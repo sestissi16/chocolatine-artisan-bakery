@@ -7,10 +7,10 @@ const Header = () => {
         <Navbar bg="dark" variant="dark">
             <Navbar.Brand href="#home">Chocolatine</Navbar.Brand>
             <Nav className="mr-auto">
-                <Nav.Link href="#about">About Us</Nav.Link>
-                <Nav.Link href="#menu">Menu</Nav.Link>
-                <Nav.Link href="#contact">Contact Us</Nav.Link>
-                <Nav.Link href="#order">Order</Nav.Link>
+                <Nav.Link href="#about" className="nav-link">About Us</Nav.Link>
+                <Nav.Link href="#menu" className="nav-link">Menu</Nav.Link>
+                <Nav.Link href="#contact" className="nav-link">Contact Us</Nav.Link>
+                <Nav.Link href="#order" className="nav-link">Order</Nav.Link>
             </Nav>
         </Navbar>
     </div>

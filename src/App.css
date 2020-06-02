@@ -1,4 +1,12 @@
 .App {
   height: 100%;
   width: 100%;
+  /* have the font-family options I linked to from google fonts so I will always have them */
+  /* font-family: 'Acme', sans-serif;
+  font-family: 'Architects Daughter', cursive;
+  font-family: 'Capriola', sans-serif;
+  font-family: 'Chau Philomene One', sans-serif;
+  font-family: 'Courgette', cursive;
+  font-family: 'Francois One', sans-serif;
+  font-family: 'Kalam', cursive; */
 }

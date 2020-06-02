@@ -4,7 +4,7 @@ import './Navbar.css'
 
 const Navigation = () => {
   return (
-        <Navbar variant="dark" expand="lg" sticky="top" className="custom-navbar-bg">
+        <Navbar variant="dark" expand="lg" fixed="top" className="custom-navbar-bg">
             <Navbar.Brand href="#home" className="smoothscroll navbar-title">Chocolatine - Artisan Bakery</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse  id="basic-navbar-nav">

@@ -6,62 +6,13 @@
 #headerContainer {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
-}
-
-.custom-navbar-bg {
-    background-color: #251605;
-    width: 100%;
-
-}
-
-.navbar-title {
-    color: #FBF2C0 !important;
-    font-family: 'Courgette', sans-serif;
-    font-size: x-large;
-    margin: 0% 10% 0% 0%;
-}
-
-
-.navLinksContainer {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-
-.navbar-link{
-    color: #C9CBA3 !important;
-    font-size: large;
-    margin: 0% 3% 0% !important;
-    border-bottom: 0.08em solid #C9CBA3;
-    border-top: 0.08em solid #C9CBA3;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.navbar-link:hover {
-    color: #A9FFCB !important;
-    border-bottom: 0.08em solid #A9FFCB;
-    border-top: 0.08em solid #A9FFCB;
-    background-color: #64341E;
-    box-shadow: 0.2em 0.2em #000000;
-}
-
-#homeSection{
-    height: 90%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: #251605 url(../assets/bakeryHeaderImage.jpg) no-repeat center center;
     background-size: cover !important;
 	-webkit-background-size: cover !important;
+    width: 100%;
+    height: 100%;
 }
 
 #homeInfo {
@@ -82,56 +33,4 @@
 #homeTagline {
     padding: 0% 5%;
     text-align: center;
-}
-
-@media (min-width: 1200px) {
-    .navbar-link {
-        font-size: larger !important;
-    }
-}
-
-@media (max-width: 786px) {
-    .navLinksContainer {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .navbar-link{
-        color: #C9CBA3 !important;
-        font-size: large;
-        margin: 1% 0% !important;
-        border-bottom: 0.04em solid #C9CBA3;
-        border-top: 0.04em solid #C9CBA3;
-        width: 100%;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-    }
-    
-    .navbar-link:hover {
-        color: #A9FFCB !important;
-        border-bottom: 0.06em solid #A9FFCB;
-        border-top: 0.06em solid #A9FFCB;
-        background-color: #64341E;
-        box-shadow: 0.2em 0.2em #000000;
-    }
-}
-
-@media (max-width: 430px) {
-    .navbar-title {
-        font-size: larger;
-    }
-}
-
-@media (max-width: 320px) {
-    .navbar-title {
-        font-size: medium;
-    }
-
-    .navbar-link {
-        font-size: medium;
-    }
 }

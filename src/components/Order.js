@@ -1,7 +1,29 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import './Order.css'
+import Input from 'react-phone-number-input/input'
+import 'react-phone-number-input/style.css'
 
+// const phoneInput = function phoneNumberImport() {
+//     // `value` will be the parsed phone number in E.164 format.
+//     // Example: "+12133734253".
+//     const [value, setValue] = useState()
+//     // If `country` property is not passed
+//     // then "International" format is used.
+//     return (
+//       <Input
+//         placeholder="Phone Number"
+//         className="orderFormInput"
+//         id="orderFormPhone"
+//         country="US"
+//         value={value}
+//         onChange={setValue} />
+//     )
+//   }
 class Order extends Component {
+
+    state = {
+        phoneValue: ''
+    }
 
     formSubmit(e) {
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwCsxWYO8f5aFTvvWzrQMYgHPryxbi0TUSlnjIMiabos2vuldpk/exec'
@@ -13,20 +35,73 @@ class Order extends Component {
           .catch(error => console.error('Error!', error.message))
     }
 
+    // phoneNumberImport() {
+    //     // `value` will be the parsed phone number in E.164 format.
+    //     // Example: "+12133734253".
+    //     const [value, setValue] = useState()
+    //     // If `country` property is not passed
+    //     // then "International" format is used.
+    //     return (
+    //       <Input
+    //         placeholder="Phone Number"
+    //         className="orderFormInput"
+    //         id="orderFormPhone"
+    //         country="US"
+    //         value={value}
+    //         onChange={setValue} />
+    //     )
+    //   }
+
     render() {
+        
         return (
             <section id="order">
                 <div id="orderContainer">
                     <form name="submit-to-google-sheet" onSubmit={this.formSubmit} id="orderForm">
-                        <input className="orderFormInput" name="email" type="email" placeholder="Email" required/>
-                        <input className="orderFormInput" name="name" type="text" placeholder="Name"/>
-                        <input className="orderFormInput" name="dateNeeded" type="date" placeholder="Date you want the order by"/>
-                        <input className="orderFormInput" name="timeNeeded" type="time" placeholder="Time you want the order by"/>
-                        <input className="orderFormInput" id="payOnline" name="payOnline" type="radio" value="yes"/>
-                        <label for="payOnline">Pay Online</label>
-                        <input className="orderFormInput" name="payInCash" type="radio" value="yes"/>
-                        <label for="payInCash">Pay In Cash</label>
-                        <input className="orderFormInput" name="foodOrdered" type="text" placeholder="Food you want to order"/>
+                        <div className="form-group">
+                            <label for="orderFormEmail">Enter your email address: </label>
+                            <input id="orderFormEmail" className="orderFormInput" name="email" type="email" placeholder="Email" required/>
+                        </div>
+
+                        <div className="form-group">
+                            <label for="orderFormPhone">Enter Phone Number: </label>
+                            <Input
+                                name="phoneNumber"
+                                placeholder="Phone Number"
+                                className="orderFormInput"
+                                id="orderFormPhone"
+                                country="US"
+                                value={ this.state.phoneValue }
+                                onChange={ phoneValue => this.setState({ phoneValue }) }
+                            />
+                        </div>
+
+                        <div className="form-group">
+                            <label for="orderFormName">Enter your name for the order:</label>
+                            <input id="orderFormName" className="orderFormInput" name="name" type="text" placeholder="Name" required/>
+                        </div>
+                        <div className="form-group">
+                            <label for="orderFormDate">Enter the date you need the order by:</label>
+                            <input id="orderFormDate" className="orderFormInput" name="dateNeeded" type="date" placeholder="Date you want the order by" required/>
+                        </div>
+
+                        <div className="form-group">
+                            <label for="orderFormTime">Enter the time you need the order by on the date you entered above:</label>
+                            <input id="orderFormTime" className="orderFormInput" name="timeNeeded" type="time" placeholder="Time you want the order by" required/>
+                        </div>
+
+                        <div className="form-group">
+                            <input className="orderFormInput" id="payOnline" name="paymentType" type="radio" value="online"/>
+                            <label for="payOnline">Pay Online</label>
+                            <input id="payInCash" className="orderFormInput" name="paymentType" type="radio" value="cash"/>
+                            <label for="payInCash">Pay In Cash</label>
+                        </div>
+
+                        <div className="form-group">
+                            <label for="orderFormFood">Enter the food items you'd like to buy:</label>
+                            <input id="orderFormFood" className="orderFormInput" name="foodOrdered" type="text" placeholder="Food you want to order"/>
+                        </div>
+
                         <button type="submit">Send</button>
                     </form>
                 </div>

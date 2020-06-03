@@ -5,6 +5,7 @@ const About = () => {
   return (
     <section id="about">
         <div id="aboutContainer">
+          <h1 id="aboutSectionTitle">About Us:</h1>
           <div id="aboutRow1">
             <div id="aboutMission">
               <h2 className="aboutTitles">Our Mission:</h2>
@@ -40,10 +41,10 @@ const About = () => {
             <div id="aboutHowToOrder">
               <h2 className="aboutTitles">How To Order Our Delicious Goods:</h2>
               <h3>You can:</h3>
-              <ul>
-                <h4><li>Message us on <a href="https://www.facebook.com/ArtisanBakeries/" className="aboutLink">Facebook</a></li></h4>
-                <h4><li>Use the <a href="#order" className="aboutLink">Order Form</a> on this webiste</li></h4>
-                <h4><li><a href="#contact" className="aboutLink">Email us</a> at artisanbakeriesusa@gmail.com</li></h4>
+              <ul className="aboutHowToList">
+                <h4><li className="aboutHowToListItems">Message us on <a href="https://www.facebook.com/ArtisanBakeries/" className="aboutLink">Facebook</a></li></h4>
+                <h4><li className="aboutHowToListItems">Use the <a href="#order" className="aboutLink">Order Form</a> on this webiste</li></h4>
+                <h4><li className="aboutHowToListItems"><a href="#contact" className="aboutLink">Email us</a> (artisanbakeriesusa@gmail.com)</li></h4>
               </ul>
               <br/>
               <h4>When you order, please let us know the date and time you'd like your order buy and how many of which items you'd like.</h4>

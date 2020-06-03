@@ -12,6 +12,18 @@
     align-items: center;
 }
 
+#aboutSectionTitle {
+    font-family: 'Kalam', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    width: 95%;
+    background-color: #251605;
+    padding: 2% 1% 1% 1%;
+    color: #FBF2C0;
+    border: #F2C091 outset 0.1em;
+    margin: 0% 0% 2% 0%;
+}
+
 #aboutRow1, #aboutRow2 {
     display: flex;
     flex-direction: row;
@@ -26,7 +38,7 @@
 }
 
 #aboutMission, #aboutServices, #aboutHowWeMakeIt, #aboutHowToOrder {
-    width: 49%;
+    width: 46%;
     height: fit-content;
     background-color: #F2C091;
     color: #251605;
@@ -63,6 +75,10 @@
     padding: 2%;
 }
 
+#aboutHowToOrder {
+    overflow-wrap: break-word;
+}
+
 .aboutLink {
     color: rgb(10, 29, 170);
 }
@@ -71,6 +87,36 @@
     color: #360093;
 }
 
-/* .aboutLink:visited {
-    color: #140330;
-} */
+.aboutHowToList {
+    list-style-type: none;
+    padding: 0%;
+}
+
+.aboutHowToListItems {
+    background-color: rgba(139, 177, 116, 0.808);
+    padding: 1%;
+    border: #2E1F27 outset 0.2em;
+    /* box-shadow: #251605 0.7em 0.7em; */
+}
+
+@media (max-width: 770px) {
+    #about {
+        padding: 10% 2%;
+    }
+
+    #aboutRow1, #aboutRow2 {
+        flex-direction: column;
+    }
+
+    #aboutRow1 {
+        padding: 0% 0% 4% 0%;
+    }
+
+    #aboutMission, #aboutServices, #aboutHowWeMakeIt, #aboutHowToOrder {
+        width: 100%;
+    }
+
+    #aboutMission, #aboutHowWeMakeIt {
+        margin: 0% 0% 4% 0%;
+    }
+}

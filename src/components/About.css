@@ -1,6 +1,76 @@
 #about {
-    height: 60%;
+    height: fit-content;
     width: 100%;
     background-color: #C9CBA3;
     padding: 7% 2%;
 }
+
+#aboutContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#aboutRow1, #aboutRow2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    height: fit-content;
+    width: 100%;
+}
+
+#aboutRow1 {
+    padding: 0% 0% 2% 0%;
+}
+
+#aboutMission, #aboutServices, #aboutHowWeMakeIt, #aboutHowToOrder {
+    width: 49%;
+    height: fit-content;
+    background-color: #F2C091;
+    color: #251605;
+    padding: 2%;
+    text-align: center;
+    border: #2E1F27 outset 0.1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#aboutMission, #aboutHowWeMakeIt {
+    margin: 0% 2% 0% 0%;
+}
+
+.aboutTitles {
+    border-bottom: #2E1F27 solid 0.05em;
+    font-family: 'Kalam', sans-serif;
+    font-weight: bolder;
+}
+
+.aboutEmphasis {
+    font-family: 'Courgette', sans-serif;
+    font-weight: bold;
+}
+
+#aboutServicesList {
+    font-family: 'Courgette', sans-serif;
+    font-weight: bold;
+}
+
+#aboutServicesContact {
+    border-top: #2E1F27 solid 0.05em;
+    padding: 2%;
+}
+
+.aboutLink {
+    color: rgb(10, 29, 170);
+}
+
+.aboutLink:hover {
+    color: #360093;
+}
+
+/* .aboutLink:visited {
+    color: #140330;
+} */

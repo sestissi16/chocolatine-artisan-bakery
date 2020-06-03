@@ -1,5 +1,5 @@
 #home {
-    height: 50%;
+    height: 55%;
     width: 100%;
 }
 
@@ -18,13 +18,14 @@
 
 #homeInfo {
     width: 80%;
-    height: 85%;
-    background: rgba(27, 16, 3, 0.897);
+    height: fit-content;
+    background: rgba(22, 13, 3, 0.925);
     color: #FBF2C0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 3% 0%;
 }
 
 .spanTitle {
@@ -34,4 +35,10 @@
 #homeTagline {
     padding: 0% 5%;
     text-align: center;
+}
+
+#homeList {
+    padding: 0% 5%;
+    text-align: center;
+    font-family: 'Kalam', sans-serif;
 }

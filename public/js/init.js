@@ -1,7 +1,6 @@
 
 jQuery(document).ready(function($) {
     // Smooth Scrolling for Navigation Bar
-
     $('.smoothscroll').on('click',function (e) {
         e.preventDefault();
 
@@ -14,5 +13,5 @@ jQuery(document).ready(function($) {
             window.location.hash = target;
         });
     });
-    
+
 });

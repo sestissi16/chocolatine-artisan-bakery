@@ -60,6 +60,7 @@ class Order extends Component {
                         <div className="form-group">
                             <input className="orderFormInput" id="payOnline" name="paymentType" type="radio" value="online"/>
                             <label for="payOnline">Pay Online</label>
+                            
                             <input id="payInCash" className="orderFormInput" name="paymentType" type="radio" value="cash"/>
                             <label for="payInCash">Pay In Cash</label>
                         </div>

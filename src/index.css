@@ -9,6 +9,7 @@ body {
     sans-serif;
   height: 100%;
   width: 100%;
+  padding-top: 3.875em;
 }
 
 #root {

@@ -3,22 +3,6 @@ import './Order.css'
 import Input from 'react-phone-number-input/input'
 import 'react-phone-number-input/style.css'
 
-// const phoneInput = function phoneNumberImport() {
-//     // `value` will be the parsed phone number in E.164 format.
-//     // Example: "+12133734253".
-//     const [value, setValue] = useState()
-//     // If `country` property is not passed
-//     // then "International" format is used.
-//     return (
-//       <Input
-//         placeholder="Phone Number"
-//         className="orderFormInput"
-//         id="orderFormPhone"
-//         country="US"
-//         value={value}
-//         onChange={setValue} />
-//     )
-//   }
 class Order extends Component {
 
     state = {
@@ -34,23 +18,6 @@ class Order extends Component {
           .then(response => console.log('Success!', response))
           .catch(error => console.error('Error!', error.message))
     }
-
-    // phoneNumberImport() {
-    //     // `value` will be the parsed phone number in E.164 format.
-    //     // Example: "+12133734253".
-    //     const [value, setValue] = useState()
-    //     // If `country` property is not passed
-    //     // then "International" format is used.
-    //     return (
-    //       <Input
-    //         placeholder="Phone Number"
-    //         className="orderFormInput"
-    //         id="orderFormPhone"
-    //         country="US"
-    //         value={value}
-    //         onChange={setValue} />
-    //     )
-    //   }
 
     render() {
         

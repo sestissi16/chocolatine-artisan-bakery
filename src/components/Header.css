@@ -42,3 +42,9 @@
     text-align: center;
     font-family: 'Kalam', sans-serif;
 }
+
+@media (max-width:960px) {
+    #home {
+        height: fit-content;
+    }
+}

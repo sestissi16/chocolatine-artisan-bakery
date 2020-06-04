@@ -1,7 +1,7 @@
 #about {
     height: fit-content;
     width: 100%;
-    background-color: #C9CBA3;
+    background-color: #868F60;
     padding: 7% 2%;
 }
 
@@ -15,13 +15,16 @@
 #aboutSectionTitle {
     font-family: 'Kalam', sans-serif;
     font-weight: bolder;
-    text-align: center;
-    width: 95%;
+    width: 100%;
     background-color: #251605;
-    padding: 2% 1% 1% 1%;
-    color: #FBF2C0;
-    border: #F2C091 outset 0.1em;
+    padding: 2% 1% 1% 3%;
+    color: #D7D9B1;
+    border: #FBF2C0 solid 0.08em;
     margin: 0% 0% 2% 0%;
+    border-radius: 17px;
+    background: #3C1518;
+    box-shadow: inset 6px -6px 12px #321214, 
+            inset -6px 6px 12px #46181c;
 }
 
 #aboutRow1, #aboutRow2 {
@@ -40,11 +43,14 @@
 #aboutMission, #aboutServices, #aboutHowWeMakeIt, #aboutHowToOrder {
     width: 46%;
     height: fit-content;
-    background-color: #F2C091;
+    border-radius: 17px;
+    background: #D7D9B1;
+    box-shadow:  6px -6px 12px #b5b695, 
+                -6px 6px 12px #f9fccd;
     color: #251605;
     padding: 2%;
     text-align: center;
-    border: #2E1F27 outset 0.1em;
+    border: #3C1518 outset 0.1em;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -55,7 +61,7 @@
 }
 
 .aboutTitles {
-    border-bottom: #2E1F27 solid 0.05em;
+    border-bottom: #3C1518 solid 0.05em;
     font-family: 'Kalam', sans-serif;
     font-weight: bolder;
 }
@@ -71,7 +77,7 @@
 }
 
 #aboutServicesContact {
-    border-top: #2E1F27 solid 0.05em;
+    border-top: #3C1518 solid 0.05em;
     padding: 2%;
 }
 
@@ -80,7 +86,7 @@
 }
 
 .aboutLink {
-    color: rgb(10, 29, 170);
+    color: #0a1daa;
 }
 
 .aboutLink:hover {
@@ -93,9 +99,13 @@
 }
 
 .aboutHowToListItems {
-    background-color: rgba(139, 177, 116, 0.808);
+    color: #251605;
+    border-radius: 17px;
+    background: #FFE6A7;
+    box-shadow: inset 8px -8px 16px #d6c18c, 
+                inset -8px 8px 16px #ffffc2;
     padding: 1%;
-    border: #2E1F27 outset 0.2em;
+    border: #6F1D1B outset 0.2em;
     /* box-shadow: #251605 0.7em 0.7em; */
 }
 

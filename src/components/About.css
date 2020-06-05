@@ -22,8 +22,8 @@
     margin: 0% 0% 2% 0%;
     border-radius: 17px;
     background: #3C1518;
-    box-shadow: inset 6px -6px 12px #321214, 
-            inset -6px 6px 12px #46181c;
+    box-shadow: inset 8px -8px 16px #280e10, 
+                inset -8px 8px 16px #501c20;
 }
 
 #aboutRow1, #aboutRow2 {
@@ -118,7 +118,7 @@
     }
 
     #aboutRow1 {
-        padding: 0% 0% 4% 0%;
+        padding: 0% 0% 8% 0%;
     }
 
     #aboutMission, #aboutServices, #aboutHowWeMakeIt, #aboutHowToOrder {
@@ -126,6 +126,6 @@
     }
 
     #aboutMission, #aboutHowWeMakeIt {
-        margin: 0% 0% 4% 0%;
+        margin: 0% 0% 8% 0%;
     }
 }

@@ -1,7 +1,9 @@
 #menu {
     height: 60%;
     width: 100%;
-    background-color: #FFE6A7;
+    background: #FFE6A7 url('../assets/chocolatineCroissantsImage.jpg') no-repeat center center;
+    background-size: cover !important;
+	-webkit-background-size: cover !important;
     padding: 7% 2%;
 }
 
@@ -10,7 +12,7 @@
     font-weight: bolder;
     width: 100%;
     padding: 2% 1% 1% 3%;
-    color: #D7D9B1;
+    color: aliceblue;
     border: #868F60 solid 0.08em;
     margin: 0% 0% 2% 0%;
     border-radius: 17px;

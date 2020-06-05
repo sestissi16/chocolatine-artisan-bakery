@@ -1,6 +1,113 @@
 #contact {
-    height: 60%;
+    height: fit-content;
     width: 100%;
-    background-color: #A9FFCB;
+    background-color: #FFE6A7;
     padding: 7% 2%;
+}
+
+#contactContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+#contactSectionTitle {
+    font-family: 'Kalam', sans-serif;
+    font-weight: bolder;
+    width: 100%;
+    padding: 2% 1% 1% 3%;
+    color: #FBF2C0;
+    border: #CAAC7D solid 0.08em;
+    margin: 0% 0% 2% 0%;
+    border-radius: 17px;
+    background: #432818;
+    box-shadow: inset 5px -5px 10px #1b100a, 
+                inset -5px 5px 10px #6b4026;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 0% 0% 2%;
+    border-radius: 17px;
+    background: #804C27;
+    box-shadow:  9px -9px 0px #331e10, 
+                -9px 9px 0px #cd7a3e;
+        
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0% 0% 2% 0%;
+    padding: 1% 2%;
+    color: #FEFBEC;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: large;
+}
+
+.contactFormInput {
+    border-radius: 34px;
+    border: #3C1518 0.2em solid;
+    padding: 1.5% 2%;
+}
+
+#buttonGroup {
+    padding: 1% 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+}
+
+.contactFormButton {
+    width: 30%;
+    padding: 0.9%;
+    border-radius: 12px !important;
+    background: linear-gradient(45deg, #646d41, #545c37) !important;
+    box-shadow:  5px -5px 0px #3c4228, 
+                -5px 5px 0px #7e8a52;
+    border: none !important;
+    margin: 0% 2%;
+    font-weight: bold !important;
+    font-size: large !important;
+}
+
+.contactFormButton:hover{
+    border-radius: 12px !important;
+    background: linear-gradient(45deg, #a1ae6d, #87935c) !important;
+    box-shadow:  5px -5px 0px #626a42, 
+                -5px 5px 0px #cbdc8a;
+    border: none !important;
+    color: black;
+}
+
+@media (max-width:768px){
+    .contactFormButton {
+        width: 40%;
+    }
+}
+
+@media (max-width:426px) {
+    #buttonGroup {
+        display: flex;
+        flex-direction: column;
+    }
+    .contactFormButton {
+        width: 90%;
+        margin: 1% 0% 7%;
+    }
+
+    #contactSectionTitle {
+        margin: 0% 0% 6%;
+    }
 }

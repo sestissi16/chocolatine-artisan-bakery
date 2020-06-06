@@ -16,23 +16,42 @@
     padding: 6% 2%;
 }
 
+
+
 #homeInfo {
     width: 80%;
     height: fit-content;
-    border-radius: 60px;
-background: linear-gradient(45deg, rgba(23, 13, 3, 0.925), rgba(20, 12, 3, 0.925));
-box-shadow:  5px -5px 5px #090501, 
-             -5px 5px 5px #231505;
+    border-radius: 17px;
+    background: linear-gradient(145deg, rgba(31, 19, 5, 0.92), rgba(40, 24, 5, 0.92));
+    box-shadow:  26px 26px 52px #0f0902, 
+                -26px -26px 52px #3b2308;
     color: #FBF2C0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3% 0%;
+    padding: 0.5%;
 }
 
+#homeInfoBorderImage{
+    background: url(../assets/flowerGoldenRectangularBorderTransparent-AllAround.png) no-repeat center center;
+    background-size: 100% 100% !important;
+    -webkit-background-size: 100% 100% !important;
+    width: 100%;
+    height: 100%;
+}
+
+#homeInfoText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15% 15%;
+}
+
+
 #homeTitle {
-    padding: 0% 5%;
+    padding: 2% 2% 0%;
     text-align: center;
 }
 
@@ -41,18 +60,68 @@ box-shadow:  5px -5px 5px #090501,
 }
 
 #homeTagline {
-    padding: 0% 5%;
+    padding: 0% 2%;
     text-align: center;
 }
 
 #homeList {
-    padding: 0% 5%;
+    padding: 0% 2%;
     text-align: center;
     font-family: 'Kalam', sans-serif;
+}
+
+@media (min-width:1200px){
+    #homeInfoText {
+        padding: 10% 12%;
+    }
 }
 
 @media (max-width:960px) {
     #home {
         height: fit-content;
+    }
+}
+
+@media (max-width:768px){
+    #homeInfoText {
+        padding: 18% 13%;
+    }
+}
+
+@media (max-width:660px){
+    #homeInfo {
+        width: 90%;
+    }
+    #homeInfoText {
+        padding: 18% 13%;
+    }
+}
+
+@media (max-width:610px){
+    #homeInfo {
+        width: 98%;
+    }
+    #homeInfoText {
+        padding: 21% 16%;
+    }
+}
+
+@media (max-width:550px){
+    #homeInfo {
+        width: 100%;
+    }
+    #homeInfoText {
+        padding: 28% 16% 21%;
+    }
+}
+
+@media (max-width:426px){
+    #homeInfo {
+        width: 100%;
+    }
+    #homeInfoText {
+        padding: 18% 12% 12%;
+        border-radius: 17px;
+        background-color: rgba(40, 24, 5, 0.80);
     }
 }

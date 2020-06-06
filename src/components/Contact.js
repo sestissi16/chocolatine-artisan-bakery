@@ -66,7 +66,7 @@ class Contact extends Component {
                     <h1 id="contactSectionTitle">Contact Us:</h1>
                     <form name="contact-us" id="contactForm">
                         <div className="form-group">
-                            <label for="contactFormEmail">Enter your email address: </label>
+                            <label className="contactFormLabel" for="contactFormEmail">Enter your email address: </label>
                             <input 
                                 id="contactFormEmail" 
                                 className="contactFormInput" 
@@ -80,7 +80,7 @@ class Contact extends Component {
                         </div>
         
                         <div className="form-group">
-                            <label for="contactFormName">Enter your name:</label>
+                            <label className="contactFormLabel" for="contactFormName">Enter your name:</label>
                             <input 
                                 id="contactFormName" 
                                 className="contactFormInput" 
@@ -94,7 +94,7 @@ class Contact extends Component {
                         </div>
                         
                         <div className="form-group">
-                            <label for="contactFormSubject">Enter the subject:</label>
+                            <label className="contactFormLabel" for="contactFormSubject">Enter the subject:</label>
                             <input 
                                 id="contactFormSubject" 
                                 className="contactFormInput" 
@@ -108,7 +108,7 @@ class Contact extends Component {
                         </div>
         
                         <div className="form-group">
-                            <label for="contactFormMessage">Enter the message you'd like to send:</label>
+                            <label className="contactFormLabel" for="contactFormMessage">Enter the message you'd like to send:</label>
                             <textarea 
                                 id="contactFormMessage" 
                                 className="contactFormInput" 

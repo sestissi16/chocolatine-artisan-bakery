@@ -2,7 +2,7 @@
     height: fit-content;
     width: 100%;
     background-color: #FFE6A7;
-    padding: 7% 2%;
+    padding: 7% 2% 2%;
 }
 
 #contactContainer {
@@ -12,18 +12,42 @@
     width: 100%;
 }
 
+#contactTitle {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #211405, #281805);
+    box-shadow:  8px 8px 1px #0f0902, 
+                -8px -8px 1px #3b2308;
+    margin: 0% 0% 4% 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#titleBorderTop {
+    height: 4em;
+    width: 100%;
+}
+
+#titleBorderBottom {
+    height: 1em;
+    width: 100%;
+}
+
 #contactSectionTitle {
     font-family: 'Kalam', sans-serif;
     font-weight: bolder;
-    width: 100%;
-    padding: 2% 1% 1% 3%;
-    color: #FBF2C0;
-    border: #CAAC7D solid 0.08em;
-    margin: 0% 0% 2% 0%;
+    text-align: center;
+    width: 80%;
+    margin: 1% 0%;
+    color: #CAAC7D;
+    /* border: #CAAC7D solid 0.08em;
     border-radius: 17px;
     background: #432818;
     box-shadow: inset 5px -5px 10px #1b100a, 
-                inset -5px 5px 10px #6b4026;
+                inset -5px 5px 10px #6b4026; */
 }
 
 #contactForm {
@@ -72,10 +96,15 @@
 .contactFormButton {
     width: 30%;
     padding: 0.9%;
-    border-radius: 12px !important;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #6aa7f7, #598cd0);
+    box-shadow:  5px 5px 0px #283e5c, 
+                -5px -5px 0px #9efaff;  
+    color: black;  
+    /* border-radius: 12px !important;
     background: linear-gradient(45deg, #646d41, #545c37) !important;
     box-shadow:  5px -5px 0px #3c4228, 
-                -5px 5px 0px #7e8a52;
+                -5px 5px 0px #7e8a52; */
     border: none !important;
     margin: 0% 2%;
     font-weight: bold !important;
@@ -83,17 +112,59 @@
 }
 
 .contactFormButton:hover{
-    border-radius: 12px !important;
-    background: linear-gradient(45deg, #a1ae6d, #87935c) !important;
-    box-shadow:  5px -5px 0px #626a42, 
-                -5px 5px 0px #cbdc8a;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #badbfa, #9db9d3);
+    box-shadow:  5px 5px 0px #46525e, 
+                -5px -5px 0px #ffffff;
     border: none !important;
     color: black;
+}
+
+#fb-container {
+    margin: 6% 0% 0% 0% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#fbTopBorder {
+    padding: 0% 0% 2%;
+    width: 70%
+}
+
+#fbBottomBorder {
+    padding: 2% 0% 0%;
+    width: 70%
+}
+
+#fb-iframe {
+    width: 500px;
+    border: #7CA7DE solid 0.02em !important;
+    box-shadow:  9px 9px 0px #405773, 
+                -9px -9px 0px #b8f7ff;
+    /* height: fit-content; */
 }
 
 @media (max-width:768px){
     .contactFormButton {
         width: 40%;
+    }
+    #fbTopBorder {
+        padding: 0% 0% 2%;
+        width: 80%
+    }
+    
+    #fbBottomBorder {
+        padding: 2% 0% 0%;
+        width: 80%
+    }
+}
+
+@media (max-width:501px) {
+    #fb-iframe {
+        width:400px;
     }
 }
 
@@ -109,5 +180,25 @@
 
     #contactSectionTitle {
         margin: 0% 0% 6%;
+    }
+
+    #fbTopBorder {
+        padding: 0% 0% 2%;
+        width: 100%
+    }
+    
+    #fbBottomBorder {
+        padding: 2% 0% 0%;
+        width: 100%
+    }
+
+    #fb-iframe {
+        width: 340px;
+    }
+}
+
+@media (max-width:321px) {
+    #fb-iframe {
+        width: 300px;
     }
 }

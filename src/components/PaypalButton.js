@@ -89,8 +89,7 @@ class PaypalButton extends React.Component {
   
 
   render() {
-    const { showButtons, loading, paid, showPaypal } = this.state;
-    console.log(showPaypal);
+    const { showButtons, loading, paid } = this.state;
       return (
         <div className="main">
           {loading}
@@ -109,17 +108,16 @@ class PaypalButton extends React.Component {
               </div>
             )}
   
-            {paid && (
-              <div className="main">
-                <h2>
-                  Congrats! You paid for your order!
-                </h2>
-              </div>
-            )}
-  
-          
+          {paid && (
+            <div className="main">
+              <h2>
+                Congrats! You paid for your order!
+              </h2>
+            </div>
+          )}
+
         </div>
-      );
+    );
   }
 
  }

@@ -1,8 +1,8 @@
 #about {
     height: fit-content;
     width: 100%;
-    background-color: #868F60;
-    padding: 7% 2%;
+    background-color: #5A3620;
+    padding: 5% 2%;
 }
 
 #aboutContainer {
@@ -16,14 +16,28 @@
     font-family: 'Kalam', sans-serif;
     font-weight: bolder;
     width: 100%;
-    padding: 2% 1% 1% 3%;
-    color: #D7D9B1;
-    border: #FBF2C0 solid 0.08em;
+    padding: 1%;
+    color: #FCF3C5;
     margin: 0% 0% 2% 0%;
+    text-align: center;
+    border-radius: 6px;
+    background: #4B2F1B;
+    box-shadow: inset 12px 12px 17px #352113, 
+                inset -12px -12px 17px #623d23;
+    /* border: #965E36 solid 0.08em;
     border-radius: 17px;
-    background: #3C1518;
-    box-shadow: inset 8px -8px 16px #280e10, 
-                inset -8px 8px 16px #501c20;
+    background: #FFE6A7;
+    box-shadow: inset 8px 8px 9px #665c43, 
+                inset -8px -8px 9px #ffffff; */
+}
+
+#aboutTitleText {
+    padding: 1% 0% 0%;
+}
+
+#aboutTitleTopBorder, #aboutTitleBottomBorder {
+    width: 100%;
+    height: 4em;
 }
 
 #aboutRow1, #aboutRow2 {
@@ -39,13 +53,21 @@
     padding: 0% 0% 2% 0%;
 }
 
+.aboutLineDivider {
+    width: 100%;
+}
+
 #aboutMission, #aboutServices, #aboutHowWeMakeIt, #aboutHowToOrder {
     width: 46%;
     height: fit-content;
-    border-radius: 17px;
+    border-radius: 12px;
+    background: #C6D9E6;
+    box-shadow:  5px 5px 3px #4f575c, 
+                -5px -5px 3px #ffffff;
+    /* border-radius: 17px;
     background: #D7D9B1;
     box-shadow:  6px -6px 12px #b5b695, 
-                -6px 6px 12px #f9fccd;
+                -6px 6px 12px #f9fccd; */
     color: #251605;
     padding: 2%;
     text-align: center;
@@ -60,7 +82,7 @@
 }
 
 .aboutTitles {
-    border-bottom: #3C1518 solid 0.05em;
+    /* border-bottom: #3C1518 solid 0.05em; */
     font-family: 'Kalam', sans-serif;
     font-weight: bolder;
 }
@@ -99,13 +121,16 @@
 
 .aboutHowToListItems {
     color: #251605;
-    border-radius: 17px;
+    border-radius: 56px;
+background: linear-gradient(145deg, #fff8b9, #e6d19c);
+box-shadow:  5px 5px 9px #a69770, 
+             -5px -5px 9px #ffffea;
+    /* border-radius: 17px;
     background: #FFE6A7;
     box-shadow: inset 8px -8px 16px #d6c18c, 
-                inset -8px 8px 16px #ffffc2;
+                inset -8px 8px 16px #ffffc2; */
     padding: 1%;
-    border: #6F1D1B outset 0.2em;
-    /* box-shadow: #251605 0.7em 0.7em; */
+    border: #3C1518 solid 0.2em;
 }
 
 @media (max-width: 770px) {

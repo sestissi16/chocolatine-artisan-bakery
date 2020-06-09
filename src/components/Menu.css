@@ -1,7 +1,7 @@
 #menu {
     height: 60%;
     width: 100%;
-    background: #FFE6A7 url('../assets/chocolatineCroissantsImage.jpg') no-repeat center center;
+    background: #FFE6A7 url('../assets/parchmentBackgroundPic.jpg') no-repeat center center;
     background-size: cover !important;
 	-webkit-background-size: cover !important;
     padding: 7% 2%;

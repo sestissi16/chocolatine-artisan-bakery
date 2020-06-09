@@ -1,8 +1,8 @@
 #contact {
     height: fit-content;
     width: 100%;
-    background-color: #FFE6A7;
-    padding: 7% 2% 2%;
+    background-color: #E8C29C;
+    padding: 5% 2% 2%;
 }
 
 #contactContainer {
@@ -15,10 +15,11 @@
 #contactTitle {
     width: 100%;
     height: 100%;
-    border-radius: 12px;
-    background: linear-gradient(145deg, #211405, #281805);
-    box-shadow:  8px 8px 1px #0f0902, 
-                -8px -8px 1px #3b2308;
+    border-radius: 6px;
+background: #E4B88B;
+box-shadow: inset 11px 11px 11px #a68665, 
+            inset -11px -11px 11px #ffeab1;
+    padding: 1%;
     margin: 0% 0% 4% 0%;
     display: flex;
     flex-direction: column;
@@ -27,12 +28,7 @@
 }
 
 #titleBorderTop {
-    height: 4em;
-    width: 100%;
-}
-
-#titleBorderBottom {
-    height: 1em;
+    height: 6.5em;
     width: 100%;
 }
 
@@ -42,12 +38,17 @@
     text-align: center;
     width: 80%;
     margin: 1% 0%;
-    color: #CAAC7D;
+    color: #1E120B;
     /* border: #CAAC7D solid 0.08em;
     border-radius: 17px;
     background: #432818;
     box-shadow: inset 5px -5px 10px #1b100a, 
                 inset -5px 5px 10px #6b4026; */
+}
+
+#contactSectionSubTitle {
+    text-align: center;
+    font-family: 'Kalam', sans-serif;
 }
 
 #contactForm {
@@ -57,10 +58,22 @@
     width: 100%;
     padding: 0% 0% 2%;
     border-radius: 17px;
-    background: #804C27;
-    box-shadow:  9px -9px 0px #331e10, 
-                -9px 9px 0px #cd7a3e;
+    background: #4B2F1B;
+    box-shadow:  9px 9px 0px #25170d, 
+                -9px -9px 0px #714729;
         
+}
+
+#formTopBorder, #formBottomBorder {
+    height: 7em;
+}
+
+#contactFormTitle, #contactFormSubTitle {
+    color: #FCF3C5;
+    text-align: center;
+    font-family: 'Kalam', sans-serif;
+    padding: 0% 2% 2%;
+    overflow-wrap: break-word;
 }
 
 .form-group {
@@ -129,8 +142,22 @@
     align-content: center;
 }
 
+#contactFacebookTitle, #contactFacebookSubTitle {
+    padding: 0% 2% 2%;
+    font-family: 'Kalam', sans-serif;
+    text-align: center;
+}
+
+#contactFacebookLink {
+    color: #1B3269;
+}
+
+#contactFacebookLink:hover {
+    color: #0D1D42;
+}
+
 #fbTopBorder {
-    padding: 0% 0% 2%;
+    padding: 0%;
     width: 70%
 }
 

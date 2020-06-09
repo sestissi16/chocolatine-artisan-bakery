@@ -4,8 +4,10 @@ import Button from 'react-bootstrap/Button'
 import Iframe from 'react-iframe'
 import topBorder from '../assets/blackFractalVarietyEuropeanPatterBorders-Top3.png'
 import bottomBorder from '../assets/blackFractalVarietyEuropeanPatterBorders-Bottom3.png'
-import titleTop from '../assets/goldOrnateLines-Top1-Transparent.png'
-import titleBottom from '../assets/goldOrnateLines-Bottom1-Transparent.png'
+import titleTop from '../assets/blackFractalVarietyEuropeanPatterBorders-Top2.png'
+// import titleBottom from '../assets/blackFleurDivider-Transparent.png'
+import formTop from '../assets/flowerGoldenRectangularBorderTransparent-Top2.png'
+import formBottom from '../assets/flowerGoldenRectangularBorderTransparent-Bottom2.png'
 import './Contact.css'
 
 class Contact extends Component {
@@ -107,11 +109,18 @@ class Contact extends Component {
             <section id="contact">
                 <div id="contactContainer">
                     <div id="contactTitle">
-                        <img src={titleTop} id="titleBorderTop" alt="ornate gold border"/>
+                        <img src={titleTop} id="titleBorderTop" alt="ornate black border"/>
                         <h1 id="contactSectionTitle">Contact Us:</h1>
-                        <img src={titleBottom} id="titleBorderBottom" alt="ornate gold border"/>
+                        <h2 id="contactSectionSubTitle">Here you can send us an email with the Contact Form below or checkout our Facebook page below.</h2>
                     </div>
                     <form name="contact-us" id="contactForm">
+                        <img src={formTop} alt="Gold ornate top border" id="formTopBorder"/>
+                        <h2 id="contactFormTitle">Contact Form:</h2>
+                        <h3 id="contactFormSubTitle">
+                            This form will help craft and email to artisanbakeriesusa@gmail.com. 
+                            Once you fill out the form it will open up your default mail app and fill everything out for you. 
+                            You'll just have to press send!
+                        </h3>
                         <div className="form-group">
                             <label className="contactFormLabel" for="contactFormEmail">Enter your email address: </label>
                             <input 
@@ -184,10 +193,13 @@ class Contact extends Component {
                                 onKeyDown={(e) => this.keyboardResetContact(e)}
                             >Clear Form</Button>
                         </div>
+                        <img src={formBottom} alt="Gold ornate bottom border" id="formBottomBorder"/>
                     </form>
                 </div>
                 <div id="fb-container">
                     <img src={topBorder} alt="top ornamental border" id="fbTopBorder"/>
+                    <h2 id="contactFacebookTitle">Our <a id="contactFacebookLink" href="www.facebook.com/ArtisanBakeries">Facebook Page</a>:</h2>
+                    <h3 id="contactFacebookSubTitle">Here you can message us and check out our posts and events for new specialities and promos.</h3>
                     <Iframe url={`https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FArtisanBakeries&tabs=timeline%2C%20messages%2C%20events&width=${this.state.width}&height=700&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=605332897003313`} 
                         height="700px"
                         id="fb-iframe"

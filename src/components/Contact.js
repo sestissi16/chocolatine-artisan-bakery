@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button'
 import Iframe from 'react-iframe'
 import topBorder from '../assets/blackFractalVarietyEuropeanPatterBorders-Top3.png'
 import bottomBorder from '../assets/blackFractalVarietyEuropeanPatterBorders-Bottom3.png'
-import titleTop from '../assets/blackFractalVarietyEuropeanPatterBorders-Top2.png'
+import titleDivider from '../assets/blackFlowerDivider-Transparent-Cropped.png'
 // import titleBottom from '../assets/blackFleurDivider-Transparent.png'
 import formTop from '../assets/flowerGoldenRectangularBorderTransparent-Top2.png'
 import formBottom from '../assets/flowerGoldenRectangularBorderTransparent-Bottom2.png'
@@ -109,15 +109,15 @@ class Contact extends Component {
             <section id="contact">
                 <div id="contactContainer">
                     <div id="contactTitle">
-                        <img src={titleTop} id="titleBorderTop" alt="ornate black border"/>
                         <h1 id="contactSectionTitle">Contact Us:</h1>
+                        <img src={titleDivider} id="titleDivider" alt="ornate black flower divider"/>
                         <h2 id="contactSectionSubTitle">Here you can send us an email with the Contact Form below or checkout our Facebook page below.</h2>
                     </div>
                     <form name="contact-us" id="contactForm">
                         <img src={formTop} alt="Gold ornate top border" id="formTopBorder"/>
                         <h2 id="contactFormTitle">Contact Form:</h2>
                         <h3 id="contactFormSubTitle">
-                            This form will help craft and email to artisanbakeriesusa@gmail.com. 
+                            This form will help craft an email to artisanbakeriesusa@gmail.com. 
                             Once you fill out the form it will open up your default mail app and fill everything out for you. 
                             You'll just have to press send!
                         </h3>

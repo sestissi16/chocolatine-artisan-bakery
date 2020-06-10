@@ -51,7 +51,7 @@
     margin: -2% 0%;
 }
 
-#croissantGeneralInfo {
+.savoryGeneralInfo {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -66,24 +66,25 @@
     border-bottom: solid #942624b4 0.1em;
 }
 
-#croissantAccordianHeader {
+.savoryAccordianHeader {
     background: rgba(255, 230, 167, 0.5);
     border: solid #942624b4 0.1em;
 }
 
-#croissantAccordianPanel {
-    background: #942624e3;
+.savoryAccordianPanel {
+    background: #942624ea;
     color: white;
     list-style-type: none;
     padding: 1% 2% 0.1%;
 }
 
-#croissantList {
+.savoryList {
     list-style-type: none;
+    margin-bottom: 0%;
 
 }
 
-.croissantListItem {
+.savoryListItem {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -91,6 +92,16 @@
     align-content: center;
 }
 
-.croissantItemExplanation {
+.savoryItemExplanation {
     padding-bottom: 2%;
+}
+
+.savoryFullIngredients {
+    border-top: white solid 0.01em;
+    border-bottom: white solid 0.01em;
+    padding: 1% 0%;
+}
+
+#crostiniContainer {
+    margin-top: 3%;
 }

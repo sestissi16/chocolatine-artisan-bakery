@@ -13,7 +13,7 @@
 }
 
 #aboutSectionTitle {
-    font-family: 'Kalam', sans-serif;
+    font-family: 'Courgette', sans-serif;
     font-weight: bolder;
     width: 100%;
     padding: 1%;
@@ -61,9 +61,9 @@
     width: 46%;
     height: fit-content;
     border-radius: 12px;
-    background: #C6D9E6;
-    box-shadow:  5px 5px 3px #4f575c, 
-                -5px -5px 3px #ffffff;
+    background: #B8BE9D;
+    box-shadow:  5px 5px 5px #787c66, 
+                -5px -5px 5px #f8ffd4;
     /* border-radius: 17px;
     background: #D7D9B1;
     box-shadow:  6px -6px 12px #b5b695, 
@@ -83,7 +83,7 @@
 
 .aboutTitles {
     /* border-bottom: #3C1518 solid 0.05em; */
-    font-family: 'Kalam', sans-serif;
+    font-family: 'Courgette', sans-serif;
     font-weight: bolder;
 }
 

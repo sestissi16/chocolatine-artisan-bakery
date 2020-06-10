@@ -9,9 +9,9 @@ const About = () => {
     <section id="about">
         <div id="aboutContainer">
           <div id="aboutSectionTitle">
-            <img src={TitleBorderTop} alt="gold ornamental border" id="aboutTitleTopBorder"/>
+            <img src={TitleBorderTop} alt="gold ornamental top border" id="aboutTitleTopBorder"/>
             <h1 id="aboutTitleText">About Us:</h1>
-            <img src={TitleBorderBottom} alt="gold ornamental border" id="aboutTitleBottomBorder"/>
+            <img src={TitleBorderBottom} alt="gold ornamental bottom border" id="aboutTitleBottomBorder"/>
           </div>
           <div id="aboutRow1">
             <div id="aboutMission">
@@ -58,7 +58,7 @@ const About = () => {
                 <h4><li className="aboutHowToListItems"><a href="#contact" className="aboutLink">Email us</a> (artisanbakeriesusa@gmail.com)</li></h4>
               </ul>
               <br/>
-              <h4>When you order, please let us know the date and time you'd like your order buy and how many of which items you'd like.</h4>
+              <h4>When you order, please let us know the date and time you'd like your order by and how many of which items you'd like.</h4>
             </div>
           </div>
         </div>

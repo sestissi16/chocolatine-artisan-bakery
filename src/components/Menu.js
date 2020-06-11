@@ -469,6 +469,112 @@ const Menu = () => {
                   </AccordionPanel>
                 </AccordionItem>
               </div>
+            
+              <div id="cookiesContainer">
+                <div className="sweetGeneralInfo">
+                  <h3>Cookies</h3>
+                  <h4>1.25 - 1.50</h4>
+                </div>
+                <AccordionItem>
+                  <AccordionHeader className="sweetAccordianHeader" _expanded={{ background: "#5D663D !important", color: "white" }}>
+                    <Box flex="1" textAlign="left">
+                      Click For More Info
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionHeader>
+                  <AccordionPanel pb={4} className="sweetAccordianPanel">
+                    <ul className="sweetList">
+                      <li className="sweetListItem">
+                        <h5>Chocolate Chip</h5>
+                        <h5>1.25 ea.</h5>
+                      </li>
+                      <ul className="sweetItemExplanation">
+                        <li><h6>Cookies with Chocolate Chips</h6></li>
+                        <li><h6>(Contains: wheat, dairy (butter, eggs))</h6></li>
+                      </ul>
+                      <li className="sweetListItem">
+                        <h5>Choco Pecan</h5>
+                        <h5>1.50 ea.</h5>
+                      </li>
+                      <ul className="sweetItemExplanation">
+                        <li><h6>Cookies with Chocolate Chips and pecans</h6></li>
+                        <li><h6>(Contains: wheat, dairy (butter, eggs), tree nuts)</h6></li>
+                      </ul>
+                    </ul>
+                    <p className="sweetFullIngredients">
+                      <strong>Full List of Ingredients for Cookies: </strong> 
+                      Coming Soon
+                      <br/>
+                      <strong> - Chocolate Chip Ingredients: </strong>
+                      Ingredients for Cookies plus chocolate chips
+                      <br/>
+                      <strong> - Choco Pecan Ingredients: </strong>
+                      Ingredients for Cookies plus chocolate chips, pecans
+                    </p>
+                  </AccordionPanel>
+                </AccordionItem>
+              </div>
+
+              <div id="trufflesContainer">
+                <div className="sweetGeneralInfo">
+                  <h3>Truffles</h3>
+                  <h4>5.00 (for 4) | 10.00 (for 9)</h4>
+                </div>
+                <AccordionItem>
+                  <AccordionHeader className="sweetAccordianHeader" _expanded={{ background: "#5D663D !important", color: "white" }}>
+                    <Box flex="1" textAlign="left">
+                      Click For More Info
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionHeader>
+                  <AccordionPanel pb={4} className="sweetAccordianPanel">
+                    <ul className="sweetList">
+                      <li className="sweetListItem">
+                        <h5>Regular</h5>
+                      </li>
+                      <ul className="sweetItemExplanation">
+                        <li><h6>Chocolate truffles rolled in cocoa powder</h6></li>
+                        <li><h6>(Contains: dairy (heavy whipping cream))</h6></li>
+                      </ul>
+                      <li className="sweetListItem">
+                        <h5>Peppermint</h5>
+                      </li>
+                      <ul className="sweetItemExplanation">
+                        <li><h6>Chocolate truffles with peppermint flavoring rolled in cocoa powder</h6></li>
+                        <li><h6>(Contains: dairy (heavy whipping cream))</h6></li>
+                      </ul>
+                      <li className="sweetListItem">
+                        <h5>Orange</h5>
+                      </li>
+                      <ul className="sweetItemExplanation">
+                        <li><h6>Chocolate truffles with orange flavoring rolled in cocoa powder</h6></li>
+                        <li><h6>(Contains: dairy (heavy whipping cream))</h6></li>
+                      </ul>
+                      <li className="sweetListItem">
+                        <h5>Rum and Coconut</h5>
+                      </li>
+                      <ul className="sweetItemExplanation">
+                        <li><h6>Chocolate truffles with rum and Coconut flavoring rolled in coconut shavings</h6></li>
+                        <li><h6>(Contains: dairy (heavy whipping cream), coconut)</h6></li>
+                      </ul>
+                    </ul>
+                    <p className="sweetFullIngredients">
+                      <strong>Full List of Ingredients for Truffles: </strong> 
+                      Baking Chocolate (70% cocoa), Heavy Whipping Cream, Vanilla Extract
+                      <br/>
+                      <strong> - Peppermint Ingredients: </strong>
+                      Ingredients for Truffles plus Peppermint Extract
+                      <br/>
+                      <strong> - Orange Ingredients: </strong>
+                      Ingredients for Truffles plus Orange Extract
+                      <br/>
+                      <strong> - Rum and Coconut Ingredients: </strong>
+                      Ingredients for Truffles plus Rum Extract, Coconut Extract
+                    </p>
+                  </AccordionPanel>
+                </AccordionItem>
+              </div>
+            
             </Accordion>
           </div>
           <div id="menuNotesBottom">

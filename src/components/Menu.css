@@ -106,7 +106,15 @@
     padding: 1% 0%;
 }
 
-#crostiniContainer, #muffinsContainer, #rollsContainer, #turnoversContainer, #coffeCakeContainer, #danishesContainer {
+#crostiniContainer, 
+#muffinsContainer, 
+#rollsContainer, 
+#turnoversContainer, 
+#coffeCakeContainer, 
+#danishesContainer, 
+#cookiesContainer, 
+#granolaBarsContainer,
+#trufflesContainer {
     margin-top: 3%;
 }
 

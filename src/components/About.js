@@ -54,8 +54,8 @@ const About = () => {
               <h3>You can:</h3>
               <ul className="aboutHowToList">
                 <h4><li className="aboutHowToListItems">Message us on <a href="https://www.facebook.com/ArtisanBakeries/" className="aboutLink">Facebook</a></li></h4>
-                <h4><li className="aboutHowToListItems">Use the <a href="#order" className="aboutLink">Order Form</a> on this webiste</li></h4>
-                <h4><li className="aboutHowToListItems"><a href="#contact" className="aboutLink">Email us</a> (artisanbakeriesusa@gmail.com)</li></h4>
+                <h4><li className="aboutHowToListItems">Use the <a href="#order" className="aboutLink smoothscroll">Order Form</a> on this webiste</li></h4>
+                <h4><li className="aboutHowToListItems"><a href="#contact" className="aboutLink smoothscroll">Email us</a> (artisanbakeriesusa@gmail.com)</li></h4>
               </ul>
               <br/>
               <h4>When you order, please let us know the date and time you'd like your order by and how many of which items you'd like.</h4>

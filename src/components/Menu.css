@@ -4,7 +4,7 @@
     background: #FFE6A7 url('../assets/parchmentBackgroundPic.jpg') no-repeat center center;
     background-size: cover !important;
 	-webkit-background-size: cover !important;
-    padding: 5% 2%;
+    padding: 5% 0%;
 }
 
 #menuContainer {
@@ -30,23 +30,28 @@
     align-items: center;
 }
 
+#menuNotesTop, #menuNotesBottom {
+    padding: 0% 3% 2%;
+    text-align: center;
+}
+
 #menuSectionTitle {
     font-size: 4em;
     padding: 0% 3%;
 }
 
-#menuSavoryContainer {
+#menuSavoryContainer, #menuSweetContainer {
     padding: 2% 5%;
     width: 100%;
-    margin: 0% 0% 5%;
+    margin: 0% 0% 2%;
 }
 
-#menuSavoryTitle {
+#menuSavoryTitle, #menuSweetTitle {
     font-family: 'Courgette', sans-serif;
     margin: 0% 0% -1% 0%;
 }
 
-#savoryDivider {
+.sectionDivider {
     width: 100%;
     margin: -2% 0%;
 }
@@ -78,13 +83,12 @@
     padding: 1% 2% 0.1%;
 }
 
-.savoryList {
+.savoryList, .sweetList {
     list-style-type: none;
     margin-bottom: 0%;
-
 }
 
-.savoryListItem {
+.savoryListItem, .sweetListItem {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -92,16 +96,81 @@
     align-content: center;
 }
 
-.savoryItemExplanation {
+.savoryItemExplanation, .sweetItemExplanation {
     padding-bottom: 2%;
 }
 
-.savoryFullIngredients {
+.savoryFullIngredients, .sweetFullIngredients {
     border-top: white solid 0.01em;
     border-bottom: white solid 0.01em;
     padding: 1% 0%;
 }
 
-#crostiniContainer {
+#crostiniContainer, #muffinsContainer, #rollsContainer, #turnoversContainer, #coffeCakeContainer, #danishesContainer {
     margin-top: 3%;
+}
+
+.sweetGeneralInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 0% 2%;
+    margin: 1% 0% 0%;
+    background: rgba(255, 230, 167, 0.5);
+    border-left: solid #8A9362b4 0.1em;
+    border-right: solid #8A9362b4 0.1em;
+    border-top: solid #8A9362b4 0.1em;
+    border-bottom: solid #8A9362b4 0.1em;
+}
+
+.sweetAccordianHeader {
+    background: rgba(255, 230, 167, 0.5);
+    border: solid #8A9362b4 0.1em;
+}
+
+.sweetAccordianPanel {
+    background: #76814Dea;
+    color: white;
+    list-style-type: none;
+    padding: 1% 2% 0.1%;
+}
+
+@media (max-width: 768px) {
+    #menuTitle {
+        width: 100%;
+        padding: 2%;
+    }
+
+    #menuSectionTitle {
+        font-size: 3em;
+        padding: 0% 3%;
+    }
+
+    #leftTitleBorder, #rightTitleBorder {
+        width: 30%;
+    }
+
+    .savoryList, .sweetList {
+        list-style-type: none;
+        margin-bottom: 0%;
+        padding-left: 0%;
+    }
+}
+
+@media (max-width: 426px) {
+    #menuTitle {
+        width: 100%;
+        padding: 2%;
+    }
+
+    #menuSectionTitle {
+        font-size: 2.4em;
+        padding: 0% 3%;
+    }
+
+    #leftTitleBorder, #rightTitleBorder {
+        width: 25%;
+    }
 }

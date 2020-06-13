@@ -53,7 +53,7 @@ const Menu = () => {
                   <AccordionPanel pb={4} className="savoryAccordianPanel">
                     <ul className="savoryList">
                       <li className="savoryListItem">
-                        <h5>Regular</h5>
+                        <h5>Butter</h5>
                         <h5>1.75 sm. | 2.25 lg</h5>
                       </li>
                       <ul className="savoryItemExplanation">

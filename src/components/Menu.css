@@ -35,18 +35,45 @@
     text-align: center;
 }
 
+#menuSectionNav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#menuSectionNavLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    font-family: 'Courgette', sans-serif;
+}
+
+#menuSectionNavLinks a {
+    padding: 0% 2%;
+}
+
+.menuNavBorder {
+    border-right: solid #000 0.01em;
+}
+
 #menuSectionTitle {
     font-size: 4em;
     padding: 0% 3%;
 }
 
-#menuSavoryContainer, #menuSweetContainer {
-    padding: 2% 5%;
+#menu-savory, #menu-sweets, #menu-bread-and-pizza, #menu-samplers {
+    padding: 4.2% 5% 2%;
     width: 100%;
     margin: 0% 0% 2%;
 }
 
-#menuSavoryTitle, #menuSweetTitle {
+#menuSavoryTitle, #menuSweetTitle, #menuBreadPizzaTitle, #menuSamplerTitle {
     font-family: 'Courgette', sans-serif;
     margin: 0% 0% -1% 0%;
 }
@@ -83,24 +110,26 @@
     padding: 1% 2% 0.1%;
 }
 
-.savoryList, .sweetList {
+.savoryList, .sweetList, .breadPizzaList, .samplerList {
     list-style-type: none;
     margin-bottom: 0%;
 }
 
-.savoryListItem, .sweetListItem {
+.savoryListItem, .sweetListItem, .breadPizzaListItem, .samplerListItem {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     align-content: center;
+    border-top: solid #fff 0.01em;
+    padding: 2% 0% 0%;
 }
 
-.savoryItemExplanation, .sweetItemExplanation {
+.savoryItemExplanation, .sweetItemExplanation, .breadPizzaItemExplanation, .samplerItemExplanation {
     padding-bottom: 2%;
 }
 
-.savoryFullIngredients, .sweetFullIngredients {
+.savoryFullIngredients, .sweetFullIngredients, .breadPizzaFullIngredients, .samplerFullIngredients {
     border-top: white solid 0.01em;
     border-bottom: white solid 0.01em;
     padding: 1% 0%;
@@ -114,7 +143,9 @@
 #danishesContainer, 
 #cookiesContainer, 
 #granolaBarsContainer,
-#trufflesContainer {
+#trufflesContainer,
+#bunsContainer
+#loafsContainer {
     margin-top: 3%;
 }
 
@@ -145,6 +176,60 @@
     padding: 1% 2% 0.1%;
 }
 
+.breadPizzaGeneralInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 0% 2%;
+    margin: 1% 0% 0%;
+    background: #ffe6a780;
+    border-left: solid #2D1B10b4 0.1em;
+    border-right: solid #2D1B10b4 0.1em;
+    border-top: solid #2D1B10b4 0.1em;
+    border-bottom: solid #2D1B10b4 0.1em;
+}
+
+.breadPizzaAccordianHeader {
+    background: #ffe6a780;
+    border: solid #2D1B10b4 0.1em;
+}
+
+.breadPizzaAccordianPanel {
+    background: #432818ea;
+    color: white;
+    list-style-type: none;
+    padding: 1% 2% 0.1%;
+}
+
+.samplerGeneralInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 0% 2%;
+    margin: 1% 0% 0%;
+    background: rgba(255, 230, 167, 0.5);
+    border-left: solid #694226b4 0.1em;
+    border-right: solid #694226b4 0.1em;
+    border-top: solid #694226b4 0.1em;
+    border-bottom: solid #694226b4 0.1em;
+}
+
+.samplerAccordianHeader {
+    background: rgba(255, 230, 167, 0.5);
+    border: solid #694226b4 0.1em;
+}
+
+.samplerAccordianPanel {
+    background: #965E36ea;
+    color: white;
+    list-style-type: none;
+    padding: 1% 2% 0.1%;
+}
+
 @media (max-width: 768px) {
     #menuTitle {
         width: 100%;
@@ -156,11 +241,32 @@
         padding: 0% 3%;
     }
 
+    #menuSectionNavLinks {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+        font-family: 'Courgette', sans-serif;
+    }
+    
+    #menuSectionNavLinks a {
+        padding: 1% 0%;
+        width: 94%;
+        text-align: center;
+    }
+    
+    .menuNavBorder {
+        border-bottom: solid #000 0.01em;
+        border-right: none;
+    }
+
     #leftTitleBorder, #rightTitleBorder {
         width: 30%;
     }
 
-    .savoryList, .sweetList {
+    .savoryList, .sweetList, .breadPizzaList, .samplerList {
         list-style-type: none;
         margin-bottom: 0%;
         padding-left: 0%;
@@ -180,5 +286,19 @@
 
     #leftTitleBorder, #rightTitleBorder {
         width: 25%;
+    }
+
+    .savoryGeneralInfo, .sweetGeneralInfo, .breadPizzaGeneralInfo, .samplerGeneralInfo {
+        flex-direction: column;
+    }
+
+    .savoryListItem, .sweetListItem, .breadPizzaListItem, .samplerListItem {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        border-top: solid #fff 0.01em;
+        padding: 2% 0% 1%;
     }
 }

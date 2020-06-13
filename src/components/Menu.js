@@ -25,7 +25,16 @@ const Menu = () => {
             <h3>* Here's a list of everything we offer so you know what to <a href="#order" className="smoothscroll">order</a>!</h3>
             <h3>* Our food can be made gluten free or low sugar if needed and we take flavor requests! <a href="#contact" className="smoothscroll">Message us</a> to see what we can do.</h3>
           </div>
-          <div id="menuSavoryContainer">
+          <div id="menuSectionNav">
+            <h2>Menu Sections</h2>
+            <div id="menuSectionNavLinks">
+              <a href="#menu-savory" className="smoothscroll menuNavBorder"><h3>Savory Items</h3></a>
+              <a href="#menu-sweets" className="smoothscroll menuNavBorder"><h3>Sweet Items</h3></a>
+              <a href="#menu-bread-and-pizza" className="smoothscrolling menuNavBorder"><h3>Bread/Pizza Items</h3></a>
+              <a href="#menu-samplers" className="smoothscrolling"><h3>Samplers</h3></a>
+            </div>
+          </div>
+          <div id="menu-savory">
             <h2 id="menuSavoryTitle">Savory Items:</h2>
             <img src={SectionDivider} alt="black ornamental divider" className="sectionDivider"/>
             <Accordion defaultIndex={[0]} allowMultiple>
@@ -111,7 +120,7 @@ const Menu = () => {
                       </li>
                       <ul className="savoryItemExplanation">
                         <li><h6>Our take on a breadstick using puff pastry with a blend of herbs and Spices</h6></li>
-                        <li><h6>(Contains: wheat, dairy)</h6></li>
+                        <li><h6>(Contains: wheat)</h6></li>
                       </ul>
                       <li className="savoryListItem">
                         <h5>Cheese Mix</h5>
@@ -122,15 +131,23 @@ const Menu = () => {
                       </ul>
                     </ul>
                     <p className="savoryFullIngredients">
-                      <strong>Full List of Ingredients for croissants: </strong> 
-                      Coming Soon
+                      <strong>Full List of Ingredients for Crostinis: </strong> 
+                      Enriched Wheat Flour (Wheat Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin, Folic Acid, Malted Barley Flour, Ascorbic Acid), 
+                      Shortening (Palm Oil, Beta Carotene (Color)), Water, Vital Wheat Gluten, Salt
+                      <br/>
+                      <strong> - Everything Spices Crostini Ingredients:</strong>
+                      Ingredients for Crostinis plus a blend of herbs and spices
+                      <br/>
+                      <strong> - Everything Spices Crostini Ingredients:</strong>
+                      Ingredients for Crostinis plus a cheese Mix
                     </p>
                   </AccordionPanel>
                 </AccordionItem>
               </div>
             </Accordion>
           </div>
-          <div id="menuSweetContainer">
+          
+          <div id="menu-sweets">
             <h2 id="menuSweetTitle">Sweet Items:</h2>
             <img src={SectionDivider} alt="black ornamental divider" className="sectionDivider"/>
             <Accordion defaultIndex={[0]} allowMultiple>
@@ -194,7 +211,7 @@ const Menu = () => {
                       Ingredients from Croissants plus Chocolate Batons (44% cocoa)
                       <br/> 
                       <strong> - Chocolate Twists: </strong>
-                      Ingredients from Croissants plus Chocolate Chips, Pastry Creme (eggs, butter, milk, cornstarch, flour, vanilla extract, sugar, salt)
+                      Ingredients from Croissants plus Chocolate Chips, Pastry Cream (eggs, butter, milk, cornstarch, flour, vanilla extract, sugar, salt)
                     </p>
 
                   </AccordionPanel>
@@ -203,7 +220,7 @@ const Menu = () => {
 
               <div id="rollsContainer">
                 <div className="sweetGeneralInfo">
-                  <h3>Rolls</h3>
+                  <h3>Rolls / Palmiers</h3>
                   <h4>1.75 - 3.00</h4>
                 </div>
                 <AccordionItem>
@@ -216,25 +233,45 @@ const Menu = () => {
                   <AccordionPanel pb={4} className="sweetAccordianPanel">
                     <ul className="sweetList">
                       <li className="sweetListItem">
-                        <h5>Raspberry</h5>
+                        <h5>Cinnamon Pecan Roll</h5>
                         <h5>1.75 sm | 3.00 lg</h5>
                       </li>
                       <ul className="sweetItemExplanation">
-                        <li><h6>A roll with raspberry filling</h6></li>
+                        <li><h6>Rolled croissant dough filled with pastry cream, cinnamon and pecans</h6></li>
                         <li><h6>(Contains: wheat, dairy (milk, butter))</h6></li>
                       </ul>
                       <li className="sweetListItem">
-                        <h5>Cinnamon Pecan</h5>
+                        <h5>Rasin Roll</h5>
                         <h5>1.75 sm | 3.00 lg</h5>
                       </li>
                       <ul className="sweetItemExplanation">
-                        <li><h6>A classic cinnamon roll with pecans</h6></li>
+                        <li><h6>Rolled croissant dough filled with patry cream and rasins</h6></li>
                         <li><h6>(Contains: wheat, dairy (milk, butter))</h6></li>
+                      </ul>
+                      <li className="sweetListItem">
+                        <h5>Regular Palmier</h5>
+                        <h5>1.75 sm | 2.25 lg</h5>
+                      </li>
+                      <ul className="sweetItemExplanation">
+                        <li><h6>Rolled puff pastry dough filled with sugar and cinnamon</h6></li>
+                        <li><h6>(Contains: wheat)</h6></li>
                       </ul>
                     </ul>
                     <p className="sweetFullIngredients">
                       <strong>Full List of Ingredients for Rolls: </strong> 
-                      Coming soon
+                      Wheat Flour, Butter (Pasteurized Cream), Sugar, Powdered Milk (Nonfat Milk, Vitamin A Palmitate, Vitamin D3), 
+                      Salt, Yeast, Dough conditioner (Vegetable Gums - Gum Arabic, Guar Gum - Wheat Flour, Enzymes), 
+                      Water, Pastry Cream (eggs, butter, milk, cornstarch, flour, vanilla extract, sugar, salt)
+                      <br/>
+                      <strong> - Ingredients for Cinnamon Rolls: </strong>
+                      Ingredients for the Rolls plus cinnamon and pecans
+                      <br/>
+                      <strong> - Ingredients for Rasin Rolls: </strong>
+                      Ingredients for the Rolls plus rasins
+                      <br/>
+                      <strong>Full List of Ingredients for Palmiers: </strong>
+                      Enriched Wheat Flour (Wheat Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin, Folic Acid, Malted Barley Flour, Ascorbic Acid), 
+                      Shortening (Palm Oil, Beta Carotene (Color)), Water, Vital Wheat Gluten, Salt, Sugar, Cinnamon
                     </p>
 
                   </AccordionPanel>
@@ -318,29 +355,43 @@ const Menu = () => {
                         <li><h6>(Contains: wheat, dairy)</h6></li>
                       </ul>
                       <li className="sweetListItem">
-                        <h5>Peach Danish</h5>
+                        <h5>Peach/Apricot Danish</h5>
                       </li>
                       <ul className="sweetItemExplanation">
-                        <li><h6>Danish with a cream cheese and peach filling</h6></li>
+                        <li><h6>Danish with a cream cheese and peach or apricot filling (based on seasonal availability)</h6></li>
                         <li><h6>(Contains: wheat, dairy)</h6></li>
                       </ul>
                       <li className="sweetListItem">
-                        <h5>Apricot Danish</h5>
+                        <h5>Apple Danish</h5>
                       </li>
                       <ul className="sweetItemExplanation">
-                        <li><h6>Danish with a cream cheese and Apricot filling</h6></li>
+                        <li><h6>Danish with a apple compote filling</h6></li>
+                        <li><h6>(Contains: wheat, dairy)</h6></li>
+                      </ul>
+                      <li className="sweetListItem">
+                        <h5>Lemon Danish</h5>
+                      </li>
+                      <ul className="sweetItemExplanation">
+                        <li><h6>Danish with a lemon custard filling</h6></li>
                         <li><h6>(Contains: wheat, dairy)</h6></li>
                       </ul>
                     </ul>
                     <p className="sweetFullIngredients">
                       <strong>Full List of Ingredients for Danishes: </strong> 
-                      Coming Soon
+                      Wheat Flour, Butter (Pasteurized Cream), Sugar, Powdered Milk (Nonfat Milk, Vitamin A Palmitate, Vitamin D3), 
+                      Salt, Yeast, Dough conditioner (Vegetable Gums - Gum Arabic, Guar Gum - Wheat Flour, Enzymes), Water
                       <br/>
-                      <strong> - Peach Danish Ingredients: </strong>
-                      Ingredients for Danishes plus ...
+                      <strong> - Regular Danish Ingredients: </strong>
+                      Ingredients for Danishes plus cream cheese
                       <br/>
-                      <strong> - Apricot Danish Ingredients: </strong>
-                      Ingredients for Danishes plus ...
+                      <strong> - Peach/Apricot Danish Ingredients: </strong>
+                      Ingredients for Danishes plus cream cheese and peaches/apricots
+                      <br/>
+                      <strong> - Lemon Danish Ingredients: </strong>
+                      Ingredients for Danishes plus lemon custard
+                      <br/>
+                      <strong> - Apple Danish Ingredients: </strong>
+                      Ingredients for Danishes plus apple compote
                     </p>
                   </AccordionPanel>
                 </AccordionItem>
@@ -348,7 +399,7 @@ const Menu = () => {
 
               <div id="coffeCakeContainer">
                 <div className="sweetGeneralInfo">
-                  <h3>Coffe Cake/Financiers</h3>
+                  <h3>Coffe Cake / Financiers</h3>
                   <h4>2.00 ea.</h4>
                 </div>
                 <AccordionItem>
@@ -383,7 +434,7 @@ const Menu = () => {
                       <strong>Full List of Ingredients for Almond Coffe Cake: </strong>
                       Enriched Wheat Flour (Niacin, Reduced iron, thiamine Mononitrate, Riboflavin, Folic Acid), Eggs, Butter (Pasteurized Cream), 
                       Almond Flour, Almond Extract (Water, Alcohol and Oil of Bitter Almond), 
-                      Vanilla Extract (Water, Popylene Glycol, Vanillin, Caramel Color, Sodium Benzoate, Citric Acid), Salt
+                      Vanilla Extract (Water, Popylene Glycol, Vanillin, Caramel Color, Sodium Benzoate, Citric Acid), Salt, Cocoa Powder, Sour Cream
                     </p>
                   </AccordionPanel>
                 </AccordionItem>
@@ -503,7 +554,7 @@ const Menu = () => {
                     </ul>
                     <p className="sweetFullIngredients">
                       <strong>Full List of Ingredients for Cookies: </strong> 
-                      Coming Soon
+                      Flour, Butter, Vanilla, Eggs, Sugar
                       <br/>
                       <strong> - Chocolate Chip Ingredients: </strong>
                       Ingredients for Cookies plus chocolate chips
@@ -574,9 +625,296 @@ const Menu = () => {
                   </AccordionPanel>
                 </AccordionItem>
               </div>
+
+              <div id="granolaBarsContainer">
+                <div className="sweetGeneralInfo">
+                  <h3>Homemade Granola Bars</h3>
+                  <h4>1.50 - 2.00</h4>
+                </div>
+                <AccordionItem>
+                  <AccordionHeader className="sweetAccordianHeader" _expanded={{ background: "#5D663D !important", color: "white" }}>
+                    <Box flex="1" textAlign="left">
+                      Click For More Info
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionHeader>
+                  <AccordionPanel pb={4} className="sweetAccordianPanel">
+                    <ul className="sweetList">
+                      <li className="sweetListItem">
+                        <h5>Seasonal Flavors</h5>
+                        <h5>sm 1.50 ea. | lg 2.00 ea.</h5>
+                      </li>
+                      <ul className="sweetItemExplanation">
+                        <li><h6>Granola mixed with seasonal trail mix and binded with chocolate in a neat bar</h6></li>
+                        <li><h6>(Contains: tree nuts, soy, gluten, dairy (milk powder))</h6></li>
+                      </ul>
+                    </ul>
+                    <p className="sweetFullIngredients">
+                      <strong>Full List of Ingredients for Granola Bars: </strong> 
+                      Baker's Chocoalte (70% Cocoa), Agave Syrup or Honey, Sunflower Kernels, Raisins, Oats, Sugar, Canola Oil, 
+                      Rice Flour, Cornstarch, Salt, Natural Flavor, Barley Malt Syrup, Herb Blend (Includes Cardamon, Nutmeg), Tree Nuts, 
+                      Wheat, Soy, Peanuts, Cocoa Candies (Confectionary Coating [Sugar, Hydrogenated Palm Kernel Oil, Cocoa Powder, Whey Powder, Nonfat Milk Powder,
+                      Soy Lecithin, Vanilla], Sugar, Less Than 1% of Artificial Coloring [Includes Yellow 6 Lake, Yellow 6, Yellow 5 Lake, Blue 1 Lake, Red 40 Lake, Blue 2 Lake], 
+                      Gum Acacia, Corn Syrup, Confectioner's glaze)
+                      <br/>
+                    </p>
+                  </AccordionPanel>
+                </AccordionItem>
+              </div>
             
             </Accordion>
           </div>
+
+          <div id="menu-bread-and-pizza">
+            <h2 id="menuBreadPizzaTitle">Bread/Pizza Items:</h2>
+            <img src={SectionDivider} alt="black ornamental divider" className="sectionDivider"/>
+            <Accordion defaultIndex={[0]} allowMultiple>
+              <div id="pizzaContainer">
+                <div className="breadPizzaGeneralInfo">
+                  <h3>Par-Baked Pizza Doughs</h3>
+                  <h4>2.00 - 2.70</h4>
+                </div>
+                <AccordionItem>
+                  <AccordionHeader className="breadPizzaAccordianHeader" _expanded={{ background: "#2D1B10 !important", color: "white" }}>
+                    <Box flex="1" textAlign="left">
+                      Click For More Info
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionHeader>
+                  <AccordionPanel pb={4} className="breadPizzaAccordianPanel">
+                    <ul className="breadPizzaList">
+                      <li className="breadPizzaListItem">
+                        <h5>Classic</h5>
+                        <h5>2.00 reg. | 2.50 lg</h5>
+                      </li>
+                      <ul className="breadPizzaItemExplanation">
+                        <li><h6>Plain pizza dough that's par-baked and ready for your toppings!</h6></li>
+                        <li><h6>(Contains: wheat)</h6></li>
+                      </ul>
+                      <li className="breadPizzaListItem">
+                        <h5>Rosemary and Thyme infused Pizza Dough</h5>
+                        <h5>2.20 reg. | 2.70 lg</h5>
+                      </li>
+                      <ul className="breadPizzaItemExplanation">
+                        <li><h6>Pizza dough with rosemary and thyme mixed in that's par-baked!</h6></li>
+                        <li><h6>(Contains: wheat)</h6></li>
+                      </ul>
+                    </ul>
+                    <p className="breadPizzaFullIngredients">
+                      <strong>Full List of Ingredients for Pizza Dough: </strong> 
+                      Water, Flour, Sugar, Salt, Oil, Yeast
+                      <br/> 
+                      <strong> - Rosemary and Thyme Pizza Dough: </strong>
+                      Ingredients from Pizza Dough plus Rosemary and Thyme
+                    </p>
+
+                  </AccordionPanel>
+                </AccordionItem>
+              </div>
+
+              <div id="bunsContainer">
+                <div className="breadPizzaGeneralInfo">
+                  <h3>Buns / Sliders</h3>
+                  <h4>0.65 - 1.50</h4>
+                </div>
+                <AccordionItem>
+                  <AccordionHeader className="breadPizzaAccordianHeader" _expanded={{ background: "#2D1B10 !important", color: "white" }}>
+                    <Box flex="1" textAlign="left">
+                      Click For More Info
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionHeader>
+                  <AccordionPanel pb={4} className="breadPizzaAccordianPanel">
+                    <ul className="breadPizzaList">
+                      <li className="breadPizzaListItem">
+                        <h5>Brioche Bun (90 grams)</h5>
+                        <h5>0.80 ea.</h5>
+                      </li>
+                      <ul className="breadPizzaItemExplanation">
+                        <li><h6>Smaller brioche bun perfect for sandwiches, burgers, or just by itself.</h6></li>
+                        <li><h6>(Contains: wheat, dairy (milk, eggs, butter))</h6></li>
+                      </ul>
+                      <li className="breadPizzaListItem">
+                        <h5>Brioche Bun (110 grams)</h5>
+                        <h5>0.95 ea.</h5>
+                      </li>
+                      <ul className="breadPizzaItemExplanation">
+                        <li><h6>Larger brioche bun perfect for sandwiches, burgers, or just by itself.</h6></li>
+                        <li><h6>(Contains: wheat, dairy (milk, eggs, butter))</h6></li>
+                      </ul>
+                      <li className="breadPizzaListItem">
+                        <h5>Brioche Sliders</h5>
+                        <h5>0.65 ea.</h5>
+                      </li>
+                      <ul className="breadPizzaItemExplanation">
+                        <li><h6>Small brioche bun perfect for sliders.</h6></li>
+                        <li><h6>(Contains: wheat, dair (milk, eggs, butter))</h6></li>
+                      </ul>
+                    </ul>
+                    <p className="breadPizzaFullIngredients">
+                      <strong>Full List of Ingredients for Buns/Sliders: </strong> 
+                      Wheat Flour, Butter (Pasteurized Cream), Eggs, Sugar, Powdered Milk (Nonfat Milk, Vitamin A Palmitate, Vitamin D3), 
+                      Salt, Yeast, Dough conditioner (Vegetable Gums - Gum Arabic, Guar Gum - Wheat Flour, Enzymes), Water
+                    </p>
+                  </AccordionPanel>
+                </AccordionItem>
+              </div>
+
+              <div id="loafsContainer">
+                <div className="breadPizzaGeneralInfo">
+                  <h3>Loafs</h3>
+                  <h4>3.50 - 7.50</h4>
+                </div>
+                <AccordionItem>
+                  <AccordionHeader className="breadPizzaAccordianHeader" _expanded={{ background: "#2D1B10 !important", color: "white" }}>
+                    <Box flex="1" textAlign="left">
+                      Click For More Info
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionHeader>
+                  <AccordionPanel pb={4} className="breadPizzaAccordianPanel">
+                    <ul className="breadPizzaList">
+                      <li className="breadPizzaListItem">
+                        <h5>White Loaf</h5>
+                        <h5>sm. 3.50 | med. 5.00 | lg. 7.00</h5>
+                      </li>
+                      <ul className="breadPizzaItemExplanation">
+                        <li><h6>A classic bread loaf.</h6></li>
+                        <li><h6>(Contains: wheat, dairy (milk))</h6></li>
+                      </ul>
+                      <li className="breadPizzaListItem">
+                        <h5>Brioche Loaf</h5>
+                        <h5>sm. 4.00 | med. 5.50 | lg. 7.50</h5>
+                      </li>
+                      <ul className="breadPizzaItemExplanation">
+                        <li><h6>A more sweet bread loaf.</h6></li>
+                        <li><h6>Add 50 cents to add dried fruits to the loaf</h6></li>
+                        <li><h6>(Contains: wheat, dairy (eggs, butter, milk))</h6></li>
+                      </ul>
+                      <li className="breadPizzaListItem">
+                        <h5>Multi-grain Loaf</h5>
+                        <h5>sm. 4.00 | med. 5.50 | lg. 7.50</h5>
+                      </li>
+                      <ul className="breadPizzaItemExplanation">
+                        <li><h6>Bread loaf with a mix of grains</h6></li>
+                        <li><h6>Add 50 cents to add dried fruits to the loaf</h6></li>
+                        <li><h6>(Contains: wheat)</h6></li>
+                      </ul>
+                      <li className="breadPizzaListItem">
+                        <h5>Nutella Loaf</h5>
+                        <h5>1.50 ea.</h5>
+                      </li>
+                      <ul className="breadPizzaItemExplanation">
+                        <li><h6>Brioche loaf with Nutella inside.</h6></li>
+                        <li><h6>(Contains: wheat, dair (milk, eggs, butter), tree nuts)</h6></li>
+                      </ul>
+                      <li className="breadPizzaListItem">
+                        <h5>Fruit and Sugar Loaf</h5>
+                        <h5>1.50 ea.</h5>
+                      </li>
+                      <ul className="breadPizzaItemExplanation">
+                        <li><h6>Brioche loaf with dried fruits inside and topped with crystal sugar. </h6></li>
+                        <ul>
+                          <li><h6>The fruits depend on availability but are usually rasins, pineapples, cranberries, and apricots</h6></li>
+                        </ul>
+                        <li><h6>(Contains: wheat, dair (milk, eggs, butter), tree nuts)</h6></li>
+                      </ul>
+                    </ul>
+                    <p className="breadPizzaFullIngredients">
+                      <strong>Full List of Ingredients for White Loafs: </strong> 
+                      Wheat Flour, Water, Salt, Sugar, Milk
+                      <br/>
+                      <strong>Full List of Ingredients for Brioche Loafs: </strong>
+                      Wheat Flour, Water, Butter (Pasteurized Cream), Eggs, Sugar, Powdered Milk (Nonfat Milk, Vitamin A Palmitate, Vitamin D3),
+                      Salt, Dough conditioner (Vegetable Gums - Arabic Gum, Guar Gum - Wheat Flour, Enzymes), Yeast
+                      <br/>
+                      <strong> - Nutella Loafs Ingredients: </strong>
+                      Ingredients for Brioche Loafs plus Nutella (Sugar, Palm Oil, Skim Milk, Cocoa, Soy, Lecithin as Emulsifier, Vanillin, Hazelnuts)
+                      <br/>
+                      <strong> - Fruit and Sugar Loafs Ingredients: </strong>
+                      Ingredients for Brioche Loafs plus Dried Fruits (Raisins, Pineapples, Cranberries, Apricot)
+                      <br/>
+                      <strong>Full List of Ingredients for Multigrain Loafs: </strong>
+                      Wheat Flour, Water, Rye Flour, Mix of Grains (Pumpkin Seeds, Sunflower Seeds, Sesame Seeds, Poppy Seeds, Oats), Salt, Malt, Yeast
+                    </p>
+                  </AccordionPanel>
+                </AccordionItem>
+              </div>
+            </Accordion>
+          </div>
+
+          <div id="menu-samplers">
+            <h2 id="menuSamplerTitle">Sampler Boxes:</h2>
+            <img src={SectionDivider} alt="black ornamental divider" className="sectionDivider"/>
+            <Accordion defaultIndex={[0]} allowMultiple>
+              <div id="samplerContainer">
+                <div className="samplerGeneralInfo">
+                  <h3>Samplers</h3>
+                  <h4>12.00 - 44.00</h4>
+                </div>
+                <AccordionItem>
+                  <AccordionHeader className="samplerAccordianHeader" _expanded={{ background: "#694226 !important", color: "white" }}>
+                    <Box flex="1" textAlign="left">
+                      Click For More Info
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionHeader>
+                  <AccordionPanel pb={4} className="samplerAccordianPanel">
+                    <ul className="samplerList">
+                      <li className="samplerListItem">
+                        <h5>5 pack Sampler</h5>
+                        <h5>12.00</h5>
+                      </li>
+                      <ul className="samplerItemExplanation">
+                        <li><h6>1 Chocolate Croissant, 1 Almond Croissant, 1 Butter Croissant, 1 Ham and Cheese Lunch Croissant, and 1 Apple Turnover.</h6></li>
+                        <li><h6>(Contains: wheat, dairy (milk, eggs, butter), tree nuts, soy)</h6></li>
+                      </ul>
+                      <li className="samplerListItem">
+                        <h5>10 pack Sampler</h5>
+                        <h5>19</h5>
+                      </li>
+                      <ul className="samplerItemExplanation">
+                        <li><h6>
+                          1 Chocolate Croissant, 1 Almond Croissant, 1 Butter Croissant, 1 Ham and Cheese Lunch Croissant, 1 Apple Turnover, 
+                          1 Sugar Palmier, 1 Almond Vanilla Financier, 1 Choco Pecan Cookie, and 2 90g Buns.
+                        </h6></li>
+                        <li><h6>(Contains: wheat, dairy (milk, eggs, butter), tree nuts, soy)</h6></li>
+                      </ul>
+                      <li className="samplerListItem">
+                        <h5>15 pack Sampler</h5>
+                        <h5>34</h5>
+                      </li>
+                      <ul className="samplerItemExplanation">
+                        <li><h6>
+                          1 Chocolate Croissant, 1 Almond Croissant, 1 Butter Croissant, 1 Ham and Cheese Lunch Croissant, 1 Turkey and Cheese Lunch Croissant,  
+                          1 Apple Turnover, 1 Raspberry Turnover, 1 Sugar Palmier, 1 Jam Palmier, 1 Almond Vanilla Financier, 1 Cinnamon Roll, 
+                          1 Choco Pecan Cookie, 1 Chocoate Twist, and 2 90g Buns.
+                        </h6></li>
+                        <li><h6>(Contains: wheat, dairy (milk, eggs, butter), tree nuts, soy)</h6></li>
+                      </ul>
+                      <li className="samplerListItem">
+                        <h5>20 pack Sampler</h5>
+                        <h5>44</h5>
+                      </li>
+                      <ul className="samplerItemExplanation">
+                        <li><h6>
+                          1 Chocolate Croissant, 1 Almond Croissant, 1 Butter Croissant, 1 Ham and Cheese Lunch Croissant, 1 Turkey and Cheese Lunch Croissant,  
+                          2 Apple Turnover, 1 Raspberry Turnover, 1 Nutella Turnover, 1 Sugar Palmier, 1 Jam Palmier, 1 Almond Vanilla Financier, 1 Cinnamon Roll, 
+                          2 Choco Pecan Cookie, 1 Chocoate Twist, and 4 90g Buns.
+                        </h6></li>
+                        <li><h6>(Contains: wheat, dairy (milk, eggs, butter), tree nuts, soy)</h6></li>
+                      </ul>
+                    </ul>
+                    <p className="samplerFullIngredients">
+                      For the full list of ingredients please see the items in the sections above.
+                    </p>
+
+                  </AccordionPanel>
+                </AccordionItem>
+              </div>
+            </Accordion>
+          </div>
+
           <div id="menuNotesBottom">
             <h4>* Our food is made in a cottage food operation that is not subject to government food safety inspection.</h4>
             <h4>* Our food is made in the same area as nut products and gluten products. <a href="#contact" className="smoothscrool">Message us</a> if you need your food prepared in a different way.</h4>

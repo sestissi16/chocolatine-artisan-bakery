@@ -249,11 +249,19 @@ const Menu = () => {
                         <li><h6>(Contains: wheat, dairy (milk, butter))</h6></li>
                       </ul>
                       <li className="sweetListItem">
-                        <h5>Regular Palmier</h5>
+                        <h5>Sugar Palmier</h5>
                         <h5>1.75 sm | 2.25 lg</h5>
                       </li>
                       <ul className="sweetItemExplanation">
                         <li><h6>Rolled puff pastry dough filled with sugar and cinnamon</h6></li>
+                        <li><h6>(Contains: wheat)</h6></li>
+                      </ul>
+                      <li className="sweetListItem">
+                        <h5>Jam Palmier</h5>
+                        <h5>1.75 sm | 2.25 lg</h5>
+                      </li>
+                      <ul className="sweetItemExplanation">
+                        <li><h6>Rolled puff pastry dough filled with raspberry jam</h6></li>
                         <li><h6>(Contains: wheat)</h6></li>
                       </ul>
                     </ul>
@@ -272,6 +280,9 @@ const Menu = () => {
                       <strong>Full List of Ingredients for Palmiers: </strong>
                       Enriched Wheat Flour (Wheat Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin, Folic Acid, Malted Barley Flour, Ascorbic Acid), 
                       Shortening (Palm Oil, Beta Carotene (Color)), Water, Vital Wheat Gluten, Salt, Sugar, Cinnamon
+                      <br/>
+                      <strong> - Ingredients for Jam Palmier: </strong>
+                      Ingredients for the Rolls plus raspberry Jam
                     </p>
 
                   </AccordionPanel>

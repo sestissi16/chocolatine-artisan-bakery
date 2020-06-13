@@ -166,7 +166,7 @@ const Menu = () => {
                   <AccordionPanel pb={4} className="sweetAccordianPanel">
                     <ul className="sweetList">
                       <li className="sweetListItem">
-                        <h5>Regular</h5>
+                        <h5>Butter</h5>
                         <h5>1.75 sm | 2.25 lg</h5>
                       </li>
                       <ul className="sweetItemExplanation">

@@ -165,9 +165,10 @@ class Order extends Component {
     //this functions handles the changes from the text areas so the people can view what they're typing and we can pass down the final value from the state to the input
     handleChange(e) {
         e.preventDefault()
+        const numberValue = parseInt(e.target.value)
         // const splitName = e.target.name.match(/[A-Z]+[^A-Z]*|[^A-Z]+/g)
         this.setState({
-            [e.target.name]: e.target.value
+            [e.target.name]: numberValue
         })
         
     }
@@ -496,7 +497,7 @@ class Order extends Component {
                                                 <li className="orderListItem">
                                                     <label className="orderItemLabel" for="itemMuffinsChoco">Chocolate Muffins:</label>
                                                     <input 
-                                                        id="itemMuffinsChco" 
+                                                        id="itemMuffinsChoco" 
                                                         className="orderItemNum" 
                                                         name="muffinsChoco" 
                                                         value={ this.state.muffinsChoco }
@@ -505,15 +506,15 @@ class Order extends Component {
                                                     <button name="MuffinsChoco" value={this.state.muffinsChoco} onClick={this.addOrderItem}>Add to Order</button>
                                                 </li>
                                                 <li className="orderListItem">
-                                                    <label className="orderItemLabel" for="itemCookiesChocoPecan">Chocolate Chip and Pecan Cookies:</label>
+                                                    <label className="orderItemLabel" for="itemMuffinsChocoChip">Chocolate Chip Muffins:</label>
                                                     <input 
-                                                        id="itemCookiesChocoPecan" 
+                                                        id="itemMuffinsChocoChip" 
                                                         className="orderItemNum" 
-                                                        name="cookiesChocoPecan" 
-                                                        value={ this.state.cookiesChocoPecan }
+                                                        name="muffinsChocoChip" 
+                                                        value={ this.state.muffinsChocoChip }
                                                         onChange={this.handleChange}
                                                         type="number"/>
-                                                    <button name="CookiesChocoPeacan" value={this.state.cookiesChocoPecan} onClick={this.addOrderItem}>Add to Order</button>
+                                                    <button name="MuffinsChocoChip" value={this.state.muffinsChocoChip} onClick={this.addOrderItem}>Add to Order</button>
                                                 </li>
                                                 </ul>
                                             </AccordionPanel>

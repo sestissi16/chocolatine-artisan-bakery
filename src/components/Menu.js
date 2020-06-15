@@ -592,7 +592,7 @@ const Menu = () => {
                   <AccordionPanel pb={4} className="sweetAccordianPanel">
                     <ul className="sweetList">
                       <li className="sweetListItem">
-                        <h5>Regular</h5>
+                        <h5>Classic</h5>
                       </li>
                       <ul className="sweetItemExplanation">
                         <li><h6>Chocolate truffles rolled in cocoa powder</h6></li>
@@ -619,19 +619,34 @@ const Menu = () => {
                         <li><h6>Chocolate truffles with rum and Coconut flavoring rolled in coconut shavings</h6></li>
                         <li><h6>(Contains: dairy (heavy whipping cream), coconut)</h6></li>
                       </ul>
+                      <li className="sweetListItem">
+                        <h5>Mix of 4</h5>
+                      </li>
+                      <ul className="sweetItemExplanation">
+                        <li><h6>Get one of each flavor or tell us your preference</h6></li>
+                      </ul>
+                      <li className="sweetListItem">
+                        <h5>Mix of 9</h5>
+                      </li>
+                      <ul className="sweetItemExplanation">
+                        <li><h6>Get three classics, two peppermint, two orange, and two rum and coconut tell us your preference</h6></li>
+                      </ul>
                     </ul>
                     <p className="sweetFullIngredients">
                       <strong>Full List of Ingredients for Truffles: </strong> 
                       Baking Chocolate (70% cocoa), Heavy Whipping Cream, Vanilla Extract
                       <br/>
+                      <strong> - Classic Ingredients: </strong>
+                      Ingredients for Truffles plus Cocoa Powder
+                      <br/>
                       <strong> - Peppermint Ingredients: </strong>
-                      Ingredients for Truffles plus Peppermint Extract
+                      Ingredients for Truffles plus Peppermint Extract, Crystal Sugar, Dried Mint
                       <br/>
                       <strong> - Orange Ingredients: </strong>
-                      Ingredients for Truffles plus Orange Extract
+                      Ingredients for Truffles plus Orange Extract, Cocoa Powder, Nutmeg, Cinnamon
                       <br/>
                       <strong> - Rum and Coconut Ingredients: </strong>
-                      Ingredients for Truffles plus Rum Extract, Coconut Extract
+                      Ingredients for Truffles plus Rum Extract, Coconut Extract, Coconut shavings
                     </p>
                   </AccordionPanel>
                 </AccordionItem>

@@ -105,6 +105,7 @@ class PaypalButton extends React.Component {
                   createOrder={(data, actions) => this.createOrder(data, actions)}
                   onApprove={(data, actions) => this.onApprove(data, actions)}
                 />
+                <input className="hidden" name="paid" readOnly value='Did not complete online payment'/>
               </div>
             )}
   
@@ -113,6 +114,7 @@ class PaypalButton extends React.Component {
               <h2>
                 Congrats! You paid for your order!
               </h2>
+              <input className="hidden" name="paid" readOnly value='Completed Payment'/>
             </div>
           )}
 

@@ -364,82 +364,20 @@ class Order extends Component {
         let orderArray = [];
         let itemStateName
         let total = 0;
-        // yourOrder.forEach((element) => {
-        //     orderArray.push(`${element.item}: ${element.number}`)
-        //     itemStateName = element.item.charAt(0).toLowerCase() + element.item.slice(1)
-        //     console.log(element.item, itemStateName, pricesPerItem[itemStateName])
-        //     // if (parseInt(total) === undefined){
-        //     //     total = (parseInt(element.number) * pricesPerItem[itemStateName])
-        //     // } else {
-        //         total = parseInt(total) + (parseInt(element.number) * pricesPerItem[itemStateName])
-        //     // }
-            
-        // })
-        // const orderString = orderArray.join(', ')
         
         if (yourOrder.length === 0){
             total = 0
-            // (this.state.cookiesChoco * pricesPerItem.cookiesChoco) + 
-            // (this.state.cookiesChocoPecan * pricesPerItem.cookiesChocoPecan) + 
-            // ((parseInt(this.state.muffinsBerry) + parseInt(this.state.muffinsBlueberry) + parseInt(this.state.muffinsChoco) + 
-            //     parseInt(this.state.muffinsChocoChip) + parseInt(this.state.muffinsLemonPoppy) + parseInt(this.state.muffinsOrangeCranberry)) * pricesPerItem.muffins) +
-            // (this.state.smallButterCroissant * pricesPerItem.smallButterCroissant) +
-            // (this.state.largeButterCroissant * pricesPerItem.largeButterCroissant) +
-            // (this.state.smallAlmondCroissant * pricesPerItem.smallAlmondCroissant) +
-            // (this.state.largeAlmondCroissant * pricesPerItem.largeAlmondCroissant) +
-            // (this.state.smallChocolateCroissant * pricesPerItem.smallChocolateCroissant) +
-            // (this.state.largeChocolateCroissant * pricesPerItem.largeChocolateCroissant) +
-            // (this.state.everythingCroissant * pricesPerItem.everythingCroissant) +
-            // ((parseInt(this.state.lunchHamCroissant) + parseInt(this.state.lunchTurkeyCroissant)) * pricesPerItem.lunchCroissant) +
-            // ((parseInt(this.state.lunchDeluxHamCroissant) + parseInt(this.state.lunchDeluxTurkeyCroissant)) * pricesPerItem.lunchDeluxCroissant) +
-            // (this.state.smallChocoTwist * pricesPerItem.smallChocoTwist) +
-            // ((parseInt(this.state.smallRollCinnamon) + parseInt(this.state.smallRollRaspberry)) * pricesPerItem.smallRoll) +
-            // ((parseInt(this.state.largeRollCinnamon) + parseInt(this.state.smallRollRaspberry)) * pricesPerItem.largeRoll) +
-            // (this.state.smallGranolaBar * pricesPerItem.smallGranolaBar) +
-            // (this.state.largeGranolaBar * pricesPerItem.largeGranolaBar) +
-            // ((parseInt(this.state.coffeecakeAlmond) + parseInt(this.state.financierAlmond)) * pricesPerItem.financierCoffecake) +
-            // ((parseInt(this.state.fourPackTrufflesClassic) + parseInt(this.state.fourPackTrufflesMix) + parseInt(this.state.fourPackTrufflesOrange) + 
-            //     parseInt(this.state.fourPackTrufflesPeppermint) + parseInt(this.state.fourPackTrufflesRumCoco)) * pricesPerItem.fourPackTruffles) +
-            // ((parseInt(this.state.ninePackTrufflesClassic) + parseInt(this.state.ninePackTrufflesMix) + parseInt(this.state.ninePackTrufflesOrange) + 
-            //     parseInt(this.state.ninePackTrufflesPeppermint) + parseInt(this.state.ninePackTrufflesRumCoco)) * pricesPerItem.ninePackTruffles) +
-            // (this.state.regularPizza * pricesPerItem.regularPizza) +
-            // (this.state.largePizza * pricesPerItem.largePizza) +
-            // ((parseInt(this.state.turnoverApple) + parseInt(this.state.turnoverNutella) + parseInt(this.state.turnoverRaspberry) + 
-            //     parseInt(this.state.danishApple) + parseInt(this.state.danishClassic) + parseInt(this.state.danishLemon) + parseInt(this.state.danishPeachApricot)) * pricesPerItem.turnoverOrDanish) +
-            // (this.state.buns60 * pricesPerItem.buns60) +
-            // (this.state.buns90 * pricesPerItem.buns90) +
-            // (this.state.buns110 * pricesPerItem.buns110) +
-            // (this.state.smallWhiteLoaf * pricesPerItem.smallWhiteLoaf) +
-            // (this.state.mediumWhiteLoaf * pricesPerItem.mediumWhiteLoaf) +
-            // (this.state.largeWhiteLoaf * pricesPerItem.largeWhiteLoaf) +
-            // ((parseInt(this.state.smallBriocheLoaf) + parseInt(this.state.smallMultigrainLoaf)) * pricesPerItem.smallBriocheOrMultigrainLoaf) +
-            // ((parseInt(this.state.mediumBriocheLoaf) + parseInt(this.state.mediumMultigrainLoaf)) * pricesPerItem.mediumBriocheOrMultigrainLoaf) +
-            // ((parseInt(this.state.largeBriocheLoaf) + parseInt(this.state.largeMultigrainLoaf)) * pricesPerItem.largeBriocheOrMultigrainLoaf) +
-            // (this.state.loafFruitAddOn * pricesPerItem.loafFruitAddOn) +
-            // ((parseInt(this.state.nutellaLoaf) + parseInt(this.state.fruitSugarLoaf)) * pricesPerItem.nutellaOrFruitSugarLoaf) +
-            // ((parseInt(this.state.tenCrostinisCheese) + parseInt(this.state.tenCrostinisEverything)) * pricesPerItem.tenCrostinis) +
-            // ((parseInt(this.state.smallPalmierJam) + parseInt(this.state.smallPalmierSugar)) * pricesPerItem.smallPalmier) +
-            // ((parseInt(this.state.largePalmierJam) + parseInt(this.state.largePalmierSugar)) * pricesPerItem.largePalmier) +
-            // (this.state.fivePackSampler * pricesPerItem.fivePackSampler) +
-            // (this.state.tenPackSampler * pricesPerItem.tenPackSampler) +
-            // (this.state.fifteenPackSampler * pricesPerItem.fifteenPackSampler) +
-            // (this.state.twentyPackSampler * pricesPerItem.twentyPackSampler)
         } else {
             yourOrder.forEach((element) => {
                 orderArray.push(`${element.item}: ${element.number}`)
                 itemStateName = element.item.charAt(0).toLowerCase() + element.item.slice(1)
-                console.log(element.item, itemStateName, pricesPerItem[itemStateName])
-                // if (parseInt(total) === undefined){
-                //     total = (parseInt(element.number) * pricesPerItem[itemStateName])
-                // } else {
-                    total = parseInt(total) + (parseInt(element.number) * pricesPerItem[itemStateName])
-                // }
-                
+                total = parseInt(total) + (parseInt(element.number) * pricesPerItem[itemStateName])
             })
             
         }
 
         const orderString = orderArray.join(', ')
+
         const onlineTotal = ((total * 0.03) + total + 0.30).toFixed(2)
 
         const order = {
@@ -595,6 +533,11 @@ class Order extends Component {
                                     <input id="orderTotalInput" name="total" readOnly value={showPaypal ? onlineTotal : total}/>
                                 </div>
                             </div>
+                        </div>
+                        
+                        <div className="form-group">
+                            <label className="orderFormLabel" for="orderFormNotes">Notes and requests for your order: </label>
+                            <input id="orderFormNotes" className="orderFormInput" name="notes" type="textarea" placeholder="Additional notes about the order..."/>
                         </div>
 
                         <div className="form-group">

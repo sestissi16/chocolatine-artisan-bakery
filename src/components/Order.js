@@ -68,9 +68,9 @@ const pricesPerItem = {
     danishLemon: 3.00,
     danishPeach: 3.00,
     danishApricot: 3.00,
-    buns90: 0.80,
-    buns110: 0.95,
-    buns60: 0.65,
+    buns90g: 0.80,
+    buns110g: 0.95,
+    buns60g: 0.65,
     smallWhiteLoaf: 3.50,
     mediumWhiteLoaf: 5.00,
     largeWhiteLoaf: 7.00,
@@ -152,9 +152,9 @@ class Order extends Component {
             danishApricot: 0,
             danishApple: 0,
             danishLemon: 0,
-            buns90: 0,
-            buns110: 0,
-            buns60: 0,
+            buns90g: 0,
+            buns110g: 0,
+            buns60g: 0,
             smallWhiteLoaf: 0,
             mediumWhiteLoaf: 0,
             largeWhiteLoaf: 0,
@@ -1695,6 +1695,74 @@ class Order extends Component {
                                                             </button>
                                                         </li>
                                                     </div>
+                                                </ul>
+                                            </AccordionPanel>
+                                        </AccordionItem>
+                                    </div>
+                                    <div id="orderBuns" className="orderFoodItem">
+                                        <AccordionItem>
+                                            <AccordionHeader className="orderAccordianHeader" _expanded={{ background: "#2D1B10 !important", color: "white" }}>
+                                                <Box flex="1" textAlign="left">
+                                                    Buns
+                                                </Box>
+                                                <AccordionIcon />
+                                            </AccordionHeader>
+                                            <AccordionPanel pb={4} className="orderAccordianPanel">
+                                                <ul className="orderList">
+                                                    <li className="orderListItem">
+                                                        <label className="orderItemLabel" for="itemBuns90g">90g Brioche Buns:</label>
+                                                        <input 
+                                                            id="itemBuns90g" 
+                                                            className="orderItemNum" 
+                                                            name="buns90g" 
+                                                            value={ this.state.buns90g}
+                                                            onChange={this.handleChange}
+                                                            type="number"/>
+                                                        <button 
+                                                            className="addToOrderButton"
+                                                            name="Buns90g" 
+                                                            value={this.state.buns90g} 
+                                                            onClick={this.addOrderItem}
+                                                        >
+                                                            Add to Order
+                                                        </button>
+                                                    </li>
+                                                    <li className="orderListItem">
+                                                        <label className="orderItemLabel" for="itemBuns110g">110g Brioche Buns:</label>
+                                                        <input 
+                                                            id="itemBuns110g" 
+                                                            className="orderItemNum" 
+                                                            name="buns110g" 
+                                                            value={ this.state.buns110g}
+                                                            onChange={this.handleChange}
+                                                            type="number"/>
+                                                        <button 
+                                                            className="addToOrderButton"
+                                                            name="Buns110g" 
+                                                            value={this.state.buns110g} 
+                                                            onClick={this.addOrderItem}
+                                                        >
+                                                            Add to Order
+                                                        </button>
+                                                    </li>
+                                                    <li className="orderListItem">
+                                                        <label className="orderItemLabel" for="itemBuns60g">Brioche Sliders (60g Buns):</label>
+                                                        <input 
+                                                            id="itemBuns60g" 
+                                                            className="orderItemNum" 
+                                                            name="buns60g" 
+                                                            value={ this.state.buns60g}
+                                                            onChange={this.handleChange}
+                                                            type="number"/>
+                                                        <button 
+                                                            className="addToOrderButton"
+                                                            name="Buns60g" 
+                                                            value={this.state.buns60g} 
+                                                            onClick={this.addOrderItem}
+                                                        >
+                                                            Add to Order
+                                                        </button>
+                                                    </li>
                                                 </ul>
                                             </AccordionPanel>
                                         </AccordionItem>

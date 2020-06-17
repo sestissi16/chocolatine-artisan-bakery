@@ -1349,6 +1349,262 @@ class Order extends Component {
                                             </AccordionPanel>
                                         </AccordionItem>
                                     </div>
+                                    <div id="orderTruffles" className="orderFoodItem">
+                                        <AccordionItem>
+                                            <AccordionHeader className="orderAccordianHeader" _expanded={{ background: "#5D663D !important", color: "white" }}>
+                                                <Box flex="1" textAlign="left">
+                                                    Truffles
+                                                </Box>
+                                                <AccordionIcon />
+                                            </AccordionHeader>
+                                            <AccordionPanel pb={4} className="orderAccordianPanel">
+                                                <ul className="orderList">
+                                                    <div id="orderItemRowContainer">
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemTrufflesClassic4">Classic Truffles (4 pack):</label>
+                                                            <input 
+                                                                id="itemTrufflesClassic4" 
+                                                                className="orderItemNum" 
+                                                                name="fourPackTrufflesClassic" 
+                                                                value={ this.state.fourPackTrufflesClassic}
+                                                                onChange={this.handleChange}
+                                                                type="number"/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="FourPackTrufflesClassic" 
+                                                                value={this.state.fourPackTrufflesClassic} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                Add to Order
+                                                            </button>
+                                                        </li>
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemTrufflesClassic9">Classic Truffles (9 pack):</label>
+                                                            <input 
+                                                                id="itemTrufflesClassic9" 
+                                                                className="orderItemNum" 
+                                                                name="ninePackTrufflesClassic" 
+                                                                value={ this.state.ninePackTrufflesClassic}
+                                                                onChange={this.handleChange}
+                                                                type="number"/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="NinePackTrufflesClassic" 
+                                                                value={this.state.ninePackTrufflesClassic} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                Add to Order
+                                                            </button>
+                                                        </li>
+                                                    </div>
+                                                    <div id="orderItemRowContainer">
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemTrufflesPeppermint4">Peppermint Truffles (4 pack):</label>
+                                                            <input 
+                                                                id="itemTrufflesPeppermint4" 
+                                                                className="orderItemNum" 
+                                                                name="fourPackTrufflesPeppermint" 
+                                                                value={ this.state.fourPackTrufflesPeppermint}
+                                                                onChange={this.handleChange}
+                                                                type="number"/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="FourPackTrufflesPeppermint" 
+                                                                value={this.state.fourPackTrufflesPeppermint} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                Add to Order
+                                                            </button>
+                                                        </li>
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemTrufflesPeppermint9">Peppermint Truffles (9 pack):</label>
+                                                            <input 
+                                                                id="itemTrufflesPeppermint9" 
+                                                                className="orderItemNum" 
+                                                                name="ninePackTrufflesPeppermint" 
+                                                                value={ this.state.ninePackTrufflesPeppermint}
+                                                                onChange={this.handleChange}
+                                                                type="number"/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="NinePackTrufflesPeppermint" 
+                                                                value={this.state.ninePackTrufflesPeppermint} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                Add to Order
+                                                            </button>
+                                                        </li>
+                                                    </div>
+                                                    <div id="orderItemRowContainer">
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemTrufflesOrange4">Orange Truffles (4 pack):</label>
+                                                            <input 
+                                                                id="itemTrufflesOrange4" 
+                                                                className="orderItemNum" 
+                                                                name="fourPackTrufflesOrange" 
+                                                                value={ this.state.fourPackTrufflesOrange}
+                                                                onChange={this.handleChange}
+                                                                type="number"/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="FourPackTrufflesOrange" 
+                                                                value={this.state.fourPackTrufflesOrange} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                Add to Order
+                                                            </button>
+                                                        </li>
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemTrufflesOrange9">Orange Truffles (9 pack):</label>
+                                                            <input 
+                                                                id="itemTrufflesOrange9" 
+                                                                className="orderItemNum" 
+                                                                name="ninePackTrufflesOrange" 
+                                                                value={ this.state.ninePackTrufflesOrange}
+                                                                onChange={this.handleChange}
+                                                                type="number"/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="NinePackTrufflesOrange" 
+                                                                value={this.state.ninePackTrufflesOrange} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                Add to Order
+                                                            </button>
+                                                        </li>
+                                                    </div>
+                                                    <div id="orderItemRowContainer">
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemTrufflesRumCoco4">Rum and Coconut Truffles (4 pack):</label>
+                                                            <input 
+                                                                id="itemTrufflesRumCoco4" 
+                                                                className="orderItemNum" 
+                                                                name="fourPackTrufflesRumCoco" 
+                                                                value={ this.state.fourPackTrufflesRumCoco}
+                                                                onChange={this.handleChange}
+                                                                type="number"/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="FourPackTrufflesRumCoco" 
+                                                                value={this.state.fourPackTrufflesRumCoco} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                Add to Order
+                                                            </button>
+                                                        </li>
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemTrufflesRumCoco9">Rum and Coconut Truffles (9 pack):</label>
+                                                            <input 
+                                                                id="itemTrufflesRumCoco9" 
+                                                                className="orderItemNum" 
+                                                                name="ninePackTrufflesRumCoco" 
+                                                                value={ this.state.ninePackTrufflesRumCoco}
+                                                                onChange={this.handleChange}
+                                                                type="number"/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="NinePackTrufflesRumCoco" 
+                                                                value={this.state.ninePackTrufflesRumCoco} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                Add to Order
+                                                            </button>
+                                                        </li>
+                                                    </div>
+                                                    <div id="orderItemRowContainer">
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemTrufflesMix4">Mix of Truffles (4 pack):</label>
+                                                            <input 
+                                                                id="itemTrufflesMix4" 
+                                                                className="orderItemNum" 
+                                                                name="fourPackTrufflesMix" 
+                                                                value={ this.state.fourPackTrufflesMix}
+                                                                onChange={this.handleChange}
+                                                                type="number"/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="FourPackTrufflesMix" 
+                                                                value={this.state.fourPackTrufflesMix} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                Add to Order
+                                                            </button>
+                                                        </li>
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemTrufflesMix9">Mix of Truffles (9 pack):</label>
+                                                            <input 
+                                                                id="itemTrufflesMix9" 
+                                                                className="orderItemNum" 
+                                                                name="ninePackTrufflesMix" 
+                                                                value={ this.state.ninePackTrufflesMix}
+                                                                onChange={this.handleChange}
+                                                                type="number"/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="NinePackTrufflesMix" 
+                                                                value={this.state.ninePackTrufflesMix} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                Add to Order
+                                                            </button>
+                                                        </li>
+                                                    </div>
+                                                </ul>
+                                            </AccordionPanel>
+                                        </AccordionItem>
+                                    </div>
+                                    <div id="orderGranolaBars" className="orderFoodItem">
+                                        <AccordionItem>
+                                            <AccordionHeader className="orderAccordianHeader" _expanded={{ background: "#5D663D !important", color: "white" }}>
+                                                <Box flex="1" textAlign="left">
+                                                    Granola Bars
+                                                </Box>
+                                                <AccordionIcon />
+                                            </AccordionHeader>
+                                            <AccordionPanel pb={4} className="orderAccordianPanel">
+                                                <ul className="orderList">
+                                                    <div id="orderItemRowContainer">
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemGranolaBarsSmall">Small Granola Bars:</label>
+                                                            <input 
+                                                                id="itemGranolaBarsSmall" 
+                                                                className="orderItemNum" 
+                                                                name="smallGranolaBar" 
+                                                                value={ this.state.smallGranolaBar}
+                                                                onChange={this.handleChange}
+                                                                type="number"/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="SmallGranolaBar" 
+                                                                value={this.state.smallGranolaBar} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                Add to Order
+                                                            </button>
+                                                        </li>
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemGranolaBarsLarge">Large Granola Bars:</label>
+                                                            <input 
+                                                                id="itemGranolaBarsLarge" 
+                                                                className="orderItemNum" 
+                                                                name="largeGranolaBar" 
+                                                                value={ this.state.largeGranolaBar}
+                                                                onChange={this.handleChange}
+                                                                type="number"/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="largeGranolaBar" 
+                                                                value={this.state.largeGranolaBar} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                Add to Order
+                                                            </button>
+                                                        </li>
+                                                    </div>
+                                                </ul>
+                                            </AccordionPanel>
+                                        </AccordionItem>
+                                    </div>
                                 </Accordion>
                             </div>
                             <div id="orderFormYourSelection">

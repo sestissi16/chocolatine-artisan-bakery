@@ -249,6 +249,14 @@ const Menu = () => {
                         <li><h6>(Contains: wheat, dairy (milk, butter))</h6></li>
                       </ul>
                       <li className="sweetListItem">
+                        <h5>Raspberry Roll</h5>
+                        <h5>1.75 sm | 3.00 lg</h5>
+                      </li>
+                      <ul className="sweetItemExplanation">
+                        <li><h6>Rolled croissant dough filled with raspberry jam</h6></li>
+                        <li><h6>(Contains: wheat, dairy (butter))</h6></li>
+                      </ul>
+                      <li className="sweetListItem">
                         <h5>Sugar Palmier</h5>
                         <h5>1.75 sm | 2.25 lg</h5>
                       </li>
@@ -276,6 +284,9 @@ const Menu = () => {
                       <br/>
                       <strong> - Ingredients for Rasin Rolls: </strong>
                       Ingredients for the Rolls plus rasins
+                      <br/>
+                      <strong> - Ingredients for Raspberry Rolls: </strong>
+                      Ingredients for the Rolls plus raspberry jam
                       <br/>
                       <strong>Full List of Ingredients for Palmiers: </strong>
                       Enriched Wheat Flour (Wheat Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin, Folic Acid, Malted Barley Flour, Ascorbic Acid), 

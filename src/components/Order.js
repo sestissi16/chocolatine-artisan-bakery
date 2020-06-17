@@ -74,11 +74,11 @@ const pricesPerItem = {
     smallWhiteLoaf: 3.50,
     mediumWhiteLoaf: 5.00,
     largeWhiteLoaf: 7.00,
-    smallBrioche: 4.00,
+    smallBriocheLoaf: 4.00,
     smallMultigrainLoaf: 4.00,
-    mediumBrioche: 5.50,
+    mediumBriocheLoaf: 5.50,
     mediumMultigrainLoaf: 5.50,
-    largeBrioche: 7.50,
+    largeBriocheLoaf: 7.50,
     largeMultigrainLoaf: 7.50,
     loafFruitAddOn: 0.50,
     nutellaLoaf: 1.50,
@@ -1758,6 +1758,242 @@ class Order extends Component {
                                                             className="addToOrderButton"
                                                             name="Buns60g" 
                                                             value={this.state.buns60g} 
+                                                            onClick={this.addOrderItem}
+                                                        >
+                                                            Add to Order
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </AccordionPanel>
+                                        </AccordionItem>
+                                    </div>
+                                    <div id="orderLoafs" className="orderFoodItem">
+                                        <AccordionItem>
+                                            <AccordionHeader className="orderAccordianHeader" _expanded={{ background: "#2D1B10 !important", color: "white" }}>
+                                                <Box flex="1" textAlign="left">
+                                                    Loafs
+                                                </Box>
+                                                <AccordionIcon />
+                                            </AccordionHeader>
+                                            <AccordionPanel pb={4} className="orderAccordianPanel">
+                                                <ul className="orderList">
+                                                    <div id="orderItemRowContainer">
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemLoafWhiteSmall">Small White Loaf:</label>
+                                                            <input 
+                                                                id="itemLoafWhiteSmall" 
+                                                                className="orderItemNum" 
+                                                                name="smallWhiteLoaf" 
+                                                                value={ this.state.smallWhiteLoaf}
+                                                                onChange={this.handleChange}
+                                                                type="number"/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="SmallWhiteLoaf" 
+                                                                value={this.state.smallWhiteLoaf} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                Add to Order
+                                                            </button>
+                                                        </li>
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemLoafWhiteMedium">Medium White Loaf:</label>
+                                                            <input 
+                                                                id="itemLoafWhiteMedium" 
+                                                                className="orderItemNum" 
+                                                                name="mediumWhiteLoaf" 
+                                                                value={ this.state.mediumWhiteLoaf}
+                                                                onChange={this.handleChange}
+                                                                type="number"/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="MediumWhiteLoaf" 
+                                                                value={this.state.mediumWhiteLoaf} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                Add to Order
+                                                            </button>
+                                                        </li>
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemLoafWhiteLarge">Large White Loaf:</label>
+                                                            <input 
+                                                                id="itemLoafWhiteLarge" 
+                                                                className="orderItemNum" 
+                                                                name="largeWhiteLoaf" 
+                                                                value={ this.state.largeWhiteLoaf}
+                                                                onChange={this.handleChange}
+                                                                type="number"/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="LargeWhiteLoaf" 
+                                                                value={this.state.largeWhiteLoaf} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                Add to Order
+                                                            </button>
+                                                        </li>
+                                                    </div>
+                                                    <div id="orderItemRowContainer">
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemLoafBriocheSmall">Small Brioche Loaf:</label>
+                                                            <input 
+                                                                id="itemLoafBriocheSmall" 
+                                                                className="orderItemNum" 
+                                                                name="smallBriocheLoaf" 
+                                                                value={ this.state.smallBriocheLoaf}
+                                                                onChange={this.handleChange}
+                                                                type="number"/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="SmallBriocheLoaf" 
+                                                                value={this.state.smallBriocheLoaf} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                Add to Order
+                                                            </button>
+                                                        </li>
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemLoafBriocheMedium">Medium Brioche Loaf:</label>
+                                                            <input 
+                                                                id="itemLoafBriocheMedium" 
+                                                                className="orderItemNum" 
+                                                                name="mediumBriocheLoaf" 
+                                                                value={ this.state.mediumBriocheLoaf}
+                                                                onChange={this.handleChange}
+                                                                type="number"/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="MediumBriocheLoaf" 
+                                                                value={this.state.mediumBriocheLoaf} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                Add to Order
+                                                            </button>
+                                                        </li>
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemLoafBriocheLarge">Large Brioche Loaf:</label>
+                                                            <input 
+                                                                id="itemLoafBriocheLarge" 
+                                                                className="orderItemNum" 
+                                                                name="largeBriocheLoaf" 
+                                                                value={ this.state.largeBriocheLoaf}
+                                                                onChange={this.handleChange}
+                                                                type="number"/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="LargeBriocheLoaf" 
+                                                                value={this.state.largeBriocheLoaf} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                Add to Order
+                                                            </button>
+                                                        </li>
+                                                    </div>
+                                                    <div id="orderItemRowContainer">
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemLoafMultigrainSmall">Small Multigrain Loaf:</label>
+                                                            <input 
+                                                                id="itemLoafMultigrainSmall" 
+                                                                className="orderItemNum" 
+                                                                name="smallMultigrainLoaf" 
+                                                                value={ this.state.smallMultigrainLoaf}
+                                                                onChange={this.handleChange}
+                                                                type="number"/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="SmallMultigrainLoaf" 
+                                                                value={this.state.smallMultigrainLoaf} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                Add to Order
+                                                            </button>
+                                                        </li>
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemLoafMultigrainMedium">Medium Multigrain Loaf:</label>
+                                                            <input 
+                                                                id="itemLoafMultigrainMedium" 
+                                                                className="orderItemNum" 
+                                                                name="mediumMultigrainLoaf" 
+                                                                value={ this.state.mediumMultigrainLoaf}
+                                                                onChange={this.handleChange}
+                                                                type="number"/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="MediumMultigrainLoaf" 
+                                                                value={this.state.mediumMultigrainLoaf} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                Add to Order
+                                                            </button>
+                                                        </li>
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemLoafMultigrainLarge">Large Multigrain Loaf:</label>
+                                                            <input 
+                                                                id="itemLoafMultigrainLarge" 
+                                                                className="orderItemNum" 
+                                                                name="largeMultigrainLoaf" 
+                                                                value={ this.state.largeMultigrainLoaf}
+                                                                onChange={this.handleChange}
+                                                                type="number"/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="LargeMultigrainLoaf" 
+                                                                value={this.state.largeMultigrainLoaf} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                Add to Order
+                                                            </button>
+                                                        </li>
+                                                    </div>
+                                                    <li className="orderListItem">
+                                                        <label className="orderItemLabel" for="itemLoafFruitAddOn">Number of Fruit add-ons: </label>
+                                                        <input 
+                                                            id="itemLoafFruitAddOn" 
+                                                            className="orderItemNum" 
+                                                            name="loafFruitAddOn" 
+                                                            value={ this.state.loafFruitAddOn}
+                                                            onChange={this.handleChange}
+                                                            type="number"/>
+                                                        <button 
+                                                            className="addToOrderButton"
+                                                            name="LoafFruitAddOn" 
+                                                            value={this.state.loafFruitAddOn} 
+                                                            onClick={this.addOrderItem}
+                                                        >
+                                                            Add to Order
+                                                        </button>
+                                                    </li>
+                                                    <li className="orderListItem">
+                                                        <label className="orderItemLabel" for="itemLoafNutella">Nutella Loaf: </label>
+                                                        <input 
+                                                            id="itemLoafNutella" 
+                                                            className="orderItemNum" 
+                                                            name="nutellaLoaf" 
+                                                            value={ this.state.nutellaLoaf}
+                                                            onChange={this.handleChange}
+                                                            type="number"/>
+                                                        <button 
+                                                            className="addToOrderButton"
+                                                            name="NutellaLoaf" 
+                                                            value={this.state.nutellaLoaf} 
+                                                            onClick={this.addOrderItem}
+                                                        >
+                                                            Add to Order
+                                                        </button>
+                                                    </li>
+                                                    <li className="orderListItem">
+                                                        <label className="orderItemLabel" for="itemLoafFruitSugar">Fruit and Sugar Loaf: </label>
+                                                        <input 
+                                                            id="itemLoafFruitSugar" 
+                                                            className="orderItemNum" 
+                                                            name="fruitSugarLoaf" 
+                                                            value={ this.state.fruitSugarLoaf}
+                                                            onChange={this.handleChange}
+                                                            type="number"/>
+                                                        <button 
+                                                            className="addToOrderButton"
+                                                            name="FruitSugarLoaf" 
+                                                            value={this.state.fruitSugarLoaf} 
                                                             onClick={this.addOrderItem}
                                                         >
                                                             Add to Order

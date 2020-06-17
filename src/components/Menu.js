@@ -69,7 +69,7 @@ const Menu = () => {
                         <li><h6>(Contains: wheat, dairy (milk, butter))</h6></li>
                       </ul>
                       <li className="savoryListItem">
-                        <h5>Lunch Croissant</h5>
+                        <h5>Lunch Croissant Square</h5>
                         <h5>3.80 ea.</h5>
                       </li>
                       <ul className="savoryItemExplanation">

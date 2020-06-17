@@ -22,7 +22,7 @@ const pricesPerItem = {
     muffinsLemonPoppy: 1.50,
     muffinsOrangeCranberry: 1.50,
     muffinsBlueberry: 1.50,
-    muffinsBerry: 1.50,
+    muffinsBerryful: 1.50,
     smallButterCroissant: 1.75,
     largeButterCroissant: 2.25,
     smallAlmondCroissant: 3.00,
@@ -103,7 +103,7 @@ class Order extends Component {
             muffinsChoco: 0,
             muffinsLemonPoppy: 0,
             muffinsBlueberry: 0,
-            muffinsBerry: 0,
+            muffinsBerryful: 0,
             muffinsOrangeCranberry: 0,
             smallButterCroissant: 0,
             largeButterCroissant: 0,
@@ -509,19 +509,105 @@ class Order extends Component {
                                                             value={ this.state.muffinsChoco }
                                                             onChange={this.handleChange}
                                                             type="number"/>
-                                                        <button className="addToOrderButton" name="MuffinsChoco" value={this.state.muffinsChoco} onClick={this.addOrderItem}>Add to Order</button>
+                                                        <button 
+                                                            className="addToOrderButton" 
+                                                            name="MuffinsChoco" 
+                                                            value={this.state.muffinsChoco}
+                                                             onClick={this.addOrderItem}
+                                                        >
+                                                            Add to Order
+                                                        </button>
                                                     </li>
                                                     <li className="orderListItem">
-                                                    <label className="orderItemLabel" for="itemMuffinsChocoChip">Chocolate Chip Muffins:</label>
-                                                    <input 
-                                                        id="itemMuffinsChocoChip" 
-                                                        className="orderItemNum" 
-                                                        name="muffinsChocoChip" 
-                                                        value={ this.state.muffinsChocoChip }
-                                                        onChange={this.handleChange}
-                                                        type="number"/>
-                                                    <button className="addToOrderButton" name="MuffinsChocoChip" value={this.state.muffinsChocoChip} onClick={this.addOrderItem}>Add to Order</button>
-                                                </li>
+                                                        <label className="orderItemLabel" for="itemMuffinsChocoChip">Chocolate Chip Muffins:</label>
+                                                        <input 
+                                                            id="itemMuffinsChocoChip" 
+                                                            className="orderItemNum" 
+                                                            name="muffinsChocoChip" 
+                                                            value={ this.state.muffinsChocoChip }
+                                                            onChange={this.handleChange}
+                                                            type="number"/>
+                                                        <button 
+                                                            className="addToOrderButton" 
+                                                            name="MuffinsChocoChip" 
+                                                            value={this.state.muffinsChocoChip} 
+                                                            onClick={this.addOrderItem}
+                                                        >
+                                                            Add to Order
+                                                        </button>
+                                                    </li>
+                                                    <li className="orderListItem">
+                                                        <label className="orderItemLabel" for="itemMuffinsLemonPoppy">Lemon Poppy seed Muffins:</label>
+                                                        <input 
+                                                            id="itemMuffinsLemonPoppy" 
+                                                            className="orderItemNum" 
+                                                            name="muffinsLemonPoppy" 
+                                                            value={ this.state.muffinsLemonPoppy}
+                                                            onChange={this.handleChange}
+                                                            type="number"/>
+                                                        <button 
+                                                            className="addToOrderButton" 
+                                                            name="MuffinsLemonPoppy" 
+                                                            value={this.state.muffinsLemonPoppy} 
+                                                            onClick={this.addOrderItem}
+                                                        >
+                                                            Add to Order
+                                                        </button>
+                                                    </li>
+                                                    <li className="orderListItem">
+                                                        <label className="orderItemLabel" for="itemMuffinsBlueberry">Blueberry Muffins:</label>
+                                                        <input 
+                                                            id="itemMuffinsBlueberry" 
+                                                            className="orderItemNum" 
+                                                            name="muffinsBlueberry" 
+                                                            value={ this.state.muffinsBlueberry}
+                                                            onChange={this.handleChange}
+                                                            type="number"/>
+                                                        <button 
+                                                            className="addToOrderButton" 
+                                                            name="MuffinsBlueberry" 
+                                                            value={this.state.muffinsBlueberry} 
+                                                            onClick={this.addOrderItem}
+                                                        >
+                                                            Add to Order
+                                                        </button>
+                                                    </li>
+                                                    <li className="orderListItem">
+                                                        <label className="orderItemLabel" for="itemMuffinsBerryful">Berry-ful Muffins:</label>
+                                                        <input 
+                                                            id="itemMuffinsBerryful" 
+                                                            className="orderItemNum" 
+                                                            name="muffinsBerryful" 
+                                                            value={ this.state.muffinsBerryful}
+                                                            onChange={this.handleChange}
+                                                            type="number"/>
+                                                        <button 
+                                                            className="addToOrderButton" 
+                                                            name="MuffinsBerryful" 
+                                                            value={this.state.muffinsBerryful} 
+                                                            onClick={this.addOrderItem}
+                                                        >
+                                                            Add to Order
+                                                        </button>
+                                                    </li>
+                                                    <li className="orderListItem">
+                                                        <label className="orderItemLabel" for="itemMuffinsOrangeCranberry">Orange Cranberry Muffins:</label>
+                                                        <input 
+                                                            id="itemMuffinsOrangeCranberry" 
+                                                            className="orderItemNum" 
+                                                            name="muffinsOrangeCranberry" 
+                                                            value={ this.state.muffinsOrangeCranberry}
+                                                            onChange={this.handleChange}
+                                                            type="number"/>
+                                                        <button 
+                                                            className="addToOrderButton" 
+                                                            name="MuffinsOrangeCranberry" 
+                                                            value={this.state.muffinsOrangeCranberry} 
+                                                            onClick={this.addOrderItem}
+                                                        >
+                                                            Add to Order
+                                                        </button>
+                                                    </li>
                                                 </ul>
                                             </AccordionPanel>
                                         </AccordionItem>
@@ -1204,6 +1290,56 @@ class Order extends Component {
                                                             className="addToOrderButton"
                                                             name="DanishLemon" 
                                                             value={this.state.danishLemon} 
+                                                            onClick={this.addOrderItem}
+                                                        >
+                                                            Add to Order
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </AccordionPanel>
+                                        </AccordionItem>
+                                    </div>
+                                    <div id="orderFinancierCoffeecake" className="orderFoodItem">
+                                        <AccordionItem>
+                                            <AccordionHeader className="orderAccordianHeader" _expanded={{ background: "#5D663D !important", color: "white" }}>
+                                                <Box flex="1" textAlign="left">
+                                                    Financiers / Coffeecakes
+                                                </Box>
+                                                <AccordionIcon />
+                                            </AccordionHeader>
+                                            <AccordionPanel pb={4} className="orderAccordianPanel">
+                                                <ul className="orderList">
+                                                    <li className="orderListItem">
+                                                        <label className="orderItemLabel" for="itemFinancierAlmond">Almond Vanilla Financiers:</label>
+                                                        <input 
+                                                            id="itemFinancierAlmond" 
+                                                            className="orderItemNum" 
+                                                            name="financierAlmond" 
+                                                            value={ this.state.financierAlmond}
+                                                            onChange={this.handleChange}
+                                                            type="number"/>
+                                                        <button 
+                                                            className="addToOrderButton"
+                                                            name="FinancierAlmond" 
+                                                            value={this.state.financierAlmond} 
+                                                            onClick={this.addOrderItem}
+                                                        >
+                                                            Add to Order
+                                                        </button>
+                                                    </li>
+                                                    <li className="orderListItem">
+                                                        <label className="orderItemLabel" for="itemCoffeecakeAlmond">Almond Coffeecakes:</label>
+                                                        <input 
+                                                            id="itemCoffeecakeAlmond" 
+                                                            className="orderItemNum" 
+                                                            name="coffeecakeAlmond" 
+                                                            value={ this.state.coffeecakeAlmond}
+                                                            onChange={this.handleChange}
+                                                            type="number"/>
+                                                        <button 
+                                                            className="addToOrderButton"
+                                                            name="CoffeecakeAlmond" 
+                                                            value={this.state.coffeecakeAlmond} 
                                                             onClick={this.addOrderItem}
                                                         >
                                                             Add to Order

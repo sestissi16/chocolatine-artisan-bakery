@@ -831,7 +831,7 @@ class Order extends Component {
                                     </div>
                                     <div id="orderRollsPalmiers" className="orderFoodItem">
                                         <AccordionItem>
-                                            <AccordionHeader className="sweetAccordianHeader" _expanded={{ background: "#5D663D !important", color: "white" }}>
+                                            <AccordionHeader className="orderAccordianHeader" _expanded={{ background: "#5D663D !important", color: "white" }}>
                                                 <Box flex="1" textAlign="left">
                                                     Rolls and Palmiers
                                                 </Box>

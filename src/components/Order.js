@@ -81,9 +81,12 @@ const pricesPerItem = {
     loafFruitAddOn: 0.50,
     nutellaLoaf: 1.50,
     fruitSugarLoaf: 1.50,
-    tenCrostinis: 5.00,
-    smallPalmier: 1.75,
-    largePalmier: 2.25,
+    tenCrostinisEverything: 5.00,
+    tenCrostinisCheese: 5.00,
+    smallPalmierSugar: 1.75,
+    smallPalmierJam: 1.75,
+    largePalmierSugar: 2.25,
+    largePalmierJam: 2.25,
     fivePackSampler: 12.00,
     tenPackSampler: 19.00,
     fifteenPackSampler: 34.00,
@@ -1035,6 +1038,74 @@ class Order extends Component {
                                                     </div>
                                                 </ul>
 
+                                            </AccordionPanel>
+                                        </AccordionItem>
+                                    </div>
+                                    <div id="orderTurnovers" className="orderFoodItem">
+                                        <AccordionItem>
+                                            <AccordionHeader className="orderAccordianHeader" _expanded={{ background: "#5D663D !important", color: "white" }}>
+                                                <Box flex="1" textAlign="left">
+                                                    Turnovers
+                                                </Box>
+                                                <AccordionIcon />
+                                            </AccordionHeader>
+                                            <AccordionPanel pb={4} className="orderAccordianPanel">
+                                                <ul className="orderList">
+                                                    <li className="orderListItem">
+                                                        <label className="orderItemLabel" for="itemTurnoversApple">Apple Turnovers:</label>
+                                                        <input 
+                                                            id="itemTurnoversApple" 
+                                                            className="orderItemNum" 
+                                                            name="turnoverApple" 
+                                                            value={ this.state.turnoverApple}
+                                                            onChange={this.handleChange}
+                                                            type="number"/>
+                                                        <button 
+                                                            className="addToOrderButton"
+                                                            name="TurnoverApple" 
+                                                            value={this.state.turnoverApple} 
+                                                            onClick={this.addOrderItem}
+                                                        >
+                                                            Add to Order
+                                                        </button>
+                                                    </li>
+                                                    <li className="orderListItem">
+                                                        <label className="orderItemLabel" for="itemTurnoversNutella">Nutella Turnovers:</label>
+                                                        <input 
+                                                            id="itemTurnoversNutella" 
+                                                            className="orderItemNum" 
+                                                            name="turnoverNutella" 
+                                                            value={ this.state.turnoverNutella}
+                                                            onChange={this.handleChange}
+                                                            type="number"/>
+                                                        <button 
+                                                            className="addToOrderButton"
+                                                            name="TurnoverNutella" 
+                                                            value={this.state.turnoverNutella} 
+                                                            onClick={this.addOrderItem}
+                                                        >
+                                                            Add to Order
+                                                        </button>
+                                                    </li>
+                                                    <li className="orderListItem">
+                                                        <label className="orderItemLabel" for="itemTurnoversRaspberry">Raspberry Turnovers:</label>
+                                                        <input 
+                                                            id="itemTurnoversRaspberry" 
+                                                            className="orderItemNum" 
+                                                            name="turnoverRaspberry" 
+                                                            value={ this.state.turnoverRaspberry}
+                                                            onChange={this.handleChange}
+                                                            type="number"/>
+                                                        <button 
+                                                            className="addToOrderButton"
+                                                            name="TurnoverRaspberry" 
+                                                            value={this.state.turnoverRaspberry} 
+                                                            onClick={this.addOrderItem}
+                                                        >
+                                                            Add to Order
+                                                        </button>
+                                                    </li>
+                                                </ul>
                                             </AccordionPanel>
                                         </AccordionItem>
                                     </div>

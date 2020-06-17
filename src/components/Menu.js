@@ -370,7 +370,7 @@ const Menu = () => {
                   <AccordionPanel pb={4} className="sweetAccordianPanel">
                     <ul className="sweetList">
                       <li className="sweetListItem">
-                        <h5>Regular Danish</h5>
+                        <h5>Classic Danish</h5>
                       </li>
                       <ul className="sweetItemExplanation">
                         <li><h6>Danish with a cream cheese filling</h6></li>

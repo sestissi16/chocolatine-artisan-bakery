@@ -56,8 +56,10 @@ const pricesPerItem = {
     ninePackTrufflesOrange: 10.00,
     ninePackTrufflesPeppermint: 10.00,
     ninePackTrufflesMix: 10.00,
-    regularPizza: 2.00,
-    largePizza: 2.50,
+    regularClassicPizza: 2.00,
+    regularHerbPizza: 2.20,
+    largeClassicPizza: 2.50,
+    largeHerbPizza: 2.70,
     turnoverApple: 3.00,
     turnoverNutella: 3.00,
     turnoverRaspberry: 3.00,
@@ -138,8 +140,10 @@ class Order extends Component {
             ninePackTrufflesPeppermint: 0,
             ninePackTrufflesOrange: 0,
             ninePackTrufflesRumCoco: 0,
-            regularPizza: 0,
-            largePizza: 0,
+            regularClassicPizza: 0,
+            regularHerbPizza:0,
+            largeClassicPizza: 0,
+            largeHerbPizza: 0,
             turnoverApple: 0,
             turnoverRaspberry: 0,
             turnoverNutella: 0,
@@ -1593,8 +1597,98 @@ class Order extends Component {
                                                                 type="number"/>
                                                             <button 
                                                                 className="addToOrderButton"
-                                                                name="largeGranolaBar" 
+                                                                name="LargeGranolaBar" 
                                                                 value={this.state.largeGranolaBar} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                Add to Order
+                                                            </button>
+                                                        </li>
+                                                    </div>
+                                                </ul>
+                                            </AccordionPanel>
+                                        </AccordionItem>
+                                    </div>
+                                    <div id="orderPizza" className="orderFoodItem">
+                                        <AccordionItem>
+                                            <AccordionHeader className="orderAccordianHeader" _expanded={{ background: "#2D1B10 !important", color: "white" }}>
+                                                <Box flex="1" textAlign="left">
+                                                    Par-Baked Pizza Dough
+                                                </Box>
+                                                <AccordionIcon />
+                                            </AccordionHeader>
+                                            <AccordionPanel pb={4} className="orderAccordianPanel">
+                                                <ul className="orderList">
+                                                    <div id="orderItemRowContainer">
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemPizzaClassicReg">Regular Classic Pizza Dough:</label>
+                                                            <input 
+                                                                id="itemPizzaClassicReg" 
+                                                                className="orderItemNum" 
+                                                                name="regularClassicPizza" 
+                                                                value={ this.state.regularClassicPizza}
+                                                                onChange={this.handleChange}
+                                                                type="number"/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="RegularClassicPizza" 
+                                                                value={this.state.regularClassicPizza} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                Add to Order
+                                                            </button>
+                                                        </li>
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemPizzaClassicLarge">Large Classic Pizza Dough:</label>
+                                                            <input 
+                                                                id="itemPizzaClassicLarge" 
+                                                                className="orderItemNum" 
+                                                                name="largeClassicPizza" 
+                                                                value={ this.state.largeClassicPizza}
+                                                                onChange={this.handleChange}
+                                                                type="number"/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="LargeClassicPizza" 
+                                                                value={this.state.largeClassicPizza} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                Add to Order
+                                                            </button>
+                                                        </li>
+                                                    </div>
+                                                    <div id="orderItemRowContainer">
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemPizzaHerbReg">Regular Rosemary and Thyme Pizza Dough:</label>
+                                                            <input 
+                                                                id="itemPizzaHerbReg" 
+                                                                className="orderItemNum" 
+                                                                name="regularHerbPizza" 
+                                                                value={ this.state.regularHerbPizza}
+                                                                onChange={this.handleChange}
+                                                                type="number"/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="RegularHerbPizza" 
+                                                                value={this.state.regularHerbPizza} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                Add to Order
+                                                            </button>
+                                                        </li>
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemPizzaHerbLarge">Large Rosemary and Thyme Pizza Dough:</label>
+                                                            <input 
+                                                                id="itemPizzaHerbLarge" 
+                                                                className="orderItemNum" 
+                                                                name="largeHerbPizza" 
+                                                                value={ this.state.largeHerbPizza}
+                                                                onChange={this.handleChange}
+                                                                type="number"/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="LargeHerbPizza" 
+                                                                value={this.state.largeHerbPizza} 
                                                                 onClick={this.addOrderItem}
                                                             >
                                                                 Add to Order

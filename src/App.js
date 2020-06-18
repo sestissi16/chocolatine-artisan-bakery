@@ -265,6 +265,7 @@ const newTheme = {
   }
 };
 
+// FB.AppEvents.logPageView();
 
 function App() {
   return (

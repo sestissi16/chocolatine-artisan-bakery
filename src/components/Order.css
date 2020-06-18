@@ -30,9 +30,33 @@
     justify-content: center;
     align-items: center;
     border-radius: 34px;
+    background: #8A9362;
+    box-shadow:  7px 7px 0px #373b27, 
+                -7px -7px 0px #ddeb9d;
+}
+
+#orderContactSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    border-radius: 34px;
     background: #D9D7B1;
-    box-shadow:  7px 7px 0px #575647, 
-                -7px -7px 0px #ffffff;
+    padding: 2%;
+}
+
+#orderContactSectionTitle {
+    background-color: #5D663D;
+    border-radius: 34px;
+    padding: 2%;
+    color: #FEFCF0;
+}
+
+.blackLineDivider {
+    width: 65%;
+    height: 3em;
 }
 
 #orderRow1, #orderRow2, #orderRow3 {
@@ -51,23 +75,66 @@
     color: #251605;
 }
 
-.orderFormInput {
-    color: #251605;
+.orderFormInputContact, .orderFormInputNotes {
+    color: #130C07;
+    border-radius: 34px;
+    border: #3C1518 0.2em solid;
+    padding: 1.5% 2%;
+    background-color: #F0F0E2;
 }
 
 #orderFormSelection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50em;
+    padding: 3% 2%;
+    margin: 3% 0% 0%;
+    border-radius: 34px;
+    background: #5D663D;
+    color: #FCF3C5;
+}
+
+#orderFormSelectionTitle{
+    text-align: center;
+    border-radius: 34px;
+    background: #D9D7B1;
+    padding: 2%;
+    color: #130708;
+    margin: 0% 0% 2%;
+}
+
+#orderFormSelectionRow {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-    height: 30em;
+    height: 70%;
 }
 
 #orderFormSelectFood {
     width: 65%;
+    height: 94%;
+    padding: 0% 1% 2% 0%;
+}
+
+#orderFormSelectFoodTitle {
+    padding: 1.5% 0%;
+    text-align: center;
+    width: 100%;
+    background: #393f25;
+    box-shadow: inset 6px 6px 12px #17190f, 
+                inset -6px -6px 12px #5b653b;
+}
+
+#orderFormSelectionContainer{
+    width: 100%;
     height: 100%;
     overflow: auto;
+    padding: 0% 2%;
 }
 
 #orderFormYourSelection {
@@ -77,15 +144,300 @@
     padding: 0% 1%;
 }
 
+#orderFormYourSelectionTitle {
+    padding: 2.5% 0%;
+    text-align: center;
+    width: 100%;
+    background: #393f25;
+    box-shadow: inset 6px 6px 12px #17190f, 
+                inset -6px -6px 12px #5b653b;
+}
+
+#orderFormYourSelectionList {
+    height: 80%;
+    overflow: auto;
+    border-radius: 17px;
+    background: #432818e0;
+    padding: 4%;
+    color: #FEFAE9;
+}
+
+#orderTotal {
+    padding: 3% 0% 0% 2%;
+    text-align: center;
+    width: 100%;
+    background: #393f25;
+    box-shadow: inset 6px 6px 12px #17190f, 
+                inset -6px -6px 12px #5b653b;
+}
+
+#orderTotalInputLabel{
+    margin: 0%;
+}
+
+#orderTotalInput {
+    background-color: transparent;
+    border: none;
+    color: #FCF3C5;
+    margin: 0% 0% 0% 4%;
+    font-size: 1.2em;
+    width: 30%;
+}
+
+.orderAccordianHeader {
+    background-color: #81211fe0;
+    color: #FEFCF0;
+    border: #FFE6A7 solid 0.01em;
+    border-left: none;
+    border-right: none;
+    height: 4em;
+}
+
+.orderAccordianPanel {
+    background-color: #4A1312e0;
+    padding: 3% 2% 1% !important;
+}
+
+.orderListItem {
+    list-style-type: none;
+    margin: 0% 0% 3.5%;
+}
+
+.orderItemNum {
+    width: 4em;
+    text-align: center;
+    margin: 0% 1.5%;
+    background-color: #FEFAE9;
+    border-color: #FFEDBE;
+    border-radius: 17px;
+    padding: 1%;
+}
+
+.addToOrderButton {
+    padding: 1% 2%;
+    border-radius: 34px;
+    background: linear-gradient(145deg, #fff6b3, #e6cf96);
+    border: #fcda85 solid 0.02em;
+}
+
+.addToOrderButton:hover {
+    background: linear-gradient(145deg, #fced7e, #cfb267);
+    border: #f0c55a solid 0.02em;
+}
+
+.yourOrderListItem {
+    list-style-type: none;
+    padding: 0% 0% 5%;
+    margin: 0% 0% 5%;
+    border-bottom: #fcda85 solid 0.01em;
+}
+
+.add1Button {
+    padding: 2% 3%;
+    border-radius: 17px;
+    background: linear-gradient(145deg, #fced7e, #cfb267);
+    border: #f0c55a solid 0.02em;
+}
+
+.minus1Button {
+    margin-left: 2%;
+    padding: 2% 3%;
+    border-radius: 17px;
+    background: linear-gradient(145deg, #fced7e, #cfb267);
+    border: #f0c55a solid 0.02em;
+}
+
+.deleteOrderItem {
+    margin: 0% 0% 0% 2%;
+    padding: 3% 3%;
+    border-radius: 17px;
+    background: linear-gradient(145deg, #8a2727, #570a0a);
+    border: #470404 solid 0.02em;
+    color: #FEFAE9;
+}
+
+.add1Button:hover {
+    padding: 2% 3%;
+    border-radius: 17px;
+    background: linear-gradient(145deg, #ffef78, #e7c161);
+    border: #fcda85 solid 0.02em;
+}
+
+.minus1Button:hover {
+    margin-left: 2%;
+    padding: 2% 3%;
+    border-radius: 17px;
+    background: linear-gradient(145deg, #ffef78, #e7c161);
+    border: #fcda85 solid 0.02em;
+}
+
+.deleteOrderItem:hover {
+    margin: 0% 0% 0% 2%;
+    padding: 3% 3%;
+    border-radius: 17px;
+    background: linear-gradient(145deg, #853030, #6b1212);
+    border: #5a0000 solid 0.02em;
+    color: #FEFAE9;
+}
+
+.deleteOrderItem svg, .minus1Button svg, .add1Button svg {
+    height: 1.5em !important;
+    width: 1.5em !important;
+}
+
+.yourOrderItemNum {
+    padding: 0% 5%;
+}
+
+.orderFormNotesSection { 
+    border-radius: 34px;
+    background: #D9D7B1;
+    padding: 2%;
+    margin: 2% 0% 0%;
+}
+
+.orderFormPaymentSection {
+    border-radius: 34px;
+    background: #5D663D;
+    padding: 2%;
+    margin: 2% 0% 0%;
+    color: #FEFAE9;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#payRadioOnline, #payRadioCash {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 20%;
+    margin: 0% 0% 1%;
+}
+
+.orderFormInputPayment {
+    margin: 0% 3%;
+    height: 2em;
+    width: 2em;
+}
+
+.orderFormLabelPayment {
+    color: #FCF3C5;
+    margin: 0%;
+    font-size: 1.5em;
+}
+
+#payPalContainer {
+    border-radius: 34px;
+    background: #D9D7B1;
+    padding: 4%;
+    margin: 2% 0% 0%;
+    width: 100%;
+}
+
+#orderFormSubmitButton {
+    margin: 2% 0% 0%;
+    padding: 2%;
+    border-radius: 34px;
+    background: #942624;
+    box-shadow:  5px 5px 0px #571615, 
+                -5px -5px 0px #d13633;
+    color: #F0F0E2;
+    border: none;
+    width: 30%;
+}
+
+#orderFormSubmitButton:hover {
+    margin: 2% 0% 0%;
+    padding: 2%;
+    border-radius: 34px;
+    background: #5a1816;
+    box-shadow:  5px 5px 0px #350e0d, 
+                -5px -5px 0px #7f221f;
+    color: #F0F0E2;
+    border: none;
+    width: 30%;
+}
+
 .hidden {
     display: none !important;
 }
 
-/* .orderFormInput {
-    padding: 2%;
-    margin: 5% 0%;
-    width: 80%;
-} */
+@media(max-width: 968px) {
+    #orderFormSelectFood {
+        width: 65%;
+        height: 90%;
+        padding: 0% 1% 2% 0%;
+    }
+
+    #orderFormYourSelection {
+        width: 35%;
+        height: 90%;
+        border-left: #251605 solid 0.01em;
+        padding: 0% 1%;
+    }
+
+    #orderFormYourSelectionList {
+        height: 76%;
+        overflow: auto;
+        border-radius: 17px;
+        background: #4A1312e0;
+        padding: 4%;
+        color: #FEFAE9;
+    }
+
+    .yourOrderListItem {
+        list-style-type: none;
+        padding: 0% 0% 2%;
+        margin: 0% 0% 2%;
+        border-bottom: #fcda85 solid 0.01em;
+    }
+
+    #orderTotal {
+        padding: 1% 0% 1% 2%;
+        text-align: center;
+        width: 100%;
+        background: #393f25;
+        box-shadow: inset 6px 6px 12px #17190f, 
+                    inset -6px -6px 12px #5b653b;
+    }
+
+    .yourOrderItemLabel {
+        width: 50%;
+        margin: 0% 0% 1% 0%;
+    }
+    
+    .add1Button {
+        padding: 1% 2%;
+    }
+    
+    .minus1Button {
+        margin-left: 2%;
+        padding: 1% 2%;
+    }
+    
+    .deleteOrderItem {
+        margin: 0% 0% 0% 2%;
+        padding: 1% 2%;
+    }
+    
+    .add1Button:hover {
+        padding: 1% 2%;
+    }
+    
+    .minus1Button:hover {
+        margin-left: 2%;
+        padding: 1% 2%;
+    }
+    
+    .deleteOrderItem:hover {
+        margin: 0% 0% 0% 2%;
+        padding: 1% 2%;
+    }
+}
 
 @media (max-width: 786px) {
     #orderRow1, #orderRow3 {
@@ -97,50 +449,154 @@
 
     #orderFormSelection {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         width: 100%;
-        height: 30em;
+        height: 60em;
+        padding: 3% 2%;
+        margin: 3% 0% 0%;
+        border-radius: 34px;
+        background: #5D663D;
+        color: #FCF3C5;
     }
-    
+
+    #orderFormSelectionRow {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 75%;
+    }
+
     #orderFormSelectFood {
-        width: 60%;
-        height: 100%;
-        overflow: auto;
+        width: 100%;
+        height: 42%;
+        padding: 0% 1% 2% 0%;
     }
-    
+   
     #orderFormYourSelection {
-        width: 40%;
-        height: 100%;
-        border-left: #251605 solid 0.01em;
+        width: 100%;
+        height: 32%;
+        border-top: #251605 solid 0.01em;
+        border-left: none;
         padding: 0% 1%;
+        margin: 11% 0% 0%;
+    }
+
+    #orderFormYourSelectionTitle {
+        padding: 2.5% 0%;
+        margin: 2% 0%;
+        text-align: center;
+        width: 100%;
+        background: #393f25;
+        box-shadow: inset 6px 6px 12px #17190f, 
+                    inset -6px -6px 12px #5b653b;
     }
     
+    #payRadioOnline, #payRadioCash {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 50%;
+        margin: 0% 0% 1%;
+    }
 }
 
 @media (max-width: 568px) {
+    
     #orderFormSelection {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         width: 100%;
-        height: 40em;
+        height: 75em;
+        padding: 3% 2%;
+        margin: 3% 0% 0%;
+        border-radius: 34px;
+        background: #5D663D;
+        color: #FCF3C5;
     }
-    
+
+    #orderFormSelectionRow {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 70%;
+    }
+
     #orderFormSelectFood {
         width: 100%;
-        height: 60%;
-        overflow: auto;
+        height: 42%;
+        padding: 0% 1% 2% 0%;
     }
-    
+   
     #orderFormYourSelection {
         width: 100%;
-        height: 40%;
+        height: 42%;
         border-top: #251605 solid 0.01em;
         border-left: none;
-        padding: 1% 0%;
+        padding: 0% 1%;
+        margin: 25% 0% 0%;
     }
     
+    #payRadioOnline, #payRadioCash {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        margin: 0% 0% 1%;
+    }
+
+    .blackLineDivider {
+        width: 100%;
+        height: 3em;
+    }
+}
+
+@media (max-width: 568px) {
+    
+    #orderFormSelection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 85em;
+        padding: 3% 2%;
+        margin: 3% 0% 0%;
+        border-radius: 34px;
+        background: #5D663D;
+        color: #FCF3C5;
+    }
+
+    #orderFormSelectionRow {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 70%;
+    }
+
+    #orderFormSelectFood {
+        width: 100%;
+        height: 42%;
+        padding: 0% 1% 2% 0%;
+    }
+   
+    #orderFormYourSelection {
+        width: 100%;
+        height: 42%;
+        border-top: #251605 solid 0.01em;
+        border-left: none;
+        padding: 0% 1%;
+        margin: 35% 0% 0%;
+    }
 }

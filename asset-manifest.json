@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b45fab91.chunk.css",
+    "main.js": "/static/js/main.3cbf306a.chunk.js",
+    "main.js.map": "/static/js/main.3cbf306a.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.9595752d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.9595752d.js.map",
+    "static/css/2.03923625.chunk.css": "/static/css/2.03923625.chunk.css",
+    "static/js/2.bfccb501.chunk.js": "/static/js/2.bfccb501.chunk.js",
+    "static/js/2.bfccb501.chunk.js.map": "/static/js/2.bfccb501.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.8e7937658a92c9944ad6afb3dcaeee60.js": "/precache-manifest.8e7937658a92c9944ad6afb3dcaeee60.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.03923625.chunk.css.map": "/static/css/2.03923625.chunk.css.map",
+    "static/css/main.b45fab91.chunk.css.map": "/static/css/main.b45fab91.chunk.css.map",
+    "static/js/2.bfccb501.chunk.js.LICENSE.txt": "/static/js/2.bfccb501.chunk.js.LICENSE.txt",
+    "static/media/Header.css": "/static/media/flowerGoldenRectangularBorderTransparent-AllAround.e8505509.png",
+    "static/media/blackFlowerDivider-Transparent-Cropped.png": "/static/media/blackFlowerDivider-Transparent-Cropped.9c091f96.png",
+    "static/media/blackFractalVarietyEuropeanPatterBorders-Bottom3.png": "/static/media/blackFractalVarietyEuropeanPatterBorders-Bottom3.f28f6cea.png",
+    "static/media/blackFractalVarietyEuropeanPatterBorders-Top3.png": "/static/media/blackFractalVarietyEuropeanPatterBorders-Top3.72268f54.png",
+    "static/media/flowerGoldenRectangularBorderTransparent-Bottom2.png": "/static/media/flowerGoldenRectangularBorderTransparent-Bottom2.d5e02d30.png",
+    "static/media/flowerGoldenRectangularBorderTransparent-Top2.png": "/static/media/flowerGoldenRectangularBorderTransparent-Top2.0891a1fb.png",
+    "static/media/goldOrnateLines-Bottom4-Transparent.png": "/static/media/goldOrnateLines-Bottom4-Transparent.73c0b303.png",
+    "static/media/goldOrnateLines-Top4-Transparent.png": "/static/media/goldOrnateLines-Top4-Transparent.3d83fcaf.png",
+    "static/media/Menu.css": "/static/media/parchmentBackgroundPic.d7802255.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9595752d.js",
+    "static/css/2.03923625.chunk.css",
+    "static/js/2.bfccb501.chunk.js",
+    "static/css/main.b45fab91.chunk.css",
+    "static/js/main.3cbf306a.chunk.js"
+  ]
+}

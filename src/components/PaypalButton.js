@@ -96,7 +96,7 @@ class PaypalButton extends React.Component {
       
           {showButtons && (
               <div>
-                <div>
+                <div id="orderInfo">
                   <h2>Items: {this.props.description}</h2>
                   <h2>Total checkout Amount: {this.props.price}</h2>
                 </div>
@@ -114,6 +114,7 @@ class PaypalButton extends React.Component {
               <h2>
                 Congrats! You paid for your order!
               </h2>
+              <h2>Click on the Place Order button below to finish your order.</h2>
               <input className="hidden" name="paid" readOnly value='Completed Payment'/>
             </div>
           )}

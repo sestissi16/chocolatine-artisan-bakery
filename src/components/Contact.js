@@ -111,7 +111,7 @@ class Contact extends Component {
                     <div id="contactTitle">
                         <h1 id="contactSectionTitle">Contact Us:</h1>
                         <img src={titleDivider} id="titleDivider" alt="ornate black flower divider"/>
-                        <h2 id="contactSectionSubTitle">Here you can send us an email with the Contact Form below or checkout our Facebook page below.</h2>
+                        <h2 id="contactSectionSubTitle">Here you can send us an email with the Contact Form or check out our Facebook page below.</h2>
                     </div>
                     <form name="contact-us" id="contactForm">
                         <img src={formTop} alt="Gold ornate top border" id="formTopBorder"/>

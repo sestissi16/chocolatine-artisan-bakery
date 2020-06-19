@@ -183,10 +183,12 @@ class Order extends Component {
             phoneValue: '',
             showPaypal: false,
             paymentOption: '',
+            orderComplete: false,
         }
 
         this.handleChange = this.handleChange.bind(this)
-        this.resetContact = this.resetOrder.bind(this)
+        this.resetOrder = this.resetOrder.bind(this)
+        this.completeOrder = this.completeOrder.bind(this)
         this.showPaypalButtons = this.showPaypalButtons.bind(this)
         this.changePayment = this.changePayment.bind(this)
         this.addOrderItem = this.addOrderItem.bind(this)
@@ -279,6 +281,12 @@ class Order extends Component {
         this.showPaypalButtons(e)
     }
 
+    completeOrder(e){
+        e.preventDefault();
+
+        this.setState({ orderComplete: true})
+    }
+
     //This resets the order form when someone presses place order
     resetOrder(e) {
         e.preventDefault();
@@ -290,7 +298,7 @@ class Order extends Component {
             muffinsChoco: 0,
             muffinsLemonPoppy: 0,
             muffinsBlueberry: 0,
-            muffinsBerry: 0,
+            muffinsBerryful: 0,
             muffinsOrangeCranberry: 0,
             smallButterCroissant: 0,
             largeButterCroissant: 0,
@@ -304,8 +312,10 @@ class Order extends Component {
             lunchDeluxHamCroissant: 0,
             lunchDeluxTurkeyCroissant: 0,
             smallRollCinnamon: 0,
+            smallRollRaisin: 0,
             smallRollRaspberry: 0,
             largeRollCinnamon: 0,
+            largeRollRaisin: 0,
             largeRollRaspberry: 0,
             smallChocoTwist: 0,
             largeChocoTwist: 0,
@@ -320,29 +330,36 @@ class Order extends Component {
             fourPackTrufflesRumCoco: 0,
             ninePackTrufflesMix: 0,
             ninePackTrufflesClassic: 0,
-            ninePackTrufflesPeppermind: 0,
+            ninePackTrufflesPeppermint: 0,
             ninePackTrufflesOrange: 0,
             ninePackTrufflesRumCoco: 0,
-            regularPizza: 0,
-            largePizza: 0,
+            regularClassicPizza: 0,
+            regularHerbPizza:0,
+            largeClassicPizza: 0,
+            largeHerbPizza: 0,
             turnoverApple: 0,
             turnoverRaspberry: 0,
             turnoverNutella: 0,
             danishClassic: 0,
-            danishPeachApricot: 0,
+            danishPeach: 0,
+            danishApricot: 0,
             danishApple: 0,
             danishLemon: 0,
-            buns90: 0,
-            buns110: 0,
-            buns60: 0,
+            buns90g: 0,
+            buns110g: 0,
+            buns60g: 0,
             smallWhiteLoaf: 0,
             mediumWhiteLoaf: 0,
             largeWhiteLoaf: 0,
-            smallBriocheOrMultigrainLoaf: 0,
-            mediumBriocheOrMultigrainLoaf: 0,
-            largeBriocheOrMultigrainLoaf: 0,
+            smallBriocheLoaf: 0,
+            smallMultigrainLoaf: 0,
+            mediumBriocheLoaf: 0,
+            mediumMultigrainLoaf: 0,
+            largeBriocheLoaf: 0,
+            largeMultigrainLoaf: 0,
             loafFruitAddOn: 0,
-            nutellaOrFruitSugarLoaf: 0,
+            nutellaLoaf: 0,
+            fruitSugarLoaf: 0,
             tenCrostinisEverything: 0,
             tenCrostinisCheese: 0,
             smallPalmierSugar: 0,
@@ -353,10 +370,10 @@ class Order extends Component {
             tenPackSampler: 0,
             fifteenPackSampler: 0,
             twentyPackSampler: 0,
-            phoneValue: '',
-            total: 0,
-            paymentOption: '',
             yourOrder: [],
+            showPaypal: false,
+            paymentOption: '',
+            orderComplete: false,
         })
     }
 
@@ -376,7 +393,7 @@ class Order extends Component {
     }
 
     render() {
-        const { showPaypal, paymentOption, yourOrder } = this.state;
+        const { showPaypal, paymentOption, yourOrder, orderComplete } = this.state;
         let orderArray = [];
         let itemStateName
         let total = 0;
@@ -2177,7 +2194,15 @@ class Order extends Component {
                             <PaypalButtons name={order.name} description={order.description} price={order.price} showStatus={showPaypal} />
                         </div>
 
-                        <button type="submit" id="orderFormSubmitButton" onSubmit={this.resetOrder}>Place order</button>
+                        <div id="orderCompletionContainer" className={`${orderComplete ? "" : "hidden"}`}>
+                            <h2>Your order was sent in!</h2>
+                            <h3>Click the Reset Order Form button to send in a new order!</h3>
+                        </div>
+
+                        <div id="orderFormButtons">
+                            <button type="submit" id="orderFormSubmitButton" onClick={this.completeOrder}>Place order</button>
+                            <button id="orderFormResetButton" onClick={this.resetOrder}>Reset Order Form</button>
+                        </div>
                         
                     </form>
                 </div>

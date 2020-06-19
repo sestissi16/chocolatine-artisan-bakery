@@ -241,11 +241,11 @@ const Menu = () => {
                         <li><h6>(Contains: wheat, dairy (milk, butter))</h6></li>
                       </ul>
                       <li className="sweetListItem">
-                        <h5>Rasin Roll</h5>
+                        <h5>Raisin Roll</h5>
                         <h5>1.75 sm | 3.00 lg</h5>
                       </li>
                       <ul className="sweetItemExplanation">
-                        <li><h6>Rolled croissant dough filled with patry cream and rasins</h6></li>
+                        <li><h6>Rolled croissant dough filled with patry cream and Raisins</h6></li>
                         <li><h6>(Contains: wheat, dairy (milk, butter))</h6></li>
                       </ul>
                       <li className="sweetListItem">
@@ -282,8 +282,8 @@ const Menu = () => {
                       <strong> - Ingredients for Cinnamon Rolls: </strong>
                       Ingredients for the Rolls plus cinnamon and pecans
                       <br/>
-                      <strong> - Ingredients for Rasin Rolls: </strong>
-                      Ingredients for the Rolls plus rasins
+                      <strong> - Ingredients for Raisin Rolls: </strong>
+                      Ingredients for the Rolls plus Raisins
                       <br/>
                       <strong> - Ingredients for Raspberry Rolls: </strong>
                       Ingredients for the Rolls plus raspberry jam
@@ -491,7 +491,7 @@ const Menu = () => {
                         <li><h6>(Contains: wheat, soy)</h6></li>
                       </ul>
                       <li className="sweetListItem">
-                        <h5>Lemon Poppy seed Muffin</h5>
+                        <h5>Lemon Poppyseed Muffin</h5>
                       </li>
                       <ul className="sweetItemExplanation">
                         <li><h6>Lemon flavored muffin with poppyseeds</h6></li>
@@ -527,8 +527,8 @@ const Menu = () => {
                       <strong> - Chocolate and Chocolate Chip Muffin Ingredients: </strong>
                       Ingredients for Muffins plus Chocolate Powder (Cocoa), Chocolate Chips (Sugar, Cocoa Butter, Soy Lecithin, Natural Vanilla Extract) or Cherries
                       <br/>
-                      <strong> - Lemon Poppy seed Muffin Ingredients: </strong>
-                      Ingredients for Muffins plus Poppy seeds, Lemon Extract (Ethyl Alcohol, Natural Flavors)
+                      <strong> - Lemon Poppyseed Muffin Ingredients: </strong>
+                      Ingredients for Muffins plus Poppyseeds, Lemon Extract (Ethyl Alcohol, Natural Flavors)
                       <br/>
                       <strong> - Blueberry Muffin Ingredients: </strong>
                       Ingredients for Muffins plus Blueberries
@@ -852,7 +852,7 @@ const Menu = () => {
                       <ul className="breadPizzaItemExplanation">
                         <li><h6>Brioche loaf with dried fruits inside and topped with crystal sugar. </h6></li>
                         <ul>
-                          <li><h6>The fruits depend on availability but are usually rasins, pineapples, cranberries, and apricots</h6></li>
+                          <li><h6>The fruits depend on availability but are usually Raisins, pineapples, cranberries, and apricots</h6></li>
                         </ul>
                         <li><h6>(Contains: wheat, dair (milk, eggs, butter), tree nuts)</h6></li>
                       </ul>
@@ -872,7 +872,7 @@ const Menu = () => {
                       Ingredients for Brioche Loafs plus Dried Fruits (Raisins, Pineapples, Cranberries, Apricot)
                       <br/>
                       <strong>Full List of Ingredients for Multigrain Loafs: </strong>
-                      Wheat Flour, Water, Rye Flour, Mix of Grains (Pumpkin Seeds, Sunflower Seeds, Sesame Seeds, Poppy Seeds, Oats), Salt, Malt, Yeast
+                      Wheat Flour, Water, Rye Flour, Mix of Grains (Pumpkin Seeds, Sunflower Seeds, Sesame Seeds, Poppyseeds, Oats), Salt, Malt, Yeast
                     </p>
                   </AccordionPanel>
                 </AccordionItem>

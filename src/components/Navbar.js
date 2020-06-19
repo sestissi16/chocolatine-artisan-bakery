@@ -11,8 +11,8 @@ const Navigation = () => {
                 <Nav className="navLinksContainer">
                     <Nav.Link href="#about" className="smoothscroll navbar-link">About Us</Nav.Link>
                     <Nav.Link href="#menu" className="smoothscroll navbar-link">Menu</Nav.Link>
-                    <Nav.Link href="#contact" className="smoothscroll navbar-link">Contact Us</Nav.Link>
                     <Nav.Link href="#order" className="smoothscroll navbar-link">Order</Nav.Link>
+                    <Nav.Link href="#contact" className="smoothscroll navbar-link">Contact Us</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

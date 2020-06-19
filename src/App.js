@@ -275,8 +275,8 @@ function App() {
         <Header />
         <About />
         <Menu />
-        <Contact />
         <Order />
+        <Contact />
       </ThemeProvider>
     </div>
   );

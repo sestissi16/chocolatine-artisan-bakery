@@ -194,6 +194,7 @@ class Order extends Component {
         this.addOrderItem = this.addOrderItem.bind(this)
         this.removeOrderItem = this.removeOrderItem.bind(this)
         this.updateOrderItem = this.updateOrderItem.bind(this)
+        this.formSubmit = this.formSubmit.bind(this)
     }
 
     showPaypalButtons = (e) => {
@@ -382,13 +383,14 @@ class Order extends Component {
     formSubmit(e) {
         e.preventDefault();
         e.stopPropagation();
+        // this.setState({ orderComplete: true})
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwCsxWYO8f5aFTvvWzrQMYgHPryxbi0TUSlnjIMiabos2vuldpk/exec'
         const form = document.forms['submit-to-google-sheet']
         console.log(form);
         console.log(new Date());
         
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => console.log('Success!', response))
+          .then(response => {console.log('Success!', response); this.setState({ orderComplete: true})})
           .catch(error => console.error('Error!', error.message))
     }
 
@@ -396,12 +398,12 @@ class Order extends Component {
         const { showPaypal, paymentOption, yourOrder, orderComplete } = this.state;
         let orderArray = [];
         let itemStateName
-        let total = 0;
-        let onlineTotal = 0;
+        let total = 0.00;
+        let onlineTotal = 0.00;
         
         if (yourOrder.length === 0){
-            total = 0
-            onlineTotal = 0
+            total = 0.00
+            onlineTotal = 0.00
         } else {
             yourOrder.forEach((element) => {
                 orderArray.push(`${element.item}: ${element.number}`)
@@ -2200,7 +2202,7 @@ class Order extends Component {
                         </div>
 
                         <div id="orderFormButtons">
-                            <button type="submit" id="orderFormSubmitButton" onClick={this.completeOrder}>Place order</button>
+                            <button type="submit" id="orderFormSubmitButton" onSubmit={this.completeOrder}>Place order</button>
                             <button id="orderFormResetButton" onClick={this.resetOrder}>Reset Order Form</button>
                         </div>
                         

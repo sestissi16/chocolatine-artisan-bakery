@@ -7,11 +7,13 @@ import scriptLoader from "react-async-script-loader";
    sandbox:
      "AeiVk9nuJzaPIpEff47oPP11c-_jkbvdIcyPhhhkIKTDsy3UQ4Vf1Tx4u6izJ1V21rHimqbn97luCP6W",
    production:
-     "your_production_key"
+     "AavQDHb_8SyiZIqB_1wFQGCC88OzfekPL1nreE0t6tnFwPr23Jjuw3hLsnPSRgAgooqgxHFiytLdBnIu"
  };
 
  const CLIENT_ID =
    process.env.NODE_ENV === "production" ? CLIENT.production : CLIENT.sandbox;
+
+console.log(process.env.NODE_ENV)
 //create button here
 let PayPalButton = null;
 
@@ -34,6 +36,7 @@ class PaypalButton extends React.Component {
   }
 
   componentDidMount() {
+    console.log(process.env.NODE_ENV)
     const { isScriptLoaded, isScriptLoadSucceed } = this.props;
 
     if (isScriptLoaded && isScriptLoadSucceed) {

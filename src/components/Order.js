@@ -194,6 +194,7 @@ class Order extends Component {
         this.addOrderItem = this.addOrderItem.bind(this)
         this.removeOrderItem = this.removeOrderItem.bind(this)
         this.updateOrderItem = this.updateOrderItem.bind(this)
+        this.highlight = this.highlight.bind(this)
         this.formSubmit = this.formSubmit.bind(this)
     }
 
@@ -286,6 +287,12 @@ class Order extends Component {
         e.preventDefault();
 
         this.setState({ orderComplete: true})
+    }
+
+    highlight(e){
+        e.preventDefault();
+        
+        e.target.select();
     }
 
     //This resets the order form when someone presses place order
@@ -490,11 +497,11 @@ class Order extends Component {
                             <div id="orderFormSelectionTitle">
                                 <h2>Order Selection:</h2>
                                 <img src={BlackLineDivider} alt="black ornamental flower divider" className="blackLineDivider" />
-                                <h3>On the left you can select your choices and input the number of items you'd like. On the right you can see your order and adjust it.</h3>
+                                <h3>In the "Order Selction!"" section select your choices and input the number of items you'd like. On the "Your Order Summary:" section you can see your order and adjust it.</h3>
                             </div>
                             <div id="orderFormSelectionRow">
                                 <div id="orderFormSelectFood">
-                                    <h3 id="orderFormSelectFoodTitle">Select what you'd like to order!</h3>
+                                    <h3 id="orderFormSelectFoodTitle">Order Selection!</h3>
                                     <div id="orderFormSelectionContainer">
                                     <Accordion defaultIndex={[0]} allowMultiple id="orderFormSelectionAccordion">
                                         <div id="orderCookies" className="orderFoodItem">
@@ -515,7 +522,7 @@ class Order extends Component {
                                                                 name="cookiesChoco" 
                                                                 value={ this.state.cookiesChoco }
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button className="addToOrderButton" name="CookiesChoco" value={this.state.cookiesChoco} onClick={this.addOrderItem}> Add</button>
                                                         </li>
                                                         <li className="orderListItem">
@@ -526,7 +533,7 @@ class Order extends Component {
                                                             name="cookiesChocoPecan" 
                                                             value={ this.state.cookiesChocoPecan }
                                                             onChange={this.handleChange}
-                                                            type="number"/>
+                                                            type="number" onFocus={this.highlight}/>
                                                         <button className="addToOrderButton" name="CookiesChocoPecan" value={this.state.cookiesChocoPecan} onClick={this.addOrderItem}> Add</button>
                                                     </li>
                                                     </ul>
@@ -551,7 +558,7 @@ class Order extends Component {
                                                                 name="muffinsChoco" 
                                                                 value={ this.state.muffinsChoco }
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button 
                                                                 className="addToOrderButton" 
                                                                 name="MuffinsChoco" 
@@ -569,7 +576,7 @@ class Order extends Component {
                                                                 name="muffinsChocoChip" 
                                                                 value={ this.state.muffinsChocoChip }
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button 
                                                                 className="addToOrderButton" 
                                                                 name="MuffinsChocoChip" 
@@ -587,7 +594,7 @@ class Order extends Component {
                                                                 name="muffinsLemonPoppy" 
                                                                 value={ this.state.muffinsLemonPoppy}
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button 
                                                                 className="addToOrderButton" 
                                                                 name="MuffinsLemonPoppy" 
@@ -605,7 +612,7 @@ class Order extends Component {
                                                                 name="muffinsBlueberry" 
                                                                 value={ this.state.muffinsBlueberry}
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button 
                                                                 className="addToOrderButton" 
                                                                 name="MuffinsBlueberry" 
@@ -623,7 +630,7 @@ class Order extends Component {
                                                                 name="muffinsBerryful" 
                                                                 value={ this.state.muffinsBerryful}
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button 
                                                                 className="addToOrderButton" 
                                                                 name="MuffinsBerryful" 
@@ -641,7 +648,7 @@ class Order extends Component {
                                                                 name="muffinsOrangeCranberry" 
                                                                 value={ this.state.muffinsOrangeCranberry}
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button 
                                                                 className="addToOrderButton" 
                                                                 name="MuffinsOrangeCranberry" 
@@ -674,7 +681,7 @@ class Order extends Component {
                                                                     name="smallButterCroissant" 
                                                                     value={ this.state.smallButterCroissant }
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="SmallButterCroissant" 
@@ -692,7 +699,7 @@ class Order extends Component {
                                                                     name="largeButterCroissant" 
                                                                     value={ this.state.largeButterCroissant }
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="LargeButterCroissant" 
@@ -711,7 +718,7 @@ class Order extends Component {
                                                                 name="everythingCroissant" 
                                                                 value={ this.state.everythingCroissant }
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button 
                                                                 className="addToOrderButton"
                                                                 name="EverythingCroissant" 
@@ -730,7 +737,7 @@ class Order extends Component {
                                                                     name="lunchHamCroissant" 
                                                                     value={ this.state.lunchHamCroissant }
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="LunchHamCroissant" 
@@ -748,7 +755,7 @@ class Order extends Component {
                                                                     name="lunchTurkeyCroissant" 
                                                                     value={ this.state.lunchTurkeyCroissant }
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="LunchTurkeyCroissant" 
@@ -768,7 +775,7 @@ class Order extends Component {
                                                                     name="lunchDeluxHamCroissant" 
                                                                     value={ this.state.lunchDeluxHamCroissant }
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="lunchDeluxHamCroissant" 
@@ -786,7 +793,7 @@ class Order extends Component {
                                                                     name="lunchDeluxTurkeyCroissant" 
                                                                     value={ this.state.lunchDeluxTurkeyCroissant }
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="LunchDeluxTurkeyCroissant" 
@@ -806,7 +813,7 @@ class Order extends Component {
                                                                     name="smallAlmondCroissant" 
                                                                     value={ this.state.smallAlmondCroissant }
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="SmallAlmondCroissant" 
@@ -824,7 +831,7 @@ class Order extends Component {
                                                                     name="largeAlmondCroissant" 
                                                                     value={ this.state.largeAlmondCroissant}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="LargeAlmondCroissant" 
@@ -844,7 +851,7 @@ class Order extends Component {
                                                                     name="smallChocolateCroissant" 
                                                                     value={ this.state.smallChocolateCroissant}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="SmallChocolateCroissant" 
@@ -862,7 +869,7 @@ class Order extends Component {
                                                                     name="largeChocolateCroissant" 
                                                                     value={ this.state.largeChocolateCroissant }
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="LargeChocolateCroissant" 
@@ -882,7 +889,7 @@ class Order extends Component {
                                                                     name="smallChocoTwistsCroissant" 
                                                                     value={ this.state.smallChocoTwist}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="SmallChosmallChocoTwist" 
@@ -900,7 +907,7 @@ class Order extends Component {
                                                                     name="largeChocoTwistsCroissant" 
                                                                     value={ this.state.largeChocoTwist}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="LargeChocoTwist" 
@@ -933,7 +940,7 @@ class Order extends Component {
                                                                 name="tenCrostinisEverything" 
                                                                 value={ this.state.tenCrostinisEverything}
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button 
                                                                 className="addToOrderButton"
                                                                 name="TenCrostinisEverything" 
@@ -951,7 +958,7 @@ class Order extends Component {
                                                                 name="tenCrostinisCheese" 
                                                                 value={ this.state.tenCrostinisCheese}
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button 
                                                                 className="addToOrderButton"
                                                                 name="TenCrostinisCheese" 
@@ -984,7 +991,7 @@ class Order extends Component {
                                                                     name="smallRollCinnamon" 
                                                                     value={ this.state.smallRollCinnamon}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="SmallRollCinnamon" 
@@ -1002,7 +1009,7 @@ class Order extends Component {
                                                                     name="largeRollCinnamon" 
                                                                     value={ this.state.largeRollCinnamon}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="LargeRollCinnamon" 
@@ -1022,7 +1029,7 @@ class Order extends Component {
                                                                     name="smallRollRaisin" 
                                                                     value={ this.state.smallRollRaisin}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="SmallRollRaisin" 
@@ -1040,7 +1047,7 @@ class Order extends Component {
                                                                     name="largeRollRaisin" 
                                                                     value={ this.state.largeRollRaisin}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="LargeRollRaisin" 
@@ -1060,7 +1067,7 @@ class Order extends Component {
                                                                     name="smallRollRaspberry" 
                                                                     value={ this.state.smallRollRaspberry}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="SmallRollRaspberry" 
@@ -1078,7 +1085,7 @@ class Order extends Component {
                                                                     name="largeRollRaspberry" 
                                                                     value={ this.state.largeRollRaspberry}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="LargeRollRaspberry" 
@@ -1098,7 +1105,7 @@ class Order extends Component {
                                                                     name="smallPalmierJam" 
                                                                     value={ this.state.smallPalmierJam}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="SmallPalmierJam" 
@@ -1116,7 +1123,7 @@ class Order extends Component {
                                                                     name="largePalmierJam" 
                                                                     value={ this.state.largePalmierJam}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="LargePalmierJam" 
@@ -1136,7 +1143,7 @@ class Order extends Component {
                                                                     name="smallPalmierSugar" 
                                                                     value={ this.state.smallPalmierSugar}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="SmallPalmierSugar" 
@@ -1154,7 +1161,7 @@ class Order extends Component {
                                                                     name="largePalmierSugar" 
                                                                     value={ this.state.largePalmierSugar}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="LargePalmierSugar" 
@@ -1188,7 +1195,7 @@ class Order extends Component {
                                                                 name="turnoverApple" 
                                                                 value={ this.state.turnoverApple}
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button 
                                                                 className="addToOrderButton"
                                                                 name="TurnoverApple" 
@@ -1206,7 +1213,7 @@ class Order extends Component {
                                                                 name="turnoverNutella" 
                                                                 value={ this.state.turnoverNutella}
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button 
                                                                 className="addToOrderButton"
                                                                 name="TurnoverNutella" 
@@ -1224,7 +1231,7 @@ class Order extends Component {
                                                                 name="turnoverRaspberry" 
                                                                 value={ this.state.turnoverRaspberry}
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button 
                                                                 className="addToOrderButton"
                                                                 name="TurnoverRaspberry" 
@@ -1256,7 +1263,7 @@ class Order extends Component {
                                                                 name="danishClassic" 
                                                                 value={ this.state.danishClassic}
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button 
                                                                 className="addToOrderButton"
                                                                 name="DanishClassic" 
@@ -1274,7 +1281,7 @@ class Order extends Component {
                                                                 name="danishPeach" 
                                                                 value={ this.state.danishPeach}
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button 
                                                                 className="addToOrderButton"
                                                                 name="DanishPeach" 
@@ -1292,7 +1299,7 @@ class Order extends Component {
                                                                 name="danishApricot" 
                                                                 value={ this.state.danishApricot}
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button 
                                                                 className="addToOrderButton"
                                                                 name="DanishApricot" 
@@ -1310,7 +1317,7 @@ class Order extends Component {
                                                                 name="danishApple" 
                                                                 value={ this.state.danishApple}
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button 
                                                                 className="addToOrderButton"
                                                                 name="DanishApple" 
@@ -1328,7 +1335,7 @@ class Order extends Component {
                                                                 name="danishLemon" 
                                                                 value={ this.state.danishLemon}
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button 
                                                                 className="addToOrderButton"
                                                                 name="DanishLemon" 
@@ -1360,7 +1367,7 @@ class Order extends Component {
                                                                 name="financierAlmond" 
                                                                 value={ this.state.financierAlmond}
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button 
                                                                 className="addToOrderButton"
                                                                 name="FinancierAlmond" 
@@ -1378,7 +1385,7 @@ class Order extends Component {
                                                                 name="coffeecakeAlmond" 
                                                                 value={ this.state.coffeecakeAlmond}
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button 
                                                                 className="addToOrderButton"
                                                                 name="CoffeecakeAlmond" 
@@ -1411,7 +1418,7 @@ class Order extends Component {
                                                                     name="fourPackTrufflesClassic" 
                                                                     value={ this.state.fourPackTrufflesClassic}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="FourPackTrufflesClassic" 
@@ -1429,7 +1436,7 @@ class Order extends Component {
                                                                     name="ninePackTrufflesClassic" 
                                                                     value={ this.state.ninePackTrufflesClassic}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="NinePackTrufflesClassic" 
@@ -1449,7 +1456,7 @@ class Order extends Component {
                                                                     name="fourPackTrufflesPeppermint" 
                                                                     value={ this.state.fourPackTrufflesPeppermint}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="FourPackTrufflesPeppermint" 
@@ -1467,7 +1474,7 @@ class Order extends Component {
                                                                     name="ninePackTrufflesPeppermint" 
                                                                     value={ this.state.ninePackTrufflesPeppermint}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="NinePackTrufflesPeppermint" 
@@ -1487,7 +1494,7 @@ class Order extends Component {
                                                                     name="fourPackTrufflesOrange" 
                                                                     value={ this.state.fourPackTrufflesOrange}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="FourPackTrufflesOrange" 
@@ -1505,7 +1512,7 @@ class Order extends Component {
                                                                     name="ninePackTrufflesOrange" 
                                                                     value={ this.state.ninePackTrufflesOrange}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="NinePackTrufflesOrange" 
@@ -1525,7 +1532,7 @@ class Order extends Component {
                                                                     name="fourPackTrufflesRumCoco" 
                                                                     value={ this.state.fourPackTrufflesRumCoco}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="FourPackTrufflesRumCoco" 
@@ -1543,7 +1550,7 @@ class Order extends Component {
                                                                     name="ninePackTrufflesRumCoco" 
                                                                     value={ this.state.ninePackTrufflesRumCoco}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="NinePackTrufflesRumCoco" 
@@ -1563,7 +1570,7 @@ class Order extends Component {
                                                                     name="fourPackTrufflesMix" 
                                                                     value={ this.state.fourPackTrufflesMix}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="FourPackTrufflesMix" 
@@ -1581,7 +1588,7 @@ class Order extends Component {
                                                                     name="ninePackTrufflesMix" 
                                                                     value={ this.state.ninePackTrufflesMix}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="NinePackTrufflesMix" 
@@ -1615,7 +1622,7 @@ class Order extends Component {
                                                                     name="smallGranolaBar" 
                                                                     value={ this.state.smallGranolaBar}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="SmallGranolaBar" 
@@ -1633,7 +1640,7 @@ class Order extends Component {
                                                                     name="largeGranolaBar" 
                                                                     value={ this.state.largeGranolaBar}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="LargeGranolaBar" 
@@ -1667,7 +1674,7 @@ class Order extends Component {
                                                                     name="regularClassicPizza" 
                                                                     value={ this.state.regularClassicPizza}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="RegularClassicPizza" 
@@ -1685,7 +1692,7 @@ class Order extends Component {
                                                                     name="largeClassicPizza" 
                                                                     value={ this.state.largeClassicPizza}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="LargeClassicPizza" 
@@ -1705,7 +1712,7 @@ class Order extends Component {
                                                                     name="regularHerbPizza" 
                                                                     value={ this.state.regularHerbPizza}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="RegularHerbPizza" 
@@ -1723,7 +1730,7 @@ class Order extends Component {
                                                                     name="largeHerbPizza" 
                                                                     value={ this.state.largeHerbPizza}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="LargeHerbPizza" 
@@ -1756,7 +1763,7 @@ class Order extends Component {
                                                                 name="buns90g" 
                                                                 value={ this.state.buns90g}
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button 
                                                                 className="addToOrderButton"
                                                                 name="Buns90g" 
@@ -1774,7 +1781,7 @@ class Order extends Component {
                                                                 name="buns110g" 
                                                                 value={ this.state.buns110g}
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button 
                                                                 className="addToOrderButton"
                                                                 name="Buns110g" 
@@ -1792,7 +1799,7 @@ class Order extends Component {
                                                                 name="buns60g" 
                                                                 value={ this.state.buns60g}
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button 
                                                                 className="addToOrderButton"
                                                                 name="Buns60g" 
@@ -1825,7 +1832,7 @@ class Order extends Component {
                                                                     name="smallWhiteLoaf" 
                                                                     value={ this.state.smallWhiteLoaf}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="SmallWhiteLoaf" 
@@ -1843,7 +1850,7 @@ class Order extends Component {
                                                                     name="mediumWhiteLoaf" 
                                                                     value={ this.state.mediumWhiteLoaf}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="MediumWhiteLoaf" 
@@ -1861,7 +1868,7 @@ class Order extends Component {
                                                                     name="largeWhiteLoaf" 
                                                                     value={ this.state.largeWhiteLoaf}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="LargeWhiteLoaf" 
@@ -1881,7 +1888,7 @@ class Order extends Component {
                                                                     name="smallBriocheLoaf" 
                                                                     value={ this.state.smallBriocheLoaf}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="SmallBriocheLoaf" 
@@ -1899,7 +1906,7 @@ class Order extends Component {
                                                                     name="mediumBriocheLoaf" 
                                                                     value={ this.state.mediumBriocheLoaf}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="MediumBriocheLoaf" 
@@ -1917,7 +1924,7 @@ class Order extends Component {
                                                                     name="largeBriocheLoaf" 
                                                                     value={ this.state.largeBriocheLoaf}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="LargeBriocheLoaf" 
@@ -1937,7 +1944,7 @@ class Order extends Component {
                                                                     name="smallMultigrainLoaf" 
                                                                     value={ this.state.smallMultigrainLoaf}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="SmallMultigrainLoaf" 
@@ -1955,7 +1962,7 @@ class Order extends Component {
                                                                     name="mediumMultigrainLoaf" 
                                                                     value={ this.state.mediumMultigrainLoaf}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="MediumMultigrainLoaf" 
@@ -1973,7 +1980,7 @@ class Order extends Component {
                                                                     name="largeMultigrainLoaf" 
                                                                     value={ this.state.largeMultigrainLoaf}
                                                                     onChange={this.handleChange}
-                                                                    type="number"/>
+                                                                    type="number" onFocus={this.highlight}/>
                                                                 <button 
                                                                     className="addToOrderButton"
                                                                     name="LargeMultigrainLoaf" 
@@ -1992,7 +1999,7 @@ class Order extends Component {
                                                                 name="loafFruitAddOn" 
                                                                 value={ this.state.loafFruitAddOn}
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button 
                                                                 className="addToOrderButton"
                                                                 name="LoafFruitAddOn" 
@@ -2010,7 +2017,7 @@ class Order extends Component {
                                                                 name="nutellaLoaf" 
                                                                 value={ this.state.nutellaLoaf}
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button 
                                                                 className="addToOrderButton"
                                                                 name="NutellaLoaf" 
@@ -2028,7 +2035,7 @@ class Order extends Component {
                                                                 name="fruitSugarLoaf" 
                                                                 value={ this.state.fruitSugarLoaf}
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button 
                                                                 className="addToOrderButton"
                                                                 name="FruitSugarLoaf" 
@@ -2060,7 +2067,7 @@ class Order extends Component {
                                                                 name="fivePackSampler" 
                                                                 value={ this.state.fivePackSampler}
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button 
                                                                 className="addToOrderButton"
                                                                 name="FivePackSampler" 
@@ -2078,7 +2085,7 @@ class Order extends Component {
                                                                 name="tenPackSampler" 
                                                                 value={ this.state.tenPackSampler}
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button 
                                                                 className="addToOrderButton"
                                                                 name="TenPackSampler" 
@@ -2096,7 +2103,7 @@ class Order extends Component {
                                                                 name="fifteenPackSampler" 
                                                                 value={ this.state.fifteenPackSampler}
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button 
                                                                 className="addToOrderButton"
                                                                 name="FifteenPackSampler" 
@@ -2114,7 +2121,7 @@ class Order extends Component {
                                                                 name="twentyPackSampler" 
                                                                 value={ this.state.twentyPackSampler}
                                                                 onChange={this.handleChange}
-                                                                type="number"/>
+                                                                type="number" onFocus={this.highlight}/>
                                                             <button 
                                                                 className="addToOrderButton"
                                                                 name="TwentyPackSampler" 
@@ -2161,6 +2168,7 @@ class Order extends Component {
 
                         <div className="form-group orderFormPaymentSection">
                             <h4>*If you order is over 50 dollars, you automatically get 5% off!*</h4>
+                            <h4>*3% added to the total of online payments to cover electronic fees*</h4>
                             <h3>Choose a payment option: </h3>
                             <div id="payRadioOnline">
                                 <input  

@@ -35,6 +35,11 @@
                 -7px -7px 0px #ddeb9d;
 }
 
+#orderFormInfo {
+    text-align: center;
+    color: #131001;
+}
+
 #orderContactSection {
     display: flex;
     flex-direction: column;
@@ -89,8 +94,8 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 50em;
-    padding: 3% 2%;
+    height: 55em;
+    padding: 5% 2%;
     margin: 3% 0% 0%;
     border-radius: 34px;
     background: #5D663D;
@@ -285,6 +290,11 @@
     width: 1.5em !important;
 }
 
+.yourOrderItemLabel {
+    width: 100%;
+    margin: 0% 0% 1% 0%;
+}
+
 .yourOrderItemNum {
     padding: 0% 5%;
 }
@@ -307,6 +317,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.paymentNotices {
+    margin: 0% 0% 2%;
+    padding: 2% 0%;
+    border-bottom: #D9D7B1 dotted 0.08em;
 }
 
 #payRadioOnline, #payRadioCash {
@@ -425,11 +441,6 @@
         box-shadow: inset 6px 6px 12px #17190f, 
                     inset -6px -6px 12px #5b653b;
     }
-
-    .yourOrderItemLabel {
-        width: 50%;
-        margin: 0% 0% 1% 0%;
-    }
     
     .add1Button {
         padding: 1% 2%;
@@ -474,8 +485,8 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 60em;
-        padding: 3% 2%;
+        height: 65em;
+        padding: 5% 2%;
         margin: 3% 0% 0%;
         border-radius: 34px;
         background: #5D663D;
@@ -632,17 +643,17 @@
 
     #orderFormSelectFood {
         width: 100%;
-        height: 42%;
+        height: 45%;
         padding: 0% 1% 2% 0%;
     }
    
     #orderFormYourSelection {
         width: 100%;
-        height: 42%;
+        height: 45%;
         border-top: #251605 solid 0.01em;
         border-left: none;
         padding: 0% 1%;
-        margin: 35% 0% 0%;
+        margin: 20% 0% 0%;
     }
 
     #orderFormButtons {

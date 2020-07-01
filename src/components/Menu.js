@@ -31,7 +31,7 @@ const Menu = () => {
               <a href="#menu-savory" className="smoothscroll menuNavBorder"><h3>Savory Items</h3></a>
               <a href="#menu-sweets" className="smoothscroll menuNavBorder"><h3>Sweet Items</h3></a>
               <a href="#menu-bread-and-pizza" className="smoothscrolling menuNavBorder"><h3>Bread/Pizza Items</h3></a>
-              <a href="#menu-samplers" className="smoothscrolling"><h3>Samplers</h3></a>
+              <a href="#menu-samplers" className="smoothscrolling"><h3>Samplers / Meal Packs</h3></a>
             </div>
           </div>
           <div id="menu-savory">
@@ -886,8 +886,8 @@ const Menu = () => {
             <Accordion defaultIndex={[0]} allowMultiple>
               <div id="samplerContainer">
                 <div className="samplerGeneralInfo">
-                  <h3>Samplers</h3>
-                  <h4>12.00 - 44.00</h4>
+                  <h3>Samplers / Meal Packages</h3>
+                  <h4>12.00 - 58.90</h4>
                 </div>
                 <AccordionItem>
                   <AccordionHeader className="samplerAccordianHeader" _expanded={{ background: "#694226 !important", color: "white" }}>
@@ -908,7 +908,7 @@ const Menu = () => {
                       </ul>
                       <li className="samplerListItem">
                         <h5>10 pack Sampler</h5>
-                        <h5>19</h5>
+                        <h5>19.00</h5>
                       </li>
                       <ul className="samplerItemExplanation">
                         <li><h6>
@@ -919,7 +919,7 @@ const Menu = () => {
                       </ul>
                       <li className="samplerListItem">
                         <h5>15 pack Sampler</h5>
-                        <h5>34</h5>
+                        <h5>34.00</h5>
                       </li>
                       <ul className="samplerItemExplanation">
                         <li><h6>
@@ -931,7 +931,7 @@ const Menu = () => {
                       </ul>
                       <li className="samplerListItem">
                         <h5>20 pack Sampler</h5>
-                        <h5>44</h5>
+                        <h5>44.00</h5>
                       </li>
                       <ul className="samplerItemExplanation">
                         <li><h6>
@@ -940,6 +940,72 @@ const Menu = () => {
                           2 Choco Pecan Cookie, 1 Chocoate Twist, and 4 90g Buns.
                         </h6></li>
                         <li><h6>(Contains: wheat, dairy (milk, eggs, butter), tree nuts, soy)</h6></li>
+                      </ul>
+                      <li className="samplerListItem">
+                        <h5>4 person Meal Pack</h5>
+                        <h5>20.90</h5>
+                      </li>
+                      <ul className="samplerItemExplanation">
+                        <li><h6>
+                          4 hamburger buns, 2 individual sandwich loafs, 1 par-baked pizza dough, 2 everything croissants, 
+                          2 Ham and Cheese Croissants, and 1 ten pack of cheese crostinis
+                        </h6></li>
+                        <li><h6>(Contains: wheat, dairy (milk, eggs, butter))</h6></li>
+                      </ul>
+                      <li className="samplerListItem">
+                        <h5>8 person Meal Pack</h5>
+                        <h5>41.90</h5>
+                      </li>
+                      <ul className="samplerItemExplanation">
+                        <li><h6>
+                          8 hamburger buns, 4 individual sandwich loafs, 2 par-baked pizza doughs, 4 everything croissants, 
+                          4 Ham and Cheese Croissants, 1 ten pack of cheese crostini, and 1 ten pack of everything spices crostinis
+                        </h6></li>
+                        <li><h6>(Contains: wheat, dairy (milk, eggs, butter))</h6></li>
+                      </ul>
+                      <li className="samplerListItem">
+                        <h5>4 person Dessert Pack</h5>
+                        <h5>22.80</h5>
+                      </li>
+                      <ul className="samplerItemExplanation">
+                        <li><h6>
+                            2 Chocoloate Croissants, 4 Choco Twists, 1 Apple Turnover, 1 Strawberry Turnover,
+                            2 coffecakes, 1 jam sandwich cookie (NEW), and 1 chocolate sandwich cookie (NEW)
+                        </h6></li>
+                        <li><h6>(Contains: wheat, dairy (milk, eggs, butter), tree nuts)</h6></li>
+                      </ul>
+                      <li className="samplerListItem">
+                        <h5>8 person Dessert Pack</h5>
+                        <h5>41.50</h5>
+                      </li>
+                      <ul className="samplerItemExplanation">
+                        <li><h6>
+                            4 Chocoloate Croissants, 6 Choco Twists, 2 Apple Turnovers, 2 Strawberry Turnovers,
+                            4 muffins, 2 coffecakes, 1 jam sandwich cookie (NEW), and 1 chocolate sandwich cookie (NEW)
+                        </h6></li>
+                        <li><h6>(Contains: wheat, dairy (milk, eggs, butter), tree nuts)</h6></li>
+                      </ul>
+                      <li className="samplerListItem">
+                        <h5>8 person Meal and Dessert Combo Pack</h5>
+                        <h5>41.90</h5>
+                      </li>
+                      <ul className="samplerItemExplanation">
+                        <li><h6>
+                            8 hamburger buns, 2 par-baked pizza dough, 4 everything croissants, 4 Chocoloate Croissants, 1 ten pack of cheese crostini,
+                            6 coffecakes
+                        </h6></li>
+                        <li><h6>(Contains: wheat, dairy (milk, eggs, butter), tree nuts)</h6></li>
+                      </ul>
+                      <li className="samplerListItem">
+                        <h5>12 person Meal and Dessert Combo Pack</h5>
+                        <h5>58.90</h5>
+                      </li>
+                      <ul className="samplerItemExplanation">
+                        <li><h6>
+                            12 hamburger buns, 3 par-baked pizza dough, 6 everything croissants, 6 Chocoloate Croissants, 1 ten pack of cheese crostini,
+                            8 coffecakes
+                        </h6></li>
+                        <li><h6>(Contains: wheat, dairy (milk, eggs, butter), tree nuts)</h6></li>
                       </ul>
                     </ul>
                     <p className="samplerFullIngredients">

@@ -95,6 +95,12 @@ const pricesPerItem = {
     tenPackSampler: 19.00,
     fifteenPackSampler: 34.00,
     twentyPackSampler: 44.00,
+    fourPersonMealPack: 20.90,
+    eightPersonMealPack: 41.90,
+    fourPersonDessertPack: 22.80,
+    eightPersonDessertPack: 41.50,
+    eightPersonMealAndDessertComboPack: 41.90,
+    twelvePersonMealAndDessertComboPack: 58.90,
 };
 class Order extends Component {
     constructor () {
@@ -179,6 +185,12 @@ class Order extends Component {
             tenPackSampler: 0,
             fifteenPackSampler: 0,
             twentyPackSampler: 0,
+            fourPersonMealPack: 0,
+            eightPersonMealPack: 0,
+            fourPersonDessertPack: 0,
+            eightPersonDessertPack: 0,
+            eightPersonMealAndDessertComboPack: 0,
+            twelvePersonMealAndDessertComboPack: 0,
             yourOrder: [],
             phoneValue: '',
             showPaypal: false,
@@ -224,6 +236,7 @@ class Order extends Component {
 
     addOrderItem(e) {
         const itemName = e.target.name
+        const nameWithSpaces = e.target.name.match(/[A-Z]+[^A-Z]*|[^A-Z]+/g).join(" ")
         e.preventDefault();
         e.stopPropagation();
         const yourOrder = [...this.state.yourOrder]
@@ -236,7 +249,7 @@ class Order extends Component {
             this.setState({yourOrder})
         } else
         {this.setState({
-            yourOrder: [...this.state.yourOrder, {item: e.target.name, number: e.target.value}]
+            yourOrder: [...this.state.yourOrder, {key: e.target.name, item: nameWithSpaces, number: e.target.value}]
         })}
     }
 
@@ -378,6 +391,12 @@ class Order extends Component {
             tenPackSampler: 0,
             fifteenPackSampler: 0,
             twentyPackSampler: 0,
+            fourPersonMealPack: 0,
+            eightPersonMealPack: 0,
+            fourPersonDessertPack: 0,
+            eightPersonDessertPack: 0,
+            eightPersonMealAndDessertComboPack: 0,
+            twelvePersonMealAndDessertComboPack: 0,
             yourOrder: [],
             showPaypal: false,
             paymentOption: '',
@@ -413,8 +432,8 @@ class Order extends Component {
             onlineTotal = 0.00
         } else {
             yourOrder.forEach((element) => {
-                orderArray.push(`${element.item}: ${element.number}`)
-                itemStateName = element.item.charAt(0).toLowerCase() + element.item.slice(1)
+                orderArray.push(`${element.key}: ${element.number}`)
+                itemStateName = element.key.charAt(0).toLowerCase() + element.key.slice(1)
                 total = parseInt(total) + (parseInt(element.number) * pricesPerItem[itemStateName])
             })
             onlineTotal = ((total * 0.03) + total + 0.30).toFixed(2)
@@ -442,6 +461,11 @@ class Order extends Component {
                         <img src={TitleBorderBottom} alt="gold ornamental bottom border" id="aboutTitleBottomBorder"/>
                     </div>
                     <form name="submit-to-google-sheet" id="orderForm" onSubmit={this.formSubmit}>
+                        <div id="orderFormInfo">
+                            <h3>Fill out the form below to make an order.</h3> <br/>
+                            <h3>Scroll down to the Place Order button to submit the order.</h3> <br/> 
+                            <h3>Let us know in the Contact Section if there are any issues.</h3>
+                        </div>
                         <div id="orderContactSection">
                             <div id="orderContactSectionTitle">
                                 <h2 id="orderContactTitle">Contact Information: </h2>
@@ -497,7 +521,7 @@ class Order extends Component {
                             <div id="orderFormSelectionTitle">
                                 <h2>Order Selection:</h2>
                                 <img src={BlackLineDivider} alt="black ornamental flower divider" className="blackLineDivider" />
-                                <h3>In the "Order Selction!"" section select your choices and input the number of items you'd like. On the "Your Order Summary:" section you can see your order and adjust it.</h3>
+                                <h4>In the "Order Selction!"" section select your choices and input the number of items you'd like. On the "Your Order Summary:" section you can see your order and adjust it.</h4>
                             </div>
                             <div id="orderFormSelectionRow">
                                 <div id="orderFormSelectFood">
@@ -2053,7 +2077,7 @@ class Order extends Component {
                                             <AccordionItem>
                                                 <AccordionHeader className="orderAccordianHeader" _expanded={{ background: "#351315 !important", color: "white" }}>
                                                     <Box flex="1" textAlign="left">
-                                                        Samplers
+                                                        Samplers / Meal Packages
                                                     </Box>
                                                     <AccordionIcon />
                                                 </AccordionHeader>
@@ -2131,6 +2155,114 @@ class Order extends Component {
                                                                  Add
                                                             </button>
                                                         </li>
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemMealPack4">4 Person Meal Pack: </label>
+                                                            <input 
+                                                                id="itemMealPack4" 
+                                                                className="orderItemNum" 
+                                                                name="fourPersonMealPack" 
+                                                                value={ this.state.fourPersonMealPack}
+                                                                onChange={this.handleChange}
+                                                                type="number" onFocus={this.highlight}/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="FourPersonMealPack" 
+                                                                value={this.state.fourPersonMealPack} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                 Add
+                                                            </button>
+                                                        </li>
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemMealPack8">8 Person Meal Pack: </label>
+                                                            <input 
+                                                                id="itemMealPack8" 
+                                                                className="orderItemNum" 
+                                                                name="eightPersonMealPack" 
+                                                                value={ this.state.eightPersonMealPack}
+                                                                onChange={this.handleChange}
+                                                                type="number" onFocus={this.highlight}/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="EightPersonMealPack" 
+                                                                value={this.state.eightPersonMealPack} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                 Add
+                                                            </button>
+                                                        </li>
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemDessertPack4">4 Person Dessert Pack: </label>
+                                                            <input 
+                                                                id="itemDessertPack4" 
+                                                                className="orderItemNum" 
+                                                                name="fourPersonDessertPack" 
+                                                                value={ this.state.fourPersonDessertPack}
+                                                                onChange={this.handleChange}
+                                                                type="number" onFocus={this.highlight}/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="FourPersonDessertPack" 
+                                                                value={this.state.fourPersonDessertPack} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                 Add
+                                                            </button>
+                                                        </li>
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemDessertPack8">8 Person Dessert Pack: </label>
+                                                            <input 
+                                                                id="itemDessertPack8" 
+                                                                className="orderItemNum" 
+                                                                name="eightPersonDessertPack" 
+                                                                value={ this.state.eightPersonDessertPack}
+                                                                onChange={this.handleChange}
+                                                                type="number" onFocus={this.highlight}/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="EightPersonDessertPack" 
+                                                                value={this.state.eightPersonDessertPack} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                 Add
+                                                            </button>
+                                                        </li>
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemComboPack8">8 Person Meal and Dessert Combo Pack: </label>
+                                                            <input 
+                                                                id="itemComboPack8" 
+                                                                className="orderItemNum" 
+                                                                name="eightPersonMealAndDessertComboPack" 
+                                                                value={ this.state.eightPersonMealAndDessertComboPack}
+                                                                onChange={this.handleChange}
+                                                                type="number" onFocus={this.highlight}/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="EightPersonMealAndDessertComboPack" 
+                                                                value={this.state.eightPersonMealAndDessertComboPack} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                 Add
+                                                            </button>
+                                                        </li> 
+                                                        <li className="orderListItem">
+                                                            <label className="orderItemLabel" for="itemComboPack12">12 Person Meal and Dessert Combo Pack: </label>
+                                                            <input 
+                                                                id="itemComboPack12" 
+                                                                className="orderItemNum" 
+                                                                name="twelvePersonMealAndDessertComboPack" 
+                                                                value={ this.state.twelvePersonMealAndDessertComboPack}
+                                                                onChange={this.handleChange}
+                                                                type="number" onFocus={this.highlight}/>
+                                                            <button 
+                                                                className="addToOrderButton"
+                                                                name="TwelvePersonMealAndDessertComboPack" 
+                                                                value={this.state.twelvePersonMealAndDessertComboPack} 
+                                                                onClick={this.addOrderItem}
+                                                            >
+                                                                 Add
+                                                            </button>
+                                                        </li>                                                        
                                                     </ul>
 
                                                 </AccordionPanel>
@@ -2143,7 +2275,7 @@ class Order extends Component {
                                     <h3 id="orderFormYourSelectionTitle">Your Order Summary: </h3>
                                     <ul id="orderFormYourSelectionList">
                                         {this.state.yourOrder.map(order => (
-                                            <li className="yourOrderListItem" key={order.item}>
+                                            <li className="yourOrderListItem" key={order.key}>
                                                 <h5 className="yourOrderItemLabel">{order.item}: </h5> 
                                                 <button name={order.item} aria-label="Subtract One from Item Order" className="minus1Button"  value='-1' onClick={this.updateOrderItem}>Minus 1</button>
                                                 <span className="yourOrderItemNum">{order.number}</span>
@@ -2167,8 +2299,8 @@ class Order extends Component {
                         </div>
 
                         <div className="form-group orderFormPaymentSection">
-                            <h4>*If you order is over 50 dollars, you automatically get 5% off!*</h4>
-                            <h4>*3% added to the total of online payments to cover electronic fees*</h4>
+                            <h4 className="paymentNotices">*If you order is over 50 dollars, you automatically get 5% off!*</h4>
+                            <h4 className="paymentNotices">*3% added to the total of online payments to cover electronic fees*</h4>
                             <h3>Choose a payment option: </h3>
                             <div id="payRadioOnline">
                                 <input  

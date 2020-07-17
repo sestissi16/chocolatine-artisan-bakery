@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.ef273bba.chunk.css",
-    "main.js": "/static/js/main.1ed152b9.chunk.js",
-    "main.js.map": "/static/js/main.1ed152b9.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.9595752d.js",
-    "runtime-main.js.map": "/static/js/runtime-main.9595752d.js.map",
+    "main.js": "/static/js/main.1e89182d.chunk.js",
+    "main.js.map": "/static/js/main.1e89182d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.fb3d3950.js",
+    "runtime-main.js.map": "/static/js/runtime-main.fb3d3950.js.map",
     "static/css/2.03923625.chunk.css": "/static/css/2.03923625.chunk.css",
-    "static/js/2.2fc00e2c.chunk.js": "/static/js/2.2fc00e2c.chunk.js",
-    "static/js/2.2fc00e2c.chunk.js.map": "/static/js/2.2fc00e2c.chunk.js.map",
+    "static/js/2.05ea8da8.chunk.js": "/static/js/2.05ea8da8.chunk.js",
+    "static/js/2.05ea8da8.chunk.js.map": "/static/js/2.05ea8da8.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.441733807a124814d49fd9ed422c7c0c.js": "/precache-manifest.441733807a124814d49fd9ed422c7c0c.js",
+    "precache-manifest.ee2efe69b350e352d5b2934c45071fe2.js": "/precache-manifest.ee2efe69b350e352d5b2934c45071fe2.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.03923625.chunk.css.map": "/static/css/2.03923625.chunk.css.map",
     "static/css/main.ef273bba.chunk.css.map": "/static/css/main.ef273bba.chunk.css.map",
-    "static/js/2.2fc00e2c.chunk.js.LICENSE.txt": "/static/js/2.2fc00e2c.chunk.js.LICENSE.txt",
+    "static/js/2.05ea8da8.chunk.js.LICENSE.txt": "/static/js/2.05ea8da8.chunk.js.LICENSE.txt",
     "static/media/Header.css": "/static/media/flowerGoldenRectangularBorderTransparent-AllAround.e8505509.png",
     "static/media/blackFlowerDivider-Transparent-Cropped.png": "/static/media/blackFlowerDivider-Transparent-Cropped.9c091f96.png",
     "static/media/blackFractalVarietyEuropeanPatterBorders-Bottom3.png": "/static/media/blackFractalVarietyEuropeanPatterBorders-Bottom3.f28f6cea.png",
@@ -25,10 +25,10 @@
     "static/media/Menu.css": "/static/media/parchmentBackgroundPic.d7802255.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.9595752d.js",
+    "static/js/runtime-main.fb3d3950.js",
     "static/css/2.03923625.chunk.css",
-    "static/js/2.2fc00e2c.chunk.js",
+    "static/js/2.05ea8da8.chunk.js",
     "static/css/main.ef273bba.chunk.css",
-    "static/js/main.1ed152b9.chunk.js"
+    "static/js/main.1e89182d.chunk.js"
   ]
 }

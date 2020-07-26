@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import scriptLoader from "react-async-script-loader";
+import SmartPaymentButtons, { PayPalSDKWrapper } from 'react-smart-payment-buttons';
 
 
  const CLIENT = {
@@ -10,12 +10,9 @@ import scriptLoader from "react-async-script-loader";
      "AavQDHb_8SyiZIqB_1wFQGCC88OzfekPL1nreE0t6tnFwPr23Jjuw3hLsnPSRgAgooqgxHFiytLdBnIu"
  };
 
- const CLIENT_ID =
+ const REACT_APP_PAYPAL_CLIENT_ID =
    process.env.NODE_ENV === "production" ? CLIENT.production : CLIENT.sandbox;
 
-console.log(process.env.NODE_ENV)
-//create button here
-let PayPalButton = null;
 
 // next create the class and Bind React and ReactDom to window
 //as we will be needing them later
@@ -25,41 +22,13 @@ class PaypalButton extends React.Component {
     super(props);
 
     this.state = {
-      showButtons: false,
-      loading: true,
+      showButtons: true,
       paid: false,
       showPaypal: props.showStatus,
     };
 
     window.React = React;
     window.ReactDOM = ReactDOM;
-  }
-
-  componentDidMount() {
-    console.log(process.env.NODE_ENV)
-    const { isScriptLoaded, isScriptLoadSucceed } = this.props;
-
-    if (isScriptLoaded && isScriptLoadSucceed) {
-      PayPalButton = window.paypal.Buttons.driver("react", { React, ReactDOM });
-      this.setState({ loading: false, showButtons: true });
-    }
-  }
-
-  componentWillReceiveProps(nextProps) {
-    const { isScriptLoaded, isScriptLoadSucceed } = nextProps;
-
-    const scriptJustLoaded =
-      !this.state.showButtons && !this.props.isScriptLoaded && isScriptLoaded;
-
-    if (scriptJustLoaded) {
-      if (isScriptLoadSucceed) {
-        PayPalButton = window.paypal.Buttons.driver("react", {
-          React,
-          ReactDOM
-        });
-        this.setState({ loading: false, showButtons: true });
-      }
-    }
   }
 
   createOrder = (data, actions) => {
@@ -92,10 +61,9 @@ class PaypalButton extends React.Component {
   
 
   render() {
-    const { showButtons, loading, paid } = this.state;
+    const { showButtons, paid } = this.state;
       return (
         <div className="main">
-          {loading}
       
           {showButtons && (
               <div>
@@ -103,12 +71,16 @@ class PaypalButton extends React.Component {
                   <h2>Items: {this.props.description}</h2>
                   <h2>Total checkout Amount: {this.props.price}</h2>
                 </div>
-                
-                <PayPalButton
-                  createOrder={(data, actions) => this.createOrder(data, actions)}
-                  onApprove={(data, actions) => this.onApprove(data, actions)}
-                />
+
+                <PayPalSDKWrapper clientId={REACT_APP_PAYPAL_CLIENT_ID}>
+                    <SmartPaymentButtons
+                    createOrder={(data, actions) => this.createOrder(data, actions)}
+                    onApprove={(data, actions) => this.onApprove(data, actions)}
+                    />
+                </PayPalSDKWrapper>
+    
                 <input className="hidden" name="paid" readOnly value='Did not complete online payment'/>
+                <h4>If this message doesn't go away, then something has gone wrong with the Paypal payment system! Please select, pay in cash instead and then click the Place Order button.</h4>
               </div>
             )}
   
@@ -128,6 +100,6 @@ class PaypalButton extends React.Component {
 
  }
 
- export default scriptLoader(`https://www.paypal.com/sdk/js?client-id=${CLIENT_ID}`)(PaypalButton);
+ export default (PaypalButton);
 
 //  view rawReact-PayPal-Imports.js hosted with ❤ by GitHub

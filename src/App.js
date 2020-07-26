@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route, BrowserRouter as Router } from 'react-router-dom'
 import Navigation from './components/Navbar'
 import Header from './components/Header'
 import About from './components/About'
@@ -144,11 +145,13 @@ function App() {
     <div className="App">
       <ThemeProvider theme={newTheme}>
         <Navigation />
-        <Header />
-        <About />
-        <Menu />
-        <Order />
-        <Contact />
+        <Router>
+            <Route exact path="/" component={Header} />
+            <Route exact path="/About" component={About} />
+            <Route exact path="/Menu" component={Menu} />
+            <Route exact path="/Order" component={Order} />
+            <Route exact path="/Contact" component={Contact} />
+        </Router>
       </ThemeProvider>
     </div>
   );

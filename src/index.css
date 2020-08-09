@@ -7,13 +7,13 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  height: fit-content;
+  height: 100%;
   width: 100%;
   padding-top: 3.875em;
 }
 
 #root {
-  height: fit-content;
+  height: 100%;
   width: 100%;
 }
 

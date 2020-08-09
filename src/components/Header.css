@@ -71,6 +71,11 @@
 }
 
 @media (min-width:1200px){
+    #home {
+        height: 100%;
+        width: 100%;
+    }
+    
     #homeInfoText {
         padding: 10% 12%;
     }
@@ -78,8 +83,10 @@
 
 @media (max-width:960px) {
     #home {
-        height: fit-content;
+        height: 100%;
+        width: 100%;
     }
+    
 }
 
 @media (max-width:768px){

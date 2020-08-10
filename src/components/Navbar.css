@@ -48,37 +48,6 @@
     .navbar-link {
         font-size: larger !important;
     }
-    
-}
-
-@media (max-width: 995px) {
-    .navLinksContainer {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .navbar-link{
-        color: #C9CBA3 !important;
-        font-size: large;
-        margin: 1% 0% !important;
-        border-bottom: 0.04em solid #C9CBA3;
-        border-top: 0.04em solid #C9CBA3;
-        width: 100%;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-    }
-    
-    .navbar-link:hover {
-        color: #A9FFCB !important;
-        border-bottom: 0.06em solid #A9FFCB;
-        border-top: 0.06em solid #A9FFCB;
-        background-color: #64341E;
-        box-shadow: 0.2em 0.2em #000000;
-    }
 }
 
 @media (max-width: 786px) {

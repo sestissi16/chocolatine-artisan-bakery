@@ -5,18 +5,16 @@
 
 #headerContainer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     background: #251605 url(../assets/bakeryHeaderImage.jpg) no-repeat center center;
     background-size: cover !important;
 	-webkit-background-size: cover !important;
     width: 100%;
-    height: fit-content;
+    height: 100%;
     padding: 6% 2%;
 }
-
-
 
 #homeInfo {
     width: 80%;

@@ -130,14 +130,14 @@
     color: black;
 }
 
-#fb-container {
+/* #fb-container {
     margin: 6% 0% 0% 0% !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
-}
+} */
 
 #contactFacebookTitle {
     padding: 0% 2% 2%;

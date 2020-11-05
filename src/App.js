@@ -1,4 +1,6 @@
 import React from 'react';
+import ReactGA from 'react-ga';
+import $ from 'jquery';
 import { Route, BrowserRouter as Router } from 'react-router-dom'
 import Navigation from './components/Navbar'
 import Header from './components/Header'
@@ -139,6 +141,37 @@ const newTheme = {
 };
 
 // FB.AppEvents.logPageView();
+
+constructor(props){
+    super(props);
+    this.state = {
+      foo: 'bar',
+      bakeryData: {}
+    };
+
+    ReactGA.initialize('UA-110570651-1');
+    ReactGA.pageview(window.location.pathname);
+
+  }
+
+  getResumeData(){
+    $.ajax({
+      url:'/bakeryData.json',
+      dataType:'json',
+      cache: false,
+      success: function(data){
+        this.setState({bakeryData: data});
+      }.bind(this),
+      error: function(xhr, status, err){
+        console.log(err);
+        alert(err);
+      }
+    });
+  }
+
+  componentDidMount(){
+    this.getResumeData();
+  }
 
 function App() {
   return (

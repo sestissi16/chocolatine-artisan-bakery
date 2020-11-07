@@ -1,6 +1,4 @@
-import React from 'react';
-import ReactGA from 'react-ga';
-import $ from 'jquery';
+import React, { Component } from 'react';
 import { Route, BrowserRouter as Router } from 'react-router-dom'
 import Navigation from './components/Navbar'
 import Header from './components/Header'
@@ -142,52 +140,25 @@ const newTheme = {
 
 // FB.AppEvents.logPageView();
 
-constructor(props){
-    super(props);
-    this.state = {
-      foo: 'bar',
-      bakeryData: {}
-    };
 
-    ReactGA.initialize('UA-110570651-1');
-    ReactGA.pageview(window.location.pathname);
 
-  }
-
-  getResumeData(){
-    $.ajax({
-      url:'/bakeryData.json',
-      dataType:'json',
-      cache: false,
-      success: function(data){
-        this.setState({bakeryData: data});
-      }.bind(this),
-      error: function(xhr, status, err){
-        console.log(err);
-        alert(err);
-      }
-    });
-  }
-
-  componentDidMount(){
-    this.getResumeData();
-  }
-
-function App() {
-  return (
-    <div className="App">
-      <ThemeProvider theme={newTheme}>
-        <Navigation />
-        <Router>
-            <Route exact path="/" component={Header} />
-            <Route exact path="/About" component={About} />
-            <Route exact path="/Menu" component={Menu} />
-            <Route exact path="/Order" component={Order} />
-            <Route exact path="/Contact" component={Contact} />
-        </Router>
-      </ThemeProvider>
-    </div>
-  );
+class App extends Component {
+    render() {        
+        return (
+            <div className="App">
+                <ThemeProvider theme={newTheme}>
+                    <Navigation />
+                    <Router>
+                        <Route exact path="/" component={Header} />
+                        <Route exact path="/About" component={About} />
+                        <Route exact path="/Menu" component={Menu} />
+                        <Route exact path="/Order" component={Order} />
+                        <Route exact path="/Contact" component={Contact} />
+                    </Router>
+                </ThemeProvider>
+            </div>
+        );
+    }
 }
 
 export default App;

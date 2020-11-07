@@ -1,10 +1,27 @@
-import React from 'react';
+import React, { Component } from 'react';
 import BlackLineDivider from '../assets/blackFlowerDivider-Transparent-Cropped.png'
 import TitleBorderTop from '../assets/goldOrnateLines-Top4-Transparent.png'
 import TitleBorderBottom from '../assets/goldOrnateLines-Bottom4-Transparent.png'
 import './About.css'
+import bakeryInfo from '../bakeryData'
 
-const About = () => {
+class About extends Component {
+    render(){
+        var mission1Part1 = bakeryInfo.aboutUs.mission1Part1;
+        var mission1Part2 = bakeryInfo.aboutUs.mission1Part2;
+        var mission1Emphasis = bakeryInfo.aboutUs.mission1Emphasis;
+        var mission2 = bakeryInfo.aboutUs.mission2;
+        // var vision1 = bakeryInfo.aboutUs.vision1;
+        // var vision2 = bakeryInfo.aboutUs.vision2;
+        // var service1 = bakeryInfo.aboutUs.service1;
+        // var service2 = bakeryInfo.aboutUs.service2;
+        // var service3= bakeryInfo.aboutUs.service3;
+        // var service4 = bakeryInfo.aboutUs.service4;
+        // var process1 = bakeryInfo.aboutUs.process1;
+        // var process2 = bakeryInfo.aboutUs.process2;
+        // var order1 = bakeryInfo.aboutUs.order1;
+        // var order2 = bakeryInfo.aboutUs.order2;
+        // var order3= bakeryInfo.aboutUs.order3;
   return (
     <section id="about">
         <div id="aboutContainer">
@@ -17,11 +34,13 @@ const About = () => {
             <div id="aboutMission">
               <h2 className="aboutTitles">Our Mission:</h2>
                 <img src={BlackLineDivider} alt="ornamental divider" className="aboutLineDivider"/>
-                <h4>We've grown up eating <span className="aboutEmphasis">incredible French baked goods</span> and we wanted to share that with all of you.</h4><br/>
+                {/* <h4>We've grown up eating <span className="aboutEmphasis">incredible French baked goods</span> and we wanted to share that with all of you.</h4><br/>
                 <h4>
                   That's why our mission is to bring you incredible baked goods that are as <span className="aboutEmphasis">fresh</span> as possible and <span className="aboutEmphasis">made with love</span>, 
                   so you can have wonderful mornings, tasty breaks and surprising dining experiences.
-                </h4><br/>
+                </h4><br/> */}
+                <h4>{mission1Part1}<span className="aboutEmphasis">{mission1Emphasis}</span>{mission1Part2}</h4><br></br>
+                <h4>{mission2}</h4>
             </div>
             <div id="aboutServices">
               <h2 className="aboutTitles">Our Services:</h2>
@@ -64,6 +83,7 @@ const About = () => {
         </div>
     </section>
   );
+}
 };
 
 export default About;

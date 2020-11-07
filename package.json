@@ -14,6 +14,7 @@
     "bootstrap": "^4.5.0",
     "emotion-theming": "^10.0.27",
     "informed": "^3.8.1",
+    "jquery": "^3.5.1",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-async-script-loader": "^0.3.0",

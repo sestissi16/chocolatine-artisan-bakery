@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import BlackLineDivider from '../assets/blackFlowerDivider-Transparent-Cropped.png'
-import TitleBorderTop from '../assets/goldOrnateLines-Top4-Transparent.png'
-import TitleBorderBottom from '../assets/goldOrnateLines-Bottom4-Transparent.png'
+import BlackLineDivider from '../assets/borders/black/blackFlowerDivider-Transparent-Cropped.png'
 import './About.css'
 import bakeryInfo from '../bakeryData'
+import TitleFrame from '../assets/backgrounds/aboutUsDarkBrown.png'
 
 class About extends Component {
     render(){
@@ -26,9 +25,7 @@ class About extends Component {
     <section id="about">
         <div id="aboutContainer">
           <div id="aboutSectionTitle">
-            <img src={TitleBorderTop} alt="gold ornamental top border" id="aboutTitleTopBorder"/>
-            <h1 id="aboutTitleText">About Us:</h1>
-            <img src={TitleBorderBottom} alt="gold ornamental bottom border" id="aboutTitleBottomBorder"/>
+            <img src={TitleFrame} alt="About Us Title with Vintage Frame" id="aboutTitleImage"/>
           </div>
           <div id="aboutRow1">
             <div id="aboutMission">

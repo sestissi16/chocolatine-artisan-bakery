@@ -7,9 +7,9 @@ import {
   AccordionIcon,
   Box
 } from "@chakra-ui/core";
-import LeftTitleBorder from '../assets/blackFlowerThinDivider3-LeftEnd-Transparent.png'
-import RightTitleBorder from '../assets/blackFlowerThinDivider3-RightEnd-Transparent.png'
-import SectionDivider from '../assets/blackFlowerThinDivider2-FullLine-Transparent.png'
+import LeftTitleBorder from '../assets/borders/black/blackFlowerThinDivider3-LeftEnd-Transparent.png'
+import RightTitleBorder from '../assets/borders/black/blackFlowerThinDivider3-RightEnd-Transparent.png'
+import SectionDivider from '../assets/borders/black/blackFlowerThinDivider2-FullLine-Transparent.png'
 import './Menu.css'
 
 const Menu = () => {

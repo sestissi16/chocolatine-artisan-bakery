@@ -8,7 +8,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    background: #251605 url(../assets/bakeryHeaderImage.jpg) no-repeat center center;
+    background: #251605 url(../assets/Images/bakeryHeaderImage.jpg) no-repeat center center;
     background-size: cover !important;
 	-webkit-background-size: cover !important;
     width: 100%;
@@ -32,7 +32,7 @@
 }
 
 #homeInfoBorderImage{
-    background: url(../assets/flowerGoldenRectangularBorderTransparent-AllAround.png) no-repeat center center;
+    background: url(../assets/borders/gold/flowerGoldenRectangularBorderTransparent-AllAround.png) no-repeat center center;
     background-size: 100% 100% !important;
     -webkit-background-size: 100% 100% !important;
     width: 100%;

@@ -12,9 +12,9 @@ import {
     Box, 
     button
   } from "@chakra-ui/core";
-import TitleBorderTop from '../assets/goldOrnateLines-Top4-Transparent.png'
-import TitleBorderBottom from '../assets/goldOrnateLines-Bottom4-Transparent.png'
-import BlackLineDivider from '../assets/blackFlowerDivider-Transparent-Cropped.png'
+import TitleBorderTop from '../assets/borders/gold/goldOrnateLines-Top4-Transparent.png'
+import TitleBorderBottom from '../assets/borders/gold/goldOrnateLines-Bottom4-Transparent.png'
+import BlackLineDivider from '../assets/borders/black/blackFlowerDivider-Transparent-Cropped.png'
 
 const pricesPerItem = { 
     cookiesChoco: 1.25, 

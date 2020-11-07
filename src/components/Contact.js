@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button'
 // import { FacebookProvider, Page } from 'react-facebook';
 import Iframe from 'react-iframe'
-import topBorder from '../assets/blackFractalVarietyEuropeanPatterBorders-Top3.png'
-import bottomBorder from '../assets/blackFractalVarietyEuropeanPatterBorders-Bottom3.png'
-import titleDivider from '../assets/blackFlowerDivider-Transparent-Cropped.png'
-// import titleBottom from '../assets/blackFleurDivider-Transparent.png'
-import formTop from '../assets/flowerGoldenRectangularBorderTransparent-Top2.png'
-import formBottom from '../assets/flowerGoldenRectangularBorderTransparent-Bottom2.png'
+import topBorder from '../assets/borders/black/blackFractalVarietyEuropeanPatterBorders-Top3.png'
+import bottomBorder from '../assets/borders/black/blackFractalVarietyEuropeanPatterBorders-Bottom3.png'
+import titleDivider from '../assets/borders/black/blackFlowerDivider-Transparent-Cropped.png'
+// import titleBottom from '../assets/borders/black/blackFleurDivider-Transparent.png'
+import formTop from '../assets/borders/gold/flowerGoldenRectangularBorderTransparent-Top2.png'
+import formBottom from '../assets/borders/gold/flowerGoldenRectangularBorderTransparent-Bottom2.png'
 import './Contact.css'
 
 class Contact extends Component {

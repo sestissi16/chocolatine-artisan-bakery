@@ -1,7 +1,7 @@
 #menu {
     height: fit-content;
     width: 100%;
-    background: #FFE6A7 url('../assets/parchmentBackgroundPic.jpg') no-repeat center center;
+    background: #FFE6A7 url('../assets/backgrounds/parchmentBackgroundPic.jpg') no-repeat center center;
     background-size: cover !important;
 	-webkit-background-size: cover !important;
     padding: 5% 0%;

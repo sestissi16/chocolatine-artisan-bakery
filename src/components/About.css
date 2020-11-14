@@ -17,21 +17,21 @@
     width: 80%;
     height: 18em;
     padding: 1%;
-    margin: 0% 0% 2% 0%;
+    margin: 0% 0% 1% 0%;
     text-align: center;
     border-radius: 6px;
 }
+
 #aboutTitleImage {
     width: 100%;
     height: 100%;
 }
 
-#aboutTitleTopBorder, #aboutTitleBottomBorder {
-    width: 100%;
-    height: 4em;
+.mobileSize {
+    display: none;
 }
 
-#aboutRow1, #aboutRow2 {
+#aboutServiceRow, #aboutHowRow, #aboutOrderRow {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -40,15 +40,55 @@
     width: 100%;
 }
 
-#aboutRow1 {
-    padding: 0% 0% 2% 0%;
+#aboutServiceRow {
+    padding: 0% 2% 0%;
 }
 
 .aboutLineDivider {
-    width: 100%;
+    width: 50%;
+    height: 5em;
 }
 
-#aboutMission, #aboutServices, #aboutHowWeMakeIt, #aboutHowToOrder {
+#aboutItems {
+    width: 98%;
+    height: fit-content;
+    background-image: url("../assets/backgrounds/oldParchmentBackground.jpg");
+    background-size: 100% 100%;
+    border-radius: 50px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#aboutMission {
+    width: 100%;
+    height: fit-content;
+    padding: 1% 2% 0%;
+    color: #251605;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#aboutMissionText {
+    width: 75%;
+}
+
+#aboutServicesIcon {
+    padding: 0% 3% 0% 0%;
+}
+
+#aboutServices, #aboutHowWeMakeIt, #aboutHowToOrder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+}
+
+/* #aboutHowWeMakeIt, #aboutHowToOrder {
     width: 46%;
     height: fit-content;
     border-radius: 12px;
@@ -59,16 +99,16 @@
     background: #D7D9B1;
     box-shadow:  6px -6px 12px #b5b695, 
                 -6px 6px 12px #f9fccd; */
-    color: #251605;
+    /*color: #251605;
     padding: 2%;
     text-align: center;
     border: #3C1518 outset 0.1em;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-}
+} */
 
-#aboutMission, #aboutHowWeMakeIt {
+#aboutHowWeMakeIt {
     margin: 0% 2% 0% 0%;
 }
 
@@ -76,6 +116,7 @@
     /* border-bottom: #3C1518 solid 0.05em; */
     font-family: 'Courgette', sans-serif;
     font-weight: bolder;
+    margin-top: 2%;
 }
 
 .aboutEmphasis {
@@ -86,6 +127,7 @@
 #aboutServicesList {
     font-family: 'Courgette', sans-serif;
     font-weight: bold;
+    margin: 2% 0%;
 }
 
 #aboutServicesContact {
@@ -125,23 +167,43 @@ box-shadow:  5px 5px 9px #a69770,
 }
 
 @media (max-width: 770px) {
+    .aboutLineDivider {
+        width: 80%;
+        height: 5em;
+    }
+
+    #aboutSectionTitle {
+        width: 100%;
+        height: 10em;
+    }
+
     #about {
         padding: 10% 2%;
     }
 
-    #aboutRow1, #aboutRow2 {
-        flex-direction: column;
+    #aboutServicesIcon {
+        padding: 0%;
     }
 
-    #aboutRow1 {
-        padding: 0% 0% 8% 0%;
+    #aboutServiceRow, #aboutHowRow, #aboutOrderRow {
+        flex-direction: column;
+        align-items: center;
     }
 
     #aboutMission, #aboutServices, #aboutHowWeMakeIt, #aboutHowToOrder {
         width: 100%;
+        text-align: center;
+        padding: 2%;
     }
 
-    #aboutMission, #aboutHowWeMakeIt {
-        margin: 0% 0% 8% 0%;
+}
+
+@media (max-width: 425px) {
+    .tabletDesktopSize {
+        display: none;
+    }
+
+    .mobileSize {
+        display: flex;
     }
 }

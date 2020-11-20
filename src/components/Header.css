@@ -8,7 +8,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    background: #251605 url(../assets/Images/bakeryHeaderImage.jpg) no-repeat center center;
+    background: #251605 url(../assets/backgrounds/woodenPlanks.jpg) no-repeat center center;
     background-size: cover !important;
 	-webkit-background-size: cover !important;
     width: 100%;
@@ -18,14 +18,13 @@
 }
 
 #homeInfo {
-    width: 80%;
+    width: 70%;
     height: 100%;
     overflow: auto;
     border-radius: 17px;
-    background: linear-gradient(145deg, rgba(31, 19, 5, 0.92), rgba(40, 24, 5, 0.92));
-    box-shadow:  26px 26px 52px #0f0902, 
-                -26px -26px 52px #3b2308;
-    color: #FBF2C0;
+    background: url(../assets/backgrounds/oldParchmentFloralBorder.png) no-repeat center center;
+    background-size: 100% 100%;
+    color: #251605;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,23 +32,12 @@
     padding: 0.5%;
 }
 
-#homeInfoBorderImage{
-    background: url(../assets/borders/gold/flowerGoldenRectangularBorderTransparent-AllAround.png) no-repeat center center;
-    background-size: 100% 100% !important;
-    -webkit-background-size: 100% 100% !important;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 #homeInfoText {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 20% 10%;
+    padding: 7% 10%;
     width: 100%;
     height: 100%;
 }
@@ -73,7 +61,7 @@
 
 #homeBtnRow {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 90%;
@@ -82,14 +70,14 @@
 
 #homeAboutBtn, #homeMenuBtn {
     padding: 1%;
-    width: 45%;
+    width: 90%;
     border: #942624 solid 0.1em;
     border-radius: 18px;
     background: linear-gradient(145deg, #c2c39f, #e6e8bd);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0% 3%;
+    margin: 2.5% 0%;
     text-align: center;
     font-size: 1.5em;
     font-family: "Capriola", sans-serif;
@@ -118,7 +106,7 @@
     }
     
     #homeInfoText {
-        padding: 14% 10%;
+        padding: 5% 10%;
     }
 }
 
@@ -135,14 +123,7 @@
         height: 8.7em;
     }
     #homeInfoText {
-        padding: 20% 14%;
-    }
-    #homeBtnRow {
-        flex-direction: column;
-    }
-    #homeAboutBtn, #homeMenuBtn {
-        width: 100%;
-        margin: 3% 0%;
+        padding: 9% 14%;
     }
 }
 
@@ -154,7 +135,7 @@
         height: 8.4em;
     }
     #homeInfoText {
-        padding: 20% 14%;
+        padding: 9% 14%;
     }
 }
 
@@ -166,7 +147,7 @@
         height: 8em;
     }
     #homeInfoText {
-        padding: 21% 16%;
+        padding: 9% 16%;
     }
 }
 
@@ -178,7 +159,7 @@
         height: 7.8em;
     }
     #homeInfoText {
-        padding: 21% 16% 21%;
+        padding: 8% 16% 21%;
     }
 }
 
@@ -192,6 +173,6 @@
     #homeInfoText {
         padding: 21% 12% 12%;
         border-radius: 17px;
-        background-color: rgba(40, 24, 5, 0.80);
+        /* background-color: rgba(40, 24, 5, 0.80); */
     }
 }

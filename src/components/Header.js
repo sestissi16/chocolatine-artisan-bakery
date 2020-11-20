@@ -12,16 +12,14 @@ class Header extends Component {
             <header id="home">
                 <div id="headerContainer">
                     <div id="homeInfo">
-                        <div id="homeInfoBorderImage">
-                            <div id="homeInfoText">
-                                <div id="homeLogo">
-                                    <img src={RectangleLogo} alt="Chocolatine logo with a croissant icon" id="homeLogoImage"/>
-                                </div>
-                                <h1 id="homeTagline">{tagline}</h1>
-                                <div id="homeBtnRow">
-                                    <a href="/About" id="homeAboutBtn" className="homeLink">Learn More</a>
-                                    <a href="/Menu" id="homeMenuBtn" className="homeLink">Our Menu</a>
-                                </div>
+                        <div id="homeInfoText">
+                            <div id="homeLogo">
+                                <img src={RectangleLogo} alt="Chocolatine logo with a croissant icon" id="homeLogoImage"/>
+                            </div>
+                            <h1 id="homeTagline">{tagline}</h1>
+                            <div id="homeBtnRow">
+                                <a href="/About" id="homeAboutBtn" className="homeLink">Learn More</a>
+                                <a href="/Menu" id="homeMenuBtn" className="homeLink">Our Menu</a>
                             </div>
                         </div>
                     </div>

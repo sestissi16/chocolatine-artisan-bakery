@@ -1,7 +1,7 @@
 
 
 const bakeryInfo = {
-    tagline:"Pastries for the people!",
+    tagline:"We make pastries for the people!",
     aboutUs: {
         mission1Part1: "We've grown up eating",
         mission1Part2: "French baked goods and we wanted to share that with all of you.",

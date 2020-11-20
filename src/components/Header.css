@@ -1,11 +1,6 @@
 #home {
     height: 100%;
     width: 100%;
-    background: #3c1518; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 #headerContainer {
@@ -13,13 +8,23 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    background: url(../assets/backgrounds/oldParchmentFloralBorder.png) no-repeat;
-    /* background-size: cover !important; */
-    /* -webkit-background-size: cover !important; */
-    background-size: 100% 100%;
-    width: 98%;
+    background: #251605 url(../assets/Images/bakeryHeaderImage.jpg) no-repeat center center;
+    background-size: cover !important;
+	-webkit-background-size: cover !important;
+    width: 100%;
     height: 100%;
+    overflow: auto;
     padding: 6% 2%;
+}
+#homeLogo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#homeLogoImage {
+    height: 10em;
+    padding: 17% 0% 0%;
 }
 
 #homeInfo {
@@ -43,6 +48,9 @@
     -webkit-background-size: 100% 100% !important;
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #homeInfoText {
@@ -50,7 +58,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 15% 15%;
+    padding: 0% 15%;
 }
 
 
@@ -79,9 +87,14 @@
         height: 100%;
         width: 100%;
     }
+
+    #homeLogoImage {
+        height: 12em;
+        padding: 12% 0% 0%;
+    }
     
     #homeInfoText {
-        padding: 10% 12%;
+        padding: 0% 12%;
     }
 }
 
@@ -94,8 +107,12 @@
 }
 
 @media (max-width:768px){
+    #homeLogoImage {
+        padding: 20% 0% 0%;
+    }
+
     #homeInfoText {
-        padding: 18% 13%;
+        padding: 0% 13%;
     }
 }
 
@@ -103,8 +120,11 @@
     #homeInfo {
         width: 90%;
     }
+    #homeLogoImage {
+        padding: 20% 0% 0%;
+    }
     #homeInfoText {
-        padding: 18% 13%;
+        padding: 0% 13%;
     }
 }
 
@@ -112,8 +132,11 @@
     #homeInfo {
         width: 98%;
     }
+    #homeLogoImage {
+        padding: 23% 0% 0%;
+    }
     #homeInfoText {
-        padding: 21% 16%;
+        padding: 0% 16%;
     }
 }
 
@@ -121,8 +144,11 @@
     #homeInfo {
         width: 100%;
     }
+    #homeLogoImage {
+        padding: 30% 0% 0%;
+    }
     #homeInfoText {
-        padding: 28% 16% 21%;
+        padding: 0% 16% 21%;
     }
 }
 
@@ -130,8 +156,11 @@
     #homeInfo {
         width: 100%;
     }
+    #homeLogoImage {
+        padding: 20% 0% 0%;
+    }
     #homeInfoText {
-        padding: 18% 12% 12%;
+        padding: 0% 12% 12%;
         border-radius: 17px;
         background-color: rgba(40, 24, 5, 0.80);
     }

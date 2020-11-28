@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter as Router } from 'react-router-dom'
-import Navigation from './components/Navbar'
-import Header from './components/Header'
-import About from './components/About'
-import Menu from './components/Menu'
-import Contact from './components/Contact'
-import Order from './components/Order'
+import Navigation from './screens/Navbar'
+import Header from './screens/Header'
+import About from './screens/About'
+import Menu from './screens/Menu'
+import Contact from './screens/Contact'
+import Order from './screens/Order'
 import { theme, ThemeProvider } from '@chakra-ui/core';
 import './App.css';
 

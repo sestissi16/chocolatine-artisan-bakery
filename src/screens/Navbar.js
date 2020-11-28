@@ -21,7 +21,7 @@ const Navigation = () => {
                             </Tooltip>
                         }
                     >
-                        <Nav.Link href="/Cart" className="navbar-link"> <FiShoppingCart/> </Nav.Link>
+                        <Nav.Link href="/Cart" className="navbar-link-cart"> <FiShoppingCart/> </Nav.Link>
                     </OverlayTrigger>
                     
                 </Nav>

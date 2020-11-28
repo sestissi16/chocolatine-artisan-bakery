@@ -30,6 +30,9 @@ const bakeryInfo = {
         order3LinkName: "Email us",
         orderExtraInfo: "When you order, please give us at least three days notice and ask about the minimum order requirements for the items you're interested in.",
         //You'll have to enter the contact info on About.js
+    },
+    menu: {
+
     }
 }
 

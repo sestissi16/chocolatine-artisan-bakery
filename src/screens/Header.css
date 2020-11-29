@@ -1,6 +1,9 @@
 #home {
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #headerContainer {
@@ -8,28 +11,29 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    background: #251605 url(../assets/backgrounds/woodenPlanks.jpg) no-repeat center center;
-    background-size: cover !important;
+    background: #e1b07e url(../assets/backgrounds/woodPanelNoWatermark.jpg) no-repeat center center;
+    /* background: #e1b07e; */
+    background-size: 100% 100% !important;
 	-webkit-background-size: cover !important;
     width: 100%;
     height: 100%;
-    overflow: auto;
+    /* overflow: auto; */
     padding: 6% 2%;
 }
 
 #homeInfo {
     width: 70%;
-    height: 100%;
+    height: fit-content;
     overflow: auto;
     border-radius: 25px;
-    background: url(../assets/backgrounds/oldParchmentFloralBorder.png) no-repeat center center;
+    background: url(../assets/backgrounds/rollledScroll.png) no-repeat center center;
     background-size: 100% 100%;
     color: #251605;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0.5%;
+    padding: 3%;
 }
 
 #homeInfoText {

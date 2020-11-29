@@ -5,6 +5,7 @@ import RectangleLogo from '../assets/Logos/chocolatineTransparentLogo.png'
 class Header extends Component {
     
     render () {
+
         if(bakeryInfo.tagline) {
             var tagline = bakeryInfo.tagline
         }
@@ -23,6 +24,7 @@ class Header extends Component {
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </header>
         );

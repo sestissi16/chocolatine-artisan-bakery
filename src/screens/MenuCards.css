@@ -1,0 +1,89 @@
+#menu {
+    height: fit-content;
+    width: 100%;
+    background-color: #3C1518;
+    padding: 3% 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menuContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    background: #FFE6A7 url('../assets/backgrounds/oldParchmentBackground.jpg') no-repeat center center;
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+    border-radius: 50px;
+    width: 98%;
+}
+
+#menuSectionTitle {
+    font-weight: bolder;
+    width: 85%;
+    height: 11em;
+    padding: 1%;
+    margin: 0% 0% 1% 0%;
+    text-align: center;
+    border-radius: 6px;
+}
+
+#menuTitleImage {
+    width: 100%;
+    height: 100%;
+}
+
+#menuSectionNav {
+    width: 100%;
+}
+
+#menuOrderTypesTitle {
+    text-align: center;
+}
+
+#OrderingTypesSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 2% 0%;
+}
+
+.orderTypeBtn{
+    width: 28%;
+}
+
+.btn-success {
+    background-color: #5D663D;
+    border-color: #D7D9B1;
+}
+
+
+@media (max-width: 769px) {
+    #OrderingTypesSection  {
+        flex-direction: column;
+    }
+    .orderTypeBtn{
+        width: 50%;
+        margin: 0% 0% 2%;
+    }
+    
+}
+
+@media (max-width: 426px) {
+    .orderTypeBtn{
+        width: 70%;
+    }
+
+    .tabletDesktopSize {
+        display: none;
+    }
+
+    .mobileSize {
+        display: flex;
+    }
+}

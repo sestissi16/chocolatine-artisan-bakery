@@ -1,0 +1,20 @@
+#menuTopNotes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.topNoteItem {
+    text-align: center;
+    padding: 3%;
+    /* margin-bottom: 3%; */
+    border-bottom: solid black 0.05em;
+    width: 90%;
+}
+
+@media (max-width: 769px) {
+    .topNoteItem {
+        font-size: 1.4em;
+    }
+}

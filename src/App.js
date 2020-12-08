@@ -3,7 +3,7 @@ import { Route, BrowserRouter as Router } from 'react-router-dom'
 import Navigation from './screens/Navbar'
 import Header from './screens/Header'
 import About from './screens/About'
-import Menu from './screens/Menu'
+import Menu from './screens/MenuCards'
 import Contact from './screens/Contact'
 import Order from './screens/Order'
 import { theme, ThemeProvider } from '@chakra-ui/core';

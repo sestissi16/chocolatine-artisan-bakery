@@ -37,7 +37,9 @@
 }
 
 #menuSectionNav {
-    width: 100%;
+    width: 90%;
+    border-bottom: black solid 0.06em;
+    margin-bottom: 2%;
 }
 
 #menuOrderTypesTitle {
@@ -53,6 +55,10 @@
     padding: 2% 0%;
 }
 
+.hidden{
+    display: none;
+}
+
 .orderTypeBtn{
     width: 28%;
 }
@@ -61,6 +67,10 @@
     background-color: #5D663D;
     border-color: #D7D9B1;
 }
+.btn-success:hover {
+    background-color: #2F331F;
+}
+
 
 
 @media (max-width: 769px) {

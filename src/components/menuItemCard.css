@@ -1,0 +1,22 @@
+#cardSection {
+    width: 40%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    border: black solid 0.07em;
+    margin: 1% 2%;
+}
+
+.accordionItem {
+    width: 100%;
+}
+
+#sizeChoice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}

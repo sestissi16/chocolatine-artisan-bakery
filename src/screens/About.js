@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import Navigation from './Navbar'
 import BlackLineDivider from '../assets/borders/black/blackFlowerDivider-Transparent-Cropped.png'
 import './About.css'
 import bakeryInfo from '../bakeryData'
+import yourOrder from '../yourOrder'
 import TitleFrame from '../assets/backgrounds/aboutUsDarkBrown.png'
 import TitleFrameSm from '../assets/backgrounds/aboutUsDarkBrownSm.png'
 import servicesIcon from '../assets/Images/varietyMixOurServices.png'
@@ -10,12 +12,13 @@ import orderIcon from '../assets/Images/cashRegister.png'
 
 class About extends Component {
     render(){
+        var orderCount = yourOrder.orderList.count
         var mission1Part1 = bakeryInfo.aboutUs.mission1Part1;
         var mission1Part2 = bakeryInfo.aboutUs.mission1Part2;
         var mission1Emphasis = bakeryInfo.aboutUs.mission1Emphasis;
-        if(bakeryInfo.aboutUs.mission2) {
-            var mission2 = bakeryInfo.aboutUs.mission2;
-        }
+        // if(bakeryInfo.aboutUs.mission2) {
+        //     var mission2 = bakeryInfo.aboutUs.mission2;
+        // }
         if(bakeryInfo.aboutUs.serviceList) {
             var serviceList = bakeryInfo.aboutUs.serviceList
         }
@@ -63,6 +66,7 @@ class About extends Component {
         }
   return (
     <section id="about">
+        <Navigation orderCount={orderCount}/>
         <div id="aboutContainer">
             <div id="aboutItems">
                 <div id="aboutSectionTitle">

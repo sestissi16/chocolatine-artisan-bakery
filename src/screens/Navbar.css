@@ -49,6 +49,10 @@
     
 }
 
+.cartIcon {
+    margin-right: 1%;
+}
+
 .navbar-link:hover, .navbar-link-cart:hover {
     color: #FBF2C0 !important;
     border-bottom: 0.08em solid #868F60;

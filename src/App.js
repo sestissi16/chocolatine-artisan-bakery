@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter as Router } from 'react-router-dom'
 import Navigation from './screens/Navbar'
+import yourOrder from './yourOrder'
 import Header from './screens/Header'
 import About from './screens/About'
 import Menu from './screens/MenuCards'
 import Contact from './screens/Contact'
 import Order from './screens/Order'
+
 import { theme, ThemeProvider } from '@chakra-ui/core';
 import './App.css';
 
@@ -147,7 +149,7 @@ class App extends Component {
         return (
             <div className="App">
                 <ThemeProvider theme={newTheme}>
-                    <Navigation />
+                    {/* <Navigation orderCount={yourOrder.orderList.count}/> */}
                     <Router>
                         <Route exact path="/" component={Header} />
                         <Route exact path="/About" component={About} />

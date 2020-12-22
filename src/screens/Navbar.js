@@ -7,7 +7,6 @@ import './Navbar.css'
 
 class Navigation extends Component {
     render(){
-        console.log(this.props.orderCount)
         return (
             <Navbar variant="dark" expand="lg" fixed="top" className="custom-navbar-bg">
                 <Navbar.Brand href="/" className="navbar-title">Chocolatine - Artisan Bakery</Navbar.Brand>

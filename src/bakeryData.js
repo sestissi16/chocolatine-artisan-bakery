@@ -45,6 +45,17 @@ const bakeryInfo = {
                 secondPart: " below to see what's available for each!",
             }
         },
+        bottomNotes: {
+            note1: {
+                firstPart: "* Our food is made in a cottage food operation that is not subject to government food safety inspection."
+            },
+            note2: {
+                firstPart: "* Our food is made in the same area as nut products and gluten products.",
+                linkText: "Message us",
+                link: "/Contact",
+                secondPart: " if you need your food prepared in a different way.",
+            }
+        },
         monthlySpecials: {
 
         },
@@ -215,17 +226,23 @@ const bakeryInfo = {
                     // SavoryCrepes: {
     
                     // },
-                    // ShortBread: {
-                    //     name: "Financiers",
-                    //     price: {
-                    //         sm: "$4.00",
-                    //         med: "$12.00",
-                    //         lg: "$24.00",
-                    //     },
-                    //     description: "The financier is similar to our coffeecake! It's flavored with almond and vanilla extract.",
-                    //     shortIngredient: "Contains: wheat, dairy (egg whites, butter), tree nuts",
-                    //     longIngredient: "Egg Whites, Sugar, Hi Gluten Flour, Salt, Almond Flour, Almond Meal, Butter (Pasteurized Cream), Vanilla Extract (Water, Natural Vanilla Extract, Ethyl Alcohol, Fructose)",
-                    // },
+                    ShortBread: {
+                        name: "Savory Shortbread Cookies (Pack of 5)",
+                        price: {
+                            sm: "$4.00",
+                            med: "$12.00",
+                            lg: "$24.00",
+                        },
+                        description: "Savory shortbread cookies that work great with your meals or as a snack.",
+                        shortIngredient: "Contains: wheat, dairy (butter, cheese)",
+                        longIngredient: "Butter, flour, sugar, thyme (fresh and dried), merlot Bellavitano cheese",
+                        option1: {
+                            title: "Flavors",
+                            choices: {
+                                one: "Merlot Cheese and Thyme",
+                            }
+                        }
+                    },
                 }
             },
             sweet: {
@@ -293,7 +310,7 @@ const bakeryInfo = {
                         longIngredient: "Egg Whites, Sugar, Hi Gluten Flour, Salt, Almond Flour, Almond Meal, Butter (Pasteurized Cream), Vanilla Extract (Water, Natural Vanilla Extract, Ethyl Alcohol, Fructose)",
                     },
                     Truffles: {
-                        name: "Chocolate Truffles",
+                        name: "Chocolate Truffles (Pack of 5)",
                         price: {
                             sm: "$4.00",
                             med: "$12.00",
@@ -312,53 +329,62 @@ const bakeryInfo = {
                             },   
                         }
                     },
-                    // ShortBread: {
-                    //     name: "Financiers",
-                    //     price: {
-                    //         sm: "$4.00",
-                    //         med: "$12.00",
-                    //         lg: "$24.00",
-                    //     },
-                    //     description: "The financier is similar to our coffeecake! It's flavored with almond and vanilla extract.",
-                    //     shortIngredient: "Contains: wheat, dairy (egg whites, butter), tree nuts",
-                    //     longIngredient: "Egg Whites, Sugar, Hi Gluten Flour, Salt, Almond Flour, Almond Meal, Butter (Pasteurized Cream), Vanilla Extract (Water, Natural Vanilla Extract, Ethyl Alcohol, Fructose)",
-                    // },
+                    ShortBread: {
+                        name: "Shortbread Cookies (Pack of 5)",
+                        price: {
+                            sm: "$4.00",
+                            med: "$12.00",
+                            lg: "$24.00",
+                        },
+                        description: "Shortbread cookies that work great as a dessert or as a snack.",
+                        shortIngredient: "Contains: wheat, dairy (butter), honey",
+                        longIngredient: "Butter, flour, sugar, lavendar, local honey",
+                        option1: {
+                            title: "Flavors",
+                            choices: {
+                                one: "Lavender and Local Honey",
+                            }
+                        }
+                    },
                 }
             },
             specialOrder: {
-                info: "These items will can only be made if you order six or more each and need to be ordered 5 days ahead of when you need them.",
-                TartsTurnovers: {
-                    name: "Tarts and Turnovers",
-                    price: {
-                        sm: "$6.00",
-                        med: "$18.00",
-                        lg: "$36.00",
-                    },
-                    description: "We offer either open-faced tarts or sealed turnover with various fillings!",
-                    shortIngredient: "Contains: wheat, dairy, soy, tree nuts",
-                    longIngredient: "Enriched Wheat Flour (niacin, reduced iron, thiamine mononitrate, riboflavin, folic acid), Malted Barley Flour, Water, Butter (pasteurized cream), Ascorbic acid as dough conditioner, Shortening (Palm oil, Beta carotene - color - Water, Vital Gluten), Salt, Almond Extract (Water, Alcohol and Oil of Bitter Almond)",
-                    option1: {
-                        title: "Flavors",
-                        choices: {
-                            one: "Apple",
-                            two: "Nutella / Chocolate",
-                            three: "Raspberry",
-                            four: "Peach",
+                info: "For these items, size small is 6 items, size medium is 12 items, and size large is 24 items. Please order 5 days in advance! ",
+                items: {
+                    TartsTurnovers: {
+                        name: "Tarts and Turnovers",
+                        price: {
+                            sm: "$6.00",
+                            med: "$18.00",
+                            lg: "$36.00",
                         },
-                    }
+                        description: "We offer either open-faced tarts or sealed turnover with various fillings!",
+                        shortIngredient: "Contains: wheat, dairy, soy, tree nuts",
+                        longIngredient: "Enriched Wheat Flour (niacin, reduced iron, thiamine mononitrate, riboflavin, folic acid), Malted Barley Flour, Water, Butter (pasteurized cream), Ascorbic acid as dough conditioner, Shortening (Palm oil, Beta carotene - color - Water, Vital Gluten), Salt, Almond Extract (Water, Alcohol and Oil of Bitter Almond)",
+                        option1: {
+                            title: "Flavors",
+                            choices: {
+                                one: "Apple",
+                                two: "Nutella / Chocolate",
+                                three: "Raspberry",
+                                four: "Peach",
+                            },
+                        }
+                    },
+                    // BakedBrie: {
+        
+                    // },
+                    // Muffins: {
+        
+                    // },
+                    // Cakes: {
+        
+                    // },
+                    // Phyllo: {
+        
+                    // }
                 },
-                // BakedBrie: {
-    
-                // },
-                // Muffins: {
-    
-                // },
-                // Cakes: {
-    
-                // },
-                // Phyllo: {
-    
-                // }
+                
             }
         },
         cateringInfo: {

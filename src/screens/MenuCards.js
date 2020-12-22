@@ -1,15 +1,7 @@
 import React, { Component } from 'react';
 import Navigation from './Navbar'
-import { Button } from "react-bootstrap"
-// import {
-//   Accordion,
-//   AccordionItem,
-//   AccordionHeader,
-//   AccordionPanel,
-//   AccordionIcon,
-//   Box
-// } from "@chakra-ui/core";
-import TopNotes from '../components/menuTopNotes'
+import { Button, Alert } from "react-bootstrap"
+import Notes from '../components/menuNotes'
 import TitleFrame from '../assets/backgrounds/menuLightGreen.png'
 import TitleFrameSm from '../assets/backgrounds/menuLightGreenSm.png'
 import SmallBatchSection from '../components/menuSmallBatch'
@@ -71,7 +63,6 @@ class Menu extends Component {
         var valueSplit = e.target.value.split("-")
         var size = valueSplit[0]
         var price = valueSplit[1]
-        console.log(size, price)
         e.stopPropagation();
         //this changes the state
         if (size === "Sm") {
@@ -94,23 +85,25 @@ class Menu extends Component {
         
         e.preventDefault();
         e.stopPropagation();
-        this.setState({ itemName: e.target.name});
-        // console.log(this.state.itemName)
-        var numberOfItems  = yourOrder.orderList.count
-        var itemName = e.target.value
-        var key = e.target.name.replace( /\s/g, '') + numberOfItems
-        yourOrder.orderList[key] = {name: itemName, price: this.state.itemPrice, size: this.state.itemSize, option: this.state.itemOption};
-        yourOrder.orderList.count = numberOfItems + 1
-
-        console.log(yourOrder.orderList)
-        this.setState({ itemSize: '', itemOption: ''});
-        
+        if(this.state.itemSize === ''){
+            alert("Please choose a size before adding an item to your order!")
+        }else{
+            this.setState({ itemName: e.target.name});
+            // console.log(this.state.itemName)
+            var numberOfItems  = yourOrder.orderList.count
+            var itemName = e.target.value
+            var key = e.target.name.replace( /\s/g, '') + numberOfItems
+            yourOrder.orderList[key] = {name: itemName, price: this.state.itemPrice, size: this.state.itemSize, option: this.state.itemOption};
+            yourOrder.orderList.count = numberOfItems + 1
+    
+            console.log(yourOrder.orderList)
+            this.setState({ itemSize: '', itemOption: ''});
+        }
     }
 
     render() {
         const { showSmall, showCatering, showWholesale } = this.state;
         var orderCount = yourOrder.orderList.count
-        console.log(orderCount)
         return (
         <section id="menu">
             <Navigation orderCount={orderCount}/>
@@ -119,37 +112,45 @@ class Menu extends Component {
                     <img src={TitleFrame} alt="About Us Title with Vintage Frame" id="menuTitleImage" class="tabletDesktopSize"/>
                     <img src={TitleFrameSm} alt="About Us Title with Vintage Frame" id="menuTitleImage" class="mobileSize"/>
                 </div>
-                <TopNotes></TopNotes>
+                <Notes notes={bakeryInfo.menu.topNotes} textSize={3}></Notes>
                 <div id="menuSectionNav">
                     <h2 id="menuOrderTypesTitle">Ordering Types:</h2>
                     <section id="OrderingTypesSection">
-                        <Button
-                            variant="success"
-                            className="orderTypeBtn"
-                            size="lg"
-                            value="smallBatch"
-                            onClick={this.orderTypeSelect}
-                        >
-                            Small Batch Orders
-                        </Button>
-                        <Button
-                            variant="success"
-                            className="orderTypeBtn"
-                            size="lg"
-                            value="catering"
-                            onClick={this.orderTypeSelect}
-                        >
-                            Catering
-                        </Button>
-                        <Button
-                            variant="success"
-                            className="orderTypeBtn"
-                            size="lg"
-                            value="wholesale"
-                            onClick={this.orderTypeSelect}
-                        >
-                            Wholesale
-                        </Button>
+                        <div className="orderTypeDiv">
+                            <Button
+                                variant="success"
+                                className="orderTypeBtn"
+                                size="lg"
+                                value="smallBatch"
+                                onClick={this.orderTypeSelect}
+                            >
+                                Small Batch Orders
+                            </Button>
+                            <h5>{bakeryInfo.menu.smallBatch.description}</h5>
+                            
+                        </div>
+                        <div className="orderTypeDiv">
+                            <Button
+                                variant="success"
+                                className="orderTypeBtn"
+                                size="lg"
+                                value="catering"
+                                onClick={this.orderTypeSelect}
+                            >
+                                Catering
+                            </Button>
+                        </div>
+                        <div className="orderTypeDiv">
+                            <Button
+                                variant="success"
+                                className="orderTypeBtn"
+                                size="lg"
+                                value="wholesale"
+                                onClick={this.orderTypeSelect}
+                            >
+                                Wholesale
+                            </Button>
+                        </div>
                     </section>
                 </div>
                 <div id="menuSectionCards">
@@ -163,15 +164,11 @@ class Menu extends Component {
                         <p>Wholesale</p>
                     </div>
                 </div>
-
-    
-                
-    
-                
     
                 <div id="menuNotesBottom">
-                <h4>* Our food is made in a cottage food operation that is not subject to government food safety inspection.</h4>
-                <h4>* Our food is made in the same area as nut products and gluten products. <a href="#contact" className="smoothscrool">Message us</a> if you need your food prepared in a different way.</h4>
+                    <Notes notes={bakeryInfo.menu.bottomNotes} textSize={5}></Notes>
+                {/* <h4>* Our food is made in a cottage food operation that is not subject to government food safety inspection.</h4>
+                <h4>* Our food is made in the same area as nut products and gluten products. <a href="#contact" className="smoothscrool">Message us</a> if you need your food prepared in a different way.</h4> */}
                 </div>
             </div>
         </section>

@@ -9,64 +9,17 @@ import {
   } from "@chakra-ui/core";
 import bakeryInfo from '../bakeryData';
 import yourOrder from '../yourOrder';
-import SectionDivider from '../assets/borders/black/blackFlowerThinDivider2-FullLine-Transparent.png'
+import SectionDivider from '../assets/borders/black/blackFleurDivider-Transparent.png'
 import './menuItemCard.css'
 import { render } from 'react-dom';
 
 class ItemCard extends Component {
-    constructor (props) {
-        super(props)
-
-        this.state = {
-            Name: '',
-            Size: '',
-            Price: '',
-            Option: '',
-        }
-
-    }
-
-    // changeSize(e) {
-    //     e.stopPropagation();
-    //     //this changes the state
-    //     if (e.target.value === "Sm") {
-    //         this.setState({ itemSize: e.target.value, itemPrice: this.props.price.sm});
-    //     } else if (e.target.value === "Med") {
-    //         this.setState({ itemSize: e.target.value, itemPrice: this.props.price.med});
-    //     } else {
-    //         this.setState({ itemSize: e.target.value, itemPrice: this.props.price.lg});
-    //     }
-        
-    // }
-
-    // changeOption(e) {
-    //     e.stopPropagation();
-    //     //this changes the state
-    //     this.setState({ itemOption: e.target.value});
-    // }
-
-    // addOrderItem(e) {
-        
-    //     e.preventDefault();
-    //     e.stopPropagation();
-    //     this.setState({ itemName: e.target.name});
-    //     // console.log(this.state.itemName)
-    //     var numberOfItems  = yourOrder.orderList.count
-    //     var itemName = e.target.name
-    //     var key = e.target.name.replace( /\s/g, '') + numberOfItems
-    //     yourOrder.orderList[key] = {name: itemName, price: this.state.itemPrice, size: this.state.itemSize, option: this.state.itemOption};
-    //     yourOrder.orderList.count = numberOfItems + 1
-
-    //     console.log(yourOrder.orderList)
-    //     this.setState({ itemSize: '', itemOption: ''});
-        
-    // }
+  
     render() {
         // name, price, description, shortIngredients, longIngredients, option1
         const {section, type, itemKey, name, price, description, shortIngredients, longIngredients, option1, changeTheSize, changeTheOption, addTheItem, itemName, itemSize, itemPrice, itemOption} = this.props
         // const {itemName, itemSize, itemPrice, itemOption} = this.state
-        console.log(itemSize)
-        var optionName = section+'.'+type+'.'+itemKey+'-option'
+        
         var buttonName = section+'.'+type+'.'+itemKey
 
         var orderInfo = bakeryInfo.menu.smallBatch.orderInfo
@@ -74,10 +27,13 @@ class ItemCard extends Component {
         return(
             <div id="cardSection">
                 <h5>{name}</h5>
-                <div></div>
+                <div className="itemDividerSection">
+                    <img src={SectionDivider} alt="Floral Section Divider" className="itemDividerImg"/>
+                </div>
                 <h6>{description}</h6>
+                <h6 className="allergyHeader">Allergy Info:</h6>
                 <AccordionItem className="accordionItem">
-                    <AccordionHeader className="ingredientsHeader" _expanded={{ background: "#5D663D !important", color: "white" }}>
+                    <AccordionHeader className="ingredientsHeader" _expanded={{ background: "#432818 !important", color: "white" }}>
                         <Box flex="1" textAlign="left">
                             {shortIngredients}
                         </Box>
@@ -87,9 +43,11 @@ class ItemCard extends Component {
                         {longIngredients}
                     </AccordionPanel>
                 </AccordionItem>
-                <div></div>
+                <div className="itemDividerSection">
+                    <img src={SectionDivider} alt="Floral Section Divider" className="itemDividerImg"/>
+                </div>
                 <AccordionItem className="accordionItem">
-                    <AccordionHeader className="ingredientsHeader" _expanded={{ background: "#5D663D !important", color: "white" }}>
+                    <AccordionHeader className="ingredientsHeader" _expanded={{ background: "#432818 !important", color: "white" }}>
                         <Box flex="1" textAlign="left">
                             Order Options:
                         </Box>
@@ -97,6 +55,7 @@ class ItemCard extends Component {
                     </AccordionHeader>
                     <AccordionPanel pb={4} className="ingredientsPanel">
                         <div id="sizeChoice">
+                            <h6>Size:</h6>
                             <div className="sizeRadio">
                                 <input 
                                     type="radio" 
@@ -105,8 +64,9 @@ class ItemCard extends Component {
                                     id="smSize" 
                                     onChange={changeTheSize}
                                     checked={this.props.itemSize === "Sm"}
+                                    style={{height:1.1 +'em', width:1.1+'em',}}
                                 />
-                                <lable for="smSize">Small - {price.sm}</lable>
+                                <lable for="smSize" className="itemInputLabel">Small - {price.sm}</lable>
                             </div>
                             <div className="sizeRadio">
                                 <input 
@@ -116,8 +76,9 @@ class ItemCard extends Component {
                                     id="medSize"
                                     onChange={changeTheSize}
                                     checked={this.props.itemSize === "Med"}
+                                    style={{height:1.1 +'em', width:1.1+'em',}}
                                 />
-                                <lable for="medSize">Medium - {price.med}</lable>
+                                <lable for="medSize" className="itemInputLabel">Medium - {price.med}</lable>
                             </div>
                             <div className="sizeRadio">
                                 <input 
@@ -127,11 +88,11 @@ class ItemCard extends Component {
                                     id="lgSize"
                                     onChange={changeTheSize}
                                     checked={this.props.itemSize === "Lg"}
+                                    style={{height:1.1 +'em', width:1.1+'em',}}
                                 /> 
-                                <lable for="lgSize">Large - {price.lg}</lable>
+                                <lable for="lgSize" className="itemInputLabel">Large - {price.lg}</lable>
                             </div>
                         </div>
-                        <div></div>
                         <div id="option1Choice">
                             <h6>{option1.title}</h6>
                             {Object.keys(extraChoices).map((key, index) => {
@@ -144,8 +105,9 @@ class ItemCard extends Component {
                                         id={name+key} 
                                         onChange={changeTheOption}
                                         checked={this.props.itemOption === optValue}
+                                        style={{height:1.1 +'em', width:1.1+'em',}}
                                     /> 
-                                    <lable for={name+key}>{optValue}</lable>
+                                    <lable for={name+key} className="itemInputLabel">{optValue}</lable>
                                 </div>
                             })}
                         </div>
@@ -153,7 +115,7 @@ class ItemCard extends Component {
                 </AccordionItem>
                 <div id="addToOrderSection">
                     <button 
-                        className="addToOrderButton"
+                        id="addToOrderButton"
                         name={buttonName}
                         value={name} 
                         onClick={addTheItem}

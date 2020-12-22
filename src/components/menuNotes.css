@@ -1,11 +1,11 @@
-#menuTopNotes {
+#menuNotes {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.topNoteItem {
+.noteItem {
     text-align: center;
     padding: 3%;
     /* margin-bottom: 3%; */
@@ -14,7 +14,7 @@
 }
 
 @media (max-width: 769px) {
-    .topNoteItem {
+    .noteItem {
         font-size: 1.4em;
     }
 }

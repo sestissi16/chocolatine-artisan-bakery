@@ -12,14 +12,6 @@ import SectionDivider from '../assets/borders/black/blackFlowerThinDivider2-Full
 import './menuSmallBatch.css'
 
 class SmallBatch extends Component {
-    
-    isEmpty(obj) {
-        for(var key in obj) {
-            if(obj.hasOwnProperty(key))
-                return false;
-        }
-        return true;
-    }
     render() {
         const { changeSize, changeOption, addItem, stateItemName, stateItemOption, stateItemPrice, stateItemSize } = this.props
         var orderInfo = bakeryInfo.menu.smallBatch.orderInfo

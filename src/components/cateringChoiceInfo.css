@@ -1,0 +1,110 @@
+#cardSection {
+    width: 40%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    border: black solid 0.1em;
+    margin: 1% 2%;
+    background-image: url('../assets/backgrounds/oldParchmentBackground.jpg');
+    border-radius: 10%;
+}
+
+.itemDividerSection {
+    width: 80%;
+    height: 2.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemDividerImg {
+    width: 100%;
+}
+
+.allergyHeader {
+    text-align: center;
+    margin: 1% 0%;
+}
+
+.accordionItem {
+    width: 100%;
+}
+
+.ingredientsHeader {
+    background-color: rgba(150, 94, 54, 0.3);
+    border: #432818 solid 0.07em;
+}
+
+.ingredientsPanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2%;
+
+}
+
+.extraChoiceRadio {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#option1Choice {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.itemInputLabel {
+    padding-left: 3%;
+}
+
+#addToOrderSection {
+    margin-top: 4%;
+    width: 100%;
+}
+
+#addToOrderButton {
+    padding: 1%;
+    color: #FBF2C0 !important;
+    border-bottom: 0.08em solid #C9CBA3;
+    border-top: 0.08em solid #C9CBA3;
+    background-color: #3C1518;
+    width: 50%;
+    text-align: center;
+    border-radius: 60px;
+}
+#addToOrderButton:hover {
+    border-bottom: 0.08em solid #868F60;
+    border-top: 0.08em solid #868F60;
+    border-radius: 60px;
+    background: linear-gradient(45deg, #771f1d, #641a18);
+    box-shadow:  5px -5px 0px #651a19, 
+             -5px 5px 0px #79201d;
+}
+
+@media (max-width: 770px) {
+    #cardSection {
+        width: 100%;
+    }
+    .itemDividerSection {
+        width: 70%;
+        height: 1.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1% 0%;
+    }
+    .itemDividerImg {
+        width: 100%;
+        height: 100%;
+    }
+}

@@ -30,6 +30,22 @@ const bakeryInfo = {
         orderExtraInfo: "When you order, please give us at least three days notice and ask about the minimum order requirements for the items you're interested in.",
         //You'll have to enter the contact info on About.js
     },
+    contactUs: {
+        overallDescript: "Send us an email with the Contact Form or check out our Facebook page below.",
+        formDescript: {
+            line1: "This form will help craft an email to artisanbakeriesusa@gmail.com. ",
+            line2: "Once you fill out the form it will open up your default mail app and fill everything out for you. ",
+            line3: "You'll just have to press send!"
+        },
+        formSubjects: {
+            caterInquiry: "CateringInquiry-",
+            wholesaleInquiry: "WholesaleInquiry-",
+            customizationInquiry: "CustomizationInquiry-",
+            otherInquiry: "",
+        },
+        fbSectionDescript: "Here you can message us and check out our posts and events for new specialities and promos.",
+
+    },
     menu: {
         topNotes: {
             note1: {
@@ -388,28 +404,40 @@ const bakeryInfo = {
             }
         },
         cateringInfo: {
-            combos: {
-                breakfast: {
-                    sm: "36 items. Choose up to three options below (3 options = 12 of each option)",
-                    lg: "72 items. Choose up to three options below (3 options = 24 of each option)"
-                },
-                lunchDinner: {
-                    sm: "36 personal entree items + 24 side items",
-                    lg: ""
-                },
+            sizing: {
+                sm: "12 of each item in combo",
+                lg: "24 of each item in combo",
+            },
+            description: "For those small gatherings or parties you want to have",
+            orderInfo: {
+                line1: "Each section below will give you combo options. It will explain what choices of items come with each combo.",
+                line2: "The sizing determines how many of each item you get in the combo but you can order as many combos as necessary to have enough for your gathering.",
+                line3: "Please contact us if there's something you'd like to have in your combo that isn't listed. Click on the Contact button in the navigation bar."
             },
             cateringMenu: {
                 breakfast: {
-    
+                    description: "Please pick one of the sizes below and then choose 3 items below. It can be the same item if you want or it can be 3 different items.",
+                    choices: {
+
+                    }
                 },
                 lunchDinner: {
-    
+                    description: "",
+                    choices: {
+
+                    }
                 },
                 sides: {
-    
+                    description: "",
+                    choices: {
+
+                    }
                 },
                 desserts: {
-    
+                    description: "",
+                    choices: {
+
+                    }
                 }
             },
         },

@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button'
+import BlackLineDivider from '../assets/borders/black/blackFlowerDivider-Transparent-Cropped.png'
+import Navigation from './Navbar'
+import TitleFrame from '../assets/backgrounds/contactUsDarkRed.png'
+import TitleFrameSm from '../assets/backgrounds/contactUsDarkRedSm.png'
 // import { FacebookProvider, Page } from 'react-facebook';
 import Iframe from 'react-iframe'
-import topBorder from '../assets/borders/black/blackFractalVarietyEuropeanPatterBorders-Top3.png'
-import bottomBorder from '../assets/borders/black/blackFractalVarietyEuropeanPatterBorders-Bottom3.png'
-import titleDivider from '../assets/borders/black/blackFlowerDivider-Transparent-Cropped.png'
-// import titleBottom from '../assets/borders/black/blackFleurDivider-Transparent.png'
-import formTop from '../assets/borders/gold/flowerGoldenRectangularBorderTransparent-Top2.png'
-import formBottom from '../assets/borders/gold/flowerGoldenRectangularBorderTransparent-Bottom2.png'
+import yourOrder from '../yourOrder'
 import './Contact.css'
+import bakeryInfo from '../bakeryData';
 
 class Contact extends Component {
     constructor () {
@@ -18,12 +18,14 @@ class Contact extends Component {
             name: '',
             email: '',
             subject: '',
+            subjectRadio: '',
             message: '',
             width: '500',
         }
 
         this.handleChange = this.handleChange.bind(this)
         this.resetContact = this.resetContact.bind(this)
+        this.changeSubject = this.changeSubject.bind(this)
     }
 
     /**
@@ -65,7 +67,15 @@ class Contact extends Component {
     handleChange(e) {
         e.preventDefault()
         this.setState({
-            [e.target.name]: e.target.value
+            [e.target.type]: e.target.value
+        })
+    }
+
+    changeSubject(e) {
+        e.preventDefault();
+        this.setState({
+            subjectRadio: e.target.value,
+            subject: bakeryInfo.contactUs.formSubjects[e.target.value],
         })
     }
 
@@ -105,113 +115,175 @@ class Contact extends Component {
     }
 
     render() {
+        var orderCount = yourOrder.orderList.count
         return (
             <section id="contact">
+                <Navigation orderCount={orderCount}/>
                 <div id="contactContainer">
                     <div id="contactTitle">
-                        <h1 id="contactSectionTitle">Contact Us:</h1>
-                        <img src={titleDivider} id="titleDivider" alt="ornate black flower divider"/>
-                        <h2 id="contactSectionSubTitle">Here you can send us an email with the Contact Form or check out our Facebook page below.</h2>
+                        <img src={TitleFrame} alt="Contact Us Title with Vintage Frame" id="contactTitleImage" class="tabletDesktopSize"/>
+                        <img src={TitleFrameSm} alt="Contact Us Title with Vintage Frame" id="contactTitleImage" class="mobileSize"/>
                     </div>
-                    <form name="contact-us" id="contactForm">
-                        <img src={formTop} alt="Gold ornate top border" id="formTopBorder"/>
-                        <h2 id="contactFormTitle">Contact Form:</h2>
-                        <h3 id="contactFormSubTitle">
-                            This form will help craft an email to artisanbakeriesusa@gmail.com. 
-                            Once you fill out the form it will open up your default mail app and fill everything out for you. 
-                            You'll just have to press send!
-                        </h3>
-                        <div className="form-group">
-                            <label className="contactFormLabel" for="contactFormEmail">Enter your email address: </label>
-                            <input 
-                                id="contactFormEmail" 
-                                className="contactFormInput" 
-                                name="email" 
-                                type="email" 
-                                placeholder="Email" 
-                                value={ this.state.email }
-                                onChange={this.handleChange}
-                                required
-                            />
+                    <form name="contact-us" id="contactSection">
+                        <h1 id="contactFormTitle">Contact Form:</h1>
+                        <img src={BlackLineDivider} alt="ornamental divider" className="contactDivider"/>
+                        <div id="contactFormSubTitle">
+                            {
+                                Object.keys(bakeryInfo.contactUs.formDescript).map((key, index) => {
+                                    var descript = bakeryInfo.contactUs.formDescript
+                                    return <h2>{descript[key]}</h2>
+                                })
+                            }
                         </div>
-        
-                        <div className="form-group">
-                            <label className="contactFormLabel" for="contactFormName">Enter your name:</label>
-                            <input 
-                                id="contactFormName" 
-                                className="contactFormInput" 
-                                name="name" 
-                                type="text" 
-                                placeholder="Name" 
-                                value={ this.state.name }
-                                onChange={this.handleChange}
-                                required
-                            />
-                        </div>
-                        
-                        <div className="form-group">
-                            <label className="contactFormLabel" for="contactFormSubject">Enter the subject:</label>
-                            <input 
-                                id="contactFormSubject" 
-                                className="contactFormInput" 
-                                name="subject" 
-                                type="text" 
-                                placeholder="Subject" 
-                                value={ this.state.subject }
-                                onChange={this.handleChange}
-                                required
-                            />
-                        </div>
-        
-                        <div className="form-group">
-                            <label className="contactFormLabel" for="contactFormMessage">Enter the message you'd like to send:</label>
-                            <textarea 
-                                id="contactFormMessage" 
-                                className="contactFormInput" 
-                                name="message" 
-                                type="text-area" 
-                                placeholder="Message you'd like to send"
-                                value={ this.state.message }
-                                onChange={this.handleChange}
-                                required
-                            />
-                        </div>
+                        <div id="contactForm">
+                            <div className="form-group">
+                                <label className="contactFormLabel" for="contactFormEmail">Enter your email address: </label>
+                                <input 
+                                    id="contactFormEmail" 
+                                    className="contactFormInput" 
+                                    name="email" 
+                                    type="email" 
+                                    placeholder="Email" 
+                                    value={ this.state.email }
+                                    onChange={this.handleChange}
+                                    required
+                                />
+                            </div>
+                            
+                            <div className="form-group">
+                                <label className="contactFormLabel" for="contactFormName">Enter your name:</label>
+                                <input 
+                                    id="contactFormName" 
+                                    className="contactFormInput" 
+                                    name="name" 
+                                    type="text"  
+                                    placeholder="Name" 
+                                    value={ this.state.name }
+                                    onChange={this.handleChange}
+                                    required
+                                />
+                            </div>
 
-                        <div id="buttonGroup">
-                            <Button
-                                variant='success' 
-                                type='submit'
-                                className="contactFormButton"
-                                href={`mailto:artisanbakeriesusa@gmail.com?subject=Note%20From%20${this.state.name}-${this.state.subject}&body=${this.state.message}`}
-                            >
-                                Send                          
-                            </Button>
-                            <Button
-                                variant='success'
-                                className="contactFormButton" 
-                                onClick={this.resetContact}
-                                onKeyDown={(e) => this.keyboardResetContact(e)}
-                            >Clear Form</Button>
+                            <div className="form-group">
+                                <h5>Why would you like to message us today?</h5>
+                                <div id="subjectRadioRow">
+                                    <div className="form-check">
+                                        <input 
+                                            id="cateringRadio" 
+                                            className="contactFormRadio" 
+                                            name="subjectFormRadio"
+                                            value="caterInquiry" 
+                                            type="radio" 
+                                            onChange={this.changeSubject}
+                                            checked={this.state.subjectRadio === "caterInquiry"}
+                                            style={{height:1.1 +'em', width:1.1+'em',}}
+                                        />
+                                        <label className="contactFormLabel" for="contactFormName">Catering order or inquiry</label>
+                                    </div>
+                                    <div className="form-check">
+                                        <input 
+                                            id="wholesaleRadio" 
+                                            className="contactFormRadio" 
+                                            name="subjectFormRadio"
+                                            value="wholesaleInquiry" 
+                                            type="radio" 
+                                            onChange={this.changeSubject}
+                                            checked={this.state.subjectRadio === "wholesaleInquiry"}
+                                            style={{height:1.1 +'em', width:1.1+'em',}}
+                                        />
+                                        <label className="contactFormLabel" for="contactFormName">Wholesale order or inquiry</label>
+                                    </div>
+                                    <div className="form-check">
+                                        <input 
+                                            id="customizationRadio" 
+                                            className="contactFormRadio" 
+                                            name="subjectFormRadio"
+                                            value="customizationInquiry" 
+                                            type="radio" 
+                                            onChange={this.changeSubject}
+                                            checked={this.state.subjectRadio === "customizationInquiry"}
+                                            style={{height:1.1 +'em', width:1.1+'em',}}
+                                        />
+                                        <label className="contactFormLabel" for="contactFormName">Customization inquiries</label>
+                                    </div>
+                                    <div className="form-check">
+                                        <input 
+                                            id="otherRadio" 
+                                            className="contactFormRadio" 
+                                            name="subjectFormRadio"
+                                            value="otherInquiry" 
+                                            type="radio" 
+                                            onChange={this.changeSubject}
+                                            checked={this.state.subjectRadio === "otherInquiry"}
+                                            style={{height:1.1 +'em', width:1.1+'em',}}
+                                        />
+                                        <label className="contactFormLabel" for="contactFormName">Other inquiries</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div className="form-group">
+                                <label className="contactFormLabel" for="contactFormSubject">Pick and option above to fill out the first portion of the subject and then fill in your question:</label>
+                                <input 
+                                    id="contactFormSubject" 
+                                    className="contactFormInput" 
+                                    name="subject" 
+                                    type="text" 
+                                    placeholder="Subject" 
+                                    value={ this.state.subject }
+                                    onChange={this.handleChange}
+                                    required
+                                />
+                            </div>
+            
+                            <div className="form-group">
+                                <label className="contactFormLabel" for="contactFormMessage">Enter the message you'd like to send:</label>
+                                <textarea 
+                                    id="contactFormMessage" 
+                                    className="contactFormInput" 
+                                    name="message" 
+                                    type="text-area" 
+                                    placeholder="Message you'd like to send"
+                                    value={ this.state.message }
+                                    onChange={this.handleChange}
+                                    required
+                                />
+                            </div>
+
+                            <div id="buttonGroup">
+                                <Button
+                                    variant='success' 
+                                    type='submit'
+                                    className="contactFormButton"
+                                    href={`mailto:artisanbakeriesusa@gmail.com?subject=Note%20From%20${this.state.name}-${this.state.subject}&body=${this.state.message}`}
+                                >
+                                    Send                          
+                                </Button>
+                                <Button
+                                    variant='success'
+                                    className="contactFormButton" 
+                                    onClick={this.resetContact}
+                                    onKeyDown={(e) => this.keyboardResetContact(e)}
+                                >Clear Form</Button>
+                            </div>
                         </div>
-                        <img src={formBottom} alt="Gold ornate bottom border" id="formBottomBorder"/>
                     </form>
+                    <div id="fb-container">
+                        <h2 id="contactFacebookTitle">Our <a id="contactFacebookLink" href="www.facebook.com/ArtisanBakeries">Facebook Page</a>:</h2>
+                        <h3 id="contactFacebookSubTitle">Here you can message us and check out our posts and events for new specialities and promos.</h3>
+                        <Iframe url={`https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FArtisanBakeries&tabs=timeline%2C%20messages%2C%20events&width=${this.state.width}&height=700&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=605332897003313`} 
+                            height="700px"
+                            id="fb-iframe"
+                            style={{border: 'none' , overflow: 'hidden'}}
+                            display="initial"
+                            scrolling="yes" 
+                            frameborder="0px"
+                            allowTransparency="true"
+                            allow="encrypted-media"
+                        /> 
+                    </div>
                 </div>
-                <div id="fb-container">
-                    <img src={topBorder} alt="top ornamental border" id="fbTopBorder"/>
-                    <h2 id="contactFacebookTitle">Our <a id="contactFacebookLink" href="www.facebook.com/ArtisanBakeries">Facebook Page</a>:</h2>
-                    <h3 id="contactFacebookSubTitle">Here you can message us and check out our posts and events for new specialities and promos.</h3>
-                    <Iframe url={`https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FArtisanBakeries&tabs=timeline%2C%20messages%2C%20events&width=${this.state.width}&height=700&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=605332897003313`} 
-                        height="700px"
-                        id="fb-iframe"
-                        style={{border: 'none' , overflow: 'hidden'}}
-                        display="initial"
-                        scrolling="yes" 
-                        frameborder="0px"
-                        allowTransparency="true"
-                        allow="encrypted-media"
-                    /> 
-                    <img src={bottomBorder} alt="bottom ornamental border" id="fbBottomBorder"/>
-                </div>
+                
             </section>
         );
     }

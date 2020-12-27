@@ -5,6 +5,7 @@ import Notes from '../components/menuNotes'
 import TitleFrame from '../assets/backgrounds/menuLightGreen.png'
 import TitleFrameSm from '../assets/backgrounds/menuLightGreenSm.png'
 import SmallBatchSection from '../components/menuSmallBatch'
+import Catering from '../components/menuCatering'
 import yourOrder from '../yourOrder';
 import './MenuCards.css'
 import bakeryInfo from '../bakeryData';
@@ -23,13 +24,16 @@ class Menu extends Component {
             itemSize: '',
             itemPrice: '',
             itemOption: '',
-            count: 0,
+            caterOption: {},
         }
 
         this.orderTypeSelect = this.orderTypeSelect.bind(this)
         this.addOrderItem = this.addOrderItem.bind(this)
         this.changeSize = this.changeSize.bind(this)
         this.changeOption = this.changeOption.bind(this)
+        this.addCaterOption = this.addCaterOption.bind(this)
+        this.removeCaterOption = this.removeCaterOption.bind(this)
+        this.addCaterCombo = this.addCaterCombo.bind(this)
     }
 
     orderTypeSelect(e){
@@ -81,6 +85,49 @@ class Menu extends Component {
         this.setState({ itemOption: e.target.value});
     }
 
+    addCaterOption = (e, Combo) => {
+        e.stopPropagation();
+        // target key needs to be the choice name
+        // target value needs to be item option choice
+        if(Combo === "Sides" || Object.keys(this.state.caterOption).length === 2 ){
+            alert("You've already selected the max amount for this combo!")
+        } else if (Object.keys(this.state.caterOption).length === 3 ){
+            alert("You've already selected the max amount for this combo!")
+        } else {
+            this.setState({ caterOption: {
+                [e.target.name]: e.target.value
+            }})
+
+            this.setState({ itemOption: '' })
+        }
+    }
+
+    removeCaterOption = (e) => {
+        e.stopPropagation();
+        delete this.state.caterOption[e.target.name]
+        console.log(this.state.caterOption)
+    }
+
+    addCaterCombo = (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        if(this.state.itemSize === '' || (Object.keys(this.state.caterOption).length === 0 && this.state.caterOption.constructor === Object)){
+            alert("Please make sure you choose a size for your combo and choose your items!")
+        } else {
+            this.setState({ itemName: e.target.name });
+            var numberOfItems = yourOrder.orderList.count;
+            var key = e.target.name.replace( /\s/g, '') + numberOfItems
+            yourOrder.orderList[key] = {
+                name: e.target.name,
+                price: this.state.itemPrice,
+                size: this.state.itemSize,
+                items: this.state.caterOption
+            }
+            yourOrder.orderList.count = numberOfItems + 1
+            this.setState({ itemSize: '', caterOption: {}, itemOption: '' })
+        }
+    }
+
     addOrderItem = (e) => {
         
         e.preventDefault();
@@ -109,8 +156,8 @@ class Menu extends Component {
             <Navigation orderCount={orderCount}/>
             <div id="menuContainer">
                 <div id="menuSectionTitle">
-                    <img src={TitleFrame} alt="About Us Title with Vintage Frame" id="menuTitleImage" class="tabletDesktopSize"/>
-                    <img src={TitleFrameSm} alt="About Us Title with Vintage Frame" id="menuTitleImage" class="mobileSize"/>
+                    <img src={TitleFrame} alt="Menu Title with Vintage Frame" id="menuTitleImage" class="tabletDesktopSize"/>
+                    <img src={TitleFrameSm} alt="Menu Title with Vintage Frame" id="menuTitleImage" class="mobileSize"/>
                 </div>
                 <Notes notes={bakeryInfo.menu.topNotes} textSize={3}></Notes>
                 <div id="menuSectionNav">
@@ -127,7 +174,6 @@ class Menu extends Component {
                                 Small Batch Orders
                             </Button>
                             <h5>{bakeryInfo.menu.smallBatch.description}</h5>
-                            
                         </div>
                         <div className="orderTypeDiv">
                             <Button
@@ -139,6 +185,7 @@ class Menu extends Component {
                             >
                                 Catering
                             </Button>
+                            <h5>{bakeryInfo.menu.cateringInfo.description}</h5>
                         </div>
                         <div className="orderTypeDiv">
                             <Button
@@ -158,10 +205,14 @@ class Menu extends Component {
                         <SmallBatchSection changeSize={this.changeSize} changeOption={this.changeOption} addItem={this.addOrderItem} stateItemName={this.state.itemName} stateItemPrice={this.state.itemPrice} stateItemOption={this.state.itemOption} stateItemSize={this.state.itemSize}></SmallBatchSection>
                     </div>
                     <div id="cateringSection" className={`${showCatering ? "" : "hidden"}`}>
-                        <p>Catering</p>
+                        <h3>Online Catering Order System Coming Soon!</h3>
+                        <h3>At this time, <a href="/Contact" className="smoothscroll contactLink">Contact Us by email</a> with what you're interested in having.</h3>
+                        {/* <Catering changeSize={this.changeSize} caterOption={this.addCaterOption} removeCaterOption={this.removeCaterOption} addCombo={this.addCaterCombo} stateItemName={this.state.itemName} stateItemOption={this.state.itemOption} stateItemSize={this.state.itemSize} stateCaterOption={this.state.caterOption}/> */}
+                        {/* <p>Catering</p> */}
                     </div>
                     <div id="wholesaleSection" className={`${showWholesale ? "" : "hidden"}`}>
-                        <p>Wholesale</p>
+                        <h3>Online Wholesale Order System Coming Soon!</h3>
+                        <h3>At this time, <a href="/Contact" className="smoothscroll contactLink">Contact Us by email</a> with what you're interested in having.</h3>
                     </div>
                 </div>
     

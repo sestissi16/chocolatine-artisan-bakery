@@ -8,42 +8,31 @@
 
 #headerContainer {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-start;
-    background: url(../assets/backgrounds/woodPanelNoWatermark.jpg) no-repeat center center;
-    /* background: #e1b07e; */
-    background-size: 100% 100% !important;
-	-webkit-background-size: cover !important;
+    /* background: url(../assets/backgrounds/Textures/gray-rock-marble-texture.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
+    /* background: #faf2e9; */
+    /* background-size: 100% 100% !important;
+	-webkit-background-size: cover !important; */
     width: 100%;
     height: 100%;
-    /* overflow: auto; */
-    padding: 4% 2%;
 }
 
 #homeInfo {
-    width: 70%;
+    width: 100%;
     height: fit-content;
-    overflow: auto;
-    border-radius: 25px;
-    background: url(../assets/backgrounds/rollledScroll.png) no-repeat center center;
+    background: url(../assets/backgrounds/Textures/bakery-window-with-items.jpeg) no-repeat center center;
     background-size: 100% 100%;
-    color: #251605;
+    color: #0F0905;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3%;
-}
-
-#homeInfoText {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 7% 10%;
-    width: 100%;
-    height: 100%;
 }
 
 #homeLogo {
@@ -51,52 +40,197 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0% 0% 4%;
+    padding: 0% 0% 1%;
 }
 #homeLogoImage {
     height: 10em;
 }
 
-#homeTagline {
-    padding: 0% 2%;
-    text-align: center;
-    font-family: 'Courgette', sans-serif;
-}
-
-#homeBtnRow {
+#homeInfoText {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90%;
-    padding: 1% 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #432818b2;
+    padding: 2% 1%;
 }
 
-#homeAboutBtn, #homeMenuBtn {
+#homeTagline {
+    color: #FCF3C5;
+    text-align: center;
+    font-family: 'Courgette', sans-serif;
+}
+
+#homeMenuAction {
+    border-top: #ffe9d1 dotted 0.2em;
+    margin: 0.5% 0% 0%;
+    padding: 1% 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FCF3C5;
+    width: 80%;
+    font-family: 'Baskervville', sans-serif;
+}
+
+#actionText {
+    font-weight: bold;
+    text-align: center;
+}
+
+#homeMenuBtn {
+    margin: 1% 0% 0%;
     padding: 1%;
-    width: 90%;
-    border: #942624 solid 0.1em;
-    border-radius: 18px;
-    background: linear-gradient(145deg, #c2c39f, #e6e8bd);
+    width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2.5% 0%;
+    border: solid black 0.08em;
+    border-radius: 4px;
+    /* background: linear-gradient(145deg, #e6e8bd, #c2c39f);
+    box-shadow:  8px 8px 0px #b7b896, 
+                -8px -8px 0px #f7facc; */
+    background: linear-gradient(145deg, #fff6b3, #e6cf96);
+    box-shadow:  8px 8px 0px #d9c48e, 
+                -8px -8px 0px #ffffc0;
+}
+
+#homeMenuBtn:hover {
+    background: linear-gradient(145deg, #afa3a3, #948989);
+    box-shadow:  8px 8px 0px #8b8181, 
+             -8px -8px 0px #bdafaf;
+}
+
+.homeLightLink {
+    color: #432818;
+}
+
+.homeLightLink:hover {
+    color: #FCF3C5;
+}
+
+#homeBriefAbout {
+    width: 100%;
+    height: fit-content;
+    background: #D7D9B1;
+    color: #0F0905;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+}
+
+#homeAboutRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    height: fit-content;
+    padding: 1% 3%;
+}
+
+#homeAboutText {
+    font-family: 'Baskervville', sans-serif;
+    width: 60%;
+}
+
+#homeAboutTitle {
+    font-weight: bold;
+}
+
+#homeAboutDescipt {
+    font-weight: 500;
+}
+
+#homeAboutBtn{
+    padding: 2%;
+    width: 25%;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0% 3%;
     text-align: center;
     font-size: 1.5em;
-    font-family: "Capriola", sans-serif;
+    font-family: "Baskervville", sans-serif;
+    font-weight: 500;
+}
+
+#homeAboutBtn {
+    background: linear-gradient(145deg, #4b5231, #3f4529);
+    box-shadow:  8px 8px 0px #757d53, 
+                 -8px -8px 0px #9fa971;
+}
+
+#homeAboutBtn:hover {
+    background: linear-gradient(145deg, #949d69, #7c8458);
+    box-shadow:  8px 8px 0px #4f5734, 
+                -8px -8px 0px #6b7546;
 }
 
 .homeLink {
-    color: #3c1518;
+    color: #ffe9d1;
 }
 
 .homeLink:hover {
-    color: #2a0f11;
-    border-radius: 18px;
-    background: linear-gradient(145deg, #8c9661, #a7b374);
-    box-shadow:  5px 5px 0px #3e432b, 
-                -5px -5px 0px #faffad;
+    color: #130a01;
+}
+
+#homeWhatWeBring {
+    width: 100%;
+    height: fit-content;
+    background: url(../assets/backgrounds/Textures/gray-rock-marble-texture.jpg) no-repeat center center;
+    background-size: 100% 100%;
+    color: #ffe9d1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+    font-family: "Baskervville", sans-serif;
+    font-weight: bold;
+}
+
+#benefitsBg {
+    width: 100%;
+    background-color: #00000077;
+    padding: 1%;
+
+}
+
+#benefitsTitle {
+    width: 100%;
+    text-align: center;
+    padding: 2% 0%;
+    font-family: "Courgette", sans-serif;
+}
+
+#benefitsCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+}
+
+#benefit1, #benefit2, #benefit3 {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid black 0.08em;
+    background: linear-gradient(145deg, #fff6b3, #e6cf96);
+    box-shadow:  5px 5px 0px #d9c48e, 
+                -5px -5px 0px #ffffc0;
+    padding: 2%;
+    color: black;
+    margin: 1% 2%;
+    text-align: center;
 }
 
 @media (min-width:1200px){
@@ -107,10 +241,6 @@
 
     #homeLogoImage {
         height: 12em;
-    }
-    
-    #homeInfoText {
-        padding: 5% 10%;
     }
 }
 
@@ -126,32 +256,66 @@
     #homeLogoImage {
         height: 8.7em;
     }
-    #homeInfoText {
-        padding: 9% 14%;
-    }
 }
 
 @media (max-width:660px){
     #homeInfo {
-        width: 90%;
+        width: 100%;
     }
     #homeLogoImage {
         height: 8.4em;
     }
     #homeInfoText {
-        padding: 9% 14%;
+        width: 100%;
+        padding: 4% 4%;
+    }
+    #homeMenuBtn {
+        margin: 3% 0% 0%;
+        width: 60%;
+    }
+    #homeAboutRow {
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+        padding: 4% 0%;
+    }
+    #homeAboutText {
+        width: 70%;
+    }
+    #homeAboutBtn{
+        width: 70%;
+        margin: 4% 0%;
     }
 }
 
 @media (max-width:610px){
     #homeInfo {
-        width: 98%;
+        width: 100%;
     }
     #homeLogoImage {
         height: 8em;
     }
-    #homeInfoText {
-        padding: 9% 16%;
+    #homeMenuAction {
+        width: 90%;
+    }
+    #benefitsCards {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #benefit1, #benefit2, #benefit3 {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid black 0.08em;
+        background: linear-gradient(145deg, #fff6b3, #e6cf96);
+        box-shadow:  5px 5px 0px #d9c48e, 
+                    -5px -5px 0px #ffffc0;
+        padding: 2%;
+        color: black;
+        margin: 3% 2%;
+        text-align: center;
     }
 }
 
@@ -162,9 +326,6 @@
     #homeLogoImage {
         height: 7.8em;
     }
-    #homeInfoText {
-        padding: 8% 16% 21%;
-    }
 }
 
 @media (max-width:426px){
@@ -174,9 +335,10 @@
     #homeLogoImage {
         height: 7em;
     }
-    #homeInfoText {
-        padding: 21% 12% 12%;
-        border-radius: 17px;
-        /* background-color: rgba(40, 24, 5, 0.80); */
+    #homeBtnRow {
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+        padding: 6% 0%;
     }
 }

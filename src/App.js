@@ -6,7 +6,7 @@ import Header from './screens/Header'
 import About from './screens/About'
 import Menu from './screens/MenuCards'
 import Contact from './screens/Contact'
-import Order from './screens/Order'
+import Order from './screens/orderCart'
 
 import { theme, ThemeProvider } from '@chakra-ui/core';
 import './App.css';
@@ -154,7 +154,7 @@ class App extends Component {
                         <Route exact path="/" component={Header} />
                         <Route exact path="/About" component={About} />
                         <Route exact path="/Menu" component={Menu} />
-                        <Route exact path="/Order" component={Order} />
+                        <Route exact path="/Cart" component={Order} />
                         <Route exact path="/Contact" component={Contact} />
                     </Router>
                 </ThemeProvider>

@@ -1,5 +1,5 @@
 #home {
-    height: 100%;
+    height: fit-content;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -235,7 +235,7 @@
 
 @media (min-width:1200px){
     #home {
-        height: 100%;
+        height: fit-content;
         width: 100%;
     }
 
@@ -246,7 +246,7 @@
 
 @media (max-width:960px) {
     #home {
-        height: 100%;
+        height: fit-content;
         width: 100%;
     }
     

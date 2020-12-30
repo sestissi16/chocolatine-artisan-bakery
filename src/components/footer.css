@@ -1,0 +1,149 @@
+.custom-footer-bg {
+    width: 100%;
+    background-color: #251605;
+}
+
+.footer-title {
+    color: #FBF2C0 !important;
+    font-family: 'Courgette', sans-serif;
+    font-size: xx-large;
+    margin: 0% 2% 0% 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerLogo {
+    width: 120px;
+    height: 120px;
+    margin: 0% 3% 0% 0%;
+}
+
+.footerSocial {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer-icon-fb {
+    height: 2.5em;
+    width: 2.5em;
+    color: #FBF2C0;
+}
+
+.footerContact {
+    color: #FBF2C0;
+    height: 100%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactItem1 {
+    padding: 0% 1%;
+    border-right: #FBF2C0 solid 0.08em;
+    margin: 0% 2% 0% 0%;
+}
+
+@media (max-width: 769px) {
+    .custom-footer-bg {
+        width: 100%;
+        background-color: #251605;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .footer-title {
+        font-size: x-large;
+    }
+    
+    .footerLogo {
+        width: 90px;
+        height: 90px;
+        margin: 0% 3% 3% 0%;
+    }
+    
+    .footerSocial {
+        width: 10%;
+    }
+    
+    .footer-icon-fb {
+        height: 2.5em;
+        width: 2.5em;
+        color: #FBF2C0;
+    }
+    
+    .footerContact {
+        color: #FBF2C0;
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .contactItem1 {
+        padding: 2% 0%;
+        border-bottom: #FBF2C0 solid 0.08em;
+        border-right: none;
+        margin: 0% 0% 2% 0%;
+        width: 100%;
+    }
+
+    .contactItem2 {
+        overflow-wrap: break-word;
+        word-break: break-all;
+    }
+}
+
+@media (max-width: 570px) {
+    .custom-footer-bg {
+        width: 100%;
+        background-color: #251605;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .footer-title {
+        font-size: x-large;
+    }
+    
+    .footerLogo {
+        width: 90px;
+        height: 90px;
+        margin: 0% 3% 3% 0%;
+    }
+    
+    .footerSocial {
+        width: 10%;
+    }
+    
+    .footer-icon-fb {
+        height: 2.5em;
+        width: 2.5em;
+        color: #FBF2C0;
+    }
+    
+    .footerContact {
+        color: #FBF2C0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .contactItem1 {
+        padding: 2% 0%;
+        border-bottom: #FBF2C0 solid 0.08em;
+        border-right: none;
+        margin: 0% 0% 2% 0%;
+        width: 100%;
+    }
+}

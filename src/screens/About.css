@@ -2,7 +2,6 @@
     height: fit-content;
     width: 100%;
     background-color: #5d663d;
-    padding: 1% 2% 5%;
 }
 
 #aboutContainer {
@@ -13,106 +12,148 @@
     color: #000000;
 }
 
-#aboutSectionTitle {
+#aboutSectionHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url("../assets/backgrounds/Textures/person-mixing-dough.jpg");
+    background-size: 100% 100%;
     font-weight: bolder;
-    width: 80%;
-    height: 18em;
-    padding: 1%;
-    margin: 0% 0% 1% 0%;
-    text-align: center;
-    border-radius: 6px;
+    width: 100%;
+    height: 25em;
+}
+
+#aboutSectionTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background: #38191c9d 100% 100%;
+    height: 100%;
+    width: 100%;
+}
+
+#aboutTitleDiv {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #aboutTitleImage {
-    width: 100%;
-    height: 100%;
+    height: 7em;
 }
 
-.mobileSize {
-    display: none;
-}
-
-#aboutServiceRow, #aboutHowRow, #aboutOrderRow {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: fit-content;
-    width: 100%;
-}
-
-#aboutServiceRow {
-    padding: 0% 2% 0%;
-}
-
-#aboutOrderRow {
-    padding: 0% 0% 2%;
-}
-
-.aboutLineDivider {
-    width: 50%;
-    height: 5em;
-}
-
-#aboutItems {
-    width: 98%;
-    height: fit-content;
-    background-image: url("../assets/backgrounds/oldParchmentBackground.jpg");
-    background-size: 100% 100%;
-    border-radius: 50px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+#aboutTagline {
+    text-align: center;
+    font-family: "Baskervville", sans-serif;
+    color: #FFFFFF;
+    padding: 3% 0%;
 }
 
 #aboutMission {
     width: 100%;
     height: fit-content;
     padding: 1% 2% 0%;
-    color: #000000;
+    color: #000;
     text-align: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    background-color: #e4b78a;
 }
 
 #aboutMissionText {
-    width: 75%;
-}
-
-#aboutServicesIcon, #aboutHowIcon, #aboutOrderIcon{
-    padding: 0% 3% 0% 0%;
-}
-
-
-#aboutServices, #aboutHowWeMakeIt, #aboutHowToOrder {
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 70%;
+    align-items: flex-start;
+    text-align: left;
+    font-family: "Baskervville", sans-serif;
+    padding: 2% 3%;
 }
 
-/* #aboutHowWeMakeIt, #aboutHowToOrder {
-    width: 46%;
+#aboutMissionTitle {
+    font-weight: bold;
+    padding: 2% 0%;
+    margin: 0% 2% 2% 0%;
+}
+
+#aboutMissionDescrip, #aboutMissionOrder {
+    border-top: dotted black 0.08em;
+    margin: 2% 0% 0%;
+    padding: 4% 0% 2%;
+}
+
+#aboutLogo {
+    height: 14em;
+    width: 14em;
+}
+
+#aboutServiceRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     height: fit-content;
-    border-radius: 12px;
-    background: #B8BE9D;
-    box-shadow:  5px 5px 5px #787c66, 
-                -5px -5px 5px #f8ffd4;
-    /* border-radius: 17px;
-    background: #D7D9B1;
-    box-shadow:  6px -6px 12px #b5b695, 
-                -6px 6px 12px #f9fccd; */
-    /*color: #251605;
-    padding: 2%;
-    text-align: center;
-    border: #3C1518 outset 0.1em;
+    width: 100%;
+    padding: 0% 2% 0%;
+    background-image: url("../assets/backgrounds/Textures/small-wood-vertical-panel-texture.jpeg");
+    background-size: 100% 100%;
+    color: white;
+}
+
+#aboutServiceBg {
+    background-color: #5a311979;
+}
+
+#aboutServices {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-} */
+    justify-content: center;
+    width: 100%;
+}
+
+#aboutServicesEx {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+}
+
+.aboutServiceItem {
+    /* border-radius: 4px;
+    background: linear-gradient(145deg, #c2c39f, #e6e8bd);
+    box-shadow:  5px 5px 0px #b7b896, 
+                -0px -0px 0px #f7facc; */
+    border-radius: 4px;
+    background: linear-gradient(145deg, #40161a, #361316);
+    box-shadow:  5px 5px 0px #19090a,
+                -0px -0px 0px #5f2126;
+    margin: 0% 0% 2%;
+    padding: 2%;
+    color: white;
+}
+
+.serviceTitle {
+    font-family: "Courgette", sans-serif;
+    text-align: center;
+}
+
+.serviceEx {
+    font-family: "Baskervville", sans-serif;
+    text-align: center;
+}
+
+#aboutServicesContact {
+    border-top: #FFFFFF solid 0.05em;
+    padding: 2%;
+}
+
 .aboutTitles {
     /* border-bottom: #3C1518 solid 0.05em; */
     font-family: 'Courgette', sans-serif;
@@ -120,105 +161,95 @@
     margin-top: 2%;
 }
 
-.aboutEmphasis {
-    font-family: 'Courgette', sans-serif;
-    font-weight: bold;
-}
-
-#aboutServicesList {
-    font-family: 'Courgette', sans-serif;
-    font-weight: bold;
-    margin: 2% 0%;
-}
-
-#aboutServicesContact {
-    border-top: #3C1518 solid 0.05em;
-    padding: 2%;
-}
-
-#aboutHowWeMakeIt {
-    margin: 0% 0.5% 0% 4%;
-}
-
-#aboutHowToOrder {
-    overflow-wrap: break-word;
+.aboutLineDivider {
+    width: 50%;
+    height: 5em;
 }
 
 .aboutLink {
-    color: #1e0cd5;
+    color: #c1bcff;
 }
 
 .aboutLink:hover {
     color: #0c1265;
 }
 
-.aboutHowToList {
-    list-style-type: none;
-    padding: 0%;
-}
-
-.aboutHowToListItems {
-    color: #251605;
-    border-radius: 15px;
-    background: linear-gradient(145deg, #e6e8bd, #c2c39f);
-    box-shadow:  5px 5px 10px #565747, 
-                -5px -5px 10px #ffffff;
-    padding: 1% 1% 1% 3%;
-    border: #3C1518 solid 0.2em;
-    width: 96%;
+@media (min-width: 1200px){
+    #aboutTitleImage {
+        height: 10em;
+    }
 }
 
 @media (max-width: 770px) {
+    #aboutSectionHeader {
+        height: 20em;
+    }
+
+    #aboutTitleImage {
+        height: 6em;
+    }
+    
+    #aboutTagline {
+        text-align: center;
+        font-family: "Baskervville", sans-serif;
+        color: #FFFFFF;
+        padding: 3% 2%;
+    }
+
     .aboutLineDivider {
         width: 80%;
         height: 5em;
     }
-
-    #aboutSectionTitle {
+    
+    #aboutMission {
         width: 100%;
-        height: 10em;
-    }
-
-    #about {
-        padding: 10% 2%;
-    }
-
-    #aboutServicesIcon, #aboutHowIcon, #aboutOrderIcon {
-        padding: 0%;
-    }
-
-    #aboutServiceRow, #aboutHowRow, #aboutOrderRow {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #aboutMission, #aboutServices, #aboutHowWeMakeIt, #aboutHowToOrder {
-        width: 100%;
+        height: fit-content;
+        padding: 1% 2% 0%;
+        color: #000;
         text-align: center;
-        padding: 2%;
-    }
-
-    #aboutServicesEx {
-        text-align: left;
-    }
-
-    #aboutHowWeMakeIt {
-        margin: 0% 3%;
-    }
-
-    #aboutHowToListItems {
-        padding: 1%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #e4b78a;
     }
     
+    #aboutMissionText {
+        order: 2;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
+        font-family: "Baskervville", sans-serif;
+        padding: 2% 3%;
+    }
+    
+    
+    #aboutLogo {
+        order: 1;
+        height: 14em;
+        width: 15em;
+        padding: 0% 0% 2%;
+    }
 
 }
 
-@media (max-width: 425px) {
-    .tabletDesktopSize {
-        display: none;
+@media (max-width: 500px){
+    #aboutSectionHeader {
+        height: 17em;
     }
 
-    .mobileSize {
-        display: flex;
+    #aboutTitleImage {
+        height: 4em;
     }
+    #aboutTagline {
+        font-size: 2em !important;
+    }
+    
+}
+
+@media (max-width: 425px) {
+    
 }

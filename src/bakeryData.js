@@ -2,21 +2,17 @@
 const bakeryInfo = {
     tagline:"We make pastries for the people!",
     aboutUs: {
-        mission1Part1: "We've grown up eating",
-        mission1Part2: "French baked goods and we wanted to share that with all of you.",
-        mission1Emphasis: " incredible and fresh ",
-        mission2: "",
-        vision1: "Chocolatine's vision",
-        vision2: "Second Sentence of vision if needed",
-        serviceList: "Catering, Wholesale, Events, Small Batch Orders",
-        serviceEx1: "Do you want a couple goodies for a quick breakfast?",
-        serviceEx2: "Are you having an event?",
-        serviceEx3: "Do you have a restaurant or cafe that sells snacks or lunch?",
+        missionTagline: "We've opened up our home to bring you all fresh and traditional baked goods.",
+        missionTitle: "Welcome to Chocolatine",
+        missionDescript: "We're Vegas locals that want bring our heritage to an affordable level for everyone. That's why we're opening our home and using our own family knowledge to make these baked goods for everyone in Vegas. ",
+        missionOrderDescript: "Since we're a small business, we don't have daily available products. However, we do take all kinds of orders! You'll need to order a minimum of two days before you want to pick it up or for us to deliver it to you.",
+        service1: "Small Batch Orders",
+        service1Ex: "For a small group of friends or your family",
+        service2: "Catering",
+        service2Ex: "For when we can all throw parties again and for events",
+        service3: "Wholesale",
+        service3Ex: "For businesses that sell meals or snacks",
         serviceSum: "We would love to work with you to give you fresh, local options to treat your family, friends, colleagues and guests!",
-        process1: "Old-fashioned techniques",
-        process2: "Baked fresh for your orders",
-        process3: "Locally sourced with no added preservatives",
-        processSum: "We're doing everything to bring quality products at an affordable price!",
         //the orders need to have a link and a link name associated with them
         order1: "Message us on ",
         order1Link: "https://www.facebook.com/ArtisanBakeries/",
@@ -85,7 +81,7 @@ const bakeryInfo = {
             orderInfo: {
                 line1: "We have three different sizes so you can find the one that best fits your needs.",
                 line2: "You can order more than one count of a certain size order, like two small orders of chocolate croissants.",
-                line3: "Please order three days before you need it."},
+                line3: "Delivery or pick up happens on Friday and Monday. Let us know which day you need your order on and at what time."},
             savory: {
                 croissantBased: {
                     Butter: {
@@ -447,6 +443,27 @@ const bakeryInfo = {
         },
         
 
+    },
+    order: {
+        topNotes: {
+            note1: {
+                firstPart: "Review your order down below and then input your information and choose your payment method.",
+            },
+            note2: {
+                firstPart: "You can delete items in the review section but to add a new item plese go back to the Menu.",
+            },
+            note3: {
+                firstPart:"Make sure to click the 'Place Order' button to submit your order and don't hesitate to contact us if there are any issues.",
+            },
+        },
+        bottomNotes: {
+            note1: {
+                firstPart: "* If you order is over 50 dollars, you automatically get 5% off! *",
+            },
+            note2: {
+                firstPart: "* 3% added to the total of online payments to cover electronic fees *",
+            },
+        },
     }
 }
 

@@ -82,7 +82,7 @@
 }
 
 #homeMenuBtn {
-    margin: 1% 0% 0%;
+    margin: 3% 0% 0%;
     padding: 1%;
     width: 30%;
     display: flex;
@@ -126,9 +126,9 @@
 
 #homeAboutRow {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: stretch;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     height: fit-content;
     padding: 1% 3%;
@@ -136,11 +136,13 @@
 
 #homeAboutText {
     font-family: 'Baskervville', sans-serif;
-    width: 60%;
+    width: 80%;
+    text-align: center;
 }
 
 #homeAboutTitle {
     font-weight: bold;
+    margin: 0% 0% 4%;
 }
 
 #homeAboutDescipt {
@@ -148,26 +150,27 @@
 }
 
 #homeAboutBtn{
-    padding: 2%;
-    width: 25%;
+    padding: 1%;
+    width: 35%;
     border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0% 3%;
+    margin: 4% 0% 0%;
     text-align: center;
     font-size: 1.5em;
     font-family: "Baskervville", sans-serif;
     font-weight: 500;
+    border: #2e331e solid 0.07em;
 }
 
-#homeAboutBtn {
+#homeAboutBtn, #homeWholesaleBtn {
     background: linear-gradient(145deg, #4b5231, #3f4529);
     box-shadow:  8px 8px 0px #757d53, 
                  -8px -8px 0px #9fa971;
 }
 
-#homeAboutBtn:hover {
+#homeAboutBtn:hover, #homeWholesaleBtn:hover {
     background: linear-gradient(145deg, #949d69, #7c8458);
     box-shadow:  8px 8px 0px #4f5734, 
                 -8px -8px 0px #6b7546;
@@ -187,27 +190,28 @@
     background: url(../assets/backgrounds/Textures/gray-rock-marble-texture.jpg) no-repeat center center;
     background-size: 100% 100%;
     color: #ffe9d1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 3%;
     font-family: "Baskervville", sans-serif;
     font-weight: bold;
 }
 
 #benefitsBg {
     width: 100%;
-    background-color: #00000077;
-    padding: 1%;
+    background-color: #00000091;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 }
 
 #benefitsTitle {
-    width: 100%;
+    width: 80%;
     text-align: center;
     padding: 2% 0%;
-    font-family: "Courgette", sans-serif;
+    /* font-family: "Courgette", sans-serif; */
+    font-family: 'Baskervville', sans-serif;
+    font-weight: bold;
 }
 
 #benefitsCards {
@@ -221,7 +225,8 @@
 #benefit1, #benefit2, #benefit3 {
     width: 30%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     border: solid black 0.08em;
     background: linear-gradient(145deg, #fff6b3, #e6cf96);
@@ -231,6 +236,59 @@
     color: black;
     margin: 1% 2%;
     text-align: center;
+}
+
+#chefHatIcon, #moneyIcon, #carryingIcon {
+    height: 5em;
+    width: 5em;
+    margin: 0% 0% 8%;
+}
+
+.benefitTitle {
+    font-weight: bold;
+    margin: 0% 0% 8%;
+}
+
+.benefitDescrip {
+    text-align: left;
+}
+
+#homeWorkWithUs {
+    width: 100%;
+    height: fit-content;
+    background: #D7D9B1;
+    color: #0F0905;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+    font-family: 'Baskervville', sans-serif;
+}
+
+#homeWholesaleTitle {
+    font-weight: bold;
+    margin: 0% 0% 4%;
+    text-align: center;
+}
+
+#homeWholesaleDescrip {
+    text-align: center;
+}
+
+#homeWholesaleBtn {
+    padding: 1%;
+    width: 35%;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4% 0% 0%;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: "Baskervville", sans-serif;
+    font-weight: 500;
+    border: #2e331e solid 0.07em;
 }
 
 @media (min-width:1200px){
@@ -256,6 +314,13 @@
     #homeLogoImage {
         height: 8.7em;
     }
+    #homeAboutTitle, #homeWholesaleTitle {
+        margin: 0% 0% 6%;
+    }
+    #homeAboutBtn, #homeWholesaleBtn {
+        width: 45%;
+        margin: 5% 0%;
+    }
 }
 
 @media (max-width:660px){
@@ -274,15 +339,12 @@
         width: 60%;
     }
     #homeAboutRow {
-        flex-direction: column;
-        align-items: center;
-        height: fit-content;
         padding: 4% 0%;
     }
     #homeAboutText {
-        width: 70%;
+        width: 80%;
     }
-    #homeAboutBtn{
+    #homeAboutBtn, #homeWholesaleBtn {
         width: 70%;
         margin: 4% 0%;
     }
@@ -325,6 +387,13 @@
     }
     #homeLogoImage {
         height: 7.8em;
+    }
+    #homeAboutTitle, #homeWholesaleTitle {
+        margin: 0% 0% 10%; 
+    }
+    #homeAboutBtn, #homeWholesaleBtn {
+        width: 90%;
+        margin: 6% 0%;
     }
 }
 

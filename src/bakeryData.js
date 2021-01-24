@@ -1,10 +1,24 @@
 
 const bakeryInfo = {
-    tagline:"We make pastries for the people!",
+    home: {
+        tagline:"We make pastries for the people!",
+        taglineAction: "Treat yourself without breaking the bank today!",
+        headerAboutTitle: "We're Black Owned, Women Led, and Local!",
+        headerAboutDescript: " We're a local Vegas family that immigrated from France, so we wanted to share the food magic with all of you! We started up this bakery in our garage so that we could provide fresh and affordable baked goods.",
+        headerBenefitsTitle: "Our pastries should be as good as the ones you could get in France and we'll do it by putting humans first and not profit.",
+        headerBenefit1: "Everything is hand made with traditional recipes.",
+        headerBenefit1Ex: " We make the dough in house and only bake it when orders come in so they can be as fresh as possible! Our recipes are coming straight from Europe so we can make the best quality pastries.",
+        headerBenefit2: "We make all of our goods as affordable as possible.",
+        headerBenefit2Ex: "We're not here to cheat you out of money to make our owner rich. Pastries this good should not just be for the bourgeoisie! We want everyone employed to make a living wage so our fellow working-class people can also have a tasty treat without breaking the bank.",
+        headerBenefit3: "We have multiple ways for you to get our goods.",
+        headerBenefit3Ex: "Don't let us not having a store front yet stop you from ordering our amazing pastries! We have pickup/carry out options and we'll deliver almost anywhere in the Vegas Valley. We even have our products at Farmer's Markets from time to time! And soon, you'll be able to find our goods at grocery stores and coffee shops near you.",
+        headerWholesaleTitle: "Let us provide you with quality products!",
+        headerWholesaleDescript: "If you have a business that would benefit from selling baked goods, we'd love to help you provide that to your customers. We already provide a variety of baked goods for wholesale, but we also do customizations. Let's work together to find something that's perfect for your business.",
+    },
     aboutUs: {
-        missionTagline: "We've opened up our home to bring you all fresh and traditional baked goods.",
-        missionTitle: "Welcome to Chocolatine",
+        missionTagline: "We've opened up our home in Vegas to bring you all fresh and traditional baked goods.",
         missionDescript: "We're Vegas locals that want bring our heritage to an affordable level for everyone. That's why we're opening our home and using our own family knowledge to make these baked goods for everyone in Vegas. ",
+        missionDescript2: "We don't have a store-front yet but you might be able to find us soon at a coffeshop or grocery store near you, or you can order directly from us!",
         missionOrderDescript: "Since we're a small business, we don't have daily available products. However, we do take all kinds of orders! You'll need to order a minimum of two days before you want to pick it up or for us to deliver it to you.",
         service1: "Small Batch Orders",
         service1Ex: "For a small group of friends or your family",
@@ -12,7 +26,9 @@ const bakeryInfo = {
         service2Ex: "For when we can all throw parties again and for events",
         service3: "Wholesale",
         service3Ex: "For businesses that sell meals or snacks",
-        serviceSum: "We would love to work with you to give you fresh, local options to treat your family, friends, colleagues and guests!",
+        service4: "Pick-up / Carryout",
+        service5: "Deliveries",
+        service6: "Online Ordering via Facebook or Website",
         //the orders need to have a link and a link name associated with them
         order1: "Message us on ",
         order1Link: "https://www.facebook.com/ArtisanBakeries/",

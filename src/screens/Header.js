@@ -4,13 +4,27 @@ import yourOrder from '../yourOrder'
 import './Header.css'
 import bakeryInfo from '../bakeryData'
 import RectangleLogo from '../assets/Logos/chocolatineTransparentLogo.png'
+import { GiChefToque, GiTakeMyMoney } from 'react-icons/gi'
+import { FaPeopleCarry } from 'react-icons/fa'
 class Header extends Component {
     
     render () {
         var orderCount = yourOrder.orderList.count
-        if(bakeryInfo.tagline) {
-            var tagline = bakeryInfo.tagline
-        }
+        const { 
+            tagline, 
+            taglineAction, 
+            headerAboutTitle, 
+            headerAboutDescript, 
+            headerBenefitsTitle,
+            headerBenefit1,
+            headerBenefit1Ex,
+            headerBenefit2,
+            headerBenefit2Ex,
+            headerBenefit3,
+            headerBenefit3Ex,
+            headerWholesaleTitle,
+            headerWholesaleDescript
+        } = bakeryInfo.home
         return (
             <header id="home">
                 <Navigation orderCount={orderCount}/>
@@ -22,7 +36,7 @@ class Header extends Component {
                             </div>
                             <h1 id="homeTagline">{tagline}</h1>
                             <div id="homeMenuAction">
-                                <h3 id="actionText">Treat yourself without breaking the bank today!</h3>
+                                <h3 id="actionText">{taglineAction}</h3>
                                 <a href="/Menu" id="homeMenuBtn" className="homeLightLink"><h4>Our Menu</h4></a>
                             </div>
                         </div>
@@ -30,32 +44,39 @@ class Header extends Component {
                     <div id="homeBriefAbout">
                         <div id="homeAboutRow">
                             <div id="homeAboutText">
-                                <h2 id="homeAboutTitle">We're Black Owned, Women Led, and Local! </h2>
-                                <h5 id="homeAboutDescipt">
-                                    We're a local Vegas family that immigrated from France, so we wanted to share the food magic with all of you!
-                                    We started up this bakery in our garage so that we could provide fresh and affordable baked goods.
-                                </h5>
+                                <h2 id="homeAboutTitle">{headerAboutTitle}</h2>
+                                <h3 id="homeAboutDescipt">{headerAboutDescript} </h3>
                             </div>
                             <a href="/About" id="homeAboutBtn" className="homeLink"><h3>Learn More About Us</h3></a>
                         </div>
                     </div>
                     <div id="homeWhatWeBring">
                         <div id="benefitsBg">
-                            <h2 id="benefitsTitle">What We Bring To The Table</h2>
+                            <h2 id="benefitsTitle">{headerBenefitsTitle}</h2>
                             <div id="benefitsCards">
                                 <div id="benefit1">
-                                    <h3>Everything is hand made with traditional recipes.</h3>
+                                    <GiChefToque id="chefHatIcon"/>
+                                    <h3 className="benefitTitle">{headerBenefit1}</h3>
+                                    <h4 className="benefitDescrip">{headerBenefit1Ex}</h4>
                                 </div>
                                 <div id="benefit2">
-                                    <h3>We make all of our goods as affordable as possible.</h3>
+                                    <GiTakeMyMoney id="moneyIcon"/>
+                                    <h3 className="benefitTitle">{headerBenefit2}</h3>
+                                    <h4 className="benefitDescrip">{headerBenefit2Ex}</h4>
                                 </div>
                                 <div id="benefit3">
-                                    <h3>We'll deliver almost anywhere in the valley.</h3>
+                                    <FaPeopleCarry id="carryingIcon"/>
+                                    <h3 className="benefitTitle">{headerBenefit3}</h3>
+                                    <h4 className="benefitDescrip">{headerBenefit3Ex}</h4>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+                    <div id="homeWorkWithUs">
+                        <h2 id="homeWholesaleTitle">{headerWholesaleTitle}</h2>
+                        <h3 id="homeWholesaleDescrip">{headerWholesaleDescript}</h3>
+                        <a href="/Wholesale" id="homeWholesaleBtn" className="homeLink">Work With Us</a>
+                    </div>
                 </div>
             </header>
         );

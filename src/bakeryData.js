@@ -61,6 +61,14 @@ const bakeryInfo = {
             otherInquiry: "",
         },
         fbSectionDescript: "Here you can message us and check out our posts and events for new specialities and promos.",
+        phone: " (702) 475-3415",
+        email: " artisanbakeriesusa@gmail.com",
+        facebookLink: "https://www.facebook.com/ArtisanBakeries",
+        facebookLinkText: "Chocolatine Artisan Bakeries",
+        hours: " Mon-Sun: 8 AM - 7 PM",
+        delivery: " Delivery and ",
+        carryout: " Carryout Available",
+        address: " 8415 Iron Mountain Rd, Las Vegas NV 89143",
 
     },
     menu: {

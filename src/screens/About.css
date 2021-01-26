@@ -106,7 +106,7 @@
     padding: 0% 2% 0%;
     /* background-image: url("../assets/backgrounds/Textures/small-wood-vertical-panel-texture.jpeg");
     background-size: 100% 100%; */
-    background-color: #f5d688;
+    background-color: #D7D9B1;
     color: black;
 }
 
@@ -190,7 +190,7 @@
     justify-content: center;
     align-items: center;
     /* background-color: #3C1518; */
-    background-image: url("../assets/backgrounds/Textures/dough-balls-next-to-rolling-pins.jpg");
+    background-image: url("../assets/backgrounds/Textures/small-wood-vertical-panel-texture.jpeg");
     background-size: 100% 100%;
 }
 
@@ -214,7 +214,7 @@
     font-family: "Baskervville", sans-serif;
     border: solid black 0.08em;
     border-radius: 6px;
-    background: linear-gradient(145deg, #fff6b3c2, #e6cf96d5);
+    background: linear-gradient(145deg, #fff6b3, #e6cf96);
     box-shadow:  5px 5px 0px #d9c48e, 
                 -5px -5px 0px #ffffc0;
     padding: 2%;
@@ -231,7 +231,7 @@
     height: fit-content;
     width: 100%;
     padding: 0% 2% 0%;
-    background-color: #f5d688;
+    background-color: #D7D9B1;
     color: black;
 }
 
@@ -251,14 +251,28 @@
 }
 
 #aboutContactBtn {
-    border-radius: 4px;
+    /* border-radius: 4px;
     background: linear-gradient(145deg, #40161a, #361316);
     box-shadow:  5px 5px 0px #19090a,
-                -0px -0px 0px #6d242a;
+                -0px -0px 0px #6d242a; */
+    border-radius: 4px;
+    background: linear-gradient(145deg, #361316, #40161a);
+    box-shadow:  11px 11px 0px #18080a,
+                    -11px -11px 0px #602226;
     color: #fff;
-    padding: 2%;
+    padding: 1%;
     font-family: "Baskervville", sans-serif;
-    margin: 2% 0% 0%;
+    font-size: x-large;
+    margin: 3% 0% 0%;
+    width: 40%;
+    text-align: center;
+}
+
+#aboutContactBtn:hover {
+    border-radius: 4px;
+    background: linear-gradient(145deg, #5a0b11, #6b0d14);
+    box-shadow:  11px 11px 0px #a0131e,
+                 -11px -11px 0px #280508;
 }
 
 .aboutTitles {

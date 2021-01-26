@@ -1,18 +1,11 @@
 import React, { Component } from 'react';
 import Navigation from './Navbar'
-import BlackLineDivider from '../assets/borders/black/blackFlowerDivider-Transparent-Cropped.png'
 import './About.css'
 import { FaCarSide, FaPeopleCarry } from 'react-icons/fa'
 import { MdRestaurantMenu } from 'react-icons/md'
 import bakeryInfo from '../bakeryData'
 import yourOrder from '../yourOrder'
 import CircleLogo from '../assets/Logos/chocolatineTransparentCircleLogo.png'
-import TitleFrame from '../assets/backgrounds/AboutUsBrownTitle.png'
-import TitleFrameSm from '../assets/backgrounds/aboutUsDarkBrownSm.png'
-import servicesIcon from '../assets/Images/varietyMixOurServices.png'
-import madeIcon from '../assets/Images/varietyMixHowMade.png'
-import orderIcon from '../assets/Images/cashRegister.png'
-
 class About extends Component {
     render(){
         var orderCount = yourOrder.orderList.count

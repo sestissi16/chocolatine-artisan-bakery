@@ -121,7 +121,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3%;
+    padding: 1% 3%;
 }
 
 #homeAboutRow {
@@ -131,7 +131,9 @@
     align-items: center;
     width: 100%;
     height: fit-content;
-    padding: 1% 3%;
+    padding: 4%;
+    border: rgb(51, 31, 31) double 0.6em;
+    margin: 2%;
 }
 
 #homeAboutText {
@@ -262,8 +264,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3%;
+    padding: 1%;
     font-family: 'Baskervville', sans-serif;
+}
+
+#homeWorkWithUsBg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4%;
+    border: rgb(51, 31, 31) double 0.6em;
+    margin: 2%;
 }
 
 #homeWholesaleTitle {

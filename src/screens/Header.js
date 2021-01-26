@@ -73,9 +73,11 @@ class Header extends Component {
                         </div>
                     </div>
                     <div id="homeWorkWithUs">
-                        <h2 id="homeWholesaleTitle">{headerWholesaleTitle}</h2>
-                        <h3 id="homeWholesaleDescrip">{headerWholesaleDescript}</h3>
-                        <a href="/Wholesale" id="homeWholesaleBtn" className="homeLink">Work With Us</a>
+                        <div id="homeWorkWithUsBg">
+                            <h2 id="homeWholesaleTitle">{headerWholesaleTitle}</h2>
+                            <h3 id="homeWholesaleDescrip">{headerWholesaleDescript}</h3>
+                            <a href="/Wholesale" id="homeWholesaleBtn" className="homeLink">Work With Us</a>
+                        </div>
                     </div>
                 </div>
             </header>

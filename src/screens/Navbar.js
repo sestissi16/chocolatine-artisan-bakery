@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Nav, Navbar, OverlayTrigger, Tooltip } from "react-bootstrap";
+import { Nav, Navbar, NavDropdown, OverlayTrigger, Tooltip } from "react-bootstrap";
 import Badge from '@material-ui/core/Badge';
 import { FiShoppingCart } from "react-icons/fi"
 import yourOrder from "../yourOrder"
@@ -14,7 +14,11 @@ class Navigation extends Component {
                 <Navbar.Collapse  id="basic-navbar-nav">
                     <Nav className="navLinksContainer">
                         <Nav.Link href="/About" className="navbar-link">About Us</Nav.Link>
-                        <Nav.Link href="/Menu" className="navbar-link">Menu</Nav.Link>
+                        {/* <Nav.Link href="/Menu" className="navbar-link">Menu</Nav.Link> */}
+                        <NavDropdown title="Menu Options" className="navbar-link" id="menu-dropdown">
+                            <NavDropdown.Item href="/Menu" className="navbar-menu-link">Small Batch / Catering</NavDropdown.Item>
+                            <NavDropdown.Item href="/Wholesale" className="navbar-menu-link">Wholesale</NavDropdown.Item>
+                        </NavDropdown>
                         <Nav.Link href="/Contact" className="navbar-link">Contact Us</Nav.Link>
                         <OverlayTrigger
                             placement="bottom"

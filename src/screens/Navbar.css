@@ -63,6 +63,25 @@
              -5px 5px 0px #79201d;
 }
 
+#menu-dropdown {
+    color: #FBF2C0 !important; 
+}
+
+.dropdown-menu {
+    background-color: #3C1518;
+}
+
+.navbar-menu-link {
+    color: #FBF2C0 !important; 
+}
+
+.navbar-menu-link:hover {
+    background: linear-gradient(45deg, #771f1d, #641a18);
+    color: #FBF2C0 !important;
+    border-bottom: 0.08em solid #868F60;
+    border-top: 0.08em solid #868F60;
+}
+
 @media (min-width: 1200px) {
     .navbar-link, .navbar-link-cart {
         font-size: larger !important;

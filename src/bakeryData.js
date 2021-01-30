@@ -74,17 +74,14 @@ const bakeryInfo = {
     menu: {
         topNotes: {
             note1: {
+                firstPart: "To see the options and ordering info for each type of ordering style click on the button below for the small batch menu or the catering menu. ",
+            },
+            note2: {
                 firstPart: "* Our food can be made gluten free or low sugar if needed! ",
                 linkText: "Message us",
                 link: "/Contact",
                 secondPart: " to see what we can do."
             },
-            note2: {
-                firstPart: "* We do small batch orders, catering, and wholesale, so select your ",
-                linkText: "ordering style",
-                link: "#OrderingTypesSection",
-                secondPart: " below to see what's available for each!",
-            }
         },
         bottomNotes: {
             note1: {
@@ -92,7 +89,7 @@ const bakeryInfo = {
             },
             note2: {
                 firstPart: "* Our food is made in the same area as nut products and gluten products.",
-                linkText: "Message us",
+                linkText: " Message us",
                 link: "/Contact",
                 secondPart: " if you need your food prepared in a different way.",
             }
@@ -102,19 +99,21 @@ const bakeryInfo = {
         },
         smallBatch: {
             sizing: {
-                sm: "2 of a same item",
-                med: "6 of a same item",
-                lg: "12 of a same item"
+                sm: "2 packs",
+                med: "6 packs",
+                lg: "12 packs"
             },
             description: "Best for a small group or just yourself ;)",
             orderInfo: {
                 line1: "We have three different sizes so you can find the one that best fits your needs.",
                 line2: "You can order more than one count of a certain size order, like two small orders of chocolate croissants.",
-                line3: "Delivery or pick up happens on Friday and Monday. Let us know which day you need your order on and at what time."},
+                line3: "Delivery or pick up happens on Friday and Monday. Let us know which day you need your order on and at what time."
+            },
             savory: {
                 croissantBased: {
                     Butter: {
                         name: "Butter Croissant",
+                        pack: "Pack of 1",
                         price: {
                             sm: "$4.00",
                             med: "$12.00",
@@ -126,6 +125,7 @@ const bakeryInfo = {
                     },
                     Everything: {
                         name: "Everything Spiced Croissant",
+                        pack: "Pack of 1",
                         price: {
                             sm:"$4.00",
                             med: "$12.00",
@@ -137,6 +137,7 @@ const bakeryInfo = {
                     },
                     Lunch: {
                         name: "Lunch Croissant Square",
+                        pack: "Pack of 1",
                         price: {
                             sm:"$7.60",
                             med: "$22.80",
@@ -156,12 +157,13 @@ const bakeryInfo = {
                     },
                     Crostinis: {
                         name: "Croissant Crostinis",
+                        pack: "Pack of 10",
                         price: {
                             sm:"$7.60",
                             med: "$22.80",
                             lg: "$45.60"
                         },
-                        description: "Snack size croissant sticks with a seasoning on top. It's perfect to accompany your tea or coffee or even as a snack on its own! They come in packs of 10.",
+                        description: "Snack size croissant sticks with a seasoning on top. It's perfect to accompany your tea or coffee or even as a snack on its own!",
                         shortIngredient: "Contains: wheat, dairy (milk, butter)",
                         longIngredient: "Wheat Flour, Butter (Pasteurized Cream), Sugar, Powdered Milk (Nonfat Milk, Vitamin A Palmitate, Vitamin D3), Salt, Yeast, Dough conditioner (Vegetable Gums - Gum Arabic, Guar Gum - Wheat Flour, Enzymes), Water, Cheese (swiss, cheddar), Herbs, Seasonings, Honey",
                         option1: {
@@ -177,6 +179,7 @@ const bakeryInfo = {
                 breadBased: {
                     Buns60: {
                         name: "Brioche Slider Buns ",
+                        pack: "Pack of 1",
                         price: {
                             sm: "$1.30",
                             med: "$3.90",
@@ -188,6 +191,7 @@ const bakeryInfo = {
                     },
                     Buns90: {
                         name: "Brioche Medium Buns ",
+                        pack: "Pack of 1",
                         price: {
                             sm:"$1.60",
                             med: "$3.90",
@@ -199,6 +203,7 @@ const bakeryInfo = {
                     },
                     Buns110: {
                         name: "Brioche Large Buns ",
+                        pack: "Pack of 1",
                         price: {
                             sm:"$1.90",
                             med:"$5.70",
@@ -210,11 +215,13 @@ const bakeryInfo = {
                     },
                     BroicheLoafSmall: {
                         name: "Small Brioche Loaf",
+                        pack: "Pack of 1",
                         price: {
                             sm:"$8.00",
                             med: "$24.00",
+                            lg: "Not Available Yet"
                         },
-                        description: "A soft, buttery loaf. The ordering size is different because it's a loaf.",
+                        description: "A soft, buttery loaf. It's perfect for sandwiches or even french toast.",
                         shortIngredient: "Contains: wheat, dairy (milk, eggs, butter)",
                         longIngredient: "Wheat Flour, Butter (Pasteurized Cream), Eggs, Sugar, Powdered Milk (Nonfat Milk, Vitamin A Palmitate, Vitamin D3), Salt, Yeast, Dough conditioner (Vegetable Gums - Gum Arabic, Guar Gum - Wheat Flour, Enzymes), Water",
                         option1: {
@@ -228,11 +235,13 @@ const bakeryInfo = {
                     },
                     BroicheLoafMedium: {
                         name: "Medium Brioche Loaf",
+                        pack: "Pack of 1",
                         price: {
                             sm:"$11.00",
-                            med:"$33.00"
+                            med:"$33.00",
+                            lg: "Not Available Yet"
                         },
-                        description: "A soft, buttery loaf. The ordering size is different because it's a loaf.",
+                        description: "A soft, buttery loaf. It's perfect for sandwiches or even french toast.",
                         shortIngredient: "Contains: wheat, dairy (milk, eggs, butter)",
                         longIngredient: "Wheat Flour, Butter (Pasteurized Cream), Eggs, Sugar, Powdered Milk (Nonfat Milk, Vitamin A Palmitate, Vitamin D3), Salt, Yeast, Dough conditioner (Vegetable Gums - Gum Arabic, Guar Gum - Wheat Flour, Enzymes), Water",
                         option1: {
@@ -246,11 +255,13 @@ const bakeryInfo = {
                     },
                     BroicheLoafLarge: {
                         name: "Large Brioche Loaf",
+                        pack: "Pack of 1",
                         price: {
                             sm:"$15.00",
-                            med:"$45.00"
+                            med:"$45.00",
+                            lg: "Not Available Yet"
                         },
-                        description: "A soft, buttery loaf. The ordering size is different because it's a loaf.",
+                        description: "A soft, buttery loaf. It's perfect for sandwiches or even french toast.",
                         shortIngredient: "Contains: wheat, dairy (milk, eggs, butter)",
                         longIngredient: "Wheat Flour, Butter (Pasteurized Cream), Eggs, Sugar, Powdered Milk (Nonfat Milk, Vitamin A Palmitate, Vitamin D3), Salt, Yeast, Dough conditioner (Vegetable Gums - Gum Arabic, Guar Gum - Wheat Flour, Enzymes), Water",
                         option1: {
@@ -268,7 +279,8 @@ const bakeryInfo = {
     
                     // },
                     ShortBread: {
-                        name: "Savory Shortbread Cookies (Pack of 5)",
+                        name: "Savory Shortbread Cookies",
+                        pack: "Pack of 5",
                         price: {
                             sm: "$4.00",
                             med: "$12.00",
@@ -276,11 +288,12 @@ const bakeryInfo = {
                         },
                         description: "Savory shortbread cookies that work great with your meals or as a snack.",
                         shortIngredient: "Contains: wheat, dairy (butter, cheese)",
-                        longIngredient: "Butter, flour, sugar, thyme (fresh and dried), merlot Bellavitano cheese",
+                        longIngredient: "Butter, Flour, Sugar, Thyme (fresh and dried) or Basil (fresh and dried), Merlot Bellavitano Cheese or Apricot Stilton",
                         option1: {
                             title: "Flavors",
                             choices: {
                                 one: "Merlot Cheese and Thyme",
+                                two: "Apricot Stilton and Basil"
                             }
                         }
                     },
@@ -290,17 +303,19 @@ const bakeryInfo = {
                 croissantBased: {
                     Almond: {
                         name: "Almond Croissant",
+                        pack: "Pack of 1",
                         price: {
                             sm: "$6.50",
                             med: "$19.50",
                             lg: "$39.00",
                         },
-                        description: "A croissant filled with almond creme and topped with almonds.",
+                        description: "A croissant filled with almond cream and topped with toasted almonds.",
                         shortIngredient: "Contains: wheat, dairy (milk, butter), tree nuts",
                         longIngredient: "Wheat Flour, Butter (Pasteurized Cream), Sugar, Powdered Milk (Nonfat Milk, Vitamin A Palmitate, Vitamin D3), Salt, Yeast, Dough conditioner (Vegetable Gums - Gum Arabic, Guar Gum - Wheat Flour, Enzymes), Water, Almond Extract (Water, Alcohol, and Oil of Bitter Almond), Vanilla Extract (Water, Natural Vanilla Extract, Ethyl Alcohol, Fructose), Almond Slices",
                     },
                     Chocolate: {
                         name: "Chocolate Croissant",
+                        pack: "Pack of 1",
                         price: {
                             sm: "$5.00",
                             med: "$15.00",
@@ -311,7 +326,8 @@ const bakeryInfo = {
                         longIngredient: "Wheat Flour, Butter (Pasteurized Cream), Sugar, Powdered Milk (Nonfat Milk, Vitamin A Palmitate, Vitamin D3), Salt, Yeast, Dough conditioner (Vegetable Gums - Gum Arabic, Guar Gum - Wheat Flour, Enzymes), Water, Chocolate Batons (44% cocoa)",
                     },
                     ChocoTwist: {
-                        name: "Chocolate Croissant",
+                        name: "Chocolate Twists",
+                        pack: "Pack of 1",
                         price: {
                             sm: "$5.25",
                             med: "$15.75",
@@ -324,7 +340,8 @@ const bakeryInfo = {
                 },
                 breadBased: {
                     NutellaLoaf: {
-                        name: "Nutella Loaf",
+                        name: "Small Nutella Loaf",
+                        pack: "Pack of 1",
                         price: {
                             sm: "$3.00",
                             med: "$9.00",
@@ -333,7 +350,19 @@ const bakeryInfo = {
                         description: "A beautiful brioche loaf filled with nutella.",
                         shortIngredient: "Contains: wheat, dairy (milk, eggs, butter), tree nuts",
                         longIngredient: "Wheat Flour, Water, Butter (Pasteurized Cream), Eggs, Sugar, Powdered Milk (Nonfat Milk, Vitamin A Palmitate, Vitamin D3), Salt, Dough conditioner (Vegetable Gums - Arabic Gum, Guar Gum - Wheat Flour, Enzymes), Yeast, Nutella (Sugar, Palm Oil, Skim Milk, Cocoa, Soy, Lecithin as Emulsifier, Vanillin, Hazelnuts)",
-                    }
+                    },
+                    FruitLoaf: {
+                        name: "Small Fruit Loaf",
+                        pack: "Pack of 1",
+                        price: {
+                            sm: "$3.00",
+                            med: "$9.00",
+                            lg: "$18.00",
+                        },
+                        description: "A beautiful brioche loaf filled with dried fruits that depend on the season.",
+                        shortIngredient: "Contains: wheat, dairy (milk, eggs, butter), tree nuts",
+                        longIngredient: "Wheat Flour, Water, Butter (Pasteurized Cream), Eggs, Sugar, Powdered Milk (Nonfat Milk, Vitamin A Palmitate, Vitamin D3), Salt, Dough conditioner (Vegetable Gums - Arabic Gum, Guar Gum - Wheat Flour, Enzymes), Yeast, Dried Fruits",
+                    },
                 },
                 other: {
                     // crepes: {
@@ -341,6 +370,7 @@ const bakeryInfo = {
                     // },
                     Financiers: {
                         name: "Financiers",
+                        pack: "Pack of 1",
                         price: {
                             sm: "$4.00",
                             med: "$12.00",
@@ -351,7 +381,8 @@ const bakeryInfo = {
                         longIngredient: "Egg Whites, Sugar, Hi Gluten Flour, Salt, Almond Flour, Almond Meal, Butter (Pasteurized Cream), Vanilla Extract (Water, Natural Vanilla Extract, Ethyl Alcohol, Fructose)",
                     },
                     Truffles: {
-                        name: "Chocolate Truffles (Pack of 5)",
+                        name: "Chocolate Truffles",
+                        pack: "Pack of 5",
                         price: {
                             sm: "$4.00",
                             med: "$12.00",
@@ -372,6 +403,7 @@ const bakeryInfo = {
                     },
                     ShortBread: {
                         name: "Shortbread Cookies (Pack of 5)",
+                        pack: "Pack of 5",
                         price: {
                             sm: "$4.00",
                             med: "$12.00",
@@ -394,6 +426,7 @@ const bakeryInfo = {
                 items: {
                     TartsTurnovers: {
                         name: "Tarts and Turnovers",
+                        pack: "Pack of 1",
                         price: {
                             sm: "$6.00",
                             med: "$18.00",
@@ -401,7 +434,7 @@ const bakeryInfo = {
                         },
                         description: "We offer either open-faced tarts or sealed turnover with various fillings!",
                         shortIngredient: "Contains: wheat, dairy, soy, tree nuts",
-                        longIngredient: "Enriched Wheat Flour (niacin, reduced iron, thiamine mononitrate, riboflavin, folic acid), Malted Barley Flour, Water, Butter (pasteurized cream), Ascorbic acid as dough conditioner, Shortening (Palm oil, Beta carotene - color - Water, Vital Gluten), Salt, Almond Extract (Water, Alcohol and Oil of Bitter Almond)",
+                        longIngredient: "Enriched Wheat Flour (niacin, reduced iron, thiamine mononitrate, riboflavin, folic acid), Malted Barley Flour, Water, Butter (pasteurized cream), Ascorbic acid as dough conditioner, Shortening (Palm oil, Beta carotene - color - Water, Vital Gluten), Salt, Almond Extract (Water, Alcohol and Oil of Bitter Almond),  Vanilla Extract (Water, Natural Vanilla Extract, Ethyl Alcohol, Fructose)",
                         option1: {
                             title: "Flavors",
                             choices: {
@@ -415,9 +448,27 @@ const bakeryInfo = {
                     // BakedBrie: {
         
                     // },
-                    // Muffins: {
-        
-                    // },
+                    Muffins: {
+                        name: "Muffins",
+                        pack: "Pack of 1",
+                        price: {
+                            sm: "$3.00",
+                            med: "$9.00",
+                            lg: "$18.00",
+                        },
+                        description: "We offer either open-faced tarts or sealed turnover with various fillings!",
+                        shortIngredient: "Contains: wheat, soy",
+                        longIngredient: "Wheat Flour, Baking Powder (Corn Starch, Sodium Bicarbonate, Sodium Aluminum Sulfate, Monocalcium Phosphate), Salt, Sugar, Canola oil, Chocolate Powder (Cocoa), Chocolate Chips (Sugar, Cocoa Butter, Soy Lecithin, Natural Vanilla Extract) or Cherries, or Blueberries, or Apples",
+                        option1: {
+                            title: "Flavors",
+                            choices: {
+                                one: "Chocolate Chip",
+                                two: "Chocolate",
+                                three: "Blueberries",
+                                four: "Apple",
+                            },
+                        }
+                    },
                     // Cakes: {
         
                     // },

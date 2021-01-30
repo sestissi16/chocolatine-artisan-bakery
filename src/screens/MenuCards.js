@@ -18,12 +18,12 @@ class Menu extends Component {
             orderType: '',
             showSmall: false,
             showCatering: false,
-            showWholesale: false,
             yourOrder: [],
             itemName: '',
             itemSize: '',
             itemPrice: '',
             itemOption: '',
+            itemAmount: 0,
             caterOption: {},
         }
 
@@ -31,9 +31,49 @@ class Menu extends Component {
         this.addOrderItem = this.addOrderItem.bind(this)
         this.changeSize = this.changeSize.bind(this)
         this.changeOption = this.changeOption.bind(this)
+        this.changeAmount = this.changeAmount.bind(this)
         this.addCaterOption = this.addCaterOption.bind(this)
         this.removeCaterOption = this.removeCaterOption.bind(this)
         this.addCaterCombo = this.addCaterCombo.bind(this)
+    }
+
+    componentDidMount() {
+        // add event listener to save state to sessionStorage
+        // when user leaves/refreshes the page
+        window.addEventListener(
+          "beforeunload",
+          this.saveOrderToLocalStorage.bind(this)
+        );
+    }
+    
+    componentWillUnmount() {
+        window.removeEventListener(
+            "beforeunload",
+            this.saveOrderToLocalStorage.bind(this)
+        );
+
+        // saves if component has a chance to unmount
+        this.saveOrderToLocalStorage();
+    }
+
+    saveOrderToLocalStorage() {
+        // Get the existing data
+        var existingOrderList = sessionStorage.getItem('orderList');
+
+        // If no existing data, create an array
+        // Otherwise, convert the sessionStorage string to an array
+        existingOrderList = existingOrderList ? JSON.parse(existingOrderList) : {};
+        
+        // for every item in order list
+        for (let key in yourOrder.orderList.list) {
+            // Add new data to sessionStorage Array
+            existingOrderList[key] = yourOrder.orderList.list[key];
+        }
+
+        // Save back to sessionStorage
+        sessionStorage.setItem('orderList', JSON.stringify(existingOrderList));
+
+        sessionStorage.setItem('orderCount', JSON.stringify(yourOrder.orderList.count));
     }
 
     orderTypeSelect(e){
@@ -53,13 +93,6 @@ class Menu extends Component {
                 showCatering: true, 
                 showWholesale: false
             })
-        }
-        else {
-            this.setState({ orderType: e.target.value, 
-                showSmall: false, 
-                showCatering: false, 
-                showWholesale: true
-            }) 
         }    
     }
 
@@ -83,6 +116,16 @@ class Menu extends Component {
         e.stopPropagation();
         //this changes the state
         this.setState({ itemOption: e.target.value});
+    }
+
+    changeAmount = (e) => {
+        e.stopPropagation();
+        if(e.target.value < 0){
+            alert("Sorry but you can't have negative amounts of orders!")
+            this.setState()
+        } else {
+            this.setState({ itemAmount: e.target.value})
+        }
     }
 
     addCaterOption = (e, Combo) => {
@@ -117,7 +160,7 @@ class Menu extends Component {
             this.setState({ itemName: e.target.name });
             var numberOfItems = yourOrder.orderList.count;
             var key = e.target.name.replace( /\s/g, '') + numberOfItems
-            yourOrder.orderList[key] = {
+            yourOrder.orderList.list[key] = {
                 name: e.target.name,
                 price: this.state.itemPrice,
                 size: this.state.itemSize,
@@ -135,74 +178,80 @@ class Menu extends Component {
         if(this.state.itemSize === ''){
             alert("Please choose a size before adding an item to your order!")
         }else{
-            this.setState({ itemName: e.target.name});
-            // console.log(this.state.itemName)
+            var targetNameSplit = e.target.name.split("-")
             var numberOfItems  = yourOrder.orderList.count
-            var itemName = e.target.value
-            var key = e.target.name.replace( /\s/g, '') + numberOfItems
-            yourOrder.orderList[key] = {name: itemName, price: this.state.itemPrice, size: this.state.itemSize, option: this.state.itemOption};
+            var itemName = targetNameSplit[1]
+            // var amount = e.target.value
+            var key = targetNameSplit[0].replace( /\s/g, '') + numberOfItems
+            yourOrder.orderList.list[key] = {name: itemName, price: this.state.itemPrice, size: this.state.itemSize, option: this.state.itemOption, amount: this.state.itemAmount};
             yourOrder.orderList.count = numberOfItems + 1
     
-            console.log(yourOrder.orderList)
-            this.setState({ itemSize: '', itemOption: ''});
+            console.log(yourOrder.orderList.list)
+
+            // Get the existing data
+            var existingOrderList = sessionStorage.getItem('orderList');
+
+            // If no existing data, create an array
+            // Otherwise, convert the sessionStorage string to an array
+            existingOrderList = existingOrderList ? JSON.parse(existingOrderList) : {};
+            // Add new data to sessionStorage Array
+            existingOrderList[key] = yourOrder.orderList.list[key];
+
+            // Save back to sessionStorage
+            sessionStorage.setItem('orderList', JSON.stringify(existingOrderList));
+            
+            sessionStorage.setItem('orderCount', JSON.stringify(yourOrder.orderList.count));
+
+            this.setState({ itemSize: '', itemOption: '', itemAmount: 0});
         }
     }
 
     render() {
         const { showSmall, showCatering, showWholesale } = this.state;
-        var orderCount = yourOrder.orderList.count
+        var orderCount = sessionStorage.getItem('orderCount');
         return (
         <section id="menu">
             <Navigation orderCount={orderCount}/>
             <div id="menuContainer">
-                <div id="menuSectionTitle">
-                    <img src={TitleFrame} alt="Menu Title with Vintage Frame" id="menuTitleImage" class="tabletDesktopSize"/>
-                    <img src={TitleFrameSm} alt="Menu Title with Vintage Frame" id="menuTitleImage" class="mobileSize"/>
-                </div>
-                <Notes notes={bakeryInfo.menu.topNotes} textSize={3}></Notes>
-                <div id="menuSectionNav">
-                    <h2 id="menuOrderTypesTitle">Ordering Types:</h2>
-                    <section id="OrderingTypesSection">
-                        <div className="orderTypeDiv">
-                            <Button
-                                variant="success"
-                                className="orderTypeBtn"
-                                size="lg"
-                                value="smallBatch"
-                                onClick={this.orderTypeSelect}
-                            >
-                                Small Batch Orders
-                            </Button>
-                            <h5>{bakeryInfo.menu.smallBatch.description}</h5>
+                <div id="menuSectionHeader">
+                    <div id="menuHeaderBg">
+                        <h1 id="menuHeaderTitle">Menu</h1>
+                        <h2 id="menuHeaderSubTitle">Small Batch Menu / Catering Menu</h2>
+                        <Notes notes={bakeryInfo.menu.topNotes} textSize={3} textColor="#fff"></Notes>
+                        <div id="menuSectionNav">
+                            <h2 id="menuOrderTypesTitle">Ordering Types:</h2>
+                            <section id="OrderingTypesSection">
+                                <div className="orderTypeDiv">
+                                    <Button
+                                        variant="success"
+                                        className="orderTypeBtn"
+                                        size="lg"
+                                        value="smallBatch"
+                                        onClick={this.orderTypeSelect}
+                                    >
+                                        Small Batch Orders
+                                    </Button>
+                                    <h5>{bakeryInfo.menu.smallBatch.description}</h5>
+                                </div>
+                                <div className="orderTypeDiv">
+                                    <Button
+                                        variant="success"
+                                        className="orderTypeBtn"
+                                        size="lg"
+                                        value="catering"
+                                        onClick={this.orderTypeSelect}
+                                    >
+                                        Catering
+                                    </Button>
+                                    <h5>{bakeryInfo.menu.cateringInfo.description}</h5>
+                                </div>
+                            </section>
                         </div>
-                        <div className="orderTypeDiv">
-                            <Button
-                                variant="success"
-                                className="orderTypeBtn"
-                                size="lg"
-                                value="catering"
-                                onClick={this.orderTypeSelect}
-                            >
-                                Catering
-                            </Button>
-                            <h5>{bakeryInfo.menu.cateringInfo.description}</h5>
-                        </div>
-                        <div className="orderTypeDiv">
-                            <Button
-                                variant="success"
-                                className="orderTypeBtn"
-                                size="lg"
-                                value="wholesale"
-                                onClick={this.orderTypeSelect}
-                            >
-                                Wholesale
-                            </Button>
-                        </div>
-                    </section>
+                    </div>
                 </div>
                 <div id="menuSectionCards">
                     <div id="smallBatchSection" className={`${showSmall ? "" : "hidden"}`}>
-                        <SmallBatchSection changeSize={this.changeSize} changeOption={this.changeOption} addItem={this.addOrderItem} stateItemName={this.state.itemName} stateItemPrice={this.state.itemPrice} stateItemOption={this.state.itemOption} stateItemSize={this.state.itemSize}></SmallBatchSection>
+                        <SmallBatchSection changeSize={this.changeSize} changeOption={this.changeOption} changeAmount={this.changeAmount} addItem={this.addOrderItem} stateItemName={this.state.itemName} stateItemPrice={this.state.itemPrice} stateItemOption={this.state.itemOption} stateItemSize={this.state.itemSize} stateItemAmount={this.state.itemAmount}></SmallBatchSection>
                     </div>
                     <div id="cateringSection" className={`${showCatering ? "" : "hidden"}`}>
                         <h3>Online Catering Order System Coming Soon!</h3>
@@ -210,16 +259,12 @@ class Menu extends Component {
                         {/* <Catering changeSize={this.changeSize} caterOption={this.addCaterOption} removeCaterOption={this.removeCaterOption} addCombo={this.addCaterCombo} stateItemName={this.state.itemName} stateItemOption={this.state.itemOption} stateItemSize={this.state.itemSize} stateCaterOption={this.state.caterOption}/> */}
                         {/* <p>Catering</p> */}
                     </div>
-                    <div id="wholesaleSection" className={`${showWholesale ? "" : "hidden"}`}>
-                        <h3>Online Wholesale Order System Coming Soon!</h3>
-                        <h3>At this time, <a href="/Contact" className="smoothscroll contactLink">Contact Us by email</a> with what you're interested in having.</h3>
-                    </div>
                 </div>
     
                 <div id="menuNotesBottom">
-                    <Notes notes={bakeryInfo.menu.bottomNotes} textSize={5}></Notes>
-                {/* <h4>* Our food is made in a cottage food operation that is not subject to government food safety inspection.</h4>
-                <h4>* Our food is made in the same area as nut products and gluten products. <a href="#contact" className="smoothscrool">Message us</a> if you need your food prepared in a different way.</h4> */}
+                    <div id="menuNotesBottomBg">
+                        <Notes notes={bakeryInfo.menu.bottomNotes} textSize={4} textColor="#000"></Notes>
+                    </div>
                 </div>
             </div>
         </section>

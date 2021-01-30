@@ -2,7 +2,6 @@
     height: fit-content;
     width: 100%;
     background-color: #3C1518;
-    padding: 3% 2%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,36 +13,64 @@
     justify-content: flex-start;
     align-items: center;
     align-content: center;
-    background: #FFE6A7 url('../assets/backgrounds/oldParchmentBackground.jpg') no-repeat center center;
+    /* background: #FFE6A7 url('../assets/backgrounds/oldParchmentBackground.jpg') no-repeat center center;
     background-size: cover !important;
-    -webkit-background-size: cover !important;
-    border-radius: 50px;
-    width: 98%;
-}
-
-#menuSectionTitle {
-    font-weight: bolder;
-    width: 85%;
-    height: 11em;
-    padding: 1%;
-    margin: 0% 0% 1% 0%;
-    text-align: center;
-    border-radius: 6px;
-}
-
-#menuTitleImage {
+    -webkit-background-size: cover !important; */
     width: 100%;
-    height: 100%;
+}
+
+#menuSectionHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    background: url('../assets/backgrounds/Textures/fresh-ingredients-tulips-wooden-table.jpeg');
+    background-size: 100% 100%;
+    height: fit-content;
+}
+
+#menuHeaderBg {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    background-color: #4b2d18cc;
+    padding: 2%;
+}
+
+#menuHeaderTitle {
+    width: 96%;
+    padding: 0% 0% 2% 3%;
+    margin: 0% 0% 3%;
+    border-bottom: #D7D9B1 solid 0.1em;
+    font-family: 'Baskervville', sans-serif;
+    color: #D7D9B1;
+    text-align: left;
+}
+
+#menuHeaderSubTitle {
+    text-align: center;
+    font-family: 'Baskervville', sans-serif;
+    color: #D7D9B1;
+    width: 92%;
+    padding: 0% 0% 2%;
+    margin: 0% 0% 3%;
+    border-bottom: #D7D9B1 dotted 0.08em;
+
 }
 
 #menuSectionNav {
     width: 90%;
-    border-bottom: black solid 0.06em;
-    margin-bottom: 2%;
+    border-top: #D7D9B1 dotted 0.1em;
+    padding: 3%;
 }
 
 #menuOrderTypesTitle {
     text-align: center;
+    color: #D7D9B1;
+    font-family: 'Baskervville', sans-serif;
 }
 
 #OrderingTypesSection {
@@ -53,6 +80,8 @@
     align-items: flex-start;
     width: 100%;
     padding: 2% 0%;
+    color: #D7D9B1;
+    font-family: 'Baskervville', sans-serif;
 }
 
 .hidden{
@@ -60,7 +89,7 @@
 }
 
 .orderTypeDiv {
-    width: 28%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -70,6 +99,7 @@
 
 .orderTypeBtn{
     width: 100%;
+    margin: 0% 0% 4%;
 }
 
 .btn-success {
@@ -80,11 +110,35 @@
     background-color: #2F331F;
 }
 
+#menuSectionCards {
+    background: url('../assets/backgrounds/oldParchmentBackground.jpg');
+    background-size: 100% 100%;
+    /* background-color: #d7d9b1; */
+    width: 100%;
+}
 
+#menuNotesBottom {
+    width: 100%;
+    background-color: #d7d9b1;
+    padding: 2%;
+}
+
+#menuNotesBottomBg {
+    width: 100%;
+    border: rgb(51, 31, 31) double 0.6em;
+    margin: 1% 0%;
+}
 
 @media (max-width: 769px) {
     #OrderingTypesSection  {
         flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .orderTypeDiv {
+        width: 90%;
+        /* border-bottom: black solid 0.05em; */
+        margin: 0% 0% 4%;
     }
     .orderTypeBtn{
         width: 50%;
@@ -96,13 +150,5 @@
 @media (max-width: 426px) {
     .orderTypeBtn{
         width: 70%;
-    }
-
-    .tabletDesktopSize {
-        display: none;
-    }
-
-    .mobileSize {
-        display: flex;
     }
 }

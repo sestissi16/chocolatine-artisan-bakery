@@ -256,6 +256,7 @@ class Menu extends Component {
                     <div id="cateringSection" className={`${showCatering ? "" : "hidden"}`}>
                         <h3>Online Catering Order System Coming Soon!</h3>
                         <h3>At this time, <a href="/Contact" className="smoothscroll contactLink">Contact Us by email</a> with what you're interested in having.</h3>
+                        <h3>You can look at our Small Batch offerings or inquiry about certain pastries that you already love!</h3>
                         {/* <Catering changeSize={this.changeSize} caterOption={this.addCaterOption} removeCaterOption={this.removeCaterOption} addCombo={this.addCaterCombo} stateItemName={this.state.itemName} stateItemOption={this.state.itemOption} stateItemSize={this.state.itemSize} stateCaterOption={this.state.caterOption}/> */}
                         {/* <p>Catering</p> */}
                     </div>

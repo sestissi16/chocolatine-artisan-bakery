@@ -8,7 +8,7 @@ import yourOrder from '../yourOrder'
 import CircleLogo from '../assets/Logos/chocolatineTransparentCircleLogo.png'
 class About extends Component {
     render(){
-        var orderCount = yourOrder.orderList.count
+        var orderCount = sessionStorage.getItem('orderCount');
         const {
             missionTagline,
             missionDescript,

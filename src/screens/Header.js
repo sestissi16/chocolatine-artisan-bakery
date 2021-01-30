@@ -9,7 +9,7 @@ import { FaPeopleCarry } from 'react-icons/fa'
 class Header extends Component {
     
     render () {
-        var orderCount = yourOrder.orderList.count
+        var orderCount = sessionStorage.getItem('orderCount');
         const { 
             tagline, 
             taglineAction, 

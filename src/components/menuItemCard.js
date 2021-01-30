@@ -7,116 +7,115 @@ import {
     AccordionIcon,
     Box
   } from "@chakra-ui/core";
+import {
+    NumberInput,
+    NumberInputField,
+    NumberInputStepper,
+    NumberIncrementStepper,
+    NumberDecrementStepper,
+} from "@chakra-ui/react"
+import { FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, TextField } from "@material-ui/core"
+import { withStyles } from '@material-ui/core/styles';
+import { red } from '@material-ui/core/colors';
 import bakeryInfo from '../bakeryData';
 import yourOrder from '../yourOrder';
-import SectionDivider from '../assets/borders/black/blackFleurDivider-Transparent.png'
 import './menuItemCard.css'
-import { render } from 'react-dom';
+
+const MyRadio = withStyles({
+    root: {
+      '&$checked': {
+        color: red[900],
+      },
+    },
+    checked: {},
+  })((props) => <Radio color="default" {...props} />);
 
 class ItemCard extends Component {
-  
+
     render() {
-        // name, price, description, shortIngredients, longIngredients, option1
-        const {section, type, itemKey, name, price, description, shortIngredients, longIngredients, option1, changeTheSize, changeTheOption, addTheItem, itemName, itemSize, itemPrice, itemOption} = this.props
+        const {section, type, itemKey, name, pack, price, description, shortIngredients, longIngredients, option1, changeTheSize, changeTheOption, changeTheAmount, addTheItem, itemName, itemSize, itemPrice, itemOption} = this.props
         // const {itemName, itemSize, itemPrice, itemOption} = this.state
         
         var buttonName = section+'.'+type+'.'+itemKey
 
         var orderInfo = bakeryInfo.menu.smallBatch.orderInfo
         var extraChoices = option1.choices
+
         return(
             <div id="cardSection">
-                <h5>{name}</h5>
-                <div className="itemDividerSection">
-                    <img src={SectionDivider} alt="Floral Section Divider" className="itemDividerImg"/>
+                <div id="cardNameRow">
+                    <h3>{name}</h3>
+                    <h3>{pack}</h3>
                 </div>
-                <h6>{description}</h6>
-                <h6 className="allergyHeader">Allergy Info:</h6>
+                <div id="cardDescription">
+                    <h5>{description}</h5>
+                </div>
                 <AccordionItem className="accordionItem">
-                    <AccordionHeader className="ingredientsHeader" _expanded={{ background: "#432818 !important", color: "white" }}>
+                    <AccordionHeader className="ingredientsHeader" >
                         <Box flex="1" textAlign="left">
-                            {shortIngredients}
+                            <h5 className="accordionHeaderTitle">{shortIngredients}</h5>
                         </Box>
                         <AccordionIcon />
                     </AccordionHeader>
                     <AccordionPanel pb={4} className="ingredientsPanel">
-                        {longIngredients}
+                        <h5>{longIngredients}</h5>
                     </AccordionPanel>
                 </AccordionItem>
-                <div className="itemDividerSection">
-                    <img src={SectionDivider} alt="Floral Section Divider" className="itemDividerImg"/>
-                </div>
                 <AccordionItem className="accordionItem">
-                    <AccordionHeader className="ingredientsHeader" _expanded={{ background: "#432818 !important", color: "white" }}>
+                    <AccordionHeader className="ingredientsHeader" >
                         <Box flex="1" textAlign="left">
-                            Order Options:
+                            <h5>Order Options:</h5>
                         </Box>
                         <AccordionIcon />
                     </AccordionHeader>
                     <AccordionPanel pb={4} className="ingredientsPanel">
                         <div id="sizeChoice">
-                            <h6>Size:</h6>
-                            <div className="sizeRadio">
-                                <input 
-                                    type="radio" 
-                                    value={"Sm-"+price.sm} 
-                                    name="size" 
-                                    id="smSize" 
-                                    onChange={changeTheSize}
-                                    checked={this.props.itemSize === "Sm"}
-                                    style={{height:1.1 +'em', width:1.1+'em',}}
-                                />
-                                <lable for="smSize" className="itemInputLabel">Small - {price.sm}</lable>
-                            </div>
-                            <div className="sizeRadio">
-                                <input 
-                                    type="radio" 
-                                    value={"Med-"+price.med} 
-                                    name="size" 
-                                    id="medSize"
-                                    onChange={changeTheSize}
-                                    checked={this.props.itemSize === "Med"}
-                                    style={{height:1.1 +'em', width:1.1+'em',}}
-                                />
-                                <lable for="medSize" className="itemInputLabel">Medium - {price.med}</lable>
-                            </div>
-                            <div className="sizeRadio">
-                                <input 
-                                    type="radio" 
-                                    value={"Lg-"+price.lg} 
-                                    name="size" 
-                                    id="lgSize"
-                                    onChange={changeTheSize}
-                                    checked={this.props.itemSize === "Lg"}
-                                    style={{height:1.1 +'em', width:1.1+'em',}}
-                                /> 
-                                <lable for="lgSize" className="itemInputLabel">Large - {price.lg}</lable>
-                            </div>
-                        </div>
+                            <FormControl component="fieldset">
+                                <FormLabel component="legend" id="optionTitle">Size</FormLabel>
+                                <RadioGroup aria-label="sizes" name="sizes"  onChange={changeTheSize}>
+                                    <FormControlLabel className="radioItem" value={"Sm-"+price.sm} control={<MyRadio />} label={"Small - "+price.sm} />
+                                    <FormControlLabel className="radioItem" value={"Med-"+price.med} control={<MyRadio />} label={"Medium - "+price.med} />
+                                    <FormControlLabel className="radioItem" value={"Lg-"+price.lg} control={<MyRadio />} label={"Large - "+price.lg} />
+                                </RadioGroup>
+                            </FormControl>
+                        </div> 
                         <div id="option1Choice">
-                            <h6>{option1.title}</h6>
-                            {Object.keys(extraChoices).map((key, index) => {
-                                var optValue = extraChoices[key];
-                                return <div className="extraChoiceRadio">
-                                    <input 
-                                        type="radio" 
-                                        value={optValue} 
-                                        name="options"
-                                        id={name+key} 
-                                        onChange={changeTheOption}
-                                        checked={this.props.itemOption === optValue}
-                                        style={{height:1.1 +'em', width:1.1+'em',}}
-                                    /> 
-                                    <lable for={name+key} className="itemInputLabel">{optValue}</lable>
-                                </div>
-                            })}
+                            <FormControl component="fieldset">
+                                <FormLabel component="legend" id="optionTitle">{option1.title}</FormLabel>
+                                <RadioGroup aria-label="option1" name="option1"  onChange={changeTheOption}>
+                                    {Object.keys(extraChoices).map((key, index) => {
+                                        var optValue = extraChoices[key];
+                                        return <FormControlLabel className="radioItem" value={optValue} control={<MyRadio />} label={optValue} />
+                                    })}
+                                </RadioGroup>
+                            </FormControl>
                         </div>
                     </AccordionPanel>
                 </AccordionItem>
                 <div id="addToOrderSection">
+                    <form id="amountForm" noValidate autoComplete="off">
+                        <TextField
+                            required
+                            fullWidth
+                            id="amountInput"
+                            label="Amount"
+                            type="number"
+                            onChange={changeTheAmount}
+                            placeholder={0}
+                            InputProps={{
+                                inputProps: {
+                                    min: 0,
+                                    max: 15,
+                                }
+                            }}
+                            InputLabelProps={{
+                                shrink: true,
+                            }}
+                        />
+                    </form>
                     <button 
                         id="addToOrderButton"
-                        name={buttonName}
+                        name={buttonName+'-'+name}
                         value={name} 
                         onClick={addTheItem}
                     >

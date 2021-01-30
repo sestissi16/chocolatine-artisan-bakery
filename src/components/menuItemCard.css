@@ -1,33 +1,39 @@
 #cardSection {
-    width: 40%;
+    width: 100%;
     padding: 2%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    text-align: center;
     border: black solid 0.1em;
     margin: 1% 2%;
-    background-image: url('../assets/backgrounds/oldParchmentBackground.jpg');
-    border-radius: 10%;
+    font-family: 'Libre Baskerville', sans-serif;
+    background-color: #d7d9b1;
 }
 
-.itemDividerSection {
-    width: 80%;
-    height: 2.5em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.itemDividerImg {
+#cardNameRow {
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0% 0% 1%;
+    border-bottom: #3C1518 solid 0.1em;
+    margin: 0% 0% 2%;
+    font-weight: 700;
 }
 
-.allergyHeader {
-    text-align: center;
-    margin: 1% 0%;
+#cardDescription {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 0% 0% 2%;
+}
+
+.accordionHeaderTitle {
+    font-weight: 300;
 }
 
 .accordionItem {
@@ -35,16 +41,18 @@
 }
 
 .ingredientsHeader {
-    background-color: rgba(150, 94, 54, 0.3);
-    border: #432818 solid 0.07em;
+    background-color: #d7d9b13d !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-top: none !important;
+    border-bottom: #3C1518 solid 0.09em !important;
+    padding: 2% 0% !important;
 }
 
 .ingredientsPanel {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 2%;
-
 }
 
 #sizeChoice {
@@ -59,12 +67,6 @@
     text-align: left;
 }
 
-.sizeRadio, .extraChoiceRadio {
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
 #option1Choice {
     width: 100%;
     display: flex;
@@ -74,13 +76,53 @@
     text-align: left;
 }
 
+#optionTitle {
+    font-family: 'Libre Baskerville', sans-serif !important;
+    font-size: 1.2rem !important;
+    color: black !important;
+}
+
+.MuiFormControlLabel-label {
+    font-family: 'Libre Baskerville', sans-serif !important;
+    font-size: 1.2rem !important;
+    color: black;
+}
+
 .itemInputLabel {
     padding-left: 3%;
 }
 
+#amountForm {
+    width: 20%;
+}
+
+#amountInput {
+    /* background-color: #3c151849; */
+    color: black !important;
+    height: 2em !important;
+    padding: 8px 1px 9px !important;
+    font-size: 1.2rem;
+    font-family: 'Libre Baskerville', sans-serif !important;
+}
+
+.MuiInputLabel-formControl {
+    font-family: 'Libre Baskerville', sans-serif !important;
+    font-size: 1.5rem !important;
+    color: black !important;
+}
+
+.MuiFormControl-root {
+    font-size: 1.5rem;
+    color: black !important;
+}
+
 #addToOrderSection {
-    margin-top: 4%;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1% 0% 0%;
 }
 
 #addToOrderButton {
@@ -89,7 +131,7 @@
     border-bottom: 0.08em solid #C9CBA3;
     border-top: 0.08em solid #C9CBA3;
     background-color: #3C1518;
-    width: 50%;
+    width: 30%;
     text-align: center;
     border-radius: 60px;
 }
@@ -106,17 +148,15 @@
     #cardSection {
         width: 100%;
     }
-    .itemDividerSection {
-        width: 70%;
-        height: 1.5em;
-        display: flex;
+
+    #cardNameRow {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 1% 0%;
     }
-    .itemDividerImg {
-        width: 100%;
-        height: 100%;
+
+    #addToOrderSection {
+        flex-direction: column;
+        justify-content: center;
     }
 }

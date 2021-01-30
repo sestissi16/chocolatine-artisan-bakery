@@ -13,7 +13,8 @@ import './menuSmallBatch.css'
 
 class SmallBatch extends Component {
     render() {
-        const { changeSize, changeOption, addItem, stateItemName, stateItemOption, stateItemPrice, stateItemSize } = this.props
+        const { changeSize, changeOption, changeAmount, addItem, stateItemName, stateItemOption, stateItemPrice, stateItemSize, stateItemAmount } = this.props
+        var sizingInfo = bakeryInfo.menu.smallBatch.sizing
         var orderInfo = bakeryInfo.menu.smallBatch.orderInfo
         var savoryCroissantBasedInfo = bakeryInfo.menu.smallBatch.savory.croissantBased
         var savoryBreadBasedInfo = bakeryInfo.menu.smallBatch.savory.breadBased
@@ -35,29 +36,49 @@ class SmallBatch extends Component {
 
         return(
             <section id="smallBatch">
-                <h4 id="smallbatchTitle">Small Batch Options:</h4>
+                <div id="menuStepsSection">
+                    <div id="menuStepsRow">
+                        <div className="menuStep" id="menuStep1">
+                            <h2 className="menuStepTitle">Step 1</h2>
+                            <h4 className="menuStepDescript">Select your item from the categories below</h4>
+                        </div>
+                        <div className="menuStep">
+                            <h2 className="menuStepTitle">Step 2</h2>
+                            <h4 className="menuStepDescript">Select the size you want, select the option you want, and select the amount you want</h4>
+                        </div>
+                        <div className="menuStep">
+                            <h2 className="menuStepTitle">Step 3</h2>
+                            <h4 className="menuStepDescript">Go to your cart to place your order</h4>
+                        </div>
+                    </div>
+                </div>
+                <h2 id="smallbatchTitle">Small Batch Options:</h2>
                 <div className="sectionDividerDiv">
                     <img src={SectionDivider} alt="ornate black line divider" className="sectionDivider"/>
                 </div>
                 <div id="smallBatchInfo">
-                    <h4 id="orderInfoTitle">Small Batch Ordering Info</h4>
-                    <ul>
-                        <h5><li>{orderInfo.line1}</li></h5> 
+                    <h3 id="orderInfoTitle">Ordering Info</h3>
+                    <ul id="orderInfoList">
+                        <h4><li className="orderInfoItem">{orderInfo.line1}</li></h4> 
+                        <ul id="orderSizingList">
+                            <h4><li className="orderInfoItem">Small: {sizingInfo.sm}</li></h4>
+                            <h4><li className="orderInfoItem">Medium: {sizingInfo.med}</li></h4>
+                            <h4><li className="orderInfoItem">Large: {sizingInfo.lg}</li></h4>
+                        </ul>
+                        <h4><li className="orderInfoItem">{orderInfo.line2}</li></h4>
                         
-                        <h5><li>{orderInfo.line2}</li></h5>
-                        
-                        <h5><li>{orderInfo.line3}</li></h5>
+                        <h4><li className="orderInfoItem">{orderInfo.line3}</li></h4>
                     </ul>
                 </div>
                 <div className="sectionDividerDiv">
                     <img src={SectionDivider} alt="ornate black line divider" className="sectionDivider"/>
                 </div>
                 <div id="smallBatchSavory">
-                    <h4>Savory Section:</h4>
+                    <h3 className="sectionTitle">Savory Section:</h3>
                     <AccordionItem className="accordionSection">
                         <AccordionHeader className="sectionHeader" _expanded={{ background: "#5D663D !important", color: "white" }}>
                             <Box flex="1" textAlign="left">
-                            <h5>Croissant Based</h5>
+                            <h3>Croissant Based</h3>
                             </Box>
                             <AccordionIcon />
                         </AccordionHeader>
@@ -72,6 +93,7 @@ class SmallBatch extends Component {
                                                 type="croissantBased"
                                                 itemKey={key}
                                                 name={savoryInfo[key].name}
+                                                pack={savoryInfo[key].pack}
                                                 description={savoryInfo[key].description}
                                                 shortIngredients={savoryInfo[key].shortIngredient}
                                                 longIngredients={savoryInfo[key].longIngredient}
@@ -79,11 +101,13 @@ class SmallBatch extends Component {
                                                 option1={savoryInfo[key].option1}
                                                 changeTheSize={changeSize}
                                                 changeTheOption={changeOption}
+                                                changeTheAmount={changeAmount}
                                                 addTheItem={addItem}
                                                 itemName={stateItemName}
                                                 itemPrice={stateItemPrice}
                                                 itemSize={stateItemSize}
                                                 itemOption={stateItemOption}
+                                                itemAmount={stateItemAmount}
                                             />
                                         } else {
                                             return <ItemCard
@@ -91,17 +115,20 @@ class SmallBatch extends Component {
                                                 type="croissantBased"
                                                 itemKey={key}
                                                 name={savoryInfo[key].name}
+                                                pack={savoryInfo[key].pack}
                                                 description={savoryInfo[key].description}
                                                 shortIngredients={savoryInfo[key].shortIngredient}
                                                 longIngredients={savoryInfo[key].longIngredient}
                                                 price={savoryInfo[key].price}
                                                 changeTheSize={changeSize}
                                                 changeTheOption={changeOption}
+                                                changeTheAmount={changeAmount}
                                                 addTheItem={addItem}
                                                 itemName={stateItemName}
                                                 itemPrice={stateItemPrice}
                                                 itemSize={stateItemSize}
                                                 itemOption={stateItemOption}
+                                                itemAmount={stateItemAmount}
                                             />
                                         }
                                     })
@@ -113,7 +140,7 @@ class SmallBatch extends Component {
                     <AccordionItem className="accordionSection">
                         <AccordionHeader className="sectionHeader" _expanded={{ background: "#5D663D !important", color: "white" }}>
                             <Box flex="1" textAlign="left">
-                            <h5>Bread Based</h5>
+                            <h3>Bread Based</h3>
                             </Box>
                             <AccordionIcon />
                         </AccordionHeader>
@@ -128,6 +155,7 @@ class SmallBatch extends Component {
                                                 type="breadBased"
                                                 itemKey={key}
                                                 name={savoryInfo[key].name}
+                                                pack={savoryInfo[key].pack}
                                                 description={savoryInfo[key].description}
                                                 shortIngredients={savoryInfo[key].shortIngredient}
                                                 longIngredients={savoryInfo[key].longIngredient}
@@ -135,11 +163,13 @@ class SmallBatch extends Component {
                                                 option1={savoryInfo[key].option1}
                                                 changeTheSize={changeSize}
                                                 changeTheOption={changeOption}
+                                                changeTheAmount={changeAmount}
                                                 addTheItem={addItem}
                                                 itemName={stateItemName}
                                                 itemPrice={stateItemPrice}
                                                 itemSize={stateItemSize}
                                                 itemOption={stateItemOption}
+                                                itemAmount={stateItemAmount}
                                             />
                                         } else {
                                             return <ItemCard
@@ -147,17 +177,20 @@ class SmallBatch extends Component {
                                                 type="breadBased"
                                                 itemKey={key}
                                                 name={savoryInfo[key].name}
+                                                pack={savoryInfo[key].pack}
                                                 description={savoryInfo[key].description}
                                                 shortIngredients={savoryInfo[key].shortIngredient}
                                                 longIngredients={savoryInfo[key].longIngredient}
                                                 price={savoryInfo[key].price}
                                                 changeTheSize={changeSize}
                                                 changeTheOption={changeOption}
+                                                changeTheAmount={changeAmount}
                                                 addTheItem={addItem}
                                                 itemName={stateItemName}
                                                 itemPrice={stateItemPrice}
                                                 itemSize={stateItemSize}
                                                 itemOption={stateItemOption}
+                                                itemAmount={stateItemAmount}
                                             />
                                         }
                                     })
@@ -169,7 +202,7 @@ class SmallBatch extends Component {
                     <AccordionItem className="accordionSection">
                         <AccordionHeader className="sectionHeader" _expanded={{ background: "#5D663D !important", color: "white" }}>
                             <Box flex="1" textAlign="left">
-                            <h5>Other Doughs and Confections</h5> 
+                            <h3>Other Doughs and Confections</h3> 
                             </Box>
                             <AccordionIcon />
                         </AccordionHeader>
@@ -187,6 +220,7 @@ class SmallBatch extends Component {
                                                     type="other"
                                                     itemKey={key}
                                                     name={savoryInfo[key].name}
+                                                    pack={savoryInfo[key].pack}
                                                     description={savoryInfo[key].description}
                                                     shortIngredients={savoryInfo[key].shortIngredient}
                                                     longIngredients={savoryInfo[key].longIngredient}
@@ -194,11 +228,13 @@ class SmallBatch extends Component {
                                                     option1={savoryInfo[key].option1}
                                                     changeTheSize={changeSize}
                                                     changeTheOption={changeOption}
+                                                    changeTheAmount={changeAmount}
                                                     addTheItem={addItem}
                                                     itemName={stateItemName}
                                                     itemPrice={stateItemPrice}
                                                     itemSize={stateItemSize}
                                                     itemOption={stateItemOption}
+                                                    itemAmount={stateItemAmount}
                                                 />
                                             } else {
                                                 return <ItemCard
@@ -206,17 +242,20 @@ class SmallBatch extends Component {
                                                     type="other"
                                                     itemKey={key}
                                                     name={savoryInfo[key].name}
+                                                    pack={savoryInfo[key].pack}
                                                     description={savoryInfo[key].description}
                                                     shortIngredients={savoryInfo[key].shortIngredient}
                                                     longIngredients={savoryInfo[key].longIngredient}
                                                     price={savoryInfo[key].price}
                                                     changeTheSize={changeSize}
                                                     changeTheOption={changeOption}
+                                                    changeTheAmount={changeAmount}
                                                     addTheItem={addItem}
                                                     itemName={stateItemName}
                                                     itemPrice={stateItemPrice}
                                                     itemSize={stateItemSize}
                                                     itemOption={stateItemOption}
+                                                    itemAmount={stateItemAmount}
                                                 />
                                             }
                                         }
@@ -228,11 +267,11 @@ class SmallBatch extends Component {
                     
                 </div>
                 <div id="smallBatchSweet">
-                    <h4>Sweet Section:</h4>
+                    <h3 className="sectionTitle">Sweet Section:</h3>
                     <AccordionItem className="accordionSection">
                         <AccordionHeader className="sectionHeader" _expanded={{ background: "#5D663D !important", color: "white" }}>
                             <Box flex="1" textAlign="left">
-                            <h5>Croissant Based</h5>
+                            <h3>Croissant Based</h3>
                             </Box>
                             <AccordionIcon />
                         </AccordionHeader>
@@ -247,6 +286,7 @@ class SmallBatch extends Component {
                                                 type="croissantBased"
                                                 itemKey={key}
                                                 name={sweetInfo[key].name}
+                                                pack={sweetInfo[key].pack}
                                                 description={sweetInfo[key].description}
                                                 shortIngredients={sweetInfo[key].shortIngredient}
                                                 longIngredients={sweetInfo[key].longIngredient}
@@ -254,11 +294,13 @@ class SmallBatch extends Component {
                                                 option1={sweetInfo[key].option1}
                                                 changeTheSize={changeSize}
                                                 changeTheOption={changeOption}
+                                                changeTheAmount={changeAmount}
                                                 addTheItem={addItem}
                                                 itemName={stateItemName}
                                                 itemPrice={stateItemPrice}
                                                 itemSize={stateItemSize}
                                                 itemOption={stateItemOption}
+                                                itemAmount={stateItemAmount}
                                             />
                                         } else {
                                             return <ItemCard
@@ -266,17 +308,20 @@ class SmallBatch extends Component {
                                                 type="croissantBased"
                                                 itemKey={key}
                                                 name={sweetInfo[key].name}
+                                                pack={sweetInfo[key].pack}
                                                 description={sweetInfo[key].description}
                                                 shortIngredients={sweetInfo[key].shortIngredient}
                                                 longIngredients={sweetInfo[key].longIngredient}
                                                 price={sweetInfo[key].price}
                                                 changeTheSize={changeSize}
                                                 changeTheOption={changeOption}
+                                                changeTheAmount={changeAmount}
                                                 addTheItem={addItem}
                                                 itemName={stateItemName}
                                                 itemPrice={stateItemPrice}
                                                 itemSize={stateItemSize}
                                                 itemOption={stateItemOption}
+                                                itemAmount={stateItemAmount}
                                             />
                                         }
                                     })
@@ -288,7 +333,7 @@ class SmallBatch extends Component {
                     <AccordionItem className="accordionSection">
                         <AccordionHeader className="sectionHeader" _expanded={{ background: "#5D663D !important", color: "white" }}>
                             <Box flex="1" textAlign="left">
-                            <h5>Bread Based</h5>
+                            <h3>Bread Based</h3>
                             </Box>
                             <AccordionIcon />
                         </AccordionHeader>
@@ -303,6 +348,7 @@ class SmallBatch extends Component {
                                                 type="breadBased"
                                                 itemKey={key}
                                                 name={sweetInfo[key].name}
+                                                pack={sweetInfo[key].pack}
                                                 description={sweetInfo[key].description}
                                                 shortIngredients={sweetInfo[key].shortIngredient}
                                                 longIngredients={sweetInfo[key].longIngredient}
@@ -310,11 +356,13 @@ class SmallBatch extends Component {
                                                 option1={sweetInfo[key].option1}
                                                 changeTheSize={changeSize}
                                                 changeTheOption={changeOption}
+                                                changeTheAmount={changeAmount}
                                                 addTheItem={addItem}
                                                 itemName={stateItemName}
                                                 itemPrice={stateItemPrice}
                                                 itemSize={stateItemSize}
                                                 itemOption={stateItemOption}
+                                                itemAmount={stateItemAmount}
                                             />
                                         } else {
                                             return <ItemCard
@@ -322,17 +370,20 @@ class SmallBatch extends Component {
                                                 type="breadBased"
                                                 itemKey={key}
                                                 name={sweetInfo[key].name}
+                                                pack={sweetInfo[key].pack}
                                                 description={sweetInfo[key].description}
                                                 shortIngredients={sweetInfo[key].shortIngredient}
                                                 longIngredients={sweetInfo[key].longIngredient}
                                                 price={sweetInfo[key].price}
                                                 changeTheSize={changeSize}
                                                 changeTheOption={changeOption}
+                                                changeTheAmount={changeAmount}
                                                 addTheItem={addItem}
                                                 itemName={stateItemName}
                                                 itemPrice={stateItemPrice}
                                                 itemSize={stateItemSize}
                                                 itemOption={stateItemOption}
+                                                itemAmount={stateItemAmount}
                                             />
                                         }
                                     })
@@ -344,7 +395,7 @@ class SmallBatch extends Component {
                     <AccordionItem className="accordionSection">
                         <AccordionHeader className="sectionHeader" _expanded={{ background: "#5D663D !important", color: "white" }}>
                             <Box flex="1" textAlign="left">
-                            <h5>Other Doughs and Confections</h5> 
+                            <h3>Other Doughs and Confections</h3> 
                             </Box>
                             <AccordionIcon />
                         </AccordionHeader>
@@ -362,6 +413,7 @@ class SmallBatch extends Component {
                                                     type="other"
                                                     itemKey={key}
                                                     name={sweetInfo[key].name}
+                                                    pack={sweetInfo[key].pack}
                                                     description={sweetInfo[key].description}
                                                     shortIngredients={sweetInfo[key].shortIngredient}
                                                     longIngredients={sweetInfo[key].longIngredient}
@@ -369,11 +421,13 @@ class SmallBatch extends Component {
                                                     option1={sweetInfo[key].option1}
                                                     changeTheSize={changeSize}
                                                     changeTheOption={changeOption}
+                                                    changeTheAmount={changeAmount}
                                                     addTheItem={addItem}
                                                     itemName={stateItemName}
                                                     itemPrice={stateItemPrice}
                                                     itemSize={stateItemSize}
                                                     itemOption={stateItemOption}
+                                                    itemAmount={stateItemAmount}
                                                 />
                                             } else {
                                                 return <ItemCard
@@ -381,17 +435,20 @@ class SmallBatch extends Component {
                                                     type="other"
                                                     itemKey={key}
                                                     name={sweetInfo[key].name}
+                                                    pack={sweetInfo[key].pack}
                                                     description={sweetInfo[key].description}
                                                     shortIngredients={sweetInfo[key].shortIngredient}
                                                     longIngredients={sweetInfo[key].longIngredient}
                                                     price={sweetInfo[key].price}
                                                     changeTheSize={changeSize}
                                                     changeTheOption={changeOption}
+                                                    changeTheAmount={changeAmount}
                                                     addTheItem={addItem}
                                                     itemName={stateItemName}
                                                     itemPrice={stateItemPrice}
                                                     itemSize={stateItemSize}
                                                     itemOption={stateItemOption}
+                                                    itemAmount={stateItemAmount}
                                                 />
                                             }
                                         }
@@ -405,12 +462,12 @@ class SmallBatch extends Component {
                     <div className="sectionDividerDiv">
                         <img src={SectionDivider} alt="ornate black line divider" className="sectionDivider"/>
                     </div>
-                    <h4>Special Order Section:</h4>
-                    <h5 id="specialOrderInfo">{bakeryInfo.menu.smallBatch.specialOrder.info}</h5>
+                    <h3 className="sectionTitle">Special Order Section:</h3>
+                    <h4 id="specialOrderInfo">{bakeryInfo.menu.smallBatch.specialOrder.info}</h4>
                     <AccordionItem className="accordionSection">
                         <AccordionHeader className="sectionHeader" _expanded={{ background: "#5D663D !important", color: "white" }}>
                             <Box flex="1" textAlign="left">
-                            <h5>Special Order Items</h5>
+                            <h3>Special Order Items</h3>
                             </Box>
                             <AccordionIcon />
                         </AccordionHeader>
@@ -425,6 +482,7 @@ class SmallBatch extends Component {
                                                 type="items"
                                                 itemKey={key}
                                                 name={specialInfo[key].name}
+                                                pack={specialInfo[key].pack}
                                                 description={specialInfo[key].description}
                                                 shortIngredients={specialInfo[key].shortIngredient}
                                                 longIngredients={specialInfo[key].longIngredient}
@@ -432,11 +490,13 @@ class SmallBatch extends Component {
                                                 option1={specialInfo[key].option1}
                                                 changeTheSize={changeSize}
                                                 changeTheOption={changeOption}
+                                                changeTheAmount={changeAmount}
                                                 addTheItem={addItem}
                                                 itemName={stateItemName}
                                                 itemPrice={stateItemPrice}
                                                 itemSize={stateItemSize}
                                                 itemOption={stateItemOption}
+                                                itemAmount={stateItemAmount}
                                             />
                                         } else {
                                             return <ItemCard
@@ -444,17 +504,20 @@ class SmallBatch extends Component {
                                                 type="items"
                                                 itemKey={key}
                                                 name={specialInfo[key].name}
+                                                pack={specialInfo[key].pack}
                                                 description={specialInfo[key].description}
                                                 shortIngredients={specialInfo[key].shortIngredient}
                                                 longIngredients={specialInfo[key].longIngredient}
                                                 price={specialInfo[key].price}
                                                 changeTheSize={changeSize}
                                                 changeTheOption={changeOption}
+                                                changeTheAmount={changeAmount}
                                                 addTheItem={addItem}
                                                 itemName={stateItemName}
                                                 itemPrice={stateItemPrice}
                                                 itemSize={stateItemSize}
                                                 itemOption={stateItemOption}
+                                                itemAmount={stateItemAmount}
                                             />
                                         }
                                     })

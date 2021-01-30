@@ -1,9 +1,50 @@
 #smallBatch {
-    width: 100;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+}
+
+#menuStepsSection {
+    width: 100%;
+    background-color: #d7d9b1;
+    padding: 2%;
+}
+
+#menuStepsRow {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    border: rgb(51, 31, 31) double 0.6em;
+    margin: 1% 0%;
+}
+
+.menuStep {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2%;
+}
+
+.menuStepTitle {
+    font-family: 'Courgette', sans-serif;
+    padding: 1% 0%;
+    border-bottom: #232617 solid 0.07em;
+}
+
+.menuStepDescript {
+    font-family: 'Baskervville', sans-serif;
+    padding: 1%;
+}
+
+#smallbatchTitle {
+    font-family: 'Courgette', sans-serif;
+    padding: 4% 0% 0%;
 }
 
 .sectionDividerDiv {
@@ -27,7 +68,23 @@
 }
 
 #orderInfoTitle {
-    text-align: left;
+    font-family: 'Courgette', sans-serif;
+    padding: 1% 0%;
+}
+
+#orderInfoList {
+    width: 100%;
+    padding: 1% 3% 1% 5%;
+}
+
+/* #orderSizingList {
+    font-family: 'Baskervville', sans-serif;
+    font-weight: bold;
+} */
+
+.orderInfoItem {
+    font-family: 'Baskervville', sans-serif;
+    font-weight: bold;
 }
 
 #smallBatchSavory, #smallBatchSweet, #smallBatchSpecial {
@@ -38,6 +95,10 @@
     align-items: center;
 }
 
+.sectionTitle {
+    font-family: 'Courgette', sans-serif;
+}
+
 #savoryCroissantBased, 
 #savoryBreadBased, 
 #savoryOther, 
@@ -46,10 +107,9 @@
 #sweetOther {
     width: 100%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .accordionSection {
@@ -58,18 +118,30 @@
 }
 
 .sectionHeader {
-    background-color: rgba(243, 234, 212, 0.4);
-    border: solid #232617 0.1em;
+    /* border-radius: 4px;
+background: linear-gradient(145deg, #e6e8bd, #c2c39f);
+box-shadow:  5px 5px 10px #565747,
+             -5px -5px 10px #ffffff; */
+    background-color: #d7d9b162;
+    border-bottom: solid #232617 0.25em;
+    /* border-top: solid #232617 0.1em; */
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    font-family: 'Courgette', sans-serif;
 }
 
 .itemCardPanel {
-    border: solid #232617 0.1em;
-    background-color: rgba(215, 217, 177, 0.7);
+    /* border: solid #232617 0.1em; */
+    border: none;
+    background-color: rgba(215, 217, 177, 0.301);
 }
 
 #specialOrderInfo {
     text-align: center;
     padding: 0% 3%;
+    font-family: 'Baskervville', sans-serif;
+    font-weight: bold;
 }
 
 @media (max-width: 770px){
@@ -84,5 +156,12 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    #menuStepsRow {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menuStep {
+        width: 100%;
     }
 }

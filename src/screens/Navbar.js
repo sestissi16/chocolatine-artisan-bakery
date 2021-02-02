@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Nav, Navbar, NavDropdown, OverlayTrigger, Tooltip } from "react-bootstrap";
 import Badge from '@material-ui/core/Badge';
 import { FiShoppingCart } from "react-icons/fi"
-import yourOrder from "../yourOrder"
 import './Navbar.css'
 
 class Navigation extends Component {

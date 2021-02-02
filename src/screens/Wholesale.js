@@ -33,7 +33,7 @@ class Wholesale extends Component {
         <section id="wholesale">
             <Navigation orderCount={orderCount}/>
             <div id="wholesaleContainer">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeYdjy0AsiMUy2yvnFFaRUkj7MmIcbbAfhDQjphk2b-P-2VkA/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeYdjy0AsiMUy2yvnFFaRUkj7MmIcbbAfhDQjphk2b-P-2VkA/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="Wholesale Request Form">Loading…</iframe>
             </div>
         </section>
         );

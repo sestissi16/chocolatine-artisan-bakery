@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import Navigation from './Navbar'
-import { Button, Alert } from "react-bootstrap"
+import { Button } from "react-bootstrap"
 import Notes from '../components/menuNotes'
-import TitleFrame from '../assets/backgrounds/menuLightGreen.png'
-import TitleFrameSm from '../assets/backgrounds/menuLightGreenSm.png'
 import SmallBatchSection from '../components/menuSmallBatch'
-import Catering from '../components/menuCatering'
 import yourOrder from '../yourOrder';
 import './MenuCards.css'
 import bakeryInfo from '../bakeryData';
@@ -260,7 +257,7 @@ class Menu extends Component {
                         <h3>You can look at our Small Batch offerings or inquiry about certain pastries that you already love!</h3> */}
                         {/* <Catering changeSize={this.changeSize} caterOption={this.addCaterOption} removeCaterOption={this.removeCaterOption} addCombo={this.addCaterCombo} stateItemName={this.state.itemName} stateItemOption={this.state.itemOption} stateItemSize={this.state.itemSize} stateCaterOption={this.state.caterOption}/> */}
                         {/* <p>Catering</p> */}
-                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScUd-uTT9z2ItOHfr4EjE32AZuKfYP5bteqVFyzg03LJu5Ejw/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScUd-uTT9z2ItOHfr4EjE32AZuKfYP5bteqVFyzg03LJu5Ejw/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="Catering Request Form">Loading…</iframe>
                     </div>
                 </div>
     

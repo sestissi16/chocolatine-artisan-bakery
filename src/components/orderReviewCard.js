@@ -1,13 +1,5 @@
 import React, { Component } from 'react';
-import {
-    AccordionItem,
-    AccordionHeader,
-    AccordionPanel,
-    AccordionIcon,
-    Box
-  } from "@chakra-ui/core";
 import { MdDeleteForever } from 'react-icons/md'
-import { FaPlus, FaMinus } from 'react-icons/fa'
 import './orderReviewCard.css'
 
 class ReviewCard extends Component {

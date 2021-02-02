@@ -7,10 +7,10 @@ import DatePicker from 'react-datepicker'
 import { addDays } from 'date-fns'
 import { setHours, setMinutes } from 'date-fns'
 import 'react-datepicker/dist/react-datepicker.css'
-import { FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, TextField } from "@material-ui/core"
+import { FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from "@material-ui/core"
 import { withStyles } from '@material-ui/core/styles';
 import { red } from '@material-ui/core/colors';
-import { Modal, Button, Alert } from 'react-bootstrap'
+import { Modal, Button } from 'react-bootstrap'
 import Notes from '../components/menuNotes'
 import ReviewCard from '../components/orderReviewCard'
 import './orderCart.css'
@@ -55,7 +55,6 @@ class Order extends Component {
         this.onError = this.onError.bind(this)
         this.handleClose = this.handleClose.bind(this)
         this.formSubmit = this.formSubmit.bind(this)
-        // this.changePayment = this.changePayment.bind(this)
     }
 
     componentDidMount() {
@@ -254,7 +253,8 @@ class Order extends Component {
                     orderArray.push(`${item.name}: ${item.size}, ${item.option}, ${item.amount}`)
                 } else {
                     orderArray.push(`${item.name}: ${item.size}, ${item.amount}`)
-                }     
+                }  
+                return(1)   
             })
         }
 

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import bakeryInfo from '../bakeryData';
 import './menuNotes.css'
 
 class Notes extends Component {

@@ -1,24 +1,14 @@
 import React, { Component } from 'react';
 import {
-    Accordion,
     AccordionItem,
     AccordionHeader,
     AccordionPanel,
     AccordionIcon,
     Box
   } from "@chakra-ui/core";
-import {
-    NumberInput,
-    NumberInputField,
-    NumberInputStepper,
-    NumberIncrementStepper,
-    NumberDecrementStepper,
-} from "@chakra-ui/react"
 import { FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, TextField } from "@material-ui/core"
 import { withStyles } from '@material-ui/core/styles';
 import { red } from '@material-ui/core/colors';
-import bakeryInfo from '../bakeryData';
-import yourOrder from '../yourOrder';
 import './menuItemCard.css'
 
 const MyRadio = withStyles({
@@ -33,13 +23,12 @@ const MyRadio = withStyles({
 class ItemCard extends Component {
 
     render() {
-        const {section, type, itemKey, name, pack, price, description, shortIngredients, longIngredients, option1, changeTheSize, changeTheOption, changeTheAmount, addTheItem, itemName, itemSize, itemPrice, itemOption} = this.props
+        const {section, type, itemKey, name, pack, price, description, shortIngredients, longIngredients, option1, changeTheSize, changeTheOption, changeTheAmount, addTheItem, itemAmount} = this.props
         // const {itemName, itemSize, itemPrice, itemOption} = this.state
         
         var buttonName = section+'.'+type+'.'+itemKey
 
-        var orderInfo = bakeryInfo.menu.smallBatch.orderInfo
-        var extraChoices = option1.choices
+        var extraChoices = option1 ? option1.choices : "no choices";
 
         return(
             <div id="cardSection">
@@ -79,17 +68,21 @@ class ItemCard extends Component {
                                 </RadioGroup>
                             </FormControl>
                         </div> 
-                        <div id="option1Choice">
-                            <FormControl component="fieldset">
-                                <FormLabel component="legend" id="optionTitle">{option1.title}</FormLabel>
-                                <RadioGroup aria-label="option1" name="option1"  onChange={changeTheOption}>
-                                    {Object.keys(extraChoices).map((key, index) => {
-                                        var optValue = extraChoices[key];
-                                        return <FormControlLabel className="radioItem" value={optValue} control={<MyRadio />} label={optValue} />
-                                    })}
-                                </RadioGroup>
-                            </FormControl>
-                        </div>
+                        {
+                            option1 ? 
+                            <div id="option1Choice">
+                                <FormControl component="fieldset">
+                                    <FormLabel component="legend" id="optionTitle">{option1.title}</FormLabel>
+                                    <RadioGroup aria-label="option1" name="option1"  onChange={changeTheOption}>
+                                        {Object.keys(extraChoices).map((key, index) => {
+                                            var optValue = extraChoices[key];
+                                            return <FormControlLabel className="radioItem" value={optValue} control={<MyRadio />} label={optValue} />
+                                        })}
+                                    </RadioGroup>
+                                </FormControl>
+                            </div> : <div></div>
+                        }
+                        
                     </AccordionPanel>
                 </AccordionItem>
                 <div id="addToOrderSection">
@@ -101,6 +94,7 @@ class ItemCard extends Component {
                             label="Amount"
                             type="number"
                             onChange={changeTheAmount}
+                            value={itemAmount}
                             placeholder={0}
                             InputProps={{
                                 inputProps: {
@@ -137,13 +131,7 @@ ItemCard.defaultProps = {
     description: "Description of the product.", 
     shortIngredients: "Contact us for allergy information", 
     longIngredients: "Contact us for more specific ingredient information.", 
-    option1: {
-        title: "Contact us if you need adaptations.",
-        choices: {
-            one: "Need to make something Gluten Free?",
-            two: "Want a specific flavor?"
-        }
-    }
+    
 }
 
 export default ItemCard;

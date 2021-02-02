@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Navigation from './Navbar'
-import yourOrder from '../yourOrder'
 import './Header.css'
 import bakeryInfo from '../bakeryData'
 import RectangleLogo from '../assets/Logos/chocolatineTransparentLogo.png'

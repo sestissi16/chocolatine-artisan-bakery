@@ -4,7 +4,6 @@ import './About.css'
 import { FaCarSide, FaPeopleCarry } from 'react-icons/fa'
 import { MdRestaurantMenu } from 'react-icons/md'
 import bakeryInfo from '../bakeryData'
-import yourOrder from '../yourOrder'
 import CircleLogo from '../assets/Logos/chocolatineTransparentCircleLogo.png'
 class About extends Component {
     render(){

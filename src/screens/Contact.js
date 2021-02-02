@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button'
-import BlackLineDivider from '../assets/borders/black/blackFlowerDivider-Transparent-Cropped.png'
 import Navigation from './Navbar'
 // import { FacebookProvider, Page } from 'react-facebook';
-import Iframe from 'react-iframe'
-import yourOrder from '../yourOrder'
+// import Iframe from 'react-iframe'
 import './Contact.css'
 import bakeryInfo from '../bakeryData';
 import { FaFacebookSquare, FaRegClock, FaMapMarkerAlt, FaPeopleCarry, FaCarSide } from 'react-icons/fa'

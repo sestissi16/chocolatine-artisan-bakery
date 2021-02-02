@@ -1,0 +1,231 @@
+#order {
+    height: fit-content;
+    width: 100%;
+    background-color: #432818;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#orderContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+}
+
+#orderSectionHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    background: url('../assets/backgrounds/Textures/gray-rock-marble-texture.jpg');
+    background-size: 100% 100%;
+    height: fit-content;
+}
+
+#orderSectionHeaderBg {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    background-color: #11080279;
+    padding: 2%;
+}
+
+#orderHeaderTitle {
+    width: 96%;
+    padding: 0% 0% 2% 3%;
+    margin: 0% 0% 3%;
+    border-bottom: #D7D9B1 solid 0.1em;
+    font-family: 'Baskervville', sans-serif;
+    color: #e8ebc0;
+    text-align: left;
+}
+
+#orderContent {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #6e6e5d;
+}
+
+#paymentIdSection {
+    width: 51%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 2%;
+    background-color: #d7d9b1;
+    padding: 2%;
+}
+
+#paymentTitle {
+    font-family: 'Courgette', sans-serif;
+}
+
+#orderForm {
+    width: 100%;
+    padding: 0% 1%;
+}
+
+#billingInfoSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+#billingInfoTitle {
+    align-self: center;
+    font-family: 'Libre Baskerville', sans-serif;
+}
+
+.form-group {
+    width: 100%;
+    font-family: 'Libre Baskerville', sans-serif;
+}
+
+.orderFormInputContact, .orderFormInputNotes {
+    width: 100%;
+    border-radius: 0.9em;
+    border: #432818 solid 0.09em;
+    padding: 0.5% 1.5%;
+}
+
+#orderTotal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#orderTotalInputLabel {
+    margin: 0%;
+}
+
+#orderTotalInput {
+    background: none;
+    border: none;
+    margin: 0%;
+    font-size: 1.3em;
+    font-family: 'Libre Baskerville', sans-serif;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#paymentChoiceTitle {
+    font-family: 'Libre Baskerville', sans-serif;
+    color: black;
+    font-size: 1em;
+    text-align: center;
+}
+
+#payPalContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2% 1%;
+    margin: 0.5% 0% 4%;
+}
+
+/* Makes the paypal button bigger and fill the div so you can actually see it */
+.zoid-outlet {
+    height: 100% !important;
+    width: 100% !important;
+}
+
+#onlinePaymentReceived, #cashOrOnlinePaymentCanceled {
+    padding: 1%;
+    font-family: 'Libre Baskerville', sans-serif;
+    text-align: center;
+}
+
+#orderFormBtnDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#orderFormSubmitButton {
+    width: 100%;
+    padding: 2%;
+    color: #FBF2C0 !important;
+    border-bottom: 0.08em solid #C9CBA3;
+    border-top: 0.08em solid #C9CBA3;
+    background-color: #3C1518;
+    border-radius: 60px;
+}
+
+#orderFormSubmitButton:hover {
+    border-bottom: 0.08em solid #868F60;
+    border-top: 0.08em solid #868F60;
+    border-radius: 60px;
+    background: linear-gradient(45deg, #771f1d, #641a18);
+    box-shadow:  5px -5px 0px #651a19, 
+             -5px 5px 0px #79201d;
+}
+
+#orderReviewSection {
+    width: 43%;
+    margin: 2% 2% 2% 0%;
+    background-color: #d7d9b1;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Libre Baskerville', sans-serif;
+}
+
+#reviewTitle {
+    font-family: 'Courgette', sans-serif;
+    margin: 0% 0% 2%;
+}
+
+#totalDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2% 0% 0%;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 770px) {
+    #orderContent {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #paymentIdSection, #orderReviewSection {
+        width: 96%;
+        margin: 1% 2%;
+    }
+
+    #orderReviewSection {
+        order: 1;
+    }
+
+    #paymentIdSection {
+        order: 2;
+    }
+}

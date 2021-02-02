@@ -23,8 +23,9 @@ class Menu extends Component {
             itemSize: '',
             itemPrice: '',
             itemOption: '',
-            itemAmount: 0,
+            itemAmount: parseFloat('').toFixed(2),
             caterOption: {},
+            orderCount: 0,
         }
 
         this.orderTypeSelect = this.orderTypeSelect.bind(this)
@@ -35,45 +36,23 @@ class Menu extends Component {
         this.addCaterOption = this.addCaterOption.bind(this)
         this.removeCaterOption = this.removeCaterOption.bind(this)
         this.addCaterCombo = this.addCaterCombo.bind(this)
+        this.getOrderCount = this.getOrderCount.bind(this)
     }
 
     componentDidMount() {
-        // add event listener to save state to sessionStorage
-        // when user leaves/refreshes the page
-        window.addEventListener(
-          "beforeunload",
-          this.saveOrderToLocalStorage.bind(this)
-        );
-    }
-    
-    componentWillUnmount() {
-        window.removeEventListener(
-            "beforeunload",
-            this.saveOrderToLocalStorage.bind(this)
-        );
-
-        // saves if component has a chance to unmount
-        this.saveOrderToLocalStorage();
+        this.getOrderCount();
     }
 
-    saveOrderToLocalStorage() {
-        // Get the existing data
-        var existingOrderList = sessionStorage.getItem('orderList');
+    getOrderCountUpdate() {
+        this.setState({orderCount: JSON.parse(sessionStorage.getItem('orderCount'))});
+    }
 
-        // If no existing data, create an array
-        // Otherwise, convert the sessionStorage string to an array
-        existingOrderList = existingOrderList ? JSON.parse(existingOrderList) : {};
-        
-        // for every item in order list
-        for (let key in yourOrder.orderList.list) {
-            // Add new data to sessionStorage Array
-            existingOrderList[key] = yourOrder.orderList.list[key];
-        }
+    getOrderCount() {
+        var existingOrderCount = sessionStorage.getItem('orderCount');
 
-        // Save back to sessionStorage
-        sessionStorage.setItem('orderList', JSON.stringify(existingOrderList));
+        existingOrderCount = existingOrderCount ? JSON.parse(existingOrderCount) : 0;
 
-        sessionStorage.setItem('orderCount', JSON.stringify(yourOrder.orderList.count));
+        this.setState({orderCount: existingOrderCount});
     }
 
     orderTypeSelect(e){
@@ -175,40 +154,62 @@ class Menu extends Component {
         
         e.preventDefault();
         e.stopPropagation();
+        // Checks to make sure size property has been chosen
         if(this.state.itemSize === ''){
             alert("Please choose a size before adding an item to your order!")
         }else{
-            var targetNameSplit = e.target.name.split("-")
-            var numberOfItems  = yourOrder.orderList.count
-            var itemName = targetNameSplit[1]
-            // var amount = e.target.value
-            var key = targetNameSplit[0].replace( /\s/g, '') + numberOfItems
-            yourOrder.orderList.list[key] = {name: itemName, price: this.state.itemPrice, size: this.state.itemSize, option: this.state.itemOption, amount: this.state.itemAmount};
-            yourOrder.orderList.count = numberOfItems + 1
-    
-            console.log(yourOrder.orderList.list)
-
             // Get the existing data
             var existingOrderList = sessionStorage.getItem('orderList');
+            var existingOrderCount = sessionStorage.getItem('orderCount');
+            var existingTotal = sessionStorage.getItem('orderTotal')
+
+            // If no existing data, set to 0
+            existingOrderCount = existingOrderCount ? JSON.parse(existingOrderCount) : 0;
 
             // If no existing data, create an array
             // Otherwise, convert the sessionStorage string to an array
             existingOrderList = existingOrderList ? JSON.parse(existingOrderList) : {};
+
+            existingTotal = existingTotal ? parseFloat(JSON.parse(existingTotal)).toFixed(2) : 0;
+
+            // Get Item Information
+            var targetNameSplit = e.target.name.split("-")
+            var itemName = targetNameSplit[1]
+            var priceSplit = this.state.itemPrice.split("$")
+            var key = targetNameSplit[0].replace( /\s/g, '') + existingOrderCount
+            if(this.state.itemOption) {
+                yourOrder.orderList.list[key] = {name: itemName, price: this.state.itemPrice, size: this.state.itemSize, option: this.state.itemOption, amount: this.state.itemAmount};
+            } else {
+                yourOrder.orderList.list[key] = {name: itemName, price: this.state.itemPrice, size: this.state.itemSize, amount: this.state.itemAmount};
+            }
+            console.log(yourOrder.orderList.list, existingOrderCount)
+
             // Add new data to sessionStorage Array
             existingOrderList[key] = yourOrder.orderList.list[key];
+            // Add one to count
+            existingOrderCount = existingOrderCount + 1
+
+            console.log(existingTotal, parseFloat(priceSplit[1]).toFixed(2) * this.state.itemAmount)
+
+            existingTotal = parseFloat(existingTotal) + (priceSplit[1] * this.state.itemAmount)
+
+            console.log(existingOrderList, existingOrderCount, existingTotal)
 
             // Save back to sessionStorage
             sessionStorage.setItem('orderList', JSON.stringify(existingOrderList));
             
-            sessionStorage.setItem('orderCount', JSON.stringify(yourOrder.orderList.count));
+            sessionStorage.setItem('orderCount', JSON.stringify(existingOrderCount));
 
-            this.setState({ itemSize: '', itemOption: '', itemAmount: 0});
+            sessionStorage.setItem('orderTotal', JSON.stringify(parseFloat(existingTotal).toFixed(2)));
+
+            this.setState({ itemSize: '', itemOption: '', itemPrice: '', itemAmount: parseFloat('').toFixed(2)});
         }
+        this.getOrderCountUpdate()
     }
 
     render() {
-        const { showSmall, showCatering, showWholesale } = this.state;
-        var orderCount = sessionStorage.getItem('orderCount');
+        const { showSmall, showCatering, orderCount } = this.state;
+
         return (
         <section id="menu">
             <Navigation orderCount={orderCount}/>
@@ -254,11 +255,12 @@ class Menu extends Component {
                         <SmallBatchSection changeSize={this.changeSize} changeOption={this.changeOption} changeAmount={this.changeAmount} addItem={this.addOrderItem} stateItemName={this.state.itemName} stateItemPrice={this.state.itemPrice} stateItemOption={this.state.itemOption} stateItemSize={this.state.itemSize} stateItemAmount={this.state.itemAmount}></SmallBatchSection>
                     </div>
                     <div id="cateringSection" className={`${showCatering ? "" : "hidden"}`}>
-                        <h3>Online Catering Order System Coming Soon!</h3>
+                        {/* <h3>Online Catering Order System Coming Soon!</h3>
                         <h3>At this time, <a href="/Contact" className="smoothscroll contactLink">Contact Us by email</a> with what you're interested in having.</h3>
-                        <h3>You can look at our Small Batch offerings or inquiry about certain pastries that you already love!</h3>
+                        <h3>You can look at our Small Batch offerings or inquiry about certain pastries that you already love!</h3> */}
                         {/* <Catering changeSize={this.changeSize} caterOption={this.addCaterOption} removeCaterOption={this.removeCaterOption} addCombo={this.addCaterCombo} stateItemName={this.state.itemName} stateItemOption={this.state.itemOption} stateItemSize={this.state.itemSize} stateCaterOption={this.state.caterOption}/> */}
                         {/* <p>Catering</p> */}
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScUd-uTT9z2ItOHfr4EjE32AZuKfYP5bteqVFyzg03LJu5Ejw/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                     </div>
                 </div>
     

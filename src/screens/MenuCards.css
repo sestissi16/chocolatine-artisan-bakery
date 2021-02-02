@@ -120,6 +120,8 @@
 #cateringSection {
     padding: 3%;
     font-family: 'Libre Baskerville', sans-serif;
+    height: 40em;
+    width: 100%;
 }
 
 #menuNotesBottom {

@@ -9,6 +9,8 @@ import CircleLogo from '../assets/Logos/chocolatineTransparentCircleLogo.png'
 class About extends Component {
     render(){
         var orderCount = sessionStorage.getItem('orderCount');
+        orderCount = orderCount ? JSON.parse(orderCount) : 0;
+        
         const {
             missionTagline,
             missionDescript,

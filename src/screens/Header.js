@@ -10,6 +10,8 @@ class Header extends Component {
     
     render () {
         var orderCount = sessionStorage.getItem('orderCount');
+        orderCount = orderCount ? JSON.parse(orderCount) : 0;
+        
         const { 
             tagline, 
             taglineAction, 

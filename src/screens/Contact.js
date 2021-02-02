@@ -116,6 +116,8 @@ class Contact extends Component {
 
     render() {
         var orderCount = sessionStorage.getItem('orderCount');
+        orderCount = orderCount ? JSON.parse(orderCount) : 0;
+        
         const {
             phone,
             email,

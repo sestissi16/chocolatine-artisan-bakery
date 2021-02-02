@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { Route, BrowserRouter as Router } from 'react-router-dom'
 import Navigation from './screens/Navbar'
 import Footer from './components/footer'
-import yourOrder from './yourOrder'
 import Header from './screens/Header'
 import About from './screens/About'
 import Menu from './screens/MenuCards'
 import Contact from './screens/Contact'
 import Order from './screens/orderCart'
+import Wholesale from './screens/Wholesale'
 
 import { theme, ThemeProvider } from '@chakra-ui/core';
 import './App.css';
@@ -157,6 +157,7 @@ class App extends Component {
                         <Route exact path="/Menu" component={Menu} />
                         <Route exact path="/Cart" component={Order} />
                         <Route exact path="/Contact" component={Contact} />
+                        <Route exact path="/Wholesale" component={Wholesale} />
                     </Router>
                     <Footer />
                 </ThemeProvider>

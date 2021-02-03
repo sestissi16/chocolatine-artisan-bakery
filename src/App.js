@@ -151,12 +151,12 @@ class App extends Component {
                 <ThemeProvider theme={newTheme}>
                     {/* <Navigation orderCount={yourOrder.orderList.count}/> */}
                     <Router>
-                        <Route exact path="/" component={Header} />
-                        <Route exact path="/About" component={About} />
-                        <Route exact path="/Menu" component={Menu} />
-                        <Route exact path="/Cart" component={Order} />
-                        <Route exact path="/Contact" component={Contact} />
-                        <Route exact path="/Wholesale" component={Wholesale} />
+                        <Route exact path={process.env.PUBLIC_URL+"/"} component={Header} />
+                        <Route exact path={process.env.PUBLIC_URL+"/About"} component={About} />
+                        <Route exact path={process.env.PUBLIC_URL+"/Menu"} component={Menu} />
+                        <Route exact path={process.env.PUBLIC_URL+"/Cart"} component={Order} />
+                        <Route exact path={process.env.PUBLIC_URL+"/Contact"} component={Contact} />
+                        <Route exact path={process.env.PUBLIC_URL+"/Wholesale"} component={Wholesale} />
                     </Router>
                     <Footer />
                 </ThemeProvider>

@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.ecf16a4c.chunk.css",
+    "main.css": "/static/css/main.7500677c.chunk.css",
     "main.js": "/static/js/main.1f76cb29.chunk.js",
     "main.js.map": "/static/js/main.1f76cb29.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.736068b8.js",
@@ -9,10 +9,10 @@
     "static/js/2.c089b479.chunk.js": "/static/js/2.c089b479.chunk.js",
     "static/js/2.c089b479.chunk.js.map": "/static/js/2.c089b479.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.a6095f47f18e0e0a786c9448bd69a585.js": "/precache-manifest.a6095f47f18e0e0a786c9448bd69a585.js",
+    "precache-manifest.771d0044940fc170bfb5f4efa74c851f.js": "/precache-manifest.771d0044940fc170bfb5f4efa74c851f.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.a35680c6.chunk.css.map": "/static/css/2.a35680c6.chunk.css.map",
-    "static/css/main.ecf16a4c.chunk.css.map": "/static/css/main.ecf16a4c.chunk.css.map",
+    "static/css/main.7500677c.chunk.css.map": "/static/css/main.7500677c.chunk.css.map",
     "static/js/2.c089b479.chunk.js.LICENSE.txt": "/static/js/2.c089b479.chunk.js.LICENSE.txt",
     "static/media/Header.css": "/static/media/bakery-window-with-items.10c8dff8.jpeg",
     "static/media/chocolatineTransparentCircleLogo.png": "/static/media/chocolatineTransparentCircleLogo.4f7e0ab7.png",
@@ -26,7 +26,7 @@
     "static/js/runtime-main.736068b8.js",
     "static/css/2.a35680c6.chunk.css",
     "static/js/2.c089b479.chunk.js",
-    "static/css/main.ecf16a4c.chunk.css",
+    "static/css/main.7500677c.chunk.css",
     "static/js/main.1f76cb29.chunk.js"
   ]
 }

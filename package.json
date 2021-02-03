@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "http://artisanbakeriesusa.com",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
   "dependencies": {
     "@chakra-ui/core": "^0.8.0",
     "@chakra-ui/react": "^1.0.2",
@@ -27,7 +31,6 @@
     "react-async-script-loader": "^0.3.0",
     "react-bootstrap": "^1.0.1",
     "react-datepicker": "^3.4.1",
-    "react-dom": "16.6.3",
     "react-facebook": "^8.1.4",
     "react-ga": "^3.2.0",
     "react-icons": "^4.1.0",

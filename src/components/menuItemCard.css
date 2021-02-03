@@ -153,10 +153,20 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
 
     #addToOrderSection {
         flex-direction: column;
         justify-content: center;
+    }
+
+    #amountForm {
+        width: 90%;
+        margin: 2.5% 0%; 
+    }
+
+    #addToOrderButton {
+        width: 80%
     }
 }

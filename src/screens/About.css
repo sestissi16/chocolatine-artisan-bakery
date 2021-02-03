@@ -376,10 +376,6 @@
 }
 
 @media (max-width: 500px){
-    #aboutSectionHeader {
-        height: 17em;
-    }
-
     #aboutTitleImage {
         height: 4em;
     }

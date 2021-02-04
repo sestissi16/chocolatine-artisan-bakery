@@ -32,7 +32,7 @@ class Footer extends Component {
                 </Nav>
                 <Nav className="footerContact">
                     <h5 className="contactItem1">
-                        <FaMapMarkerAlt className="footer-icon-map"/> 8415 Iron Mountain Rd. <br/>
+                        <FaMapMarkerAlt className="footer-icon-map"/> 8515 Iron Mountain Rd. <br/>
                         Las Vegas, NV 89143
                     </h5>
                     <h5 className="contactItem2">

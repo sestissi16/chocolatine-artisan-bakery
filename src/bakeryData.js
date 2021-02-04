@@ -68,7 +68,7 @@ const bakeryInfo = {
         hours: " Mon-Sun: 8 AM - 7 PM",
         delivery: " Delivery and ",
         carryout: " Carryout Available",
-        address: " 8415 Iron Mountain Rd, Las Vegas NV 89143",
+        address: " 8515 Iron Mountain Rd, Las Vegas NV 89143",
 
     },
     menu: {

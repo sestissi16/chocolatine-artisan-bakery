@@ -4,6 +4,7 @@ import Badge from '@material-ui/core/Badge';
 import { FiShoppingCart } from "react-icons/fi"
 import './Navbar.css'
 
+// Don't forget to uncomment the menu link for wholesale when we're not a cottage food operation
 class Navigation extends Component {
     render(){
         return (
@@ -16,7 +17,7 @@ class Navigation extends Component {
                         {/* <Nav.Link href="/Menu" className="navbar-link">Menu</Nav.Link> */}
                         <NavDropdown title="Menu Options" className="navbar-link" id="menu-dropdown">
                             <NavDropdown.Item href="/Menu" className="navbar-menu-link">Small Batch / Catering</NavDropdown.Item>
-                            <NavDropdown.Item href="/Wholesale" className="navbar-menu-link">Wholesale</NavDropdown.Item>
+                            {/* <NavDropdown.Item href="/Wholesale" className="navbar-menu-link">Wholesale</NavDropdown.Item> */}
                         </NavDropdown>
                         <Nav.Link href="/Contact" className="navbar-link">Contact Us</Nav.Link>
                         <OverlayTrigger

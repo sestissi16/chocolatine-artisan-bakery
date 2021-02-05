@@ -5,6 +5,8 @@ import { FaCarSide, FaPeopleCarry } from 'react-icons/fa'
 import { MdRestaurantMenu } from 'react-icons/md'
 import bakeryInfo from '../bakeryData'
 import CircleLogo from '../assets/Logos/chocolatineTransparentCircleLogo.png'
+
+// Uncomment vars and service 3 div and contact us for blank when we're not a cottage food operation
 class About extends Component {
     render(){
         var orderCount = sessionStorage.getItem('orderCount');
@@ -18,8 +20,8 @@ class About extends Component {
             service1Ex,
             service2,
             service2Ex,
-            service3,
-            service3Ex,
+            // service3,
+            // service3Ex,
             service4,
             service5,
             service6,
@@ -62,10 +64,10 @@ class About extends Component {
                                     <h2 className="serviceTitle">{service2}</h2>
                                     <h3 className="serviceEx">{service2Ex}</h3>
                                 </div>
-                                <div className="aboutServiceItem">
+                                {/* <div className="aboutServiceItem">
                                     <h2 className="serviceTitle">{service3}</h2>
                                     <h3 className="serviceEx">{service3Ex}</h3>
-                                </div>
+                                </div> */}
                             </div>
                             <div className="aboutServicesColumn">
                                 <div className="aboutServiceItem">
@@ -87,7 +89,8 @@ class About extends Component {
                             <a href="https://www.facebook.com/ArtisanBakeries/" className="aboutLink"> Facebook </a> 
                             or by 
                             <a href="/Contact" className="aboutLink"> Email </a> 
-                            for more details about Catering, and Wholesale
+                            {/* for more details about Catering, and Wholesale */}
+                            for more details about Small Batch Ordering or Catering
                         </h4>
                     </div>
                 </div>

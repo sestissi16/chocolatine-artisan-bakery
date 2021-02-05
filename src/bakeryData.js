@@ -11,20 +11,24 @@ const bakeryInfo = {
         headerBenefit2: "We make all of our goods as affordable as possible.",
         headerBenefit2Ex: "We're not here to cheat you out of money to make our owner rich. Pastries this good should not just be for the bourgeoisie! We want everyone employed to make a living wage so our fellow working-class people can also have a tasty treat without breaking the bank.",
         headerBenefit3: "We have multiple ways for you to get our goods.",
-        headerBenefit3Ex: "Don't let us not having a store front yet stop you from ordering our amazing pastries! We have pickup/carry out options and we'll deliver almost anywhere in the Vegas Valley. We even have our products at Farmer's Markets from time to time! And soon, you'll be able to find our goods at grocery stores and coffee shops near you.",
+        // Add to end of 3Ex when we are no longer a cottage food operation
+        // And soon, you'll be able to find our goods at grocery stores and coffee shops near you.
+        headerBenefit3Ex: "Don't let us not having a store front yet stop you from ordering our amazing pastries! We have pickup/carry out options and we'll deliver almost anywhere in the Vegas Valley. We even have our products at Farmer's Markets from time to time!",
         headerWholesaleTitle: "Let us provide you with quality products!",
         headerWholesaleDescript: "If you have a business that would benefit from selling baked goods, we'd love to help you provide that to your customers. We already provide a variety of baked goods for wholesale, but we also do customizations. Let's work together to find something that's perfect for your business.",
     },
     aboutUs: {
         missionTagline: "We've opened up our home in Vegas to bring you all fresh and traditional baked goods.",
         missionDescript: "We're Vegas locals that want bring our heritage to an affordable level for everyone. That's why we're opening our home and using our own family knowledge to make these baked goods for everyone in Vegas. ",
-        missionDescript2: "We don't have a store-front yet but you might be able to find us soon at a coffeshop or grocery store near you, or you can order directly from us!",
+        // Change mission descript 2 to the below string when we are no longer a cottage food operation
+        // We don't have a store-front yet but you might be able to find us soon at a coffeshop or grocery store near you, or you can order directly from us!
+        missionDescript2: "We don't have a store-front yet but you can order directly from us!",
         service1: "Small Batch Orders",
         service1Ex: "For a small group of friends or your family",
         service2: "Catering",
         service2Ex: "For when we can all throw parties again and for events",
-        service3: "Wholesale",
-        service3Ex: "For businesses that sell meals or snacks",
+        // service3: "Wholesale",
+        // service3Ex: "For businesses that sell meals or snacks",
         service4: "Pick-up / Carryout",
         service5: "Deliveries",
         service6: "Online Ordering via Facebook or Website",
@@ -56,7 +60,7 @@ const bakeryInfo = {
         },
         formSubjects: {
             caterInquiry: "CateringInquiry-",
-            wholesaleInquiry: "WholesaleInquiry-",
+            // wholesaleInquiry: "WholesaleInquiry-",
             customizationInquiry: "CustomizationInquiry-",
             otherInquiry: "",
         },
@@ -88,8 +92,8 @@ const bakeryInfo = {
                 firstPart: "* Our food is made in a cottage food operation that is not subject to government food safety inspection."
             },
             note2: {
-                firstPart: "* Our food is made in the same area as nut products and gluten products.",
-                linkText: " Message us",
+                firstPart: "* Our food is made in the same area as nut products and gluten products. Please,",
+                linkText: " message us",
                 link: "/Contact",
                 secondPart: " if you need your food prepared in a different way.",
             }

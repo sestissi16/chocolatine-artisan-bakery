@@ -5,6 +5,8 @@ import bakeryInfo from '../bakeryData'
 import RectangleLogo from '../assets/Logos/chocolatineTransparentLogo.png'
 import { GiChefToque, GiTakeMyMoney } from 'react-icons/gi'
 import { FaPeopleCarry } from 'react-icons/fa'
+
+// Uncomment work with us div and vars when we're not a cottage food operation
 class Header extends Component {
     
     render () {
@@ -23,8 +25,8 @@ class Header extends Component {
             headerBenefit2Ex,
             headerBenefit3,
             headerBenefit3Ex,
-            headerWholesaleTitle,
-            headerWholesaleDescript
+            // headerWholesaleTitle,
+            // headerWholesaleDescript
         } = bakeryInfo.home
         return (
             <header id="home">
@@ -73,13 +75,13 @@ class Header extends Component {
                             </div>
                         </div>
                     </div>
-                    <div id="homeWorkWithUs">
+                    {/* <div id="homeWorkWithUs">
                         <div id="homeWorkWithUsBg">
                             <h2 id="homeWholesaleTitle">{headerWholesaleTitle}</h2>
                             <h3 id="homeWholesaleDescrip">{headerWholesaleDescript}</h3>
                             <a href="/Wholesale" id="homeWholesaleBtn" className="homeLink">Work With Us</a>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </header>
         );

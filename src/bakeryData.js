@@ -4,12 +4,12 @@ const bakeryInfo = {
         tagline:"We make pastries for the people!",
         taglineAction: "Treat yourself without breaking the bank today!",
         headerAboutTitle: "We're Black Owned, Women Led, and Local!",
-        headerAboutDescript: " We're a local Vegas family that immigrated from France, so we wanted to share the food magic with all of you! We started up this bakery in our garage so that we could provide fresh and affordable baked goods.",
-        headerBenefitsTitle: "Our pastries should be as good as the ones you could get in France and we'll do it by putting humans first and not profit.",
+        headerAboutDescript: " We're a local Vegas family that immigrated from France, so we wanted to share the food magic with all of you! We started up this bakery so that we could provide fresh, delicious, and affordable baked goods.",
+        headerBenefitsTitle: "Our pastries should be as good as the ones you could get in France and we'll do it by putting humans first.",
         headerBenefit1: "Everything is hand made with traditional recipes.",
         headerBenefit1Ex: " We make the dough in house and only bake it when orders come in so they can be as fresh as possible! Our recipes are coming straight from Europe so we can make the best quality pastries.",
         headerBenefit2: "We make all of our goods as affordable as possible.",
-        headerBenefit2Ex: "We're not here to cheat you out of money to make our owner rich. Pastries this good should not just be for the bourgeoisie! We want everyone employed to make a living wage so our fellow working-class people can also have a tasty treat without breaking the bank.",
+        headerBenefit2Ex: "We want anybody to be able to try our homemade goods and be able to treat yourselves to something amazing! We try to buy locally and get our ingredients as affordable as possible, but we want to make sure that you're getting the best quality food.",
         headerBenefit3: "We have multiple ways for you to get our goods.",
         // Add to end of 3Ex when we are no longer a cottage food operation
         // And soon, you'll be able to find our goods at grocery stores and coffee shops near you.
@@ -19,7 +19,7 @@ const bakeryInfo = {
     },
     aboutUs: {
         missionTagline: "We've opened up our home in Vegas to bring you all fresh and traditional baked goods.",
-        missionDescript: "We're Vegas locals that want bring our heritage to an affordable level for everyone. That's why we're opening our home and using our own family knowledge to make these baked goods for everyone in Vegas. ",
+        missionDescript: "We're Vegas locals that want to bring our heritage to an affordable level for everyone. That's why we're opening our home and using our own family knowledge to make these baked goods for everyone in Vegas. ",
         // Change mission descript 2 to the below string when we are no longer a cottage food operation
         // We don't have a store-front yet but you might be able to find us soon at a coffeshop or grocery store near you, or you can order directly from us!
         missionDescript2: "We don't have a store-front yet but you can order directly from us!",
@@ -34,8 +34,8 @@ const bakeryInfo = {
         service6: "Online Ordering via Facebook or Website",
         giveBack1: "Teach bakery classes for the community",
         giveBack2: "Getting our ingredients from local sources",
-        giveBack3: "Putting humans first instead of profit first",
-        giveBack4: "Giving opportunities to other women and women of color",
+        giveBack3: "Bringing fresh, tasty, healthy, handcrafted goods to an affordable level for everyone.",
+        giveBack4: "Giving opportunities to other minorities to come work with us.",
         actionTitle: "Have any other questions?",
         actionDescript: "We'd be happy to answer them! You can click the link below to go to our contact form or you can message us on Facebook.",
         //the orders need to have a link and a link name associated with them

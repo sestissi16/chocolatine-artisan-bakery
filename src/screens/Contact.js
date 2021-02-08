@@ -231,7 +231,7 @@ class Contact extends Component {
                                 </div>
                                 
                                 <div className="form-group">
-                                    <label className="contactFormLabel" for="contactFormSubject">Pick and option above to fill out the first portion of the subject and then fill in your question:</label>
+                                    <label className="contactFormLabel" for="contactFormSubject">Pick an option above to fill out the first portion of the subject and then fill in your question:</label>
                                     <input 
                                         id="contactFormSubject" 
                                         className="contactFormInput" 

@@ -119,6 +119,7 @@ class Contact extends Component {
         const {
             phone,
             email,
+            email2,
             facebookLink,
             facebookLinkText,
             hours,
@@ -263,7 +264,7 @@ class Contact extends Component {
                                         variant='success' 
                                         type='submit'
                                         className="contactFormButton"
-                                        href={`mailto:artisanbakeriesusa@gmail.com?subject=Note%20From%20${this.state.name}-${this.state.subject}&body=${this.state.message}`}
+                                        href={`mailto:info@artisanbakeriesusa.com?subject=Note%20From%20${this.state.name}-${this.state.subject}&body=${this.state.message}`}
                                     >
                                         Send                          
                                     </Button>
@@ -283,7 +284,8 @@ class Contact extends Component {
                         <h2 id="contactInfoTitle">Contact Information:</h2>
                         <div className="contactInfoDiv">
                             <h3><MdPhone />{phone}</h3>
-                            <h3 className="wordBreak"><MdEmail />{email}</h3>
+                            <h3 className="wordBreak"><MdEmail />{email} - for questions and ordering inquiries</h3>
+                            <h3 className="wordBreak"><MdEmail />{email2} - for questions about working with us</h3>
                             <h3><FaFacebookSquare /> <a href={facebookLink}>{facebookLinkText}</a></h3>
                         </div>
                         <div className="contactInfoDiv">

@@ -45,7 +45,7 @@ const bakeryInfo = {
         order2: "Use this ",
         order2Link: "/Order",
         order2LinkName: "Order Form",
-        order3: " (artisanbakeriesusa@gmail.com)",
+        order3: " (info@artisanbakeriesusa.com)",
         order3Link: "/Contact",
         order3LinkName: "Email us",
         orderExtraInfo: "When you order, please give us at least three days notice and ask about the minimum order requirements for the items you're interested in.",
@@ -54,7 +54,7 @@ const bakeryInfo = {
     contactUs: {
         overallDescript: "Send us an email with the Contact Form or check out our Facebook page below.",
         formDescript: {
-            line1: "This form will help craft an email to artisanbakeriesusa@gmail.com. ",
+            line1: "This form will help craft an email to info@artisanbakeriesusa.com. ",
             line2: "Once you fill out the form it will open up your default mail app and fill everything out for you. ",
             line3: "You'll just have to press send!"
         },
@@ -66,7 +66,8 @@ const bakeryInfo = {
         },
         fbSectionDescript: "Here you can message us and check out our posts and events for new specialities and promos.",
         phone: " (702) 475-3415",
-        email: " artisanbakeriesusa@gmail.com",
+        email: " info@artisanbakeriesusa.com",
+        email2: " partnerships@artisanbakeriesusa.com"
         facebookLink: "https://www.facebook.com/ArtisanBakeries",
         facebookLinkText: "Chocolatine Artisan Bakeries",
         hours: " Mon-Sun: 8 AM - 7 PM",

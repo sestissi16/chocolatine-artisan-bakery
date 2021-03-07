@@ -47,6 +47,7 @@ class Footer extends Component {
                     <Nav.Link href="https://app.termly.io/document/cookie-policy/6c7276fa-a251-44bc-8e28-942dd3cea440" className="footer-link-privacy">
                         <h5>Privacy Policy</h5>
                     </Nav.Link>
+                    <button class="termly-cookie-preference-button" type="button" style={{background: "#FBF2C0", width: 70 +"%", borderRadius: 5 + "px", border: 1 + "px solid #004385", fontFamily: "Roboto, Arial", fontSize: 1 + "em", color: "#004385", fontWeight: 600, boxSizing: "border-box", cursor: "pointer", padding: 1, outline: "none"}} onclick="displayPreferenceModal()">Manage Cookie Preferences</button>
                 </Nav>
             </Navbar>
         );

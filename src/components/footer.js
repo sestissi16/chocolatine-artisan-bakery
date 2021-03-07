@@ -33,12 +33,20 @@ class Footer extends Component {
                 <Nav className="footerContact">
                     <h5 className="contactItem1">
                         <FaMapMarkerAlt className="footer-icon-map"/> 8515 Iron Mountain Rd. <br/>
-                        Las Vegas, NV 89143
+                        Las Vegas, NV <br/>
+                        89143
                     </h5>
                     <h5 className="contactItem2">
-                        artisanbakeriesusa@gmail.com <br/>
+                        <Nav.Link href="mailto:info@artisanbakeriesusa.com" className="footer-link-email">
+                            info@artisanbakeriesusa.com 
+                        </Nav.Link>
                         (702) 475-3715
                     </h5>
+                </Nav>
+                <Nav className="privacyPolicy">
+                    <Nav.Link href="https://app.termly.io/document/cookie-policy/6c7276fa-a251-44bc-8e28-942dd3cea440" className="footer-link-privacy">
+                        <h5>Privacy Policy</h5>
+                    </Nav.Link>
                 </Nav>
             </Navbar>
         );

@@ -67,7 +67,7 @@ const bakeryInfo = {
         fbSectionDescript: "Here you can message us and check out our posts and events for new specialities and promos.",
         phone: " (702) 475-3415",
         email: " info@artisanbakeriesusa.com",
-        email2: " partnerships@artisanbakeriesusa.com"
+        email2: " partnerships@artisanbakeriesusa.com",
         facebookLink: "https://www.facebook.com/ArtisanBakeries",
         facebookLinkText: "Chocolatine Artisan Bakeries",
         hours: " Mon-Sun: 8 AM - 7 PM",

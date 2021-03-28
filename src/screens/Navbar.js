@@ -17,6 +17,7 @@ class Navigation extends Component {
                         {/* <Nav.Link href="/Menu" className="navbar-link">Menu</Nav.Link> */}
                         <NavDropdown title="Menu Options" className="navbar-link" id="menu-dropdown">
                             <NavDropdown.Item href="/Menu" className="navbar-menu-link">Small Batch / Catering</NavDropdown.Item>
+                            <NavDropdown.Item href="/Shipping" className="navbar-menu-link">Shipping Packages</NavDropdown.Item>
                             {/* <NavDropdown.Item href="/Wholesale" className="navbar-menu-link">Wholesale</NavDropdown.Item> */}
                         </NavDropdown>
                         <Nav.Link href="/Contact" className="navbar-link">Contact Us</Nav.Link>

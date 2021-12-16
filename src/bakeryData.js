@@ -3,8 +3,8 @@ const bakeryInfo = {
     home: {
         tagline:"We make pastries for the people!",
         taglineAction: "Treat yourself without breaking the bank today!",
-        headerAboutTitle: "We're Black Owned, Women Led, and Local!",
-        headerAboutDescript: " We're a local Vegas family that immigrated from France, so we wanted to share the food magic with all of you! We started up this bakery so that we could provide fresh, delicious, and affordable baked goods.",
+        headerAboutTitle: "We're a Local Small Business!",
+        headerAboutDescript: " We're a local bakers that immigrated from France, so we wanted to share the food magic with all of you! We started up this bakery so that we could provide fresh, delicious, and affordable baked goods.",
         headerBenefitsTitle: "Our pastries should be as good as the ones you could get in France and we'll do it by putting humans first.",
         headerBenefit1: "Everything is hand made with traditional recipes.",
         headerBenefit1Ex: " We make the dough in house and only bake it when orders come in so they can be as fresh as possible! Our recipes are coming straight from Europe so we can make the best quality pastries.",
@@ -19,7 +19,7 @@ const bakeryInfo = {
     },
     aboutUs: {
         missionTagline: "We've opened up our home in Vegas to bring you all fresh and traditional baked goods.",
-        missionDescript: "We're Vegas locals that want to bring our heritage to an affordable level for everyone. That's why we're opening our home and using our own family knowledge to make these baked goods for everyone in Vegas. ",
+        missionDescript: "We're Vegas locals that want to bring our heritage to an affordable level for everyone. That's why we're opening our home and using our own French knowledge to make these baked goods for everyone in Vegas. ",
         // Change mission descript 2 to the below string when we are no longer a cottage food operation
         // We don't have a store-front yet but you might be able to find us soon at a coffeshop or grocery store near you, or you can order directly from us!
         missionDescript2: "We don't have a store-front yet but you can order directly from us!",
@@ -520,6 +520,23 @@ const bakeryInfo = {
 
                     }
                 }
+            },
+        },
+        shipping: {
+            sizing: {
+                sm: "12 packs",
+            },
+            shippingTypes: {
+                baked: "Fully baked but sent frozen",
+                unbaked: "Unbaked goods sent frozen for you to proof and bake",
+                both: "A set of both fully baked frozen goods and unbaked frozen goods"
+            },
+            description: "Best for a small group or just yourself in you're not in Vegas!",
+            orderInfo: {
+                line1: "For the trial period we only have one size!",
+                line2: "However, we have different types of shipping methods to choose from: Fully baked goods that are frozen and shipped to you, Unbaked frozen goods that you can back yourself, or a combination of both!",
+                line3: "We'll ship these items on the nearest Monday to ensure the items will get to you in a timely fashion but we can't guarentee it will arrive on a specific day",
+                line4: "For this trial period, each pack is only $5! The only thing we ask from you is that you fill out a feedback form telling us if our products made it, how easy it was to prepare them to it, and if you liked our food."
             },
         },
         wholesale: {

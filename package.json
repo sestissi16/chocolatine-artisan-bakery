@@ -2,7 +2,7 @@
   "name": "chocolatine-artisan-bakery",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://artisanbakeriesusa.com",
+  "homepage": "https://sestissi16.github.io/chocolatine-artisan-bakery",
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
